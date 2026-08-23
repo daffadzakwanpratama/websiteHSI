@@ -220,23 +220,58 @@
               </div>
             </div>
 
-            <!-- Interactive Google Maps Embed -->
+            <!-- Interactive Universal Map Embed (Accessible in China & Worldwide) -->
             <div>
-              <div class="text-xs sm:text-[13px] font-bold text-slate-500 uppercase tracking-wider mb-2.5">Peta Lokasi Kantor</div>
+              <div class="flex items-center justify-between mb-2.5">
+                <div class="text-xs sm:text-[13px] font-bold text-slate-500 uppercase tracking-wider">Peta Lokasi Kantor</div>
+                <span class="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/60">
+                  <i class="fa-solid fa-signal text-[9px] mr-1"></i>Akses Global & Tiongkok
+                </span>
+              </div>
               <div class="rounded-2xl overflow-hidden border border-slate-200 aspect-[16/11] sm:aspect-video bg-slate-100 shadow-sm relative">
                 <iframe 
-                  src="https://maps.google.com/maps?q=No.+216+Zhongxing+Road,+Zhongcun,+Panyu+District,+Guangzhou&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=113.3150%2C22.9780%2C113.3400%2C22.9960&amp;layer=mapnik&amp;marker=22.9868%2C113.3275" 
                   class="w-full h-full border-0" 
-                  allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade"
-                  title="Lokasi Kantor: Room 203, 2nd Floor, No. 216 Zhongxing Road, Zhongcun, Panyu District, Guangzhou">
+                  loading="lazy"
+                  title="Peta Lokasi Kantor: No. 216 Zhongxing Road, Zhongcun, Panyu District, Guangzhou">
                 </iframe>
               </div>
-              <p class="text-[11.5px] text-slate-400 mt-2 flex items-center gap-1.5">
-                <i class="fa-solid fa-location-dot text-forest-600 text-xs"></i>
-                Room 203, 2nd Floor, No. 216 Zhongxing Road, Zhongcun, Panyu District, Guangzhou
-              </p>
+
+              <!-- Action Navigation Buttons for China & Global Users -->
+              <div class="grid grid-cols-3 gap-2 mt-3">
+                <a href="https://map.baidu.com/search/%E5%B9%BF%E5%B7%9E%E5%B8%82%E7%95%AA%E7%A6%BA%E5%8C%BA%E9%92%9F%E6%9D%91%E4%B8%AD%E5%85%B4%E8%B7%AF216%E5%8F%B7" 
+                   target="_blank" rel="noopener"
+                   class="flex flex-col sm:flex-row items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200/80 text-xs font-bold transition text-center"
+                   title="Buka di Baidu Maps (Peta Utama Tiongkok)">
+                  <i class="fa-solid fa-map-location-dot text-sm"></i>
+                  <span>Baidu Map</span>
+                </a>
+                <a href="https://uri.amap.com/search?keyword=%E5%B9%BF%E5%B7%9E%E5%B8%82%E7%95%AA%E7%A6%BA%E5%8C%BA%E9%92%9F%E6%9D%91%E4%B8%AD%E5%85%B4%E8%B7%AF216%E5%8F%B7" 
+                   target="_blank" rel="noopener"
+                   class="flex flex-col sm:flex-row items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-xs font-bold transition text-center"
+                   title="Buka di Amap / Gaode Maps">
+                  <i class="fa-solid fa-location-arrow text-sm"></i>
+                  <span>Amap (高德)</span>
+                </a>
+                <a href="https://maps.google.com/?q=No.+216+Zhongxing+Road,+Zhongcun,+Panyu+District,+Guangzhou" 
+                   target="_blank" rel="noopener"
+                   class="flex flex-col sm:flex-row items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 text-xs font-bold transition text-center"
+                   title="Buka di Google Maps">
+                  <i class="fa-brands fa-google text-sm"></i>
+                  <span>Google Maps</span>
+                </a>
+              </div>
+
+              <!-- Address Details with Bilingual Support -->
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 mt-3 space-y-1.5">
+                <div class="text-[12px] font-semibold text-slate-800 flex items-start gap-1.5">
+                  <i class="fa-solid fa-location-dot text-forest-700 text-xs mt-0.5 flex-shrink-0"></i>
+                  <span>Room 203, 2nd Floor, No. 216 Zhongxing Road, Zhongcun, Panyu District, Guangzhou</span>
+                </div>
+                <div class="text-[11.5px] text-slate-500 pl-4">
+                  <span>中文地址：广州市番禺区钟村中兴路216号203室</span>
+                </div>
+              </div>
             </div>
 
           </div>
