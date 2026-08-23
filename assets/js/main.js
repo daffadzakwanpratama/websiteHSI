@@ -102,19 +102,19 @@
 // ── Detail Layanan Dynamic Content ───────────────────────────────────────────
 (function () {
   const params = new URLSearchParams(window.location.search);
-  const service = params.get('service') || 'domestik';
+  const service = params.get('service') || 'sertifikasi';
 
   const data = {
-    domestik: {
+    sertifikasi: {
       label: 'Layanan 01',
-      breadcrumb: 'Sertifikasi Halal Domestik',
-      title: 'Sertifikasi Halal Domestik',
+      breadcrumb: 'Sertifikasi Halal Resmi BPJPH & MUI',
+      title: 'Sertifikasi Halal Resmi BPJPH & MUI',
       desc: [
-        'Pendampingan komprehensif untuk memperoleh Sertifikat Halal dari BPJPH yang diakui secara resmi di Indonesia. Kami menangani seluruh proses dari persiapan dokumen, audit, hingga penerbitan sertifikat.',
-        'Dengan tim berpengalaman yang memahami regulasi BPJPH dan prosedur MUI, kami memastikan proses sertifikasi berjalan efisien dan tepat waktu.'
+        'Pendampingan komprehensif untuk memperoleh Sertifikat Halal dari BPJPH dan ketetapan fatwa halal MUI yang diakui secara resmi di Indonesia. Kami menangani seluruh proses dari persiapan dokumen, audit LPH, hingga penerbitan sertifikat.',
+        'Dengan tim berpengalaman yang memahami regulasi BPJPH dan prosedur fatwa MUI, kami memastikan proses sertifikasi berjalan efisien, terencana, dan tepat waktu.'
       ],
-      features: ['Analisis kesiapan produk dan fasilitas produksi', 'Penyusunan dokumen SJPH sesuai regulasi', 'Pendampingan audit lapangan oleh LPH', 'Koordinasi sidang fatwa dan BPJPH/MUI', 'Pengurusan penerbitan sertifikat resmi', 'Pembaruan sertifikat berkala'],
-      target: ['Perusahaan yang baru memulai proses sertifikasi', 'UMKM yang membutuhkan panduan alur BPJPH', 'Produsen yang ingin memenuhi kewajiban hukum', 'Perusahaan yang perlu memperbarui sertifikat']
+      features: ['Analisis kesiapan produk dan fasilitas produksi', 'Penyusunan dokumen SJPH sesuai regulasi BPJPH', 'Pendampingan audit lapangan oleh LPH', 'Koordinasi sidang fatwa dan BPJPH/MUI', 'Pengurusan penerbitan sertifikat halal resmi', 'Pembaruan sertifikat berkala'],
+      target: ['Perusahaan yang baru memulai proses sertifikasi halal', 'Pelaku usaha yang membutuhkan panduan alur BPJPH & MUI', 'Produsen makanan, minuman, kosmetik, dan farmasi yang ingin memenuhi kewajiban hukum', 'Perusahaan yang perlu memperbarui sertifikat halal']
     },
     sjph: {
       label: 'Layanan 02',
@@ -127,16 +127,16 @@
       features: ['Gap analysis kondisi perusahaan', 'Penyusunan manual SJPH lengkap', 'Pembuatan prosedur SOP halal', 'Penunjukan dan bimbingan penyelia halal', 'Audit internal SJPH', 'Tindak lanjut temuan ketidaksesuaian'],
       target: ['Perusahaan yang belum memiliki sistem SJPH', 'Tim internal yang perlu membangun manual halal', 'Perusahaan yang gagal audit karena dokumen tidak lengkap', 'Organisasi yang ingin meningkatkan standar internal halal']
     },
-    ekspor: {
+    standarisasi: {
       label: 'Layanan 03',
-      breadcrumb: 'Ekspor China & Global',
-      title: 'Sertifikasi Ekspor China & Global',
+      breadcrumb: 'Standarisasi & Kepatuhan Regulasi',
+      title: 'Standarisasi & Kepatuhan Regulasi Halal',
       desc: [
-        'Fasilitasi standarisasi halal dan kepatuhan regulasi internasional bagi produk Indonesia yang akan diekspor ke Tiongkok dan pasar global lainnya.',
-        'Kami memiliki pemahaman mendalam tentang persyaratan impor halal di berbagai negara dan siap memfasilitasi proses dengan dukungan multibahasa.'
+        'Fasilitasi penyelarasan standar mutu halal, uji laboratorium bahan baku, dan pemenuhan regulasi jaminan produk halal secara menyeluruh di Indonesia.',
+        'Kami membantu memastikan seluruh rantai pasok, bahan baku, dan proses produksi Anda memenuhi kriteria ketat audit LPH dan ketetapan BPJPH.'
       ],
-      features: ['Analisis regulasi negara tujuan ekspor', 'Koordinasi dengan lembaga sertifikasi asing', 'Persiapan dokumen ekspor multibahasa', 'Verifikasi kepatuhan standar impor China', 'Pendampingan proses registrasi produk', 'Konsultasi strategi masuk pasar halal global'],
-      target: ['Produsen yang ingin memasuki pasar Tiongkok', 'Eksportir yang memerlukan sertifikasi halal internasional', 'Perusahaan yang sudah punya sertifikat domestik dan ingin ekspansi', 'Brand yang menargetkan pasar Muslim global']
+      features: ['Pemenuhan standar regulasi halal BPJPH', 'Verifikasi kehalalan bahan baku kritis', 'Koordinasi uji laboratorium independen', 'Penyelarasan standar fasilitas dan sanitasi', 'Pendampingan kepatuhan perundang-undangan halal', 'Evaluasi dan validasi dokumen teknis'],
+      target: ['Produsen yang memerlukan verifikasi bahan baku halal', 'Perusahaan manufaktur dengan lini produksi kompleks', 'Perusahaan yang ingin memastikan kepatuhan menyeluruh terhadap regulasi BPJPH', 'Brand yang ingin meningkatkan jaminan mutu dan kepercayaan konsumen di Indonesia']
     },
     pelatihan: {
       label: 'Layanan 04',
@@ -151,7 +151,7 @@
     }
   };
 
-  const d = data[service] || data['domestik'];
+  const d = data[service] || data['sertifikasi'];
 
   const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
 

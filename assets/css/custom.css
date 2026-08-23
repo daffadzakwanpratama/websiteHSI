@@ -290,29 +290,30 @@ textarea:focus {
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7), 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
-/* Brand Typography Lockup (Next to Logo) */
+/* Brand Typography Lockup (Next to Logo in Navbar) */
 .brand-logo-wrap {
-  display: inline-flex;
-  align-items: center;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
   gap: 0.65rem;
   text-decoration: none;
-  line-height: 1;
+  flex-shrink: 0;
 }
 
 .brand-text-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
   user-select: none;
+  flex-shrink: 0;
 }
 
 .brand-title {
   font-family: var(--font-sans);
   font-weight: 800;
-  font-size: 1.02rem;
+  font-size: 0.98rem;
   line-height: 1.1;
-  color: #0f4429;
+  color: #0a3d24;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   transition: color 0.2s ease;
@@ -331,43 +332,35 @@ textarea:focus {
 .brand-line {
   flex: 1;
   height: 1.5px;
-  background-color: #d99a26;
+  background-color: #c89020;
   border-radius: 1px;
 }
 
 .brand-subtitle {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 0.54rem;
+  font-size: 0.52rem;
   line-height: 1;
-  color: #0f4429;
-  letter-spacing: 0.24em;
+  color: #0a3d24;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  padding-left: 0.24em; /* offset tracking */
+  padding-left: 0.22em;
   white-space: nowrap;
 }
 
-/* Drawer / Smaller variant */
-.brand-logo-wrap.brand-compact .brand-title {
-  font-size: 0.92rem;
-}
-.brand-logo-wrap.brand-compact .brand-subtitle {
-  font-size: 0.5rem;
-}
-
-/* Mobile responsive scaling */
 @media (max-width: 480px) {
   .brand-logo-wrap {
-    gap: 0.5rem;
+    gap: 0.45rem;
   }
   .brand-title {
-    font-size: 0.88rem;
+    font-size: 0.84rem;
   }
   .brand-subtitle {
-    font-size: 0.48rem;
+    font-size: 0.46rem;
     letter-spacing: 0.18em;
     padding-left: 0.18em;
   }
 }
+
 
 
