@@ -1,0 +1,292 @@
+/* PT Halal Standard Indonesia - Custom Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+  --color-primary: #155f3a;
+  --color-primary-dark: #0f4429;
+  --color-accent: #e8a317;
+  --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #334155;
+  overflow-x: hidden;
+  line-height: 1.68;
+}
+
+/* Headings System - Institutional, Dignified & Editorial */
+h1, h2, h3, .font-serif, .font-display {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+h1 {
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+h2 {
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+h3 {
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+h4 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* Micro-labels, Category badges, & Eyebrow kickers */
+.kicker, [class*="tracking-widest"] {
+  font-family: var(--font-sans);
+  letter-spacing: 0.1em;
+}
+
+/* Navigation active link (Desktop) */
+.nav-link {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #155f3a;
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.text-forest-800::after {
+  width: 100%;
+}
+
+/* Mobile Navigation Active State */
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.875rem;
+  border-radius: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #475569;
+  transition: all 0.2s ease;
+  border-left: 3.5px solid transparent;
+}
+
+.mobile-nav-link:hover {
+  background-color: #f8fafc;
+  color: #155f3a;
+}
+
+.mobile-nav-link.active {
+  background-color: #eaf5ef;
+  color: #155f3a;
+  font-weight: 700;
+  border-left: 3.5px solid #155f3a;
+  padding-left: 0.75rem;
+}
+
+.mobile-nav-link .nav-icon {
+  width: 1.25rem;
+  color: #94a3b8;
+  margin-right: 0.75rem;
+  transition: color 0.2s ease;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.mobile-nav-link:hover .nav-icon {
+  color: #155f3a;
+}
+
+.mobile-nav-link.active .nav-icon {
+  color: #155f3a;
+}
+
+.mobile-nav-link .active-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background-color: #155f3a;
+  display: none;
+}
+
+.mobile-nav-link.active .active-dot {
+  display: inline-block;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Accordion */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.25s ease-out;
+  opacity: 0;
+}
+
+.accordion-content.active {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.accordion-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.dropdown-menu-lang {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: all 0.18s ease;
+}
+
+.dropdown-parent:hover .dropdown-menu-lang {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Smooth focus ring */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(21, 95, 58, 0.12);
+}
+
+/* ── Interactive Carousel / Slider System ────────────────────────────────── */
+.carousel-container {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  user-select: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+/* Dot Indicators */
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #cbd5e1;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  width: 26px;
+  background-color: #155f3a;
+  border-radius: 9999px;
+}
+
+/* Video Play Button Pulse */
+.video-play-btn {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.video-play-btn:hover {
+  transform: scale(1.1);
+}
+
+.video-play-btn::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.3);
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+/* Hero Image Slider Hardware Acceleration */
+.hero-slider-track {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.hero-slide img {
+  transform: translateZ(0);
+}
+
+/* Subtle Text Shadow for bright image background legibility */
+.text-shadow-hero {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7), 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+

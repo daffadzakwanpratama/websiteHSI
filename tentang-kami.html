@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami — PT Halal Standard Indonesia</title>
+  <meta name="description" content="Profil, visi, misi, dan nilai inti PT Halal Standard Indonesia sebagai mitra sertifikasi halal profesional.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tentang Kami — PT Halal Standard Indonesia">
+  <meta property="og:description" content="Profil, visi, misi, dan nilai inti PT Halal Standard Indonesia sebagai mitra sertifikasi halal profesional.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              50:  '#f0faf4',
+              100: '#dcf5e7',
+              200: '#b8ebcf',
+              600: '#1a7a4a',
+              700: '#155f3a',
+              800: '#0f4429',
+              900: '#0b3320',
+              950: '#061a10',
+            },
+            gold: {
+              400: '#e8a317',
+              500: '#cc8b0f',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['"Lora"', 'Georgia', 'serif'],
+            display: ['"Lora"', 'Georgia', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-white text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/70">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-[68px]">
+
+        <a href="index.html" class="flex items-center gap-2 group" aria-label="PT Halal Standard Indonesia">
+          <img src="assets/images/logo.svg" alt="PT Halal Standard Indonesia" class="h-10 sm:h-11 w-auto object-contain">
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-slate-600 hover:text-forest-700 text-sm transition-colors duration-200">Beranda</a>
+          <a href="tentang-kami.html" class="nav-link font-semibold text-forest-800 text-sm transition-colors duration-200">Tentang Kami</a>
+          <a href="layanan.html" class="nav-link text-slate-600 hover:text-forest-700 text-sm transition-colors duration-200">Layanan</a>
+          <a href="kontak.html" class="nav-link text-slate-600 hover:text-forest-700 text-sm transition-colors duration-200">Kontak</a>
+          
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="kontak.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-[13px] font-bold rounded-lg text-white bg-forest-700 hover:bg-forest-800 transition-colors duration-200">
+            Konsultasi Gratis
+          </a>
+          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition" aria-label="Menu">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileBackdrop" class="fixed inset-0 bg-slate-900/50 z-50 hidden opacity-0 transition-opacity duration-200"></div>
+  <div id="mobileMenuDrawer" class="fixed top-0 right-0 bottom-0 w-72 bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
+      <img src="assets/images/logo.svg" alt="PT Halal Standard Indonesia" class="h-9 w-auto object-contain">
+      <button id="closeMobileMenuBtn" class="p-1.5 rounded text-slate-500 hover:text-slate-800">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+    <nav class="flex-1 overflow-y-auto p-5 space-y-1.5 text-sm">
+      <a href="index.html" class="mobile-nav-link">
+        <span class="flex items-center">
+          <i class="fa-solid fa-house nav-icon"></i>
+          <span>Beranda</span>
+        </span>
+        <span class="active-dot"></span>
+      </a>
+      <a href="tentang-kami.html" class="mobile-nav-link active">
+        <span class="flex items-center">
+          <i class="fa-solid fa-building nav-icon"></i>
+          <span>Tentang Kami</span>
+        </span>
+        <span class="active-dot"></span>
+      </a>
+      <a href="layanan.html" class="mobile-nav-link">
+        <span class="flex items-center">
+          <i class="fa-solid fa-layer-group nav-icon"></i>
+          <span>Layanan</span>
+        </span>
+        <span class="active-dot"></span>
+      </a>
+      <a href="kontak.html" class="mobile-nav-link">
+        <span class="flex items-center">
+          <i class="fa-solid fa-envelope nav-icon"></i>
+          <span>Kontak</span>
+        </span>
+        <span class="active-dot"></span>
+      </a>
+      <div class="pt-4 mt-2 border-t border-slate-100">
+        <a href="kontak.html" class="block text-center py-3 text-[14px] font-bold rounded-xl text-white bg-forest-700 hover:bg-forest-800 transition shadow-sm">Konsultasi Gratis</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-forest-950 text-white py-14 sm:py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <p class="text-gold-400 text-xs sm:text-[13px] font-bold tracking-widest uppercase mb-2.5">Tentang Kami</p>
+        <h1 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight leading-tight max-w-2xl">
+          Menghadirkan standar halal yang lebih mudah dijangkau semua pelaku usaha.
+        </h1>
+      </div>
+    </section>
+
+    <!-- PROFIL -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-4">Siapa Kami</h2>
+            <div class="space-y-3.5 text-base text-slate-600 leading-relaxed">
+              <p>
+                PT Halal Standard Indonesia adalah perusahaan profesional yang didirikan dengan tujuan membantu pelaku industri dan UMKM mengimplementasikan Sistem Jaminan Produk Halal (SJPH) secara menyeluruh, efisien, dan sesuai regulasi.
+              </p>
+              <p>
+                Kami hadir sebagai jembatan antara pelaku usaha dengan sistem dan otoritas sertifikasi halal nasional — memastikan bahwa proses yang kompleks menjadi terencana, transparan, dan dapat diselesaikan dengan hasil yang konkret.
+              </p>
+              <p>
+                Dengan pengalaman di berbagai sektor — makanan, minuman, kosmetik, farmasi, dan manufaktur — tim kami memahami betul tantangan yang dihadapi setiap jenis industri dalam mencapai kepatuhan halal.
+              </p>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-8 sm:gap-12">
+              <div>
+                <div data-counter="100" data-suffix="%" class="text-3xl sm:text-4xl font-extrabold text-forest-700">100%</div>
+                <div class="text-xs sm:text-[13px] text-slate-500 font-medium mt-1">Sesuai regulasi BPJPH</div>
+              </div>
+              <div>
+                <div data-counter="4" data-suffix="+" class="text-3xl sm:text-4xl font-extrabold text-forest-700">4+</div>
+                <div class="text-xs sm:text-[13px] text-slate-500 font-medium mt-1">Jenis layanan terintegrasi</div>
+              </div>
+              <div>
+                <div class="text-3xl sm:text-4xl font-extrabold text-forest-700">Global</div>
+                <div class="text-xs sm:text-[13px] text-slate-500 font-medium mt-1">Akses pasar internasional</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="rounded-2xl overflow-hidden aspect-[4/3] shadow-sm mb-5">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                   alt="Tim PT Halal Standard Indonesia" class="w-full h-full object-cover">
+            </div>
+            <!-- Filosofi & Tagline Card -->
+            <div class="bg-forest-900 text-white rounded-2xl p-6 border-l-4 border-gold-400 shadow-sm">
+              <p class="text-xs sm:text-[13px] font-bold tracking-widest text-gold-400 uppercase mb-1">Filosofi Kami</p>
+              <blockquote class="text-base sm:text-lg font-bold italic tracking-tight text-white mb-2">
+                "Halal bukan hanya simbol, tapi komitmen dalam setiap proses."
+              </blockquote>
+              <p class="text-xs sm:text-sm text-forest-200">
+                Bersama Mewujudkan Produk Halal, Aman dan Berkelanjutan.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VISI MISI -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-slate-50 border-y border-slate-200">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-px bg-slate-200 border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+
+          <div class="bg-white p-6 sm:p-8 lg:p-10">
+            <div class="w-10 h-10 bg-forest-100 text-forest-700 rounded-xl flex items-center justify-center mb-4">
+              <i class="fa-solid fa-eye text-base"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 mb-2.5">Visi</h3>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Menjadi lembaga fasilitator halal terdepan yang terpercaya di Indonesia, dengan jangkauan layanan hingga pasar ekspor internasional — khususnya Tiongkok dan Asia Tenggara.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 sm:p-8 lg:p-10">
+            <div class="w-10 h-10 bg-forest-100 text-forest-700 rounded-xl flex items-center justify-center mb-4">
+              <i class="fa-solid fa-bullseye text-base"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 mb-2.5">Misi</h3>
+            <ul class="space-y-2.5 text-slate-600 text-[14px] sm:text-[14.5px] leading-relaxed">
+              <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-forest-600 mt-1 text-xs flex-shrink-0"></i> Memberikan layanan pendampingan sertifikasi halal yang komprehensif dan terpercaya</li>
+              <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-forest-600 mt-1 text-xs flex-shrink-0"></i> Meningkatkan kapasitas pelaku usaha dalam implementasi SJPH secara mandiri</li>
+              <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-forest-600 mt-1 text-xs flex-shrink-0"></i> Menjembatani produk Indonesia ke pasar ekspor halal internasional</li>
+              <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-forest-600 mt-1 text-xs flex-shrink-0"></i> Mendorong pertumbuhan industri halal Indonesia secara berkelanjutan</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NILAI INTI -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="max-w-xl mb-8 sm:mb-10">
+          <p class="text-forest-700 text-xs sm:text-[13px] font-bold tracking-widest uppercase mb-2">Nilai Perusahaan</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Yang kami pegang teguh dalam setiap pekerjaan.</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="space-y-2.5 p-5 rounded-xl bg-slate-50 border border-slate-100">
+            <div class="w-10 h-10 bg-forest-100 text-forest-700 rounded-xl flex items-center justify-center">
+              <i class="fa-solid fa-shield-halved text-base"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg">Integritas</h3>
+            <p class="text-[14px] sm:text-[14.5px] text-slate-500 leading-relaxed">Kejujuran dan transparansi dalam setiap proses pendampingan dan pelaporan kepada klien.</p>
+          </div>
+          <div class="space-y-2.5 p-5 rounded-xl bg-slate-50 border border-slate-100">
+            <div class="w-10 h-10 bg-forest-100 text-forest-700 rounded-xl flex items-center justify-center">
+              <i class="fa-solid fa-star text-base"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg">Profesionalisme</h3>
+            <p class="text-[14px] sm:text-[14.5px] text-slate-500 leading-relaxed">Standar kerja tinggi dengan tim yang terlatih dan berpengalaman di bidangnya masing-masing.</p>
+          </div>
+          <div class="space-y-2.5 p-5 rounded-xl bg-slate-50 border border-slate-100">
+            <div class="w-10 h-10 bg-forest-100 text-forest-700 rounded-xl flex items-center justify-center">
+              <i class="fa-solid fa-handshake text-base"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg">Kolaborasi</h3>
+            <p class="text-[14px] sm:text-[14.5px] text-slate-500 leading-relaxed">Bekerja bersama klien sebagai mitra, bukan sekadar penyedia jasa — menuju tujuan yang sama.</p>
+          </div>
+          <div class="space-y-2.5 p-5 rounded-xl bg-slate-50 border border-slate-100">
+            <div class="w-10 h-10 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center">
+              <i class="fa-solid fa-earth-asia text-base"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg">Orientasi Global</h3>
+            <p class="text-[14px] sm:text-[14.5px] text-slate-500 leading-relaxed">Memandang jauh melampaui pasar domestik — membuka peluang ekspor bagi produk halal Indonesia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI DOKUMENTASI LAPANGAN (CAROUSEL) -->
+    <section class="py-14 sm:py-16 lg:py-20 bg-slate-50 border-t border-slate-200 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8 sm:mb-10">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-800 text-xs font-bold uppercase tracking-wider mb-2.5">
+              <i class="fa-solid fa-images text-[11px]"></i> Galeri Aktivitas
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight leading-snug">
+              Dokumentasi aktivitas & kemitraan industri.
+            </h2>
+          </div>
+
+          <!-- Controls -->
+          <div class="flex items-center gap-2.5 self-start md:self-end">
+            <button type="button" data-carousel-prev aria-label="Slide Sebelumnya"
+              class="w-11 h-11 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-forest-700 hover:text-white hover:border-forest-700 transition-all duration-200 flex items-center justify-center shadow-xs">
+              <i class="fa-solid fa-chevron-left text-sm"></i>
+            </button>
+            <button type="button" data-carousel-next aria-label="Slide Selanjutnya"
+              class="w-11 h-11 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-forest-700 hover:text-white hover:border-forest-700 transition-all duration-200 flex items-center justify-center shadow-xs">
+              <i class="fa-solid fa-chevron-right text-sm"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="carousel-container" data-carousel>
+          <div class="carousel-track flex gap-5 sm:gap-6 pb-4">
+
+            <!-- Slide 1 -->
+            <div class="carousel-slide w-[85%] sm:w-[50%] lg:w-[32%] flex-shrink-0">
+              <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md transition-all group flex flex-col h-full">
+                <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                  <img src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=800&q=80" 
+                    alt="Konsultasi Teknis Halal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 mb-1 group-hover:text-forest-700 transition-colors">
+                      Workshop Penyusunan Manual SJPH
+                    </h3>
+                    <p class="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
+                      Sesi intensif penyusunan SOP halal bersama jajaran manajemen dan tim QA industri.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide w-[85%] sm:w-[50%] lg:w-[32%] flex-shrink-0">
+              <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md transition-all group flex flex-col h-full">
+                <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                  <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
+                    alt="Inspeksi Pabrik Makanan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 mb-1 group-hover:text-forest-700 transition-colors">
+                      Audit Lapangan Fasilitas Produksi
+                    </h3>
+                    <p class="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
+                      Verifikasi langsung alur bahan baku dan sanitasi mesin di fasilitas manufaktur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide w-[85%] sm:w-[50%] lg:w-[32%] flex-shrink-0">
+              <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md transition-all group flex flex-col h-full">
+                <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                  <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80" 
+                    alt="Kemitraan Internasional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 mb-1 group-hover:text-forest-700 transition-colors">
+                      Forum Kemitraan Ekspor Halal China
+                    </h3>
+                    <p class="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
+                      Pertemuan bilateral bersama asosiasi perdagangan dan mitra sertifikasi luar negeri.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Dots -->
+          <div class="flex items-center justify-center gap-2 mt-6" data-carousel-dots></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 sm:py-14 lg:py-16 bg-forest-950 text-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Ingin bekerja sama dengan kami?</h2>
+          <p class="text-slate-300 mt-2 text-base">Hubungi tim kami dan mulai diskusi tentang kebutuhan sertifikasi Anda.</p>
+        </div>
+        <a href="kontak.html"
+           class="flex-shrink-0 inline-flex items-center gap-2 px-7 py-3.5 text-[15px] font-bold rounded-lg text-forest-950 bg-gold-400 hover:bg-yellow-400 transition-colors duration-200 shadow-sm">
+          Hubungi Kami
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-forest-950 text-slate-400 mt-auto">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 py-10 sm:py-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 pb-8 border-b border-white/10">
+
+        <div class="md:col-span-5 space-y-4">
+          <div class="inline-block bg-white p-1.5 rounded-xl shadow-sm">
+            <img src="assets/images/logo.svg" alt="PT Halal Standard Indonesia" class="h-10 w-auto object-contain">
+          </div>
+          <p class="text-sm leading-relaxed text-slate-400 max-w-xs">
+            Mitra profesional pendampingan dan sertifikasi halal nasional (BPJPH/MUI) serta fasilitasi ekspor ke pasar global dan Tiongkok.
+          </p>
+          <div class="flex gap-2 pt-1">
+            <a href="#" class="w-8 h-8 rounded-md bg-white/5 hover:bg-forest-700 flex items-center justify-center text-slate-400 hover:text-white transition-colors duration-200" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-md bg-white/5 hover:bg-forest-700 flex items-center justify-center text-slate-400 hover:text-white transition-colors duration-200" aria-label="Instagram"><i class="fa-brands fa-instagram text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-md bg-white/5 hover:bg-forest-700 flex items-center justify-center text-slate-400 hover:text-white transition-colors duration-200" aria-label="WeChat"><i class="fa-brands fa-weixin text-xs"></i></a>
+          </div>
+        </div>
+
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest">Navigasi</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-gold-400 transition-colors duration-200">Beranda</a></li>
+            <li><a href="tentang-kami.html" class="hover:text-gold-400 transition-colors duration-200">Tentang Kami</a></li>
+            <li><a href="layanan.html" class="hover:text-gold-400 transition-colors duration-200">Katalog Layanan</a></li>
+            <li><a href="kontak.html" class="hover:text-gold-400 transition-colors duration-200">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest">Kontak</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li class="flex items-start gap-2.5"><i class="fa-solid fa-location-dot text-gold-400 mt-0.5 text-xs flex-shrink-0"></i><span>Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan 12190</span></li>
+            <li class="flex items-center gap-2.5"><i class="fa-solid fa-phone text-gold-400 text-xs flex-shrink-0"></i><span>+62 (21) 8899-7700</span></li>
+            <li class="flex items-center gap-2.5"><i class="fa-brands fa-whatsapp text-emerald-400 text-xs flex-shrink-0"></i><span>+62 812-3456-7890</span></li>
+            <li class="flex items-center gap-2.5"><i class="fa-solid fa-envelope text-gold-400 text-xs flex-shrink-0"></i><span>info@halalstandard.co.id</span></li>
+            <li class="flex items-center gap-2.5"><i class="fa-brands fa-weixin text-emerald-400 text-xs flex-shrink-0"></i><span>WeChat: HalalStandardID</span></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-500">
+        <span>&copy; 2026 PT Halal Standard Indonesia. Hak Cipta Dilindungi Undang-Undang.</span>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-slate-400 transition-colors duration-200">Kebijakan Privasi</a>
+          <a href="#" class="hover:text-slate-400 transition-colors duration-200">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
