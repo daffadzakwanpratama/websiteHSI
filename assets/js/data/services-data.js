@@ -1,5 +1,5 @@
 /**
- * PT Halal Standard Indonesia - Service Catalog Data
+ * Gesid Halal Center - Service Catalog Data
  * Single Source of Truth for all service catalog information.
  * Edit this file to add, modify, or delete service items.
  */

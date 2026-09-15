@@ -1,6 +1,6 @@
 /**
- * PT Halal Standard Indonesia - Main Application Entry Point
- * Orchestrates and boots up all specialized modules.
+ * Gesid Halal Center - Main Application Entry Point
+ * Initializes all client-side modules and ensures seamless hydration.
  */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -37,5 +37,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // 7. Dynamic Service Detail Renderer
   if (typeof window.initServiceDetail === 'function') {
     window.initServiceDetail();
+  }
+
+  // 8. Conceptual Scroll & Micro-Interaction Animations
+  if (typeof window.initScrollAnimations === 'function') {
+    window.initScrollAnimations();
+  }
+
+  // 9. Countdown Timer Widget
+  if (typeof window.initCountdown === 'function') {
+    window.initCountdown();
   }
 });

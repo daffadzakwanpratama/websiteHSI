@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
 
-User-agent: Baiduspider
-Allow: /
-
-Sitemap: https://halalstandard.co.id/sitemap.xml
+Sitemap: https://gesidhalalcenter.com/sitemap.xml

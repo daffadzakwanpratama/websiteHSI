@@ -24,7 +24,7 @@
       slides.forEach((_, idx) => {
         const dot = document.createElement('button');
         dot.type = 'button';
-        dot.className = `transition-all duration-300 rounded-full ${idx === 0 ? 'w-8 h-2 bg-forest-400 shadow-sm' : 'w-2.5 h-2.5 bg-white/50 hover:bg-white'}`;
+        dot.className = `transition-all duration-300 rounded-full ${idx === 0 ? 'w-8 h-2 bg-[#c89020] shadow-sm' : 'w-2.5 h-2.5 bg-white/60 hover:bg-white'}`;
         dot.setAttribute('aria-label', `Slide ${idx + 1}`);
         dot.addEventListener('click', (e) => {
           e.stopPropagation();
@@ -40,9 +40,9 @@
       const dots = dotsContainer.querySelectorAll('button');
       dots.forEach((dot, idx) => {
         if (idx === index) {
-          dot.className = 'transition-all duration-300 rounded-full w-8 h-2 bg-forest-400 shadow-sm';
+          dot.className = 'transition-all duration-300 rounded-full w-8 h-2 bg-[#c89020] shadow-sm';
         } else {
-          dot.className = 'transition-all duration-300 rounded-full w-2.5 h-2.5 bg-white/50 hover:bg-white';
+          dot.className = 'transition-all duration-300 rounded-full w-2.5 h-2.5 bg-white/60 hover:bg-white';
         }
       });
     }

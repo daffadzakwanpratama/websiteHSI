@@ -35,7 +35,7 @@
     if (featEl && Array.isArray(d.features)) {
       featEl.innerHTML = d.features.map(f =>
         `<li class="flex items-start gap-3">
-          <i class="fa-solid fa-check text-forest-600 text-xs mt-1 flex-shrink-0"></i>
+          <i class="fa-solid fa-check text-[#c89020] text-xs mt-1 flex-shrink-0"></i>
           <span class="text-sm text-slate-700">${f}</span>
         </li>`
       ).join('');
@@ -45,7 +45,7 @@
     if (targetEl && Array.isArray(d.target)) {
       targetEl.innerHTML = d.target.map(t =>
         `<li class="flex items-center gap-2">
-          <span class="w-1.5 h-1.5 rounded-full bg-forest-600 flex-shrink-0"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#c89020] flex-shrink-0"></span>
           <span>${t}</span>
         </li>`
       ).join('');

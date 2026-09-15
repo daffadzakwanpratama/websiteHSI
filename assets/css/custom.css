@@ -1,6 +1,6 @@
 /* 
   =============================================================================
-  PT HALAL STANDARD INDONESIA — DESIGN SYSTEM & CUSTOM STYLESHEET
+  GESID HALAL CENTER — DESIGN SYSTEM & CUSTOM STYLESHEET
   =============================================================================
   TABLE OF CONTENTS:
   -----------------------------------------------------------------------------
@@ -32,12 +32,19 @@
   --color-forest-900: #0b3320;
   --color-forest-950: #061a10;
 
+  --color-gold-50: #fffdf5;
+  --color-gold-100: #fef9e7;
+  --color-gold-200: #fdf0c5;
+  --color-gold-300: #fbe29a;
   --color-gold-400: #e8a317;
-  --color-gold-500: #cc8b0f;
+  --color-gold-500: #c89020;
+  --color-gold-600: #b57f18;
+  --color-gold-700: #946310;
+  --color-gold-800: #754d10;
 
-  /* Aliases */
-  --color-primary: var(--color-forest-700);
-  --color-primary-dark: var(--color-forest-800);
+  /* Primary Theme Tokens: Rich Gold Accents with White Background */
+  --color-primary: var(--color-gold-500);
+  --color-primary-dark: var(--color-gold-600);
   --color-accent: var(--color-gold-400);
 
   /* Typography Families */
@@ -83,7 +90,11 @@ p {
 }
 
 /* ── 4. EDITORIAL TYPOGRAPHY HIERARCHY ────────────────────────────────────── */
-h1, h2, h3, .font-serif, .font-display {
+h1,
+h2,
+h3,
+.font-serif,
+.font-display {
   font-family: var(--font-serif);
   letter-spacing: -0.02em;
   text-wrap: balance;
@@ -110,7 +121,8 @@ h4 {
   letter-spacing: 0.08em;
 }
 
-.kicker, [class*="tracking-widest"] {
+.kicker,
+[class*="tracking-widest"] {
   font-family: var(--font-sans);
   letter-spacing: 0.1em;
 }
@@ -134,7 +146,7 @@ h4 {
 }
 
 .nav-link:hover::after,
-.nav-link.text-forest-800::after {
+.nav-link.text-\[\#c89020\]::after {
   width: 100%;
 }
 
@@ -158,7 +170,7 @@ h4 {
 }
 
 .mobile-nav-link.active {
-  background-color: #eaf5ef;
+  background-color: #fdf0c5;
   color: var(--color-primary);
   font-weight: 700;
   border-left: 3.5px solid var(--color-primary);
@@ -245,17 +257,233 @@ h4 {
 }
 
 .text-shadow-hero {
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7), 0 1px 3px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.95);
+}
+
+/* ── COUNTDOWN DIGIT BLOCKS (LPPOM STYLE) ─────────────────────────────────── */
+.cd-digit-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.85rem;
+  height: 2.6rem;
+  background: linear-gradient(180deg, #16a34a 0%, #15803d 50%, #14532d 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 1.45rem;
+  line-height: 1;
+  border-radius: 0.45rem;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.45), 0 4px 10px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 640px) {
+  .cd-digit-box {
+    width: 2.35rem;
+    height: 3.15rem;
+    font-size: 1.85rem;
+    border-radius: 0.6rem;
+  }
 }
 
 /* ── 7. ANIMATIONS & MICRO-INTERACTIONS ───────────────────────────────────── */
+:root {
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-reveal: 0.85s;
+}
+
+/* Base Scroll Reveal Classes */
+[data-animate],
+.reveal-on-scroll {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: transform var(--duration-reveal) var(--ease-smooth),
+    opacity var(--duration-reveal) var(--ease-smooth),
+    filter var(--duration-reveal) var(--ease-smooth);
+}
+
+/* Animations Variants */
+[data-animate="fade-up"],
+.reveal-on-scroll {
+  transform: translate3d(0, 28px, 0);
+}
+
+[data-animate="fade-down"] {
+  transform: translate3d(0, -28px, 0);
+}
+
+[data-animate="fade-left"] {
+  transform: translate3d(36px, 0, 0);
+}
+
+[data-animate="fade-right"] {
+  transform: translate3d(-36px, 0, 0);
+}
+
+[data-animate="fade-in"] {
+  transform: none;
+}
+
+[data-animate="scale-up"] {
+  transform: scale3d(0.94, 0.94, 1);
+}
+
+[data-animate="blur-in"] {
+  transform: translate3d(0, 20px, 0);
+  filter: blur(8px);
+}
+
+/* Revealed Active State */
+[data-animate].is-revealed,
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  filter: blur(0px);
+}
+
+/* Stagger Container & Children */
+[data-stagger]>* {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  will-change: transform, opacity;
+  transition: transform var(--duration-reveal) var(--ease-smooth),
+    opacity var(--duration-reveal) var(--ease-smooth);
+}
+
+[data-stagger]>*.is-revealed,
+[data-stagger].is-revealed>* {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Hover Lift & Micro-Interactions */
+.hover-lift {
+  transition: transform 0.4s var(--ease-smooth),
+    box-shadow 0.4s var(--ease-smooth),
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -10px rgba(15, 68, 41, 0.12),
+    0 10px 15px -5px rgba(0, 0, 0, 0.04);
+}
+
+.hover-lift-sm {
+  transition: transform 0.35s var(--ease-smooth),
+    box-shadow 0.35s var(--ease-smooth),
+    border-color 0.3s ease;
+}
+
+.hover-lift-sm:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -5px rgba(15, 68, 41, 0.08);
+}
+
+.hover-scale {
+  transition: transform 0.4s var(--ease-smooth);
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+/* Luxury Card Glow Effect */
+.hover-glow-gold {
+  position: relative;
+  transition: all 0.4s var(--ease-smooth);
+}
+
+.hover-glow-gold:hover {
+  box-shadow: 0 0 0 1px rgba(232, 163, 23, 0.4),
+    0 12px 28px -6px rgba(232, 163, 23, 0.2);
+}
+
+.hover-glow-forest {
+  position: relative;
+  transition: all 0.4s var(--ease-smooth);
+}
+
+.hover-glow-forest:hover {
+  box-shadow: 0 0 0 1px rgba(26, 122, 74, 0.35),
+    0 16px 32px -8px rgba(11, 51, 32, 0.18);
+}
+
+/* Shimmer Button Light Sheen */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(60deg,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0.35) 50%,
+      rgba(255, 255, 255, 0) 80%);
+  transform: rotate(25deg);
+  transition: all 0.75s ease;
+  pointer-events: none;
+}
+
+.btn-shimmer:hover::after {
+  left: 140%;
+}
+
+/* Subtle Floating Animation for Badges/Graphics */
+.animate-float-slow {
+  animation: float-slow 4.5s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Subtle Breathing Pulse */
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s infinite;
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.75;
+    transform: scale(0.97);
+  }
+}
+
+/* Video Play Button */
 .video-play-btn {
   position: relative;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.4s var(--ease-bounce);
 }
 
 .video-play-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.12);
 }
 
 .video-play-btn::before {
@@ -272,13 +500,35 @@ h4 {
     transform: scale(0.95);
     opacity: 0.8;
   }
+
   50% {
-    transform: scale(1.2);
+    transform: scale(1.25);
     opacity: 0;
   }
+
   100% {
     transform: scale(0.95);
     opacity: 0;
+  }
+}
+
+/* Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  [data-animate],
+  .reveal-on-scroll,
+  [data-stagger]>*,
+  .hover-lift,
+  .hover-lift-sm,
+  .hover-scale,
+  .animate-float-slow,
+  .animate-pulse-glow,
+  .video-play-btn::before {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+    animation: none !important;
   }
 }
 
@@ -303,9 +553,9 @@ h4 {
 .brand-title {
   font-family: var(--font-sans);
   font-weight: 800;
-  font-size: 0.98rem;
+  font-size: 1.05rem;
   line-height: 1.1;
-  color: #0a3d24;
+  color: #b57f18;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   transition: color 0.2s ease;
@@ -331,9 +581,9 @@ h4 {
 .brand-subtitle {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 0.52rem;
+  font-size: 0.53rem;
   line-height: 1;
-  color: #0a3d24;
+  color: #946310;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   padding-left: 0.22em;
@@ -344,11 +594,13 @@ h4 {
   .brand-logo-wrap {
     gap: 0.45rem;
   }
+
   .brand-title {
-    font-size: 0.84rem;
+    font-size: 0.92rem;
   }
+
   .brand-subtitle {
-    font-size: 0.46rem;
+    font-size: 0.48rem;
     letter-spacing: 0.18em;
     padding-left: 0.18em;
   }
@@ -389,4 +641,49 @@ textarea:focus {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+/* ── 11. FLOATING WHATSAPP CTA BUTTON ─────────────────────────────────────── */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.15rem;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 9999px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.38), 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.floating-whatsapp-btn:hover {
+  background-color: #20bd5a;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.48), 0 3px 8px rgba(0, 0, 0, 0.12);
+  color: #ffffff;
+}
+
+.floating-whatsapp-btn i {
+  font-size: 1.35rem;
+}
+
+@media (max-width: 640px) {
+  .floating-whatsapp-btn {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    padding: 0.75rem;
+    border-radius: 9999px;
+  }
+
+  .floating-whatsapp-btn span {
+    display: none;
+  }
 }

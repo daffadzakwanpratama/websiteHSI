@@ -48,10 +48,10 @@
     document.querySelectorAll('.nav-link').forEach(link => {
       const href = link.getAttribute('href');
       if (href === activeTarget) {
-        link.classList.add('text-forest-800', 'font-semibold');
+        link.classList.add('text-[#c89020]', 'font-semibold');
         link.classList.remove('text-slate-600');
       } else {
-        link.classList.remove('text-forest-800', 'font-semibold');
+        link.classList.remove('text-[#c89020]', 'font-semibold');
         link.classList.add('text-slate-600');
       }
     });
