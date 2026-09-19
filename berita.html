@@ -136,7 +136,7 @@
   <main class="flex-1">
 
     <!-- HERO MINI -->
-    <section class="news-hero-bg py-14 sm:py-16 lg:py-20 relative overflow-hidden">
+    <section class="news-hero-bg pt-10 pb-16 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 relative overflow-hidden">
       <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#c89020]/8 rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute -bottom-16 -left-16 w-72 h-72 bg-[#c89020]/6 rounded-full blur-3xl pointer-events-none"></div>
       <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
@@ -149,16 +149,16 @@
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-xs font-bold uppercase tracking-wider mb-4">
             <i class="fa-solid fa-newspaper text-[#e8a317] text-[11px]"></i> Berita & Artikel
           </div>
-          <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight mb-3 font-serif">
+          <h1 class="text-2xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight mb-3 font-serif">
             Informasi Terkini Dunia Halal
           </h1>
-          <p class="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
+          <p class="text-white/70 text-sm sm:text-lg leading-relaxed max-w-xl">
             Regulasi, kebijakan BPJPH, dan perkembangan industri halal Indonesia terbaru untuk Anda.
           </p>
-          <div class="flex flex-wrap items-center gap-6 mt-8 pt-6 border-t border-white/15">
-            <div class="flex items-center gap-2 text-white/80"><i class="fa-solid fa-file-lines text-[#e8a317] text-sm"></i><span class="text-sm font-semibold">12 Artikel Tersedia</span></div>
-            <div class="flex items-center gap-2 text-white/80"><i class="fa-solid fa-tags text-[#e8a317] text-sm"></i><span class="text-sm font-semibold">4 Kategori</span></div>
-            <div class="flex items-center gap-2 text-white/80"><i class="fa-regular fa-clock text-[#e8a317] text-sm"></i><span class="text-sm font-semibold">Diperbarui 18 Sep 2026</span></div>
+          <div class="flex flex-wrap items-center gap-x-5 gap-y-2 mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-white/15">
+            <div class="flex items-center gap-2 text-white/80"><i class="fa-solid fa-file-lines text-[#e8a317] text-sm"></i><span class="text-xs sm:text-sm font-semibold">12 Artikel Tersedia</span></div>
+            <div class="flex items-center gap-2 text-white/80"><i class="fa-solid fa-tags text-[#e8a317] text-sm"></i><span class="text-xs sm:text-sm font-semibold">4 Kategori</span></div>
+            <div class="flex items-center gap-2 text-white/80"><i class="fa-regular fa-clock text-[#e8a317] text-sm"></i><span class="text-xs sm:text-sm font-semibold">Diperbarui 18 Sep 2026</span></div>
           </div>
         </div>
       </div>
@@ -185,9 +185,9 @@
     </div>
 
     <!-- ARTICLES GRID -->
-    <section class="py-12 sm:py-14 bg-slate-50">
+    <section class="py-10 sm:py-14 bg-slate-50">
       <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-        <p id="resultCount" class="text-sm text-slate-500 font-medium mb-6">Menampilkan <span id="countNum" class="font-bold text-slate-800">4</span> dari 12 artikel</p>
+        <p id="resultCount" class="text-xs sm:text-sm text-slate-500 font-medium mb-6">Menampilkan <span id="countNum" class="font-bold text-slate-800">4</span> dari <span id="totalNum" class="font-bold text-slate-800">12</span> artikel</p>
 
         <div id="articlesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
 
@@ -566,7 +566,10 @@
         c.classList.add('fade-in-card');
       });
       const shown = Math.min(visibleCount, matching.length);
-      document.getElementById('countNum').textContent = shown + ' dari ' + matching.length;
+      const countEl = document.getElementById('countNum');
+      const totalEl = document.getElementById('totalNum');
+      if (countEl) countEl.textContent = shown;
+      if (totalEl) totalEl.textContent = matching.length;
       document.getElementById('searchNoResult').style.display = matching.length === 0 ? 'block' : 'none';
       const rem = matching.length - visibleCount;
       document.getElementById('loadMoreContainer').style.display = rem > 0 ? 'flex' : 'none';
