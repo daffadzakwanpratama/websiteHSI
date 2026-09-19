@@ -105,51 +105,45 @@
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-[72px]">
 
-        <!-- Brand Logo Lockup -->
+        <!-- Brand Logo -->
         <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group z-10" aria-label="Gesid Halal Center">
-          <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center"
-            class="h-10 sm:h-11 w-auto object-contain flex-shrink-0">
+          <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-10 sm:h-11 w-auto object-contain flex-shrink-0">
           <div class="flex flex-col justify-center select-none">
-            <span class="font-extrabold text-[14px] sm:text-[16px] leading-tight tracking-tight text-[#b57f18] group-hover:text-[#946310] transition-colors uppercase whitespace-nowrap font-sans">
-              GESID
-            </span>
+            <span class="font-extrabold text-[14px] sm:text-[16px] leading-tight tracking-tight text-[#b57f18] group-hover:text-[#946310] transition-colors uppercase whitespace-nowrap font-sans">GESID</span>
             <div class="flex items-center gap-1.5 w-full mt-0.5">
               <span class="h-[1.5px] flex-1 bg-[#c89020] rounded-full"></span>
-              <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.22em] text-[#946310] uppercase pl-[0.22em] whitespace-nowrap font-sans">
-                HALAL CENTER
-              </span>
+              <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.22em] text-[#946310] uppercase pl-[0.22em] whitespace-nowrap font-sans">HALAL CENTER</span>
               <span class="h-[1.5px] flex-1 bg-[#c89020] rounded-full"></span>
             </div>
           </div>
         </a>
 
-        <!-- Navigation Links (Centered) -->
-        <nav class="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-          <a href="index.html"
-            class="nav-link font-semibold text-[#c89020] text-sm transition-colors duration-200">Beranda</a>
-          <a href="tentang-kami.html"
-            class="nav-link text-slate-600 hover:text-[#c89020] text-sm transition-colors duration-200">Tentang Kami</a>
-          <a href="layanan.html"
-            class="nav-link text-slate-600 hover:text-[#c89020] text-sm transition-colors duration-200">Layanan</a>
-          <a href="kontak.html"
-            class="nav-link text-slate-600 hover:text-[#c89020] text-sm transition-colors duration-200">Kontak</a>
+        <!-- Desktop Navigation (Centered) -->
+        <nav class="hidden lg:flex items-center gap-7 absolute left-1/2 -translate-x-1/2">
+          <a href="index.html" class="nav-link font-semibold text-[#c89020] text-sm transition-colors duration-200">Beranda</a>
+          <a href="tentang-kami.html" class="nav-link text-slate-600 hover:text-[#c89020] text-sm transition-colors duration-200">Tentang Kami</a>
+          <a href="layanan.html" class="nav-link text-slate-600 hover:text-[#c89020] text-sm transition-colors duration-200">Layanan</a>
+          <a href="berita.html" class="nav-link text-slate-600 hover:text-[#c89020] text-sm transition-colors duration-200">Berita</a>
+          <a href="kontak.html" class="nav-link text-slate-600 hover:text-[#c89020] text-sm transition-colors duration-200">Kontak</a>
         </nav>
 
-        <!-- Mobile Menu Toggle -->
-        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition z-10"
-          aria-label="Menu">
-          <i class="fa-solid fa-bars text-lg"></i>
-        </button>
+        <!-- Desktop CTA + Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <a href="kontak.html" class="hidden lg:inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-bold rounded-xl text-white bg-[#c89020] hover:bg-[#b57f18] transition-all duration-200 shadow-sm hover:shadow-md btn-shimmer">
+            Konsultasi Gratis
+          </a>
+          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition z-10" aria-label="Menu">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
 
       </div>
     </div>
   </header>
 
   <!-- MOBILE DRAWER -->
-  <div id="mobileBackdrop" class="fixed inset-0 bg-slate-900/50 z-50 hidden opacity-0 transition-opacity duration-200">
-  </div>
-  <div id="mobileMenuDrawer"
-    class="fixed top-0 right-0 bottom-0 w-72 bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+  <div id="mobileBackdrop" class="fixed inset-0 bg-slate-900/50 z-50 hidden opacity-0 transition-opacity duration-200"></div>
+  <div id="mobileMenuDrawer" class="fixed top-0 right-0 bottom-0 w-72 bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
     <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
       <div class="flex items-center gap-2.5">
         <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-9 w-auto object-contain">
@@ -164,40 +158,32 @@
     </div>
     <nav class="flex-1 overflow-y-auto p-5 space-y-1.5 text-sm">
       <a href="index.html" class="mobile-nav-link active">
-        <span class="flex items-center">
-          <i class="fa-solid fa-house nav-icon"></i>
-          <span>Beranda</span>
-        </span>
+        <span class="flex items-center"><i class="fa-solid fa-house nav-icon"></i><span>Beranda</span></span>
         <span class="active-dot"></span>
       </a>
       <a href="tentang-kami.html" class="mobile-nav-link">
-        <span class="flex items-center">
-          <i class="fa-solid fa-building nav-icon"></i>
-          <span>Tentang Kami</span>
-        </span>
+        <span class="flex items-center"><i class="fa-solid fa-building nav-icon"></i><span>Tentang Kami</span></span>
         <span class="active-dot"></span>
       </a>
       <a href="layanan.html" class="mobile-nav-link">
-        <span class="flex items-center">
-          <i class="fa-solid fa-layer-group nav-icon"></i>
-          <span>Layanan</span>
-        </span>
+        <span class="flex items-center"><i class="fa-solid fa-layer-group nav-icon"></i><span>Layanan</span></span>
+        <span class="active-dot"></span>
+      </a>
+      <a href="berita.html" class="mobile-nav-link">
+        <span class="flex items-center"><i class="fa-solid fa-newspaper nav-icon"></i><span>Berita</span></span>
         <span class="active-dot"></span>
       </a>
       <a href="kontak.html" class="mobile-nav-link">
-        <span class="flex items-center">
-          <i class="fa-solid fa-envelope nav-icon"></i>
-          <span>Kontak</span>
-        </span>
+        <span class="flex items-center"><i class="fa-solid fa-envelope nav-icon"></i><span>Kontak</span></span>
         <span class="active-dot"></span>
       </a>
+
       <div class="pt-4 mt-2 border-t border-slate-100">
-        <a href="kontak.html"
-          class="block text-center py-3 text-[14px] font-bold rounded-xl text-white bg-[#c89020] hover:bg-[#b57f18] transition shadow-sm">Konsultasi
-          Gratis</a>
+        <a href="kontak.html" class="block text-center py-3 text-[14px] font-bold rounded-xl text-white bg-[#c89020] hover:bg-[#b57f18] transition shadow-sm">Konsultasi Gratis</a>
       </div>
     </nav>
   </div>
+
 
   <main>
 
@@ -329,6 +315,196 @@
         </div>
       </div>
     </div>
+
+    <!-- BERITA TERKINI -->
+    <section class="py-14 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200/80" id="berita">
+      <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div data-animate="fade-up" class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/80 text-amber-900 text-xs font-bold uppercase tracking-wider mb-2.5">
+              <i class="fa-solid fa-newspaper text-[11px] text-[#c89020]"></i> Berita & Informasi
+            </div>
+            <h2 class="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-slate-900 tracking-tight leading-snug">
+              Berita Terkini
+            </h2>
+            <p class="text-slate-500 text-sm sm:text-base mt-1 leading-relaxed">
+              Informasi terbaru seputar regulasi, kebijakan BPJPH, dan dunia halal Indonesia.
+            </p>
+          </div>
+          <a href="berita.html" class="inline-flex items-center gap-1.5 text-sm sm:text-[15px] font-bold text-[#c89020] hover:text-[#946310] transition-colors duration-200 flex-shrink-0">
+            Lihat semua berita <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div data-animate="fade-up" data-delay="60" class="flex items-center gap-2 mb-8 flex-wrap" id="beritaTabs">
+          <button onclick="filterBerita('semua')" data-tab="semua"
+            class="berita-tab active-tab px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 flex items-center gap-1.5">
+            <i class="fa-solid fa-border-all text-[11px]"></i> Semua
+          </button>
+          <button onclick="filterBerita('nasional')" data-tab="nasional"
+            class="berita-tab px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 flex items-center gap-1.5">
+            <i class="fa-solid fa-flag text-[11px]"></i> Nasional
+          </button>
+          <button onclick="filterBerita('internasional')" data-tab="internasional"
+            class="berita-tab px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 flex items-center gap-1.5">
+            <i class="fa-solid fa-globe text-[11px]"></i> Internasional
+          </button>
+          <button onclick="filterBerita('daerah')" data-tab="daerah"
+            class="berita-tab px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 flex items-center gap-1.5">
+            <i class="fa-solid fa-location-dot text-[11px]"></i> Daerah
+          </button>
+        </div>
+
+        <!-- News Grid -->
+        <div id="beritaGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6" data-stagger="90">
+
+          <!-- Artikel 1 — Nasional -->
+          <article class="berita-card" data-kategori="nasional">
+            <a href="detail-berita.html?id=1" class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
+              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
+                <img
+                  src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
+                  alt="Pemerintah Dorong Percepatan Sertifikasi Halal UMKM 2026"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  loading="lazy">
+                <span class="absolute top-3 left-3 px-2.5 py-0.5 bg-[#c89020] text-white text-[10px] font-bold rounded-md uppercase tracking-wide shadow-xs">
+                  Nasional
+                </span>
+              </div>
+              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5">
+                    <i class="fa-regular fa-calendar text-[10px]"></i> 18 Sep 2026
+                  </p>
+                  <h3 class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
+                    Pemerintah Targetkan 1 Juta UMKM Bersertifikat Halal Sebelum Oktober 2026
+                  </h3>
+                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                    Kemenag bersama BPJPH mempercepat program fasilitasi sertifikasi halal gratis bagi pelaku usaha mikro dan kecil di seluruh Indonesia.
+                  </p>
+                </div>
+                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
+                  <span class="text-[11px] text-slate-400 font-medium">5 menit baca</span>
+                  <span class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artikel 2 — Internasional -->
+          <article class="berita-card" data-kategori="internasional">
+            <a href="detail-berita.html?id=2" class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
+              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
+                <img
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80"
+                  alt="Kerjasama Halal Indonesia-Malaysia"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  loading="lazy">
+                <span class="absolute top-3 left-3 px-2.5 py-0.5 bg-blue-600 text-white text-[10px] font-bold rounded-md uppercase tracking-wide shadow-xs">
+                  Internasional
+                </span>
+              </div>
+              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5">
+                    <i class="fa-regular fa-calendar text-[10px]"></i> 15 Sep 2026
+                  </p>
+                  <h3 class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
+                    Indonesia & Malaysia Perkuat Kerja Sama Pengakuan Sertifikasi Halal ASEAN
+                  </h3>
+                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                    Forum bilateral halal ASEAN menghasilkan kesepakatan harmonisasi standar sertifikasi halal antara dua negara berpenduduk Muslim terbesar di kawasan.
+                  </p>
+                </div>
+                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
+                  <span class="text-[11px] text-slate-400 font-medium">7 menit baca</span>
+                  <span class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artikel 3 — Daerah -->
+          <article class="berita-card" data-kategori="daerah">
+            <a href="detail-berita.html?id=3" class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
+              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
+                <img
+                  src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80"
+                  alt="Jawa Barat Sertifikasi Halal"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  loading="lazy">
+                <span class="absolute top-3 left-3 px-2.5 py-0.5 bg-emerald-600 text-white text-[10px] font-bold rounded-md uppercase tracking-wide shadow-xs">
+                  Daerah
+                </span>
+              </div>
+              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5">
+                    <i class="fa-regular fa-calendar text-[10px]"></i> 12 Sep 2026
+                  </p>
+                  <h3 class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
+                    Jawa Barat Catat Rekor: 85 Ribu Produk UMKM Tersertifikasi Halal dalam Setahun
+                  </h3>
+                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                    Disperindag Jabar bersama LPH mitra berhasil melampaui target sertifikasi halal tahunan berkat program pendampingan intensif di 27 kabupaten/kota.
+                  </p>
+                </div>
+                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
+                  <span class="text-[11px] text-slate-400 font-medium">4 menit baca</span>
+                  <span class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artikel 4 — Nasional -->
+          <article class="berita-card" data-kategori="nasional">
+            <a href="detail-berita.html?id=4" class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
+              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
+                <img
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"
+                  alt="Wajib Halal Oktober 2026"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  loading="lazy">
+                <span class="absolute top-3 left-3 px-2.5 py-0.5 bg-red-600 text-white text-[10px] font-bold rounded-md uppercase tracking-wide shadow-xs flex items-center gap-1">
+                  <i class="fa-solid fa-fire text-[9px]"></i> Trending
+                </span>
+              </div>
+              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5">
+                    <i class="fa-regular fa-calendar text-[10px]"></i> 10 Sep 2026
+                  </p>
+                  <h3 class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
+                    Wajib Halal Oktober 2026: Ini Sanksi bagi Produk yang Belum Bersertifikat
+                  </h3>
+                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                    Mulai 18 Oktober 2026, seluruh produk yang wajib bersertifikat halal namun belum memiliki sertifikat resmi akan dikenakan sanksi administratif.
+                  </p>
+                </div>
+                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
+                  <span class="text-[11px] text-slate-400 font-medium">6 menit baca</span>
+                  <span class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- Empty State (hidden by default) -->
+        <div id="beritaEmpty" class="hidden text-center py-16">
+          <div class="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center mx-auto mb-4">
+            <i class="fa-regular fa-newspaper text-2xl text-slate-400"></i>
+          </div>
+          <p class="text-slate-500 font-medium">Belum ada berita untuk kategori ini.</p>
+        </div>
+
+      </div>
+    </section>
 
     <!-- JENIS PRODUK WAJIB SERTIFIKASI HALAL -->
     <section class="py-12 sm:py-16 lg:py-20 bg-white border-b border-slate-100">
@@ -978,6 +1154,8 @@
 
       </div>
     </section>
+
+
 
     <!-- CTA -->
     <section
