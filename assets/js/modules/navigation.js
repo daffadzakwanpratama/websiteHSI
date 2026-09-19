@@ -40,6 +40,8 @@
       'tentang-kami.html': 'tentang-kami.html',
       'layanan.html': 'layanan.html',
       'detail-layanan.html': 'layanan.html', // Detail layanan maps to Layanan in main navbar
+      'berita.html': 'berita.html',
+      'detail-berita.html': 'berita.html', // Detail berita maps to Berita in main navbar
       'kontak.html': 'kontak.html'
     };
     const activeTarget = pageMap[currentFile] || currentFile;

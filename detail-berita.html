@@ -131,29 +131,31 @@
   </header>
 
   <!-- MOBILE DRAWER -->
-  <div id="mobileDrawer" class="mobile-drawer fixed inset-y-0 right-0 w-80 max-w-[85vw] bg-white z-50 shadow-2xl p-6 flex flex-col justify-between lg:hidden">
-    <div class="flex items-center justify-between pb-4 border-b border-slate-100">
-      <div class="flex items-center gap-2">
-        <img src="assets/images/logo-emblem.png" alt="Gesid Logo" class="h-8 w-auto">
-        <span class="font-extrabold text-[#b57f18] text-sm font-sans tracking-wide">GESID HALAL CENTER</span>
+  <div id="mobileBackdrop" class="fixed inset-0 bg-slate-900/50 z-50 hidden opacity-0 transition-opacity duration-200"></div>
+  <div id="mobileMenuDrawer" class="fixed top-0 right-0 bottom-0 w-72 bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-9 w-auto object-contain">
+        <div class="flex flex-col select-none">
+          <span class="font-extrabold text-[14px] leading-tight text-[#b57f18] uppercase font-sans">GESID</span>
+          <span class="text-[7.5px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans">HALAL CENTER</span>
+        </div>
       </div>
-      <button id="closeDrawerBtn" class="p-2 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition" aria-label="Tutup Menu">
+      <button id="closeMobileMenuBtn" class="p-1.5 rounded text-slate-500 hover:text-slate-800" aria-label="Tutup Menu">
         <i class="fa-solid fa-xmark text-lg"></i>
       </button>
     </div>
-
-    <!-- Mobile Navigation Links (Clean Flat Links) -->
-    <nav class="flex-1 py-4 space-y-1 overflow-y-auto">
+    <nav class="flex-1 overflow-y-auto p-5 space-y-1.5 text-sm">
       <a href="index.html" class="mobile-nav-link">
         <span class="flex items-center"><i class="fa-solid fa-house nav-icon"></i><span>Beranda</span></span>
         <span class="active-dot"></span>
       </a>
       <a href="tentang-kami.html" class="mobile-nav-link">
-        <span class="flex items-center"><i class="fa-solid fa-circle-info nav-icon"></i><span>Tentang Kami</span></span>
+        <span class="flex items-center"><i class="fa-solid fa-building nav-icon"></i><span>Tentang Kami</span></span>
         <span class="active-dot"></span>
       </a>
       <a href="layanan.html" class="mobile-nav-link">
-        <span class="flex items-center"><i class="fa-solid fa-certificate nav-icon"></i><span>Layanan</span></span>
+        <span class="flex items-center"><i class="fa-solid fa-layer-group nav-icon"></i><span>Layanan</span></span>
         <span class="active-dot"></span>
       </a>
       <a href="berita.html" class="mobile-nav-link active">
