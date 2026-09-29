@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -21,46 +21,13 @@
   <meta name="twitter:description" content="Informasi dan panduan terkini sertifikasi halal resmi BPJPH & MUI.">
   <meta name="twitter:image" content="https://gesidhalalcenter.com/assets/images/logo.png">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            forest: {
-              50: '#f0faf4',
-              100: '#dcf5e7',
-              200: '#b8ebcf',
-              600: '#1a7a4a',
-              700: '#155f3a',
-              800: '#0f4429',
-              900: '#0b3320',
-              950: '#061a10',
-            },
-            gold: {
-              50: '#fffdf5',
-              100: '#fef9e7',
-              200: '#fdf0c5',
-              300: '#fbe29a',
-              400: '#e8a317',
-              500: '#c89020',
-              600: '#b57f18',
-              700: '#946310',
-              800: '#754d10',
-              900: '#5c3c10',
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
-            serif: ['"Lora"', 'Georgia', 'serif'],
-            display: ['"Lora"', 'Georgia', 'serif'],
-          },
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <!-- Security Headers (meta fallback) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/custom.css">
 
   <!-- Schema.org Structured Data -->
@@ -93,13 +60,13 @@
         <!-- Brand Logo Lockup -->
         <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group z-10" aria-label="Gesid Halal Center">
           <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-10 sm:h-11 w-auto object-contain flex-shrink-0">
-          <div class="flex flex-col justify-center select-none">
-            <span class="font-extrabold text-[14px] sm:text-[16px] leading-tight tracking-tight text-[#b57f18] group-hover:text-[#946310] transition-colors uppercase whitespace-nowrap font-sans">
+          <div class="flex flex-col justify-center items-center select-none">
+            <span class="font-extrabold text-[14px] sm:text-[16px] leading-tight tracking-tight text-[#b57f18] group-hover:text-[#946310] transition-colors uppercase whitespace-nowrap font-sans text-center">
               GESID
             </span>
             <div class="flex items-center gap-1.5 w-full mt-0.5">
               <span class="h-[1.5px] flex-1 bg-[#c89020] rounded-full"></span>
-              <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.22em] text-[#946310] uppercase pl-[0.22em] whitespace-nowrap font-sans">
+              <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.22em] text-[#946310] uppercase pl-[0.22em] whitespace-nowrap font-sans text-center">
                 HALAL CENTER
               </span>
               <span class="h-[1.5px] flex-1 bg-[#c89020] rounded-full"></span>
@@ -136,9 +103,9 @@
     <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
       <div class="flex items-center gap-2.5">
         <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-9 w-auto object-contain">
-        <div class="flex flex-col select-none">
-          <span class="font-extrabold text-[14px] leading-tight text-[#b57f18] uppercase font-sans">GESID</span>
-          <span class="text-[7.5px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans">HALAL CENTER</span>
+        <div class="flex flex-col items-center select-none">
+          <span class="font-extrabold text-[14px] leading-tight text-[#b57f18] uppercase font-sans text-center">GESID</span>
+          <span class="text-[7.5px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans text-center pl-[0.2em]">HALAL CENTER</span>
         </div>
       </div>
       <button id="closeMobileMenuBtn" class="p-1.5 rounded text-slate-500 hover:text-slate-800" aria-label="Tutup Menu">
@@ -409,9 +376,9 @@
         <div class="md:col-span-5 space-y-4">
           <div class="flex items-center gap-3">
             <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-10 w-auto">
-            <div>
-              <span class="font-extrabold text-white text-base tracking-tight font-sans">GESID</span>
-              <span class="block text-[8.5px] font-bold tracking-[0.2em] text-[#e8a317] uppercase">HALAL CENTER</span>
+            <div class="flex flex-col items-center select-none">
+              <span class="font-extrabold text-white text-base tracking-tight font-sans text-center">GESID</span>
+              <span class="block text-[8.5px] font-bold tracking-[0.2em] text-[#e8a317] uppercase text-center pl-[0.2em]">HALAL CENTER</span>
             </div>
           </div>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
@@ -482,6 +449,8 @@
   <script src="assets/js/modules/navigation.js"></script>
   <script src="assets/js/modules/news-detail.js"></script>
   <script src="assets/js/modules/scroll-animations.js"></script>
+    <script src="assets/js/modules/security.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+

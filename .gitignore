@@ -1,5 +1,28 @@
+# OS & Editor
 .DS_Store
 Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# Build dependencies
+node_modules/
+package-lock.json
+
+# Build source (only compiled output is needed)
+src/
+
+# Tailwind config (exposes internal structure)
+tailwind.config.js
+
+# Internal / backup folder — jangan di-push
+"website GESID"/
+website GESID/
+
+# Internal documents (tidak perlu publik)
+PRD.md
+
+# Environment & secrets (jika ada di masa depan)
+.env
+.env.*
+*.env

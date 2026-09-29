@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 
 <head>
@@ -11,24 +11,13 @@
     content="berita halal, artikel halal, regulasi halal, bpjph, sertifikasi halal, wajib halal 2026, gesid halal center">
   <link rel="canonical" href="https://gesidhalalcenter.com/berita.html">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            gold: { 50: '#fffdf5', 100: '#fef9e7', 400: '#e8a317', 500: '#c89020', 600: '#b57f18', 700: '#946310' }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            serif: ['"Lora"', 'Georgia', 'serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <!-- Security Headers (meta fallback) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/custom.css">
   <style>
     .news-hero-bg { background: linear-gradient(135deg,#0f1923 0%,#1a2535 55%,#0f1923 100%); }
@@ -58,11 +47,11 @@
       <div class="relative flex items-center justify-between h-[72px]">
         <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group z-10" aria-label="Gesid Halal Center">
           <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-10 sm:h-11 w-auto object-contain flex-shrink-0">
-          <div class="flex flex-col justify-center select-none">
-            <span class="font-extrabold text-[14px] sm:text-[16px] leading-tight tracking-tight text-[#b57f18] group-hover:text-[#946310] transition-colors uppercase whitespace-nowrap font-sans">GESID</span>
+          <div class="flex flex-col justify-center items-center select-none">
+            <span class="font-extrabold text-[14px] sm:text-[16px] leading-tight tracking-tight text-[#b57f18] group-hover:text-[#946310] transition-colors uppercase whitespace-nowrap font-sans text-center">GESID</span>
             <div class="flex items-center gap-1.5 w-full mt-0.5">
               <span class="h-[1.5px] flex-1 bg-[#c89020] rounded-full"></span>
-              <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.22em] text-[#946310] uppercase pl-[0.22em] whitespace-nowrap font-sans">HALAL CENTER</span>
+              <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.22em] text-[#946310] uppercase pl-[0.22em] whitespace-nowrap font-sans text-center">HALAL CENTER</span>
               <span class="h-[1.5px] flex-1 bg-[#c89020] rounded-full"></span>
             </div>
           </div>
@@ -96,9 +85,9 @@
     <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
       <div class="flex items-center gap-2.5">
         <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-9 w-auto object-contain">
-        <div class="flex flex-col select-none">
-          <span class="font-extrabold text-[14px] leading-tight text-[#b57f18] uppercase font-sans">GESID</span>
-          <span class="text-[7.5px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans">HALAL CENTER</span>
+        <div class="flex flex-col items-center select-none">
+          <span class="font-extrabold text-[14px] leading-tight text-[#b57f18] uppercase font-sans text-center">GESID</span>
+          <span class="text-[7.5px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans text-center pl-[0.2em]">HALAL CENTER</span>
         </div>
       </div>
       <button id="closeMobileMenuBtn" class="p-1.5 rounded text-slate-500 hover:text-slate-800" aria-label="Tutup Menu">
@@ -491,9 +480,9 @@
         <div class="md:col-span-5 space-y-3">
           <div class="flex items-center gap-2.5 mb-2">
             <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-9 w-auto object-contain">
-            <div class="flex flex-col select-none">
-              <span class="font-extrabold text-[15px] leading-tight text-[#b57f18] uppercase font-sans">GESID</span>
-              <span class="text-[8px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans">HALAL CENTER</span>
+            <div class="flex flex-col items-center select-none">
+              <span class="font-extrabold text-[15px] leading-tight text-[#b57f18] uppercase font-sans text-center">GESID</span>
+              <span class="text-[8px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans text-center pl-[0.2em]">HALAL CENTER</span>
             </div>
           </div>
           <p class="text-sm leading-relaxed text-slate-500 max-w-xs">Mitra profesional pendampingan dan sertifikasi halal resmi (BPJPH & MUI) serta penerapan Sistem Jaminan Produk Halal di Indonesia.</p>
@@ -540,6 +529,7 @@
 
   <script src="assets/js/modules/navigation.js"></script>
   <script src="assets/js/modules/scroll-animations.js"></script>
+    <script src="assets/js/modules/security.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
     const BATCH = 4;
@@ -594,3 +584,4 @@
   </script>
 </body>
 </html>
+

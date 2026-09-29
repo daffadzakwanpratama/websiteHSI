@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 
 <head>
@@ -27,46 +27,13 @@
     content="Pendampingan sertifikasi halal resmi BPJPH & MUI untuk pelaku usaha dan industri di Indonesia.">
   <meta name="twitter:image" content="https://gesidhalalcenter.com/assets/images/logo.png">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            forest: {
-              50: '#f0faf4',
-              100: '#dcf5e7',
-              200: '#b8ebcf',
-              600: '#1a7a4a',
-              700: '#155f3a',
-              800: '#0f4429',
-              900: '#0b3320',
-              950: '#061a10',
-            },
-            gold: {
-              50: '#fffdf5',
-              100: '#fef9e7',
-              200: '#fdf0c5',
-              300: '#fbe29a',
-              400: '#e8a317',
-              500: '#c89020',
-              600: '#b57f18',
-              700: '#946310',
-              800: '#754d10',
-              900: '#5c3c10',
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
-            serif: ['"Lora"', 'Georgia', 'serif'],
-            display: ['"Lora"', 'Georgia', 'serif'],
-          },
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <!-- Security Headers (meta fallback) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/custom.css">
 
   <!-- Schema.org Structured Data -->
@@ -108,11 +75,11 @@
         <!-- Brand Logo -->
         <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group z-10" aria-label="Gesid Halal Center">
           <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-10 sm:h-11 w-auto object-contain flex-shrink-0">
-          <div class="flex flex-col justify-center select-none">
-            <span class="font-extrabold text-[14px] sm:text-[16px] leading-tight tracking-tight text-[#b57f18] group-hover:text-[#946310] transition-colors uppercase whitespace-nowrap font-sans">GESID</span>
+          <div class="flex flex-col justify-center items-center select-none">
+            <span class="font-extrabold text-[14px] sm:text-[16px] leading-tight tracking-tight text-[#b57f18] group-hover:text-[#946310] transition-colors uppercase whitespace-nowrap font-sans text-center">GESID</span>
             <div class="flex items-center gap-1.5 w-full mt-0.5">
               <span class="h-[1.5px] flex-1 bg-[#c89020] rounded-full"></span>
-              <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.22em] text-[#946310] uppercase pl-[0.22em] whitespace-nowrap font-sans">HALAL CENTER</span>
+              <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.22em] text-[#946310] uppercase pl-[0.22em] whitespace-nowrap font-sans text-center">HALAL CENTER</span>
               <span class="h-[1.5px] flex-1 bg-[#c89020] rounded-full"></span>
             </div>
           </div>
@@ -147,9 +114,9 @@
     <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
       <div class="flex items-center gap-2.5">
         <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-9 w-auto object-contain">
-        <div class="flex flex-col select-none">
-          <span class="font-extrabold text-[14px] leading-tight text-[#b57f18] uppercase font-sans">GESID</span>
-          <span class="text-[7.5px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans">HALAL CENTER</span>
+        <div class="flex flex-col items-center select-none">
+          <span class="font-extrabold text-[14px] leading-tight text-[#b57f18] uppercase font-sans text-center">GESID</span>
+          <span class="text-[7.5px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans text-center pl-[0.2em]">HALAL CENTER</span>
         </div>
       </div>
       <button id="closeMobileMenuBtn" class="p-1.5 rounded text-slate-500 hover:text-slate-800" aria-label="Tutup Menu">
@@ -258,7 +225,7 @@
 
         <!-- CTA Action Buttons -->
         <div data-animate="fade-up" data-delay="120"
-          class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto mb-8 sm:mb-10">
+          class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto">
           <a href="kontak.html"
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 text-[15px] font-bold rounded-xl text-slate-950 bg-[#e8a317] hover:bg-[#c89020] hover:text-white transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-0.5">
             Konsultasi Gratis
@@ -267,26 +234,6 @@
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 text-[15px] font-bold rounded-xl text-white bg-slate-900/80 hover:bg-slate-900 border border-slate-700/80 hover:border-amber-400/60 transition-all duration-200 backdrop-blur-md shadow-lg">
             Lihat Layanan Kami
           </a>
-        </div>
-
-        <!-- Integrated Key Metrics & Social Proof Row -->
-        <div data-animate="fade-up" data-delay="160"
-          class="w-full max-w-4xl mx-auto pt-6 sm:pt-8 border-t border-white/20 grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-8 text-center text-white">
-          <div>
-            <div data-counter="15" data-suffix="+"
-              class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-serif tracking-tight drop-shadow-sm">15+</div>
-            <div class="text-xs sm:text-[13px] text-white/80 font-medium mt-1">Tahun Pengalaman Tim Ahli Halal</div>
-          </div>
-          <div>
-            <div data-counter="5000" data-suffix="+"
-              class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-serif tracking-tight drop-shadow-sm">5.000+</div>
-            <div class="text-xs sm:text-[13px] text-white/80 font-medium mt-1">Produk Didampingi & Tersertifikasi</div>
-          </div>
-          <div>
-            <div
-              class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-serif tracking-tight drop-shadow-sm">100% Resmi</div>
-            <div class="text-xs sm:text-[13px] text-white/80 font-medium mt-1">Kepatuhan Regulasi BPJPH & MUI</div>
-          </div>
         </div>
 
       </div>
@@ -1211,9 +1158,9 @@
         <div class="md:col-span-5 space-y-3">
           <div class="flex items-center gap-2.5 mb-2">
             <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-9 w-auto object-contain">
-            <div class="flex flex-col select-none">
-              <span class="font-extrabold text-[15px] leading-tight text-[#b57f18] uppercase font-sans">GESID</span>
-              <span class="text-[8px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans">HALAL CENTER</span>
+            <div class="flex flex-col items-center select-none">
+              <span class="font-extrabold text-[15px] leading-tight text-[#b57f18] uppercase font-sans text-center">GESID</span>
+              <span class="text-[8px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans text-center pl-[0.2em]">HALAL CENTER</span>
             </div>
           </div>
           <h3 class="text-slate-900 font-extrabold text-base tracking-tight">Gesid Halal Center</h3>
@@ -1297,6 +1244,7 @@
   <script src="assets/js/modules/carousel.js"></script>
   <script src="assets/js/modules/counter.js"></script>
   <script src="assets/js/modules/scroll-animations.js"></script>
+    <script src="assets/js/modules/security.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 

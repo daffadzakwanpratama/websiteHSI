@@ -69,8 +69,28 @@
     });
   }
 
+  function initMobileDropdown() {
+    const btn = document.getElementById('mobileDropdownBtn');
+    const content = document.getElementById('mobileDropdownContent');
+    const chevron = document.getElementById('mobileDropdownChevron');
+    if (!btn || !content) return;
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const isHidden = content.classList.contains('hidden');
+      if (isHidden) {
+        content.classList.remove('hidden');
+        chevron?.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        chevron?.classList.remove('rotate-180');
+      }
+    });
+  }
+
   window.initNavigation = function () {
     initMobileMenu();
+    initMobileDropdown();
     initActiveNav();
   };
 })();

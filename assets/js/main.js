@@ -4,6 +4,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', function () {
+  // 0. Security — harus jalan pertama sebelum modul lain
+  // (security.js sudah auto-run saat dimuat, initSecurity adalah no-op guard)
+
   // 1. Navigation & Active Links
   if (typeof window.initNavigation === 'function') {
     window.initNavigation();

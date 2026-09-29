@@ -37,10 +37,16 @@
       if (el && val) el.textContent = val;
     };
 
-    // Helper to set HTML
+    // Helper to set HTML safely (via GesidSecurity sanitizer)
     const setHTML = (id, val) => {
       const el = document.getElementById(id);
-      if (el && val) el.innerHTML = val;
+      if (el && val) {
+        if (window.GesidSecurity) {
+          window.GesidSecurity.safeSetHTML(el, val);
+        } else {
+          el.innerHTML = val;
+        }
+      }
     };
 
     // Helper to set attribute

@@ -1,5 +1,5 @@
-﻿# Product Requirement Document (PRD) — Tahap 1
-## Website Company Profile — PT Halal Standard Indonesia
+# Product Requirement Document (PRD) — Tahap 1
+## Website Company Profile — Gesid Halal Center
 
 - **Versi:** 1.0  
 - **Status:** Draft / Tahap Perencanaan  
@@ -9,16 +9,16 @@
 ---
 
 ## 1. Gambaran Proyek
-PT Halal Standard Indonesia membutuhkan sebuah website resmi yang berfungsi sebagai media informasi dan *company profile* perusahaan.
+Gesid Halal Center membutuhkan sebuah website resmi yang berfungsi sebagai media informasi dan *company profile* perusahaan.
 
-Website tahap pertama akan mengambil referensi dari struktur dan jenis informasi yang terdapat pada website LPPOM MUI, namun menggunakan identitas, branding, konten, dan visual resmi PT Halal Standard Indonesia.
+Website tahap pertama akan mengambil referensi dari struktur dan jenis informasi yang terdapat pada website LPPOM MUI, namun menggunakan identitas, branding, konten, dan visual resmi Gesid Halal Center.
 
 Pada tahap awal, website difokuskan pada penyampaian informasi mengenai perusahaan dan layanan yang tersedia. Fitur-fitur yang membutuhkan sistem backend kompleks seperti pendaftaran online, verifikasi/pengecekan sertifikat, dashboard klien, dan sistem pembayaran akan dikembangkan pada tahap berikutnya.
 
 ---
 
 ## 2. Tujuan Website
-1. **Identitas Resmi:** Menjadi representasi digital resmi PT Halal Standard Indonesia.
+1. **Identitas Resmi:** Menjadi representasi digital resmi Gesid Halal Center.
 2. **Edukasi & Informasi:** Memberikan informasi profil perusahaan dan katalog layanan yang mudah dipahami calon klien/pelaku usaha.
 3. **Kanal Komunikasi:** Menyediakan akses kontak cepat (WhatsApp, Email, Telepon, Formulir Kontak/WeChat).
 4. **Membangun Kredibilitas:** Menampilkan keunggulan, legalitas, dan profesionalisme perusahaan dalam industri sertifikasi & standardisasi halal.
@@ -43,7 +43,7 @@ Pada tahap awal, website difokuskan pada penyampaian informasi mengenai perusaha
   - Pola navigasi & hirarki menu.
   - Penyajian ringkas alur sertifikasi/layanan.
   - Struktur pengelompokan informasi (Tentang Kami, Layanan, Berita/Edukasi, Kontak).
-- **Catatan:** Desain visual, *color palette*, *copywriting*, dan elemen grafis disesuaikan sepenuhnya dengan *brand identity* PT Halal Standard Indonesia.
+- **Catatan:** Desain visual, *color palette*, *copywriting*, dan elemen grafis disesuaikan sepenuhnya dengan *brand identity* Gesid Halal Center.
 
 ---
 
@@ -68,7 +68,7 @@ Pada tahap awal, website difokuskan pada penyampaian informasi mengenai perusaha
 ## 6. Arsitektur Informasi & Sitemap
 
 ```
-PT HALAL STANDARD INDONESIA (Website)
+GESID HALAL CENTER (Website)
 │
 ├── 🏠 Beranda (Home)
 │
@@ -96,7 +96,7 @@ PT HALAL STANDARD INDONESIA (Website)
 ## 7. Blueprint Struktur Halaman
 
 ### A. Beranda (Homepage)
-1. **Header / Navbar:** Logo HSI, Menu Navigasi (Beranda, Tentang Kami, Layanan, Kontak), Pemilih Bahasa (ID / EN / 中文), Tombol CTA ("Hubungi Kami" / "Konsultasi").
+1. **Header / Navbar:** Logo Gesid, Menu Navigasi (Beranda, Tentang Kami, Layanan, Kontak), Pemilih Bahasa (ID / EN / 中文), Tombol CTA ("Hubungi Kami" / "Konsultasi").
 2. **Hero Section:** Headline kuat, sub-headline penjelas kredibilitas, visual relevan, tombol aksi primer & sekunder.
 3. **Sekilas Tentang Kami:** Cuplikan profil singkat dengan tautan ke halaman profil lengkap.
 4. **Katalog Layanan Utama:** Kartu ringkasan layanan unggulan dengan ikon/visual dan link detail.
@@ -177,7 +177,7 @@ Tahap 5: Ekspansi Pasar Tiongkok & Optimasi Baidu Lanjutan
 
 ## 11. Definition of Done (DoD) — Tahap 1
 - [ ] Seluruh halaman utama (Beranda, Tentang Kami, Layanan, Kontak) terpasang dengan layout rapi dan responsif.
-- [ ] Konten dan branding resmi HSI telah diaplikasikan.
+- [ ] Konten dan branding resmi Gesid Halal Center telah diaplikasikan.
 - [ ] Form kontak berfungsi mengirim pesan/inquiry.
 - [ ] Pengujian responsive pada perangkat desktop, tablet, dan smartphone berhasil tanpa layout rusak/overflow.
 - [ ] Metadata SEO, Open Graph, `robots.txt`, dan `sitemap.xml` siap dan valid.
