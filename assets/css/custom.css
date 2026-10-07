@@ -1443,18 +1443,13 @@ textarea:focus {
 }
 
 /* ── 16. STRUKTUR KEPENGURUSAN (TEAM ORDERING) ────────────────────────────── */
-.team-leader {
-  order: 1;
-}
-
-.team-secretary {
-  order: 2;
-}
-
-.team-treasurer {
-  order: 3;
-}
-
+/* Pada layar mobile / tablet (< 1024px), urutan mengikuti urutan HTML alami:
+   1. Murni Mupardila (Ketua/Pimpinan) paling atas
+   2. Mariam Jamilah (Sekretaris)
+   3. Sindia Dwike Pratika (Bendahara)
+   dst.
+   Pada layar desktop (>= 1024px, 3 kolom), Pimpinan diposisikan di tengah baris pertama (Sekretaris - Pimpinan - Bendahara)
+*/
 @media (min-width: 1024px) {
   .team-secretary {
     order: 1;
@@ -1466,5 +1461,17 @@ textarea:focus {
 
   .team-treasurer {
     order: 3;
+  }
+
+  .team-member-4 {
+    order: 4;
+  }
+
+  .team-member-5 {
+    order: 5;
+  }
+
+  .team-member-6 {
+    order: 6;
   }
 }
