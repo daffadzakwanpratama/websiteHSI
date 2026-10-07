@@ -1274,32 +1274,82 @@ textarea:focus {
   will-change: transform;
 }
 
-/* Timeline Track, Progress Line & Nodes */
+/* Timeline Track, Progress Line, Nodes & Chevrons */
+.alur-step-item {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.alur-step-node {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 #alurTimelineTrack {
+  position: absolute;
+  width: 3px;
+  left: 1rem;
   top: 16px;
   bottom: 24px;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
 #alurProgressLine {
+  position: absolute;
+  width: 3px;
+  left: 1rem;
   top: 16px;
+  transform: translateX(-50%);
+  pointer-events: none;
   margin-top: 0 !important;
   will-change: height;
   transition: none !important;
 }
 
+.alur-connector-arrow {
+  position: absolute;
+  left: 1rem;
+  bottom: -1.5rem;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
 @media (min-width: 640px) {
+  .alur-step-item {
+    padding-left: 4rem;
+  }
+
+  .alur-step-node {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
   #alurTimelineTrack {
+    left: 1.25rem;
     top: 20px;
     bottom: 32px;
   }
 
   #alurProgressLine {
+    left: 1.25rem;
     top: 20px;
   }
-}
 
-.alur-step-node {
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  .alur-connector-arrow {
+    left: 1.25rem;
+    bottom: -1.75rem;
+  }
 }
 
 .alur-step-item.is-passed .alur-step-node {
