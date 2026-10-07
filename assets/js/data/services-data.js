@@ -5,32 +5,58 @@
  */
 
 window.HSI_SERVICES_DATA = {
+  lph: {
+    id: 'lph',
+    number: '01',
+    label: 'Profile Lembaga',
+    icon: 'fa-building-shield',
+    accentColor: 'forest',
+    breadcrumb: 'Profile LPH Gesid Halal Center',
+    title: 'Profile LPH GESID HALAL CENTER',
+    shortDesc: 'Lembaga pemeriksaan dan pengujian kehalalan produk resmi dengan pendekatan profesional, transparan, dan mudah dijangkau di seluruh wilayah Indonesia.',
+    desc: [
+      'LPH Gesid Halal Center merupakan lembaga yang menyediakan layanan pemeriksaan dan pengujian kehalalan produk sebagai bagian dari proses sertifikasi halal. Cakupan layanan pemeriksaan meliputi Makanan, Minuman, Obat, Kosmetik, Produk Kimiawi, Barang Gunaan, dan Seluruh Jasa, untuk seluruh wilayah Indonesia.',
+      'Komitmen kami adalah mendukung seluruh ekosistem usaha dalam memenuhi standar kehalalan. Mulai dari usaha perorangan skala kecil, pelaku UMKM yang sedang berkembang, hingga perusahaan industri, semua dapat memperoleh layanan pemeriksaan halal dengan pendekatan profesional, transparan, dan mudah dijangkau.'
+    ],
+    features: [
+      'Pemeriksaan dan pengujian kehalalan produk (Makanan, Minuman, Obat, Kosmetik, Produk Kimiawi, Barang Gunaan, dan Seluruh Jasa)',
+      'Layanan digital terintegrasi dengan auditor profesional berstandar nasional & internasional',
+      'Pendampingan halal yang bermutu, transparan, dan terjangkau untuk seluruh pelaku usaha',
+      'Jaringan operasional nasional mencakup 15 provinsi dan ditargetkan beroperasi di seluruh Indonesia',
+      'Kemitraan strategis nasional dan internasional untuk memperkuat ekosistem halal Indonesia'
+    ],
+    target: [
+      'Usaha perorangan skala kecil dan pelaku UMKM yang sedang berkembang',
+      'Perusahaan industri manufaktur pangan, kosmetik, kimiawi, dan farmasi nasional',
+      'Pelaku usaha jasa (pengolahan, penyajian, penyimpanan, pengemasan, distribusi, penjualan, dan penyembelihan)',
+      'Calon Auditor Halal dan Pendamping Proses Produk Halal (P3H) di seluruh wilayah Indonesia'
+    ]
+  },
   sertifikasi: {
     id: 'sertifikasi',
     number: '01',
-    label: 'Layanan 01',
-    icon: 'fa-certificate',
+    label: 'Profile LPH & Layanan',
+    icon: 'fa-building-shield',
     accentColor: 'forest',
-    breadcrumb: 'Sertifikasi Halal Resmi BPJPH & MUI',
-    title: 'Sertifikasi Halal Resmi BPJPH & MUI',
-    shortDesc: 'Pendampingan penuh untuk produk makanan, minuman, kosmetik, dan barang gunaan sesuai standar BPJPH & MUI.',
+    breadcrumb: 'Profile LPH Gesid Halal Center',
+    title: 'Profile LPH GESID HALAL CENTER',
+    shortDesc: 'Lembaga yang menyediakan layanan pemeriksaan dan pengujian kehalalan produk sebagai bagian dari proses sertifikasi halal.',
     desc: [
-      'Pendampingan komprehensif untuk memperoleh Sertifikat Halal dari BPJPH dan ketetapan fatwa halal MUI yang diakui secara resmi di Indonesia. Kami menangani seluruh proses dari persiapan dokumen, audit LPH, hingga penerbitan sertifikat.',
-      'Dengan tim berpengalaman yang memahami regulasi BPJPH dan prosedur fatwa MUI, kami memastikan proses sertifikasi berjalan efisien, terencana, dan tepat waktu.'
+      'LPH Gesid Halal Center merupakan lembaga yang menyediakan layanan pemeriksaan dan pengujian kehalalan produk sebagai bagian dari proses sertifikasi halal. Cakupan layanan pemeriksaan meliputi Makanan, Minuman, Obat, Kosmetik, Produk Kimiawi, Barang Gunaan, dan Seluruh Jasa, untuk seluruh wilayah Indonesia.',
+      'Komitmen kami adalah mendukung seluruh ekosistem usaha dalam memenuhi standar kehalalan. Mulai dari usaha perorangan skala kecil, pelaku UMKM yang sedang berkembang, hingga perusahaan industri, semua dapat memperoleh layanan pemeriksaan halal dengan pendekatan profesional, transparan, dan mudah dijangkau.'
     ],
     features: [
-      'Analisis kesiapan produk dan fasilitas produksi',
-      'Penyusunan dokumen SJPH sesuai regulasi BPJPH',
-      'Pendampingan audit lapangan oleh LPH',
-      'Koordinasi sidang fatwa dan BPJPH/MUI',
-      'Pengurusan penerbitan sertifikat halal resmi',
-      'Pembaruan sertifikat berkala'
+      'Pemeriksaan & pengujian kehalalan produk sesuai regulasi BPJPH & standar MUI',
+      'Layanan digital terintegrasi didukung auditor profesional berlisensi',
+      'Layanan pemeriksaan dan pendampingan halal yang bermutu, efektif, dan terjangkau',
+      'Meningkatkan kompetensi auditor serta literasi halal pelaku usaha',
+      'Kemitraan strategis nasional & internasional untuk memperkuat ekosistem halal'
     ],
     target: [
-      'Perusahaan yang baru memulai proses sertifikasi halal',
-      'Pelaku usaha yang membutuhkan panduan alur BPJPH & MUI',
-      'Produsen makanan, minuman, kosmetik, dan farmasi yang ingin memenuhi kewajiban hukum',
-      'Perusahaan yang perlu memperbarui sertifikat halal'
+      'Usaha perorangan skala kecil dan UMKM yang sedang berkembang',
+      'Perusahaan manufaktur, industri makanan, minuman, obat, dan kosmetik',
+      'Pelaku usaha seluruh sektor jasa logistik dan rantai pasok halal',
+      'Anggota P3H dan Auditor Halal di 15 provinsi seluruh Indonesia'
     ]
   },
   sjph: {

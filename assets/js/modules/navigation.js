@@ -51,10 +51,11 @@
       const href = link.getAttribute('href');
       if (href === activeTarget) {
         link.classList.add('text-[#c89020]', 'font-semibold');
-        link.classList.remove('text-slate-600');
+        link.classList.remove('text-slate-600', 'text-slate-700');
       } else {
         link.classList.remove('text-[#c89020]', 'font-semibold');
-        link.classList.add('text-slate-600');
+        link.classList.remove('text-slate-600');
+        link.classList.add('text-slate-700');
       }
     });
 
@@ -88,9 +89,26 @@
     });
   }
 
+  function initHeaderScroll() {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+
+    function onScroll() {
+      if (window.scrollY > 12) {
+        header.classList.add('is-scrolled');
+      } else {
+        header.classList.remove('is-scrolled');
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   window.initNavigation = function () {
     initMobileMenu();
     initMobileDropdown();
     initActiveNav();
+    initHeaderScroll();
   };
 })();

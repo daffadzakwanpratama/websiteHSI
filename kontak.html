@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -28,7 +28,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/custom.css?v=2">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -57,7 +57,7 @@
 <body class="bg-white text-slate-800 antialiased flex flex-col min-h-screen">
 
   <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
+  <header class="site-header sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-[72px]">
 
@@ -65,12 +65,12 @@
         <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group z-10" aria-label="Gesid Halal Center">
           <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-10 sm:h-11 w-auto object-contain flex-shrink-0">
           <div class="flex flex-col justify-center items-center select-none">
-            <span class="font-extrabold text-[14px] sm:text-[16px] leading-tight tracking-tight text-[#b57f18] group-hover:text-[#946310] transition-colors uppercase whitespace-nowrap font-sans text-center">
+            <span class="font-extrabold text-[17px] sm:text-[19px] leading-tight tracking-tight text-[#b57f18] group-hover:text-[#946310] transition-colors uppercase whitespace-nowrap font-sans text-center">
               GESID
             </span>
             <div class="flex items-center gap-1.5 w-full mt-0.5">
               <span class="h-[1.5px] flex-1 bg-[#c89020] rounded-full"></span>
-              <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.22em] text-[#946310] uppercase pl-[0.22em] whitespace-nowrap font-sans text-center">
+              <span class="text-[8px] sm:text-[9px] font-bold tracking-[0.22em] text-[#946310] uppercase pl-[0.22em] whitespace-nowrap font-sans text-center">
                 HALAL CENTER
               </span>
               <span class="h-[1.5px] flex-1 bg-[#c89020] rounded-full"></span>
@@ -79,20 +79,20 @@
         </a>
 
         <!-- Desktop Navigation (Centered) -->
-        <nav class="hidden lg:flex items-center gap-7 absolute left-1/2 -translate-x-1/2">
-          <a href="index.html" class="nav-link text-slate-600 hover:text-[#c89020] text-sm transition-colors duration-200">Beranda</a>
-          <a href="tentang-kami.html" class="nav-link text-slate-600 hover:text-[#c89020] text-sm transition-colors duration-200">Tentang Kami</a>
-          <a href="layanan.html" class="nav-link text-slate-600 hover:text-[#c89020] text-sm transition-colors duration-200">Layanan</a>
-          <a href="berita.html" class="nav-link text-slate-600 hover:text-[#c89020] text-sm transition-colors duration-200">Berita</a>
-          <a href="kontak.html" class="nav-link font-semibold text-[#c89020] text-sm transition-colors duration-200">Kontak</a>
+        <nav class="hidden lg:flex items-center gap-5 sm:gap-6 absolute left-1/2 -translate-x-1/2">
+          <a href="index.html" class="nav-link text-slate-700 hover:text-[#c89020] transition-colors duration-200">Beranda</a>
+          <a href="tentang-kami.html" class="nav-link text-slate-700 hover:text-[#c89020] transition-colors duration-200">Tentang Kami</a>
+          <a href="layanan.html" class="nav-link text-slate-700 hover:text-[#c89020] transition-colors duration-200">Layanan</a>
+          <a href="berita.html" class="nav-link text-slate-700 hover:text-[#c89020] transition-colors duration-200">Berita</a>
+          <a href="kontak.html" class="nav-link font-semibold text-[#c89020] transition-colors duration-200">Kontak</a>
         </nav>
 
         <!-- Desktop CTA + Mobile Toggle -->
         <div class="flex items-center gap-3">
-          <a href="kontak.html" class="hidden lg:inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-bold rounded-xl text-white bg-[#c89020] hover:bg-[#b57f18] transition-all duration-200 shadow-sm hover:shadow-md btn-shimmer">
+          <a href="kontak.html" class="hidden lg:inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-bold rounded-xl text-white bg-[#c89020] hover:bg-[#b57f18] transition-all duration-200 shadow-xs hover:shadow-md btn-shimmer">
             Konsultasi Gratis
           </a>
-          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition z-10" aria-label="Menu">
+          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100/80 transition z-10" aria-label="Menu">
             <i class="fa-solid fa-bars text-lg"></i>
           </button>
         </div>
@@ -103,43 +103,48 @@
 
   <!-- MOBILE DRAWER -->
   <div id="mobileBackdrop" class="fixed inset-0 bg-slate-900/50 z-50 hidden opacity-0 transition-opacity duration-200"></div>
-  <div id="mobileMenuDrawer" class="fixed top-0 right-0 bottom-0 w-72 bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+  <div id="mobileMenuDrawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-[86vw] bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
     <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
       <div class="flex items-center gap-2.5">
         <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-9 w-auto object-contain">
         <div class="flex flex-col items-center select-none">
-          <span class="font-extrabold text-[14px] leading-tight text-[#b57f18] uppercase font-sans text-center">GESID</span>
-          <span class="text-[7.5px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans text-center pl-[0.2em]">HALAL CENTER</span>
+          <span class="font-extrabold text-[17px] leading-tight text-[#b57f18] uppercase font-sans text-center">GESID</span>
+          <span class="text-[8px] font-bold tracking-[0.22em] text-[#946310] uppercase font-sans text-center pl-[0.2em]">HALAL CENTER</span>
         </div>
       </div>
-      <button id="closeMobileMenuBtn" class="p-1.5 rounded text-slate-500 hover:text-slate-800" aria-label="Tutup Menu">
+      <button id="closeMobileMenuBtn" class="p-1.5 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition" aria-label="Tutup Menu">
         <i class="fa-solid fa-xmark text-lg"></i>
       </button>
     </div>
-    <nav class="flex-1 overflow-y-auto p-5 space-y-1.5 text-sm">
-      <a href="index.html" class="mobile-nav-link">
-        <span class="flex items-center"><i class="fa-solid fa-house nav-icon"></i><span>Beranda</span></span>
-        <span class="active-dot"></span>
-      </a>
-      <a href="tentang-kami.html" class="mobile-nav-link">
-        <span class="flex items-center"><i class="fa-solid fa-building nav-icon"></i><span>Tentang Kami</span></span>
-        <span class="active-dot"></span>
-      </a>
-      <a href="layanan.html" class="mobile-nav-link">
-        <span class="flex items-center"><i class="fa-solid fa-layer-group nav-icon"></i><span>Layanan</span></span>
-        <span class="active-dot"></span>
-      </a>
-      <a href="berita.html" class="mobile-nav-link">
-        <span class="flex items-center"><i class="fa-solid fa-newspaper nav-icon"></i><span>Berita</span></span>
-        <span class="active-dot"></span>
-      </a>
-      <a href="kontak.html" class="mobile-nav-link active">
-        <span class="flex items-center"><i class="fa-solid fa-envelope nav-icon"></i><span>Kontak</span></span>
-        <span class="active-dot"></span>
-      </a>
+    <nav class="flex-1 overflow-y-auto p-5">
+      <div class="space-y-2">
+        <a href="index.html" class="mobile-nav-link">
+          <span class="flex items-center"><i class="fa-solid fa-house nav-icon"></i><span>Beranda</span></span>
+          <span class="active-dot"></span>
+        </a>
+        <a href="tentang-kami.html" class="mobile-nav-link">
+          <span class="flex items-center"><i class="fa-solid fa-building nav-icon"></i><span>Tentang Kami</span></span>
+          <span class="active-dot"></span>
+        </a>
+        <a href="layanan.html" class="mobile-nav-link">
+          <span class="flex items-center"><i class="fa-solid fa-layer-group nav-icon"></i><span>Layanan</span></span>
+          <span class="active-dot"></span>
+        </a>
+        <a href="berita.html" class="mobile-nav-link">
+          <span class="flex items-center"><i class="fa-solid fa-newspaper nav-icon"></i><span>Berita</span></span>
+          <span class="active-dot"></span>
+        </a>
+        <a href="kontak.html" class="mobile-nav-link active">
+          <span class="flex items-center"><i class="fa-solid fa-envelope nav-icon"></i><span>Kontak</span></span>
+          <span class="active-dot"></span>
+        </a>
+      </div>
 
-      <div class="pt-4 mt-2 border-t border-slate-100">
-        <a href="kontak.html" class="block text-center py-3 text-[14px] font-bold rounded-xl text-white bg-[#c89020] hover:bg-[#b57f18] transition shadow-sm">Konsultasi Gratis</a>
+      <div class="mobile-drawer-cta">
+        <a href="kontak.html" class="mobile-drawer-btn">
+          <i class="fa-solid fa-headset text-sm"></i>
+          <span>Konsultasi Gratis</span>
+        </a>
       </div>
     </nav>
   </div>
@@ -147,7 +152,7 @@
   <main>
 
     <!-- PAGE HEADER (LIGHT WITH GOLD ACCENT) -->
-    <section class="bg-gradient-to-b from-amber-50/60 via-white to-white border-b border-amber-100/70 py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+    <section class="bg-gradient-to-b from-amber-50/60 via-white to-white border-b border-amber-100/70 pt-8 pb-8 sm:pt-10 sm:pb-10 lg:pt-12 lg:pb-12 relative overflow-hidden">
       <div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl pointer-events-none"></div>
       <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
         <p data-animate="fade-down" class="text-[#c89020] text-xs sm:text-[13px] font-bold tracking-widest uppercase mb-2.5 inline-flex items-center gap-2">
@@ -162,7 +167,7 @@
     </section>
 
     <!-- KONTAK GRID -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+    <section class="pt-8 pb-12 sm:pt-10 sm:pb-16 lg:pt-12 lg:pb-20 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
 
@@ -339,8 +344,8 @@
           <div class="flex items-center gap-2.5 mb-2">
             <img src="assets/images/logo-emblem.png" alt="Gesid Halal Center" class="h-9 w-auto object-contain">
             <div class="flex flex-col items-center select-none">
-              <span class="font-extrabold text-[15px] leading-tight text-[#b57f18] uppercase font-sans text-center">GESID</span>
-              <span class="text-[8px] font-bold tracking-[0.2em] text-[#946310] uppercase font-sans text-center pl-[0.2em]">HALAL CENTER</span>
+              <span class="font-extrabold text-[17px] leading-tight text-[#b57f18] uppercase font-sans text-center">GESID</span>
+              <span class="text-[8px] font-bold tracking-[0.22em] text-[#946310] uppercase font-sans text-center pl-[0.2em]">HALAL CENTER</span>
             </div>
           </div>
           <h3 class="text-slate-900 font-extrabold text-base tracking-tight">Gesid Halal Center</h3>

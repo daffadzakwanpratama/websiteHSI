@@ -12,7 +12,12 @@
 
     const data = window.HSI_SERVICES_DATA || {};
     const params = new URLSearchParams(window.location.search);
-    const serviceKey = params.get('service') || 'sertifikasi';
+    const serviceKey = params.get('service');
+
+    // Jika tanpa parameter atau service=lph, pertahankan layout statis Profile LPH yang kaya fitur
+    if (!serviceKey || serviceKey === 'lph') {
+      return;
+    }
 
     const d = data[serviceKey] || data['sertifikasi'];
     if (!d) return;
