@@ -1583,3 +1583,29 @@ textarea:focus {
     order: 6;
   }
 }
+
+/* ── 17. HALAMAN KONTAK (RESPONSIVE ORDERING) ────────────────────────────── */
+/* Pada tampilan mobile (< 1024px), formulir pesan ditampilkan paling atas
+   agar pengguna langsung bisa mengisi pesan, sedangkan informasi kontak dan
+   Google Maps diletakkan di bawah formulir.
+   Pada tampilan desktop (>= 1024px), informasi kontak di kiri, formulir di kanan.
+*/
+@media (max-width: 1023.98px) {
+  .contact-form-col {
+    order: 1 !important;
+  }
+
+  .contact-info-col {
+    order: 2 !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-info-col {
+    order: 1 !important;
+  }
+
+  .contact-form-col {
+    order: 2 !important;
+  }
+}
