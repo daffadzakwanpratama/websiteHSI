@@ -35,19 +35,56 @@
     }
 
     .article-card.fade-in-card {
-      animation: aFadeIn .4s cubic-bezier(.16, 1, .3, 1) both;
+      animation: aFadeIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
     @keyframes aFadeIn {
-      from {
+      0% {
         opacity: 0;
-        transform: translateY(18px)
+        transform: translateY(20px) scale(0.96);
       }
 
-      to {
-        opacity: 1;
-        transform: translateY(0)
+      60% {
+        opacity: 0.95;
+        transform: translateY(-2px) scale(1.008);
       }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .article-card>a {
+      transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+        box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+        border-color 0.3s ease;
+    }
+
+    .article-card:hover>a {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 32px -10px rgba(15, 23, 42, 0.12),
+        0 0 0 1px rgba(200, 144, 32, 0.25);
+      border-color: rgba(200, 144, 32, 0.45);
+    }
+
+    .article-card:active>a {
+      transform: translateY(-2px) scale(0.985);
+      transition-duration: 0.1s;
+    }
+
+    .article-card:hover .fa-arrow-right {
+      transform: translateX(4px);
+      transition: transform 0.25s ease;
+    }
+
+    [class^="badge-"] {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .article-card:hover [class^="badge-"] {
+      transform: translateY(-1.5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .load-more-btn {
@@ -135,9 +172,12 @@
 
         <!-- Desktop CTA + Mobile Toggle -->
         <div class="flex items-center gap-3">
-          <a href="kontak.html"
-            class="hidden lg:inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-bold rounded-xl text-white bg-[#c89020] hover:bg-[#b57f18] transition-all duration-200 shadow-xs hover:shadow-md btn-shimmer">
-            Konsultasi Gratis
+          <a href="https://bpjph.halal.go.id/kalkulator-biaya-sh" target="_blank" rel="noopener"
+            class="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-bold rounded-xl text-white bg-[#c89020] hover:bg-[#b57f18] transition-all duration-200 shadow-xs hover:shadow-md btn-shimmer"
+            title="Kalkulator Simulasi Tarif Resmi BPJPH">
+            <i class="fa-solid fa-calculator text-white/90"></i>
+            <span>Kalkulator Tarif BPJPH</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-white/80"></i>
           </a>
           <button id="mobileMenuBtn"
             class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100/80 transition z-10" aria-label="Menu">
@@ -195,9 +235,11 @@
       </div>
 
       <div class="mobile-drawer-cta">
-        <a href="kontak.html" class="mobile-drawer-btn">
-          <i class="fa-solid fa-headset text-sm"></i>
-          <span>Konsultasi Gratis</span>
+        <a href="https://bpjph.halal.go.id/kalkulator-biaya-sh" target="_blank" rel="noopener"
+          class="mobile-drawer-btn">
+          <i class="fa-solid fa-calculator text-sm"></i>
+          <span>Kalkulator Tarif BPJPH</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-auto"></i>
         </a>
       </div>
     </nav>
@@ -207,35 +249,39 @@
 
     <!-- HERO MINI -->
     <section class="news-hero-bg pt-10 pb-16 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 relative overflow-hidden">
-      <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#c89020]/8 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute -bottom-16 -left-16 w-72 h-72 bg-[#c89020]/6 rounded-full blur-3xl pointer-events-none">
+      <div
+        class="absolute -top-24 -right-24 w-96 h-96 bg-[#c89020]/10 rounded-full blur-3xl pointer-events-none animate-pulse">
+      </div>
+      <div class="absolute -bottom-16 -left-16 w-72 h-72 bg-[#c89020]/8 rounded-full blur-3xl pointer-events-none">
       </div>
       <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
         <div class="max-w-3xl">
-          <nav class="flex items-center gap-1.5 text-xs text-white/50 font-medium mb-5">
+          <nav data-animate="fade-up" data-delay="0"
+            class="flex items-center gap-1.5 text-xs text-white/50 font-medium mb-5">
             <a href="index.html" class="hover:text-white/80 transition-colors">Beranda</a>
             <i class="fa-solid fa-chevron-right text-[9px]"></i>
             <span class="text-white/80">Berita & Artikel</span>
           </nav>
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-xs font-bold uppercase tracking-wider mb-4">
+          <div data-animate="fade-up" data-delay="60"
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-xs font-bold uppercase tracking-wider mb-4 hover:border-amber-400/50 transition-colors">
             <i class="fa-solid fa-newspaper text-[#e8a317] text-[11px]"></i> Berita & Artikel
           </div>
-          <h1
+          <h1 data-animate="fade-up" data-delay="100"
             class="text-2xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight mb-3 font-serif">
             Informasi Terkini Dunia Halal
           </h1>
-          <p class="text-white/70 text-sm sm:text-lg leading-relaxed max-w-xl">
+          <p data-animate="fade-up" data-delay="160" class="text-white/70 text-sm sm:text-lg leading-relaxed max-w-xl">
             Regulasi, kebijakan BPJPH, dan perkembangan industri halal Indonesia terbaru untuk Anda.
           </p>
-          <div class="flex flex-wrap items-center gap-x-5 gap-y-2 mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-white/15">
-            <div class="flex items-center gap-2 text-white/80"><i
+          <div data-animate="fade-up" data-delay="220"
+            class="flex flex-wrap items-center gap-x-5 gap-y-2 mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-white/15">
+            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors"><i
                 class="fa-solid fa-file-lines text-[#e8a317] text-sm"></i><span
-                class="text-xs sm:text-sm font-semibold">12 Artikel Tersedia</span></div>
-            <div class="flex items-center gap-2 text-white/80"><i
-                class="fa-solid fa-tags text-[#e8a317] text-sm"></i><span class="text-xs sm:text-sm font-semibold">4
+                class="text-xs sm:text-sm font-semibold">4 Artikel Tersedia</span></div>
+            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors"><i
+                class="fa-solid fa-tags text-[#e8a317] text-sm"></i><span class="text-xs sm:text-sm font-semibold">3
                 Kategori</span></div>
-            <div class="flex items-center gap-2 text-white/80"><i
+            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors"><i
                 class="fa-regular fa-clock text-[#e8a317] text-sm"></i><span
                 class="text-xs sm:text-sm font-semibold">Diperbarui 18 Sep 2026</span></div>
           </div>
@@ -244,7 +290,7 @@
     </section>
 
     <!-- STICKY SEARCH + FILTER -->
-    <div class="sticky top-[72px] z-40 bg-white border-b border-slate-200 shadow-xs">
+    <div class="sticky top-[72px] z-40 bg-white border-b border-slate-200 shadow-xs backdrop-blur-md bg-white/95">
       <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-3.5">
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
           <div class="relative flex-1 max-w-xs">
@@ -277,7 +323,7 @@
       <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
         <p id="resultCount" class="text-xs sm:text-sm text-slate-500 font-medium mb-6">Menampilkan <span id="countNum"
             class="font-bold text-slate-800">4</span> dari <span id="totalNum"
-            class="font-bold text-slate-800">12</span> artikel</p>
+            class="font-bold text-slate-800">4</span> artikel</p>
 
         <div id="articlesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
 
@@ -351,13 +397,13 @@
 
           <!-- Article 3 — Daerah -->
           <article class="article-card" data-kategori="daerah"
-            data-title="jawa barat catat rekor 85 ribu produk umkm tersertifikasi halal dalam setahun">
+            data-title="penyerahan sertifikat halal simbolis umkm aa jatra baking demo roti gesid apui lhokseumawe">
             <a href="detail-berita.html?id=3"
               class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
               <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80"
-                  alt="Halal Jabar"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                <img src="assets/images/berita/penyerahan-sh-lhokseumawe.jpg"
+                  alt="Penyerahan Sertifikat Halal UMKM AA Jatra GESID APUI Lhokseumawe"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="lazy">
                 <span
                   class="badge-daerah absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide">Daerah</span>
@@ -365,13 +411,13 @@
               <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
                 <div>
                   <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5"><i
-                      class="fa-regular fa-calendar text-[10px]"></i> 12 Sep 2026</p>
+                      class="fa-regular fa-calendar text-[10px]"></i> 14 Mei 2026</p>
                   <h3
                     class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
-                    Jawa Barat Catat Rekor: 85 Ribu Produk UMKM Tersertifikasi Halal dalam Setahun</h3>
-                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">Disperindag Jabar bersama LPH mitra
-                    berhasil melampaui target sertifikasi halal tahunan berkat pendampingan intensif di 27
-                    kabupaten/kota.</p>
+                    Penyerahan Sertifikat Halal Simbolis UMKM AA Jatra pada Baking Demo GESID-APUI Lhokseumawe</h3>
+                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">LPH Gesid bersama APUI menyerahkan
+                    Sertifikat Halal resmi BPJPH kepada UMKM AA Jatra dalam agenda Baking Demo Roti di Kota Lhokseumawe,
+                    Aceh.</p>
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
                   <span class="text-[11px] text-slate-400 font-medium">4 menit baca</span>
@@ -417,271 +463,6 @@
               </div>
             </a>
           </article>
-
-          <!-- Article 5 — Nasional (hidden) -->
-          <article class="article-card hidden-card" data-kategori="nasional"
-            data-title="kemenag luncurkan aplikasi si halal untuk permudah pendaftaran sertifikasi online">
-            <a href="detail-berita.html?id=5"
-              class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
-              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80"
-                  alt="Aplikasi SI Halal"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy">
-                <span
-                  class="badge-nasional absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide">Nasional</span>
-              </div>
-              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5"><i
-                      class="fa-regular fa-calendar text-[10px]"></i> 7 Sep 2026</p>
-                  <h3
-                    class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
-                    Kemenag Luncurkan Aplikasi SI Halal untuk Permudah Pendaftaran Sertifikasi Online</h3>
-                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">Sistem Informasi Halal kini hadir versi
-                    terbaru dengan antarmuka lebih intuitif dan proses persetujuan dipercepat hingga 40%.</p>
-                </div>
-                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span class="text-[11px] text-slate-400 font-medium">4 menit baca</span>
-                  <span
-                    class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Article 6 — Internasional (hidden) -->
-          <article class="article-card hidden-card" data-kategori="internasional"
-            data-title="produk halal indonesia tembus pasar timur tengah ekspor naik 32 persen">
-            <a href="detail-berita.html?id=6"
-              class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
-              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=800&q=80"
-                  alt="Ekspor Halal"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy">
-                <span
-                  class="badge-internasional absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide">Internasional</span>
-              </div>
-              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5"><i
-                      class="fa-regular fa-calendar text-[10px]"></i> 5 Sep 2026</p>
-                  <h3
-                    class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
-                    Produk Halal Indonesia Tembus Pasar Timur Tengah, Ekspor Naik 32 Persen</h3>
-                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">Kemendag mencatat lonjakan ekspor
-                    produk halal bersertifikat ke kawasan Timur Tengah didorong permintaan dari UEA dan Arab Saudi.</p>
-                </div>
-                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span class="text-[11px] text-slate-400 font-medium">6 menit baca</span>
-                  <span
-                    class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Article 7 — Daerah (hidden) -->
-          <article class="article-card hidden-card" data-kategori="daerah"
-            data-title="sulawesi selatan buka 50 gerai pendampingan halal gratis untuk pelaku umkm lokal">
-            <a href="detail-berita.html?id=7"
-              class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
-              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
-                  alt="Pendampingan Sulsel"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy">
-                <span
-                  class="badge-daerah absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide">Daerah</span>
-              </div>
-              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5"><i
-                      class="fa-regular fa-calendar text-[10px]"></i> 2 Sep 2026</p>
-                  <h3
-                    class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
-                    Sulawesi Selatan Buka 50 Gerai Pendampingan Halal Gratis untuk Pelaku UMKM Lokal</h3>
-                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">Pemprov Sulsel meluncurkan program
-                    gerai pendampingan halal terpadu di 24 kabupaten/kota untuk UMKM kuliner dan pangan olahan.</p>
-                </div>
-                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span class="text-[11px] text-slate-400 font-medium">3 menit baca</span>
-                  <span
-                    class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Article 8 — Regulasi (hidden) -->
-          <article class="article-card hidden-card" data-kategori="nasional"
-            data-title="panduan lengkap sjph untuk industri kosmetik dan skincare 2026">
-            <a href="detail-berita.html?id=8"
-              class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
-              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80"
-                  alt="SJPH Kosmetik"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy">
-                <span
-                  class="badge-regulasi absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide">Regulasi</span>
-              </div>
-              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5"><i
-                      class="fa-regular fa-calendar text-[10px]"></i> 28 Agu 2026</p>
-                  <h3
-                    class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
-                    Panduan Lengkap SJPH untuk Industri Kosmetik dan Skincare 2026</h3>
-                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">Penerapan SJPH di industri kosmetik
-                    memiliki tantangan khusus terkait bahan aktif dan proses formulasi yang perlu dipahami produsen.</p>
-                </div>
-                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span class="text-[11px] text-slate-400 font-medium">8 menit baca</span>
-                  <span
-                    class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Article 9 — Internasional (hidden) -->
-          <article class="article-card hidden-card" data-kategori="internasional"
-            data-title="forum halal dunia 2026 indonesia jadi tuan rumah konferensi standar halal global">
-            <a href="detail-berita.html?id=9"
-              class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
-              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
-                  alt="Forum Halal Dunia"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy">
-                <span
-                  class="badge-internasional absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide">Internasional</span>
-              </div>
-              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5"><i
-                      class="fa-regular fa-calendar text-[10px]"></i> 22 Agu 2026</p>
-                  <h3
-                    class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
-                    Forum Halal Dunia 2026: Indonesia Jadi Tuan Rumah Konferensi Standar Halal Global</h3>
-                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">Indonesia menjadi tuan rumah World
-                    Halal Forum 2026 di Jakarta Convention Center, dihadiri perwakilan 60 negara.</p>
-                </div>
-                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span class="text-[11px] text-slate-400 font-medium">5 menit baca</span>
-                  <span
-                    class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Article 10 — Daerah (hidden) -->
-          <article class="article-card hidden-card" data-kategori="daerah"
-            data-title="east java halal hub program sertifikasi produk pondok pesantren jawa timur">
-            <a href="detail-berita.html?id=10"
-              class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
-              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80"
-                  alt="Halal Hub Jatim"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy">
-                <span
-                  class="badge-daerah absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide">Daerah</span>
-              </div>
-              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5"><i
-                      class="fa-regular fa-calendar text-[10px]"></i> 18 Agu 2026</p>
-                  <h3
-                    class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
-                    East Java Halal Hub: Program Sertifikasi Produk Pondok Pesantren Jawa Timur</h3>
-                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">Pemprov Jatim bekerja sama dengan 1.200
-                    pesantren untuk mendaftarkan produk binaan santri agar mendapat sertifikat halal resmi.</p>
-                </div>
-                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span class="text-[11px] text-slate-400 font-medium">5 menit baca</span>
-                  <span
-                    class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Article 11 — Regulasi (hidden) -->
-          <article class="article-card hidden-card" data-kategori="nasional"
-            data-title="bpjph perbarui daftar bahan kritis halal farmasi dan suplemen kesehatan">
-            <a href="detail-berita.html?id=11"
-              class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
-              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=800&q=80"
-                  alt="Bahan Halal Farmasi"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy">
-                <span
-                  class="badge-regulasi absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide">Regulasi</span>
-              </div>
-              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5"><i
-                      class="fa-regular fa-calendar text-[10px]"></i> 14 Agu 2026</p>
-                  <h3
-                    class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
-                    BPJPH Perbarui Daftar Bahan Kritis Halal untuk Industri Farmasi dan Suplemen</h3>
-                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">Regulasi terbaru BPJPH memperbarui
-                    klasifikasi 200+ bahan aktif farmasi yang wajib diverifikasi kehalalannya sebelum digunakan.</p>
-                </div>
-                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span class="text-[11px] text-slate-400 font-medium">9 menit baca</span>
-                  <span
-                    class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Article 12 — Internasional (hidden) -->
-          <article class="article-card hidden-card" data-kategori="internasional"
-            data-title="uni eropa buka peluang impor produk halal indonesia tanpa tarif tambahan">
-            <a href="detail-berita.html?id=12"
-              class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
-              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80"
-                  alt="Ekspor ke Eropa"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy">
-                <span
-                  class="badge-internasional absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide">Internasional</span>
-              </div>
-              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5"><i
-                      class="fa-regular fa-calendar text-[10px]"></i> 10 Agu 2026</p>
-                  <h3
-                    class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
-                    Uni Eropa Buka Peluang Impor Produk Halal Indonesia Tanpa Tarif Tambahan</h3>
-                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">Perjanjian IEU-CEPA membuka akses
-                    produk halal BPJPH ke 27 negara Uni Eropa dengan bea masuk nol persen mulai 2027.</p>
-                </div>
-                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span class="text-[11px] text-slate-400 font-medium">7 menit baca</span>
-                  <span
-                    class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
-                </div>
-              </div>
-            </a>
-          </article>
-
         </div>
 
         <!-- No results -->
@@ -694,8 +475,8 @@
           <p class="text-slate-500 text-sm">Coba kata kunci lain atau pilih kategori berbeda.</p>
         </div>
 
-        <!-- Load More -->
-        <div class="flex justify-center mt-10" id="loadMoreContainer">
+        <!-- Load More (Hidden as all 4 articles are displayed) -->
+        <div class="hidden justify-center mt-10" id="loadMoreContainer">
           <button id="loadMoreBtn" onclick="loadMoreArticles()"
             class="load-more-btn inline-flex items-center gap-2.5 px-8 py-3.5 text-[15px] font-bold rounded-xl text-white bg-[#c89020] hover:bg-[#b57f18] transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5">
             <i class="fa-solid fa-circle-down text-base"></i>
@@ -747,7 +528,8 @@
                 CENTER</span>
             </div>
           </div>
-          <p class="text-sm leading-relaxed text-slate-500 max-w-xs">Lembaga Pemeriksa Halal (LPH) resmi serta mitra profesional pendampingan dan sertifikasi halal (BPJPH & MUI) di Indonesia.</p>
+          <p class="text-sm leading-relaxed text-slate-500 max-w-xs">Lembaga Pemeriksa Halal (LPH) resmi serta mitra
+            profesional pendampingan dan sertifikasi halal (BPJPH & MUI) di Indonesia.</p>
           <div class="flex gap-2 pt-1">
             <a href="#"
               class="w-8 h-8 rounded-md bg-white border border-slate-200 hover:border-[#c89020] hover:text-[#c89020] flex items-center justify-center text-slate-500 transition-colors"><i
@@ -770,14 +552,18 @@
             </li>
             <li><a href="berita.html" class="text-[#c89020] font-semibold">Berita & Artikel</a></li>
             <li><a href="kontak.html" class="text-slate-600 hover:text-[#c89020] transition-colors">Kontak</a></li>
-            <li><a href="https://bpjph.halal.go.id/kalkulator-biaya-sh" target="_blank" rel="noopener" class="text-slate-600 hover:text-[#c89020] transition-colors inline-flex items-center gap-1.5"><span>Kalkulator Tarif BPJPH</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-amber-500"></i></a></li>
+            <li><a href="https://bpjph.halal.go.id/kalkulator-biaya-sh" target="_blank" rel="noopener"
+                class="text-slate-600 hover:text-[#c89020] transition-colors inline-flex items-center gap-1.5"><span>Kalkulator
+                  Tarif BPJPH</span> <i
+                  class="fa-solid fa-arrow-up-right-from-square text-[10px] text-amber-500"></i></a></li>
           </ul>
         </div>
         <div class="md:col-span-4 space-y-3">
           <h4 class="text-xs font-bold text-slate-900 uppercase tracking-widest">Kontak</h4>
           <ul class="space-y-2.5 text-sm text-slate-600">
             <li class="flex items-start gap-2.5"><i
-                class="fa-solid fa-location-dot text-[#c89020] mt-0.5 text-xs flex-shrink-0"></i><span>Ruko Seasons City Blok E No.1, RT.13/RW.1, Jemb. Besi, Kec. Tambora, Kota Jakarta Barat, DKI Jakarta 11320</span></li>
+                class="fa-solid fa-location-dot text-[#c89020] mt-0.5 text-xs flex-shrink-0"></i><span>Ruko Seasons City
+                Blok E No.1, RT.13/RW.1, Jemb. Besi, Kec. Tambora, Kota Jakarta Barat, DKI Jakarta 11320</span></li>
             <li class="flex items-center gap-2.5"><i
                 class="fa-solid fa-phone text-[#c89020] text-xs flex-shrink-0"></i><span>0895-6267-79601</span></li>
             <li class="flex items-center gap-2.5"><i
@@ -802,8 +588,9 @@
   </footer>
 
   <a href="https://wa.me/62895626779601?text=Halo%20Gesid%20Halal%20Center,%20saya%20ingin%20konsultasi%20sertifikasi%20halal"
-    target="_blank" rel="noopener" class="floating-whatsapp-btn" aria-label="Konsultasi via WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i><span>Konsultasi Halal</span>
+    target="_blank" rel="noopener" class="floating-whatsapp-btn" aria-label="Konsultasi via WhatsApp"
+    title="Konsultasi via WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
   </a>
 
   <script src="assets/js/modules/navigation.js"></script>
@@ -831,23 +618,38 @@
       matching.slice(0, visibleCount).forEach((c, i) => {
         c.classList.remove('hidden-card');
         void c.offsetWidth;
-        c.style.animationDelay = (i * 55) + 'ms';
+        c.style.animationDelay = (i * 65) + 'ms';
         c.classList.add('fade-in-card');
       });
       const shown = Math.min(visibleCount, matching.length);
       const countEl = document.getElementById('countNum');
       const totalEl = document.getElementById('totalNum');
-      if (countEl) countEl.textContent = shown;
+      if (countEl) {
+        countEl.style.transition = 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease';
+        countEl.style.transform = 'scale(1.25)';
+        countEl.textContent = shown;
+        setTimeout(() => { countEl.style.transform = 'scale(1)'; }, 180);
+      }
       if (totalEl) totalEl.textContent = matching.length;
       document.getElementById('searchNoResult').style.display = matching.length === 0 ? 'block' : 'none';
       const rem = matching.length - visibleCount;
-      document.getElementById('loadMoreContainer').style.display = rem > 0 ? 'flex' : 'none';
-      document.getElementById('remainingCount').textContent = '+' + Math.min(rem, BATCH);
+      const loadMore = document.getElementById('loadMoreContainer');
+      if (loadMore) loadMore.style.display = rem > 0 ? 'flex' : 'none';
+      const remCount = document.getElementById('remainingCount');
+      if (remCount) remCount.textContent = '+' + Math.min(rem, BATCH);
     }
 
     window.filterPage = function (k) {
       currentFilter = k; visibleCount = 4;
       document.querySelectorAll('.page-tab').forEach(b => b.classList.toggle('active-tab', b.dataset.tab === k));
+      const grid = document.getElementById('articlesGrid');
+      if (grid) {
+        grid.style.opacity = '0.85';
+        setTimeout(() => {
+          grid.style.transition = 'opacity 0.25s ease';
+          grid.style.opacity = '1';
+        }, 20);
+      }
       renderCards();
     };
 

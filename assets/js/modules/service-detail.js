@@ -19,7 +19,7 @@
       return;
     }
 
-    const d = data[serviceKey] || data['sertifikasi'];
+    const d = data[serviceKey] || data['pemeriksaan'] || data['sertifikasi'];
     if (!d) return;
 
     const set = (id, val) => {

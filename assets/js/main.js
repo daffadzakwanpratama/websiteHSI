@@ -69,6 +69,15 @@ window.filterBerita = function (kategori) {
     btn.classList.toggle('active-tab', btn.dataset.tab === kategori);
   });
 
+  const grid = document.getElementById('beritaGrid');
+  if (grid) {
+    grid.style.opacity = '0.85';
+    setTimeout(() => {
+      grid.style.transition = 'opacity 0.25s ease';
+      grid.style.opacity = '1';
+    }, 20);
+  }
+
   const cards = document.querySelectorAll('.berita-card');
   const emptyState = document.getElementById('beritaEmpty');
   let visibleCount = 0;
@@ -81,7 +90,7 @@ window.filterBerita = function (kategori) {
       // Stagger the fade-in animation
       card.classList.remove('fade-in-card');
       void card.offsetWidth; // force reflow to restart animation
-      card.style.animationDelay = (index * 60) + 'ms';
+      card.style.animationDelay = (index * 70) + 'ms';
       card.classList.add('fade-in-card');
       visibleCount++;
     } else {

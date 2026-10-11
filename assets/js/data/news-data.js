@@ -1,6 +1,5 @@
 /**
- * Gesid Halal Center - News & Articles Database
- * Comprehensive database for all 12 news articles.
+ * Comprehensive database for 4 curated news articles.
  */
 
 window.NEWS_DATA = [
@@ -59,7 +58,7 @@ window.NEWS_DATA = [
         Sebagai konsultan pendampingan profesional, Gesid Halal Center siap membantu pelaku usaha dari berbagai skala — baik melalui jalur *self-declare* bagi usaha mikro maupun jalur reguler dengan audit LPH independen bagi industri menengah dan besar.
       </p>
     `,
-    relatedIds: [4, 5, 8]
+    relatedIds: [2, 3, 4]
   },
   {
     id: 2,
@@ -102,39 +101,59 @@ window.NEWS_DATA = [
         <li><strong>Kemudahan Ekspansi ke Pasar Timur Tengah:</strong> Menguatkan reputasi produk di rantai pasok global.</li>
       </ul>
     `,
-    relatedIds: [6, 9, 12]
+    relatedIds: [1, 3, 4]
   },
   {
     id: 3,
-    title: "Jawa Barat Catat Rekor: 85 Ribu Produk UMKM Tersertifikasi Halal dalam Setahun",
-    slug: "jawa-barat-rekor-85-ribu-umkm-tersertifikasi-halal",
+    title: "Penyerahan Sertifikat Halal Simbolis UMKM AA Jatra pada Baking Demo Roti GESID-APUI Lhokseumawe",
+    slug: "penyerahan-sertifikat-halal-umkm-aa-jatra-gesid-apui-lhokseumawe",
     category: "daerah",
     categoryLabel: "Daerah",
     categoryBadgeClass: "badge-daerah",
-    date: "12 Sep 2026",
+    date: "14 Mei 2026",
     readTime: "4 menit baca",
     author: {
-      name: "Siti Rahmawati, S.Pt",
-      role: "Koordinator Pendampingan Daerah",
+      name: "Tim Pendamping Gesid Aceh",
+      role: "Pendamping Proses Produk Halal (P3H)",
       avatar: "assets/images/logo-emblem.png"
     },
-    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=85",
-    caption: "Kegiatan fasilitasi penyerahan sertifikat halal massal di Bandung, Jawa Barat.",
-    summary: "Disperindag Jabar bersama LPH mitra berhasil melampaui target sertifikasi halal tahunan berkat program pendampingan intensif di 27 kabupaten/kota.",
+    image: "assets/images/berita/penyerahan-sh-lhokseumawe.jpg",
+    caption: "Penyerahan Sertifikat Halal (SH) secara simbolis kepada UMKM AA Jatra dalam acara Baking Demo Roti GESID–APUI di Kota Lhokseumawe, Aceh.",
+    summary: "LPH Gesid Halal Center bersama APUI Kota Lhokseumawe menyerahkan Sertifikat Halal resmi BPJPH secara simbolis kepada pelaku usaha UMKM AA Jatra dalam rangkaian agenda Baking Demo Roti.",
     content: `
       <p class="lead-text">
-        <strong>Bandung —</strong> Provinsi Jawa Barat kembali mengukuhkan posisinya sebagai provinsi terdepan dalam pengembangan industri halal di Indonesia setelah berhasil memfasilitasi sertifikasi 85.000 produk UMKM hanya dalam kurun waktu satu tahun kalender.
+        <strong>Lhokseumawe —</strong> <em>Bismillahirrohmanirrohim.</em> Kabar membanggakan datang dari ekosistem industri halal Kota Lhokseumawe, Aceh. LPH Gesid Halal Center berkolaborasi bersama Asosiasi Pengusaha Usaha Industri (APUI) Kota Lhokseumawe menyelenggarakan agenda pelatihan dan <strong>Baking Demo Roti</strong> yang dirangkaikan dengan penyerahan Sertifikat Halal (SH) resmi secara simbolis kepada pelaku UMKM <strong>AA Jatra</strong> pada 14 Mei 2026.
       </p>
 
-      <h3>Kolaborasi Multi-Pihak</h3>
+      <h3>Wujud Nyata Pendampingan Halal Berkelanjutan</h3>
       <p>
-        Keberhasilan ini didorong oleh integrasi program "Jabar Juara Halal" yang menggandeng dinas perdagangan, perguruan tinggi, perbankan daerah, serta lembaga pendampingan swasta.
+        Penyerahan sertifikat halal ini merupakan buah dari proses pendampingan komprehensif yang dilakukan oleh tim Pendamping Proses Produk Halal (P3H) Gesid. Mulai dari kurasi bahan baku halal, penyusunan Manual Sistem Jaminan Produk Halal (SJPH), hingga verifikasi kepatuhan standar BPJPH Kementerian Agama RI.
       </p>
+
+      <blockquote class="article-quote">
+        <p>"Alhamdulillah, penyerahan Sertifikat Halal ini membuktikan komitmen kami bahwa Gesid siap mendampingi para pelaku usaha roti dan olahan pangan di daerah hingga tuntas mengantongi sertifikat resmi, memperkuat kepercayaan konsumen dan daya saing pasar."</p>
+        <cite>— Perwakilan Tim Gesid Halal Center Kota Lhokseumawe</cite>
+      </blockquote>
+
+      <h3>Dukungan Sinergis Melalui Baking Demo Roti</h3>
       <p>
-        Sektor kuliner tradisional, olahan keripik, kopi olahan Priangan, dan produk herbal lokal menjadi kontributor terbesar dari sertifikasi massal ini.
+        Acara Baking Demo Roti yang digelar bersama APUI menjadi momentum strategis bagi para pengusaha mikro dan industri rumahan di Lhokseumawe untuk meningkatkan keterampilan teknis pembuatan roti berkualitas tinggi sekaligus memahami pentingnya integritas halal pada setiap rantai pasok bahan baku: mulai dari tepung, ragi, shortening, hingga emulsifier yang terverifikasi halal.
+      </p>
+
+      <div class="callout-box">
+        <div class="callout-icon"><i class="fa-solid fa-certificate text-emerald-600"></i></div>
+        <div>
+          <h4>UMKM AA Jatra Resmi Bersertifikat Halal</h4>
+          <p>Dengan terbitnya Sertifikat Halal resmi BPJPH ini, produk roti dan olahan kuliner UMKM AA Jatra kini resmi terjamin kehalalannya, siap memperluas pangsa pasar ritel modern dan rantai distribusi di seluruh wilayah Aceh dan sekitarnya.</p>
+        </div>
+      </div>
+
+      <h3>Komitmen Jangkauan Gesid di Seluruh Indonesia</h3>
+      <p>
+        Kegiatan di Lhokseumawe ini sekaligus menegaskan kehadiran operasional aktif LPH Gesid Halal Center di berbagai provinsi di Indonesia, membuktikan bahwa layanan konsultasi, audit, dan pendampingan halal Gesid hadir langsung mendampingi para pelaku usaha di akar rumput.
       </p>
     `,
-    relatedIds: [7, 10, 1]
+    relatedIds: [1, 4, 2]
   },
   {
     id: 4,
@@ -176,226 +195,7 @@ window.NEWS_DATA = [
         </div>
       </div>
     `,
-    relatedIds: [1, 8, 11]
-  },
-  {
-    id: 5,
-    title: "Kemenag Luncurkan Aplikasi SI Halal untuk Permudah Pendaftaran Online",
-    slug: "kemenag-luncurkan-aplikasi-si-halal-online",
-    category: "nasional",
-    categoryLabel: "Nasional",
-    categoryBadgeClass: "badge-nasional",
-    date: "7 Sep 2026",
-    readTime: "4 menit baca",
-    author: {
-      name: "Tim IT & Sistem Gesid",
-      role: "Digital Specialist",
-      avatar: "assets/images/logo-emblem.png"
-    },
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=85",
-    caption: "Aplikasi SI Halal terbaru dengan antarmuka yang lebih cepat dan terintegrasi.",
-    summary: "Sistem Informasi Halal kini hadir versi terbaru dengan antarmuka lebih intuitif dan proses persetujuan dipercepat hingga 40%.",
-    content: `
-      <p class="lead-text">
-        <strong>Jakarta —</strong> BPJPH meluncurkan pembaruan besar pada portal layanan digital Sistem Informasi Halal (SIHALAL). Versi terbaru ini dirancang khusus untuk memangkas birokrasi pendaftaran dan mempercepat proses verifikasi dokumen.
-      </p>
-      <h3>Fitur-fitur Baru SIHALAL</h3>
-      <ul>
-        <li><strong>Auto-Validation Bahan Baku:</strong> Pengecekan otomatis nomor sertifikat halal bahan baku dari database nasional.</li>
-        <li><strong>Integrasi OSS RBA:</strong> Sinkronisasi data NIB (Nomor Induk Berusaha) secara langsung tanpa perlu upload manual berkali-kali.</li>
-        <li><strong>Tracking Status Real-Time:</strong> Notifikasi WhatsApp dan email pada setiap perpindahan tahapan audit.</li>
-      </ul>
-    `,
-    relatedIds: [1, 4, 8]
-  },
-  {
-    id: 6,
-    title: "Produk Halal Indonesia Tembus Pasar Timur Tengah, Ekspor Naik 32 Persen",
-    slug: "produk-halal-indonesia-tembus-pasar-timur-tengah-ekspor-naik",
-    category: "internasional",
-    categoryLabel: "Internasional",
-    categoryBadgeClass: "badge-internasional",
-    date: "5 Sep 2026",
-    readTime: "6 menit baca",
-    author: {
-      name: "Ahmad Fauzi, M.Si",
-      role: "Analis Hubungan Internasional Halal",
-      avatar: "assets/images/logo-emblem.png"
-    },
-    image: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1200&q=85",
-    caption: "Kontainer pengiriman ekspor produk pangan halal di pelabuhan Tanjung Priok.",
-    summary: "Kemendag mencatat lonjakan ekspor produk halal bersertifikat ke kawasan Timur Tengah didorong permintaan dari UEA dan Arab Saudi.",
-    content: `
-      <p class="lead-text">
-        <strong>Dubai —</strong> Kementerian Perdagangan mencatat lonjakan nilai ekspor produk makanan dan minuman olahan halal Indonesia ke negara-negara Teluk (GCC) sebesar 32% pada kuartal ketiga 2026.
-      </p>
-      <p>
-        Sertifikasi halal resmi BPJPH yang telah diakui oleh otoritas standarisasi Teluk (GSO) menjadi kunci pembuka gerbang pasar internasional yang bernilai triliunan rupiah.
-      </p>
-    `,
-    relatedIds: [2, 9, 12]
-  },
-  {
-    id: 7,
-    title: "Sulawesi Selatan Buka 50 Gerai Pendampingan Halal Gratis untuk UMKM Lokal",
-    slug: "sulsel-buka-50-gerai-pendampingan-halal-gratis",
-    category: "daerah",
-    categoryLabel: "Daerah",
-    categoryBadgeClass: "badge-daerah",
-    date: "2 Sep 2026",
-    readTime: "3 menit baca",
-    author: {
-      name: "Siti Rahmawati, S.Pt",
-      role: "Koordinator Pendampingan Daerah",
-      avatar: "assets/images/logo-emblem.png"
-    },
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=85",
-    caption: "Layanan gerai halal terpadu untuk pelaku usaha mikro di Makassar.",
-    summary: "Pemprov Sulsel meluncurkan program gerai pendampingan halal terpadu di 24 kabupaten/kota untuk UMKM kuliner dan pangan olahan.",
-    content: `
-      <p class="lead-text">
-        <strong>Makassar —</strong> Pemerintah Provinsi Sulawesi Selatan meresmikan pembukaan 50 gerai pendampingan halal serentak di pusat-pusat perbelanjaan, pasar tradisional, dan kantor dinas UMKM di seluruh kabupaten/kota di Sulsel.
-      </p>
-      <p>
-        Gerai ini menyediakan konsultasi langsung, asistensi verifikasi bahan kritis, serta bimbingan pendaftaran online bagi para pelaku usaha kuliner lokal.
-      </p>
-    `,
-    relatedIds: [3, 10, 1]
-  },
-  {
-    id: 8,
-    title: "Panduan Lengkap SJPH untuk Industri Kosmetik dan Skincare 2026",
-    slug: "panduan-lengkap-sjph-industri-kosmetik-skincare-2026",
-    category: "nasional",
-    categoryLabel: "Regulasi",
-    categoryBadgeClass: "badge-regulasi",
-    date: "28 Agu 2026",
-    readTime: "8 menit baca",
-    author: {
-      name: "Tim Formulasi & Teknis Gesid",
-      role: "Auditor Mutu Kosmetik",
-      avatar: "assets/images/logo-emblem.png"
-    },
-    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=85",
-    caption: "Pemeriksaan bahan baku kosmetik di laboratorium formulasi.",
-    summary: "Penerapan SJPH di industri kosmetik memiliki tantangan khusus terkait bahan aktif dan proses formulasi yang perlu dipahami produsen.",
-    content: `
-      <p class="lead-text">
-        <strong>Jakarta —</strong> Industri kosmetik dan perawatan tubuh (*personal care*) memiliki kompleksitas rantai pasok bahan baku yang tinggi, mulai dari emulsifier, pengawet, hingga bahan aktif bioteknologi.
-      </p>
-      <h3>Titik Kritis Halal Kosmetik</h3>
-      <p>
-        Produsen wajib memastikan tidak ada penggunaan kolagen hewani non-halal, gliserin turunan lemak babi, plasenta hewani, atau alkohol teknis non-halal dalam formulasi produk.
-      </p>
-    `,
-    relatedIds: [4, 11, 1]
-  },
-  {
-    id: 9,
-    title: "Forum Halal Dunia 2026: Indonesia Tuan Rumah Konferensi Standar Global",
-    slug: "forum-halal-dunia-2026-indonesia-tuan-rumah",
-    category: "internasional",
-    categoryLabel: "Internasional",
-    categoryBadgeClass: "badge-internasional",
-    date: "22 Agu 2026",
-    readTime: "5 menit baca",
-    author: {
-      name: "Ahmad Fauzi, M.Si",
-      role: "Analis Hubungan Internasional Halal",
-      avatar: "assets/images/logo-emblem.png"
-    },
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=85",
-    caption: "Suasana konferensi internasional World Halal Forum di Jakarta.",
-    summary: "Indonesia menjadi tuan rumah World Halal Forum 2026 di Jakarta Convention Center, dihadiri perwakilan 60 negara.",
-    content: `
-      <p class="lead-text">
-        <strong>Jakarta —</strong> Lebih dari 1.500 delegasi internasional yang terdiri dari regulator, lembaga riset, dan pelaku industri global menghadiri pembukaan World Halal Forum 2026 di Jakarta.
-      </p>
-      <p>
-        Forum ini mendiskusikan standardisasi pengujian berbasis DNA, digital traceability menggunakan blockchain, serta integrasi etika keberlanjutan (*Halal & Green Economy*).
-      </p>
-    `,
-    relatedIds: [2, 6, 12]
-  },
-  {
-    id: 10,
-    title: "East Java Halal Hub: Program Sertifikasi Produk Pondok Pesantren",
-    slug: "east-java-halal-hub-program-sertifikasi-pesantren",
-    category: "daerah",
-    categoryLabel: "Daerah",
-    categoryBadgeClass: "badge-daerah",
-    date: "18 Agu 2026",
-    readTime: "5 menit baca",
-    author: {
-      name: "Siti Rahmawati, S.Pt",
-      role: "Koordinator Pendampingan Daerah",
-      avatar: "assets/images/logo-emblem.png"
-    },
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85",
-    caption: "Inkubator bisnis produk pesantren di Jawa Timur.",
-    summary: "Pemprov Jatim bekerja sama dengan 1.200 pesantren untuk mendaftarkan produk binaan santri agar mendapat sertifikat halal resmi.",
-    content: `
-      <p class="lead-text">
-        <strong>Surabaya —</strong> Program East Java Halal Hub resmi mengintegrasikan 1.200 unit usaha berbasis pondok pesantren di Jawa Timur ke dalam ekosistem industri halal bersertifikat resmi.
-      </p>
-      <p>
-        Produk yang didaftarkan meliputi air minum dalam kemasan (AMDK), roti, kopi, pakan ternak, dan makanan olahan santri.
-      </p>
-    `,
-    relatedIds: [3, 7, 1]
-  },
-  {
-    id: 11,
-    title: "BPJPH Perbarui Daftar Bahan Kritis Halal untuk Industri Farmasi & Suplemen",
-    slug: "bpjph-perbarui-daftar-bahan-kritis-farmasi-suplemen",
-    category: "nasional",
-    categoryLabel: "Regulasi",
-    categoryBadgeClass: "badge-regulasi",
-    date: "14 Agu 2026",
-    readTime: "9 menit baca",
-    author: {
-      name: "Tim Formulasi & Teknis Gesid",
-      role: "Spesialis Farmasi & Kimia Halal",
-      avatar: "assets/images/logo-emblem.png"
-    },
-    image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=1200&q=85",
-    caption: "Laboratorium pengujian kapsul dan suplemen kesehatan.",
-    summary: "Regulasi terbaru BPJPH memperbarui klasifikasi 200+ bahan aktif farmasi yang wajib diverifikasi kehalalannya sebelum digunakan.",
-    content: `
-      <p class="lead-text">
-        <strong>Jakarta —</strong> BPJPH merilis Keputusan Kepala Badan terbaru yang memuat daftar 200 lebih bahan baku kritis farmasi, eksipien, gelatin kapsul, dan enzim bioteknologi.
-      </p>
-      <p>
-        Industri farmasi diberikan masa transisi untuk menyesuaikan *Certificate of Analysis* (CoA) dan audit fasilitas manufaktur guna memenuhi standar SJPH farmasi.
-      </p>
-    `,
-    relatedIds: [4, 8, 1]
-  },
-  {
-    id: 12,
-    title: "Uni Eropa Buka Peluang Impor Produk Halal Indonesia Tanpa Tarif Tambahan",
-    slug: "uni-eropa-buka-peluang-impor-produk-halal-indonesia",
-    category: "internasional",
-    categoryLabel: "Internasional",
-    categoryBadgeClass: "badge-internasional",
-    date: "10 Agu 2026",
-    readTime: "7 menit baca",
-    author: {
-      name: "Ahmad Fauzi, M.Si",
-      role: "Analis Hubungan Internasional Halal",
-      avatar: "assets/images/logo-emblem.png"
-    },
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=85",
-    caption: "Pertemuan perdagangan bilateral Indonesia - Uni Eropa di Brussel.",
-    summary: "Perjanjian perdagangan membuka akses produk halal BPJPH ke 27 negara Uni Eropa dengan fasilitas tarif preferensi mulai 2027.",
-    content: `
-      <p class="lead-text">
-        <strong>Brussel —</strong> Delegasi dagang Uni Eropa dan Indonesia menyepakati pengakuan standar sertifikasi halal nasional Indonesia untuk produk makanan olahan, perikanan, dan rempah-rempah yang masuk ke pasar Eropa.
-      </p>
-      <p>
-        Langkah ini diperkirakan akan meningkatkan ekspor komoditas organik dan makanan halal nusantara ke pasar Eropa hingga 45% dalam dua tahun mendatang.
-      </p>
-    `,
-    relatedIds: [2, 6, 9]
+    relatedIds: [1, 3, 2]
   }
 ];
+

@@ -55,13 +55,13 @@
   /* Primary & Headings: Dark Charcoal (Slate 900 / Slate 800) */
   --color-text-heading: #0f172a;
   --color-text-primary: #1e293b;
-  
+
   /* Primary Body: Rich Deep Slate (Slate 700 - 10.1:1 contrast on white) */
   --color-text-body: #334155;
-  
+
   /* Secondary / Supporting: Refined Dark Gray (Slate 600 - 7.0:1 contrast on white) */
   --color-text-secondary: #475569;
-  
+
   /* Captions & Micro-labels: Medium Slate (Slate 500 - 4.6:1+ contrast) */
   --color-text-muted: #64748b;
 }
@@ -77,7 +77,6 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-text-body);
-  overflow-x: hidden;
   line-height: 1.68;
 }
 
@@ -115,12 +114,12 @@ p {
 /* Refined Typography Contrast Calibration for Content on Light Backgrounds */
 /* Elevate washed-out light slates to refined dark gray with high contrast */
 section:not(.bg-slate-900):not(.bg-slate-950):not(#heroCarouselSection) .text-slate-500:not(.text-white),
-div:not(.bg-slate-900):not(.bg-slate-950) > .text-slate-500:not(.text-white) {
+div:not(.bg-slate-900):not(.bg-slate-950)>.text-slate-500:not(.text-white) {
   color: var(--color-text-secondary);
 }
 
 section:not(.bg-slate-900):not(.bg-slate-950):not(#heroCarouselSection) .text-slate-400:not(.text-white),
-div:not(.bg-slate-900):not(.bg-slate-950) > .text-slate-400:not(.text-white) {
+div:not(.bg-slate-900):not(.bg-slate-950)>.text-slate-400:not(.text-white) {
   color: var(--color-text-secondary);
 }
 
@@ -377,7 +376,7 @@ footer img[src*="logo-emblem"],
 .carousel-track {
   display: flex;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -393,6 +392,10 @@ footer img[src*="logo-emblem"],
   flex-shrink: 0;
   scroll-snap-align: start;
   transition: transform 0.3s ease;
+}
+
+.carousel-slide:last-child {
+  scroll-snap-align: end;
 }
 
 /* Dot Indicators */
@@ -506,7 +509,7 @@ footer img[src*="logo-emblem"],
 [data-animate].is-revealed,
 .reveal-on-scroll.is-revealed {
   opacity: 1;
-  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transform: none;
   filter: blur(0px);
 }
 
@@ -522,7 +525,7 @@ footer img[src*="logo-emblem"],
 [data-stagger]>*.is-revealed,
 [data-stagger].is-revealed>* {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  transform: none;
 }
 
 /* Hover Lift & Micro-Interactions */
@@ -556,6 +559,22 @@ footer img[src*="logo-emblem"],
 
 .hover-scale:hover {
   transform: scale(1.03);
+}
+
+/* Gold Card Border Utility */
+.gold-card-border {
+  border: 2px solid #c89020 !important;
+}
+
+/* Sticky Sidebar & Form Utility (Rock-solid viewport sticky) */
+@media (min-width: 1024px) {
+  .sticky-top-navbar {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 96px !important;
+    z-index: 20 !important;
+    align-self: start !important;
+  }
 }
 
 /* Luxury Card Glow Effect */
@@ -808,70 +827,106 @@ textarea:focus {
   transform: translateY(0);
 }
 
-/* ── 11. FLOATING WHATSAPP CTA BUTTON ─────────────────────────────────────── */
+/* ── 11. FLOATING WHATSAPP CTA BUTTON (CIRCULAR) ─────────────────────────── */
 .floating-whatsapp-btn {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: 1.75rem;
+  right: 1.75rem;
   z-index: 45;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.75rem 1.15rem;
-  background-color: #25d366;
-  color: #ffffff;
-  border-radius: 9999px;
-  font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 0.875rem;
-  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.38), 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #25d366 0%, #20bd5a 100%);
+  color: #ffffff !important;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.42), 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease,
+    background-color 0.25s ease;
   text-decoration: none;
 }
 
 .floating-whatsapp-btn:hover {
-  background-color: #20bd5a;
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.48), 0 3px 8px rgba(0, 0, 0, 0.12);
-  color: #ffffff;
+  background: linear-gradient(135deg, #2ae06e 0%, #1da850 100%);
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.52), 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #ffffff !important;
+}
+
+.floating-whatsapp-btn:active {
+  transform: scale(0.95);
 }
 
 .floating-whatsapp-btn i {
-  font-size: 1.35rem;
+  font-size: 1.85rem;
+  color: #ffffff !important;
+  line-height: 1;
+}
+
+.floating-whatsapp-btn span {
+  display: none !important;
 }
 
 @media (max-width: 640px) {
   .floating-whatsapp-btn {
     bottom: 1.25rem;
     right: 1.25rem;
-    padding: 0.75rem;
-    border-radius: 9999px;
+    width: 52px;
+    height: 52px;
   }
 
-  .floating-whatsapp-btn span {
-    display: none;
+  .floating-whatsapp-btn i {
+    font-size: 1.65rem;
   }
 }
 
+/* ── 12. BERITA TERKINI — TAB FILTER & CARDS ─────────────────────────────── */
 /* ── 12. BERITA TERKINI — TAB FILTER & CARDS ─────────────────────────────── */
 .berita-tab {
   background-color: #f8fafc;
   color: #64748b;
   border: 1.5px solid #e2e8f0;
   cursor: pointer;
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  user-select: none;
 }
 
 .berita-tab:hover {
   background-color: #fef9e7;
   color: var(--color-primary);
   border-color: rgba(200, 144, 32, 0.4);
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 12px -2px rgba(200, 144, 32, 0.18);
+}
+
+.berita-tab:active {
+  transform: scale(0.94);
 }
 
 .berita-tab.active-tab {
   background-color: var(--color-primary);
   color: #ffffff;
   border-color: var(--color-primary);
-  box-shadow: 0 4px 14px -2px rgba(200, 144, 32, 0.35);
+  box-shadow: 0 6px 18px -2px rgba(200, 144, 32, 0.4);
+  transform: translateY(-1.5px) scale(1.02);
+}
+
+.berita-tab.active-tab:hover {
+  background-color: #b57f18;
+  border-color: #b57f18;
+  transform: translateY(-1.5px) scale(1.02);
+  box-shadow: 0 8px 22px -2px rgba(200, 144, 32, 0.45);
+}
+
+.berita-tab.active-tab:active {
+  transform: translateY(0) scale(0.96);
 }
 
 .berita-card.hidden-card {
@@ -879,19 +934,42 @@ textarea:focus {
 }
 
 .berita-card.fade-in-card {
-  animation: beritaFadeIn 0.35s var(--ease-smooth) both;
+  animation: beritaFadeIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes beritaFadeIn {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(18px) scale(0.96);
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  60% {
+    opacity: 0.95;
+    transform: translateY(-2px) scale(1.008);
   }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.berita-card>a {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.3s ease;
+}
+
+.berita-card:hover>a {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 32px -10px rgba(15, 23, 42, 0.12),
+    0 0 0 1px rgba(200, 144, 32, 0.25);
+  border-color: rgba(200, 144, 32, 0.45);
+}
+
+.berita-card:active>a {
+  transform: translateY(-2px) scale(0.985);
+  transition-duration: 0.1s;
 }
 
 /* line-clamp utilities */
@@ -1236,28 +1314,37 @@ textarea:focus {
 
 /* ── 11. ALUR PROSES SERTIFIKASI & ASSET SHOWCASE ────────────────────────── */
 @keyframes alurFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-8px);
   }
 }
 
 @keyframes alurFloatSubtle {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(6px);
   }
 }
 
 @keyframes alurChevronFlow {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate3d(0, 0, 0);
     opacity: 0.85;
   }
+
   50% {
     transform: translate3d(0, 4px, 0);
     opacity: 1;
@@ -1429,17 +1516,38 @@ textarea:focus {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .alur-floating,
   .alur-floating-subtle,
   .alur-step-item.is-active .alur-arrow-badge {
     animation: none !important;
   }
+
   .alur-step-item:hover .alur-step-card {
     transform: none !important;
   }
+
   .alur-step-item:hover .alur-step-node {
     transform: none !important;
   }
+}
+
+/* Custom Scrollbar Utility */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
 
 /* ── 16. STRUKTUR KEPENGURUSAN (TEAM ORDERING) ────────────────────────────── */
@@ -1474,4 +1582,4 @@ textarea:focus {
   .team-member-6 {
     order: 6;
   }
-}
+}

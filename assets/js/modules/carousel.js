@@ -11,8 +11,13 @@
     carousels.forEach(carousel => {
       const track = carousel.querySelector('.carousel-track');
       const slides = carousel.querySelectorAll('.carousel-slide');
-      const prevBtn = carousel.querySelector('[data-carousel-prev]');
-      const nextBtn = carousel.querySelector('[data-carousel-next]');
+      const sectionParent = carousel.closest('section') || carousel.parentElement;
+      const prevBtn = sectionParent ? sectionParent.querySelector('[data-carousel-prev]') : null;
+      const nextBtn = sectionParent ? sectionParent.querySelector('[data-carousel-next]') : null;
+      const internalPrev = carousel.querySelector('[data-carousel-prev]');
+      const internalNext = carousel.querySelector('[data-carousel-next]');
+      const actualPrevBtn = internalPrev || prevBtn;
+      const actualNextBtn = internalNext || nextBtn;
       const dotsContainer = carousel.querySelector('[data-carousel-dots]');
 
       if (!track || slides.length === 0) return;
@@ -27,7 +32,10 @@
           const dot = document.createElement('button');
           dot.className = `carousel-dot ${idx === 0 ? 'active' : ''}`;
           dot.setAttribute('aria-label', `Slide ${idx + 1}`);
-          dot.addEventListener('click', () => goToSlide(idx));
+          dot.addEventListener('click', (e) => {
+            e.preventDefault();
+            goToSlide(idx);
+          });
           dotsContainer.appendChild(dot);
         });
       }
@@ -44,58 +52,67 @@
         });
       }
 
+      function getMaxScroll() {
+        return Math.max(0, track.scrollWidth - track.clientWidth);
+      }
+
       function goToSlide(index) {
         if (index < 0) index = 0;
         if (index >= totalSlides) index = totalSlides - 1;
         currentIndex = index;
 
-        const slide = slides[index];
-        if (slide) {
-          track.scrollTo({
-            left: slide.offsetLeft - track.offsetLeft,
-            behavior: 'smooth'
-          });
+        const maxScroll = getMaxScroll();
+        if (maxScroll <= 0) {
+          updateDots(0);
+          return;
         }
+
+        // Proportional target scroll position based on total slides
+        const targetLeft = (index / (totalSlides - 1)) * maxScroll;
+        track.scrollTo({
+          left: targetLeft,
+          behavior: 'smooth'
+        });
         updateDots(index);
       }
 
-      if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-          currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
+      if (actualPrevBtn) {
+        actualPrevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
           goToSlide(currentIndex);
         });
       }
 
-      if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-          currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
+      if (actualNextBtn) {
+        actualNextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : totalSlides - 1;
           goToSlide(currentIndex);
         });
       }
 
-      // Update active dot on manual touch scroll / swipe
+      // Update active dot proportionally on manual touch scroll / swipe
       let scrollTimeout;
       track.addEventListener('scroll', () => {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
-          const scrollLeft = track.scrollLeft;
-          let nearestIndex = 0;
-          let minDiff = Infinity;
+          const maxScroll = getMaxScroll();
+          if (maxScroll <= 0) {
+            updateDots(0);
+            return;
+          }
 
-          slides.forEach((slide, idx) => {
-            const diff = Math.abs(slide.offsetLeft - track.offsetLeft - scrollLeft);
-            if (diff < minDiff) {
-              minDiff = diff;
-              nearestIndex = idx;
-            }
-          });
+          // Calculate current progress between 0 and 1
+          const progress = Math.max(0, Math.min(1, track.scrollLeft / maxScroll));
+          const nearestIndex = Math.min(totalSlides - 1, Math.round(progress * (totalSlides - 1)));
 
           currentIndex = nearestIndex;
           updateDots(nearestIndex);
-        }, 50);
+        }, 35);
       }, { passive: true });
 
-      // Desktop Mouse Drag support
+      // Desktop Mouse Drag support (disable snap during drag to avoid stutter)
       let isDown = false;
       let startX;
       let scrollStart;
@@ -103,25 +120,28 @@
       track.addEventListener('mousedown', (e) => {
         isDown = true;
         track.classList.add('cursor-grabbing');
+        track.style.scrollSnapType = 'none';
+        track.style.scrollBehavior = 'auto';
         startX = e.pageX - track.offsetLeft;
         scrollStart = track.scrollLeft;
       });
 
-      track.addEventListener('mouseleave', () => {
+      function stopDrag() {
+        if (!isDown) return;
         isDown = false;
         track.classList.remove('cursor-grabbing');
-      });
+        track.style.scrollSnapType = '';
+        track.style.scrollBehavior = '';
+      }
 
-      track.addEventListener('mouseup', () => {
-        isDown = false;
-        track.classList.remove('cursor-grabbing');
-      });
+      track.addEventListener('mouseleave', stopDrag);
+      track.addEventListener('mouseup', stopDrag);
 
       track.addEventListener('mousemove', (e) => {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - track.offsetLeft;
-        const walk = (x - startX) * 1.5;
+        const walk = (x - startX) * 1.3;
         track.scrollLeft = scrollStart - walk;
       });
     });
