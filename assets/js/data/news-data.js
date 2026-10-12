@@ -118,6 +118,7 @@ window.NEWS_DATA = [
       avatar: "assets/images/logo-emblem.png"
     },
     image: "assets/images/berita/penyerahan-sh-lhokseumawe.jpg",
+    imageLayout: "portrait",
     caption: "Penyerahan Sertifikat Halal (SH) secara simbolis kepada UMKM AA Jatra dalam acara Baking Demo Roti GESID–APUI di Kota Lhokseumawe, Aceh.",
     summary: "LPH Gesid Halal Center bersama APUI Kota Lhokseumawe menyerahkan Sertifikat Halal resmi BPJPH secara simbolis kepada pelaku usaha UMKM AA Jatra dalam rangkaian agenda Baking Demo Roti.",
     content: `
@@ -198,4 +199,3 @@ window.NEWS_DATA = [
     relatedIds: [1, 3, 2]
   }
 ];
-

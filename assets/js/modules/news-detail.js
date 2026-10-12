@@ -85,6 +85,18 @@
       setAttr('articleImage', 'src', article.image);
       setAttr('articleImage', 'alt', article.title);
     }
+    const articleImage = document.getElementById('articleImage');
+    if (articleImage && article.imageLayout === 'portrait') {
+      const imageFrame = document.getElementById('articleImageFrame');
+      if (imageFrame) {
+        imageFrame.style.aspectRatio = 'auto';
+        imageFrame.style.height = 'min(65vh, 560px)';
+        imageFrame.style.maxHeight = 'none';
+        imageFrame.style.backgroundColor = '#f1f5f9';
+      }
+      articleImage.style.objectFit = 'contain';
+      articleImage.style.objectPosition = 'center';
+    }
     setText('articleCaption', article.caption || article.title);
 
     // 5. Article Content
