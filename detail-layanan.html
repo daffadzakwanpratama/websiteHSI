@@ -173,7 +173,7 @@
 
     <!-- BREADCRUMB + HEADER (EDITORIAL GOLD & SLATE) -->
     <section
-      class="bg-gradient-to-b from-amber-50/70 via-white to-white border-b border-amber-100/70 py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+      class="bg-gradient-to-b from-amber-50/70 via-white to-white border-b border-amber-100/70 py-8 sm:py-10 lg:py-12 relative overflow-hidden">
       <div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl pointer-events-none"></div>
       <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
         <div data-animate="fade-down"
@@ -196,7 +196,7 @@
           Profile LPH GESID HALAL CENTER
         </h1>
         <p data-animate="fade-up" data-delay="180"
-          class="text-slate-600 text-base sm:text-lg mt-3 max-w-2xl leading-relaxed">
+          class="text-slate-600 text-base sm:text-lg mt-3 max-w-2xl leading-relaxed" id="serviceHeroDescription">
           Lembaga penyedia layanan pemeriksaan dan pengujian kehalalan produk resmi yang terpercaya, profesional,
           modern, dan berstandar internasional untuk seluruh wilayah Indonesia.
         </p>
@@ -204,12 +204,108 @@
     </section>
 
     <!-- MAIN CONTENT GRID (PROFILE, SCOPE, VISI-MISI, JARINGAN & FORM) -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+    <section class="py-8 sm:py-10 lg:py-12 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
+
+          <div id="serviceDynamicContent" class="hidden lg:col-span-7 space-y-6" aria-live="polite"></div>
+          <template id="serviceDetailTemplate">
+            <section data-service-flow class="space-y-3" aria-labelledby="serviceFlowHeading">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-[#c89020]">Alur layanan</p>
+                <h2 id="serviceFlowHeading" class="mt-1 text-xl font-bold tracking-tight text-slate-900">
+                  Bagaimana prosesnya?
+                </h2>
+                <p data-flow-intro class="mt-2 text-sm leading-relaxed text-slate-600"></p>
+              </div>
+              <p data-flow-hint class="flex items-center gap-2 text-xs font-semibold text-[#946310]">
+                <i class="fa-solid fa-hand-pointer text-sm" aria-hidden="true"></i>
+                <span>Pilih nomor langkah untuk membaca penjelasannya.</span>
+              </p>
+              <div data-flow-steps class="grid gap-1.5 sm:grid-cols-2"></div>
+              <div data-flow-panel class="hidden rounded-2xl border border-amber-200 bg-amber-50/70 p-4 sm:p-5"
+                aria-live="polite">
+                <div class="flex items-center gap-4">
+                  <span data-flow-icon-tile
+                    class="relative flex h-16 w-16 flex-shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-md sm:h-[4.5rem] sm:w-[4.5rem]"
+                    aria-hidden="true">
+                    <span class="absolute -right-3 -top-3 h-10 w-10 rounded-full bg-white/20"></span>
+                    <span class="absolute -bottom-3 -left-2 h-8 w-8 rounded-full bg-black/10"></span>
+                    <i data-flow-icon class="fa-solid fa-file-lines relative z-10 text-3xl drop-shadow-sm"></i>
+                  </span>
+                  <div class="min-w-0">
+                    <p data-flow-count class="text-xs font-semibold uppercase tracking-wider text-[#946310]"></p>
+                    <h3 data-flow-title class="mt-2 text-lg font-bold text-slate-900"></h3>
+                    <p data-flow-description class="mt-2 text-sm leading-relaxed text-slate-700"></p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="space-y-3" aria-labelledby="serviceAboutHeading">
+              <div
+                class="inline-flex items-center gap-2 rounded-full border border-amber-200/80 bg-amber-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-900">
+                <i data-service-icon class="text-[#c89020]" aria-hidden="true"></i>
+                Tentang layanan
+              </div>
+              <h2 id="serviceAboutHeading"
+                class="text-2xl font-extrabold tracking-tight text-slate-900 font-serif sm:text-3xl">Apa yang kami bantu?
+              </h2>
+              <div data-service-description
+                class="space-y-3 text-[15px] leading-relaxed text-slate-600 sm:text-base"></div>
+            </section>
+            <section class="space-y-3" aria-labelledby="serviceFeaturesHeading">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-[#c89020]">Ruang lingkup</p>
+                <h2 id="serviceFeaturesHeading" class="mt-1 text-xl font-bold tracking-tight text-slate-900">
+                  Yang termasuk dalam layanan ini
+                </h2>
+              </div>
+              <ul data-service-features class="grid gap-2"></ul>
+            </section>
+            <section class="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5"
+              aria-labelledby="serviceTargetHeading">
+              <h2 id="serviceTargetHeading" class="text-lg font-bold text-slate-900">Layanan ini sesuai untuk</h2>
+              <ul data-service-targets class="mt-3 divide-y divide-slate-200 text-sm leading-relaxed text-slate-600">
+              </ul>
+            </section>
+          </template>
+          <template id="serviceFlowStepTemplate">
+            <button type="button" data-flow-step aria-pressed="false" class="group flex min-h-16 w-full items-center gap-3 rounded-xl border border-slate-200 bg-white p-3 text-left text-sm text-slate-600 transition-colors hover:border-amber-300 hover:bg-amber-50/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c89020] aria-pressed:border-[#c89020] aria-pressed:bg-amber-50 aria-pressed:text-slate-900">
+              <span data-flow-number
+                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-slate-100 text-xs font-bold text-slate-600 group-aria-pressed:bg-[#c89020] group-aria-pressed:text-white"></span>
+              <span data-flow-step-title class="font-semibold leading-snug"></span>
+              <i class="fa-solid fa-chevron-right ml-auto text-[10px] text-slate-400 transition-transform group-hover:translate-x-0.5 group-aria-pressed:text-[#946310]"
+                aria-hidden="true"></i>
+            </button>
+          </template>
+          <template id="serviceFeatureTemplate">
+            <li
+              class="flex items-start gap-3 rounded-xl border border-slate-200/80 bg-white p-3 text-sm leading-relaxed text-slate-700">
+              <i class="fa-solid fa-check mt-1 flex-shrink-0 text-xs text-[#c89020]" aria-hidden="true"></i>
+              <span data-service-text></span>
+            </li>
+          </template>
+          <template id="serviceTargetTemplate">
+            <li class="flex items-start gap-3 py-2.5 first:pt-0 last:pb-0">
+              <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#c89020]" aria-hidden="true"></span>
+              <span data-service-text></span>
+            </li>
+          </template>
+          <template id="serviceNotFoundTemplate">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
+              <h2 class="text-lg font-semibold text-slate-900">Pilih layanan dari katalog</h2>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">Tautan yang dibuka tidak mengarah ke layanan yang
+                tersedia.</p>
+              <a href="layanan.html"
+                class="mt-5 inline-flex items-center gap-2 rounded-lg bg-[#c89020] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#b57f18]">
+                Kembali ke katalog layanan
+                <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+              </a>
+            </div>
+          </template>
 
           <!-- Left Column: Comprehensive Profile & Service Details -->
-          <div data-animate="fade-right" class="lg:col-span-7 space-y-10">
+          <div id="legacyLphProfile" data-animate="fade-right" class="lg:col-span-7 space-y-10">
 
             <!-- 1. Tentang LPH Gesid Halal Center -->
             <div class="space-y-4">
@@ -517,7 +613,7 @@
                 <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 font-serif">Layanan & Konsultasi</h3>
               </div>
               <p class="text-xs text-slate-500 mb-4 leading-relaxed">
-                Ajukan pemeriksaan halal produk Anda atau konsultasikan keanggotaan P3H/Auditor daerah.
+                Ceritakan kebutuhan usaha Anda. Tim kami akan membantu mengarahkan langkah berikutnya.
               </p>
 
               <form id="consultForm" class="space-y-3">
@@ -555,8 +651,8 @@
 
                 <!-- Row 3: Sektor Layanan -->
                 <div>
-                  <label class="block text-xs font-bold text-slate-700 mb-1" for="jenisProduk">Cakupan Sektor /
-                    Layanan</label>
+                  <label class="block text-xs font-bold text-slate-700 mb-1" for="jenisProduk">Sektor Produk /
+                    Usaha</label>
                   <select id="jenisProduk" name="jenisProduk"
                     class="w-full px-3.5 py-2 text-[13px] border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c89020] focus:border-transparent transition bg-white text-slate-700">
                     <option value="Makanan">Produk Makanan (Food)</option>

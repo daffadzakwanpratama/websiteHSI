@@ -1,60 +1,132 @@
 /**
- * Service Detail Page Renderer Module
- * Reads `service` query parameter from the URL, retrieves data from `window.HSI_SERVICES_DATA`,
- * and populates the dynamic detail-layanan.html DOM elements.
+ * Renders the selected service detail from the shared service catalog data.
  */
 
 (function () {
-  function initServiceDetail() {
-    // Only run on pages containing service detail container
-    const titleEl = document.getElementById('serviceTitle');
-    if (!titleEl) return;
+  const flowIconPalettes = {
+    blue: ['#60A5FA', '#2563EB'],
+    indigo: ['#818CF8', '#4F46E5'],
+    purple: ['#C084FC', '#9333EA'],
+    teal: ['#2DD4BF', '#0F766E'],
+    green: ['#4ADE80', '#15803D'],
+    amber: ['#FBBF24', '#D97706']
+  };
 
-    const data = window.HSI_SERVICES_DATA || {};
-    const params = new URLSearchParams(window.location.search);
-    const serviceKey = params.get('service');
+  function cloneTemplate(id) {
+    const template = document.getElementById(id);
+    return template.content.cloneNode(true);
+  }
 
-    // Jika tanpa parameter atau service=lph, pertahankan layout statis Profile LPH yang kaya fitur
-    if (!serviceKey || serviceKey === 'lph') {
+  function renderList(templateId, values) {
+    const fragment = document.createDocumentFragment();
+    values.forEach(value => {
+      const item = cloneTemplate(templateId);
+      item.querySelector('[data-service-text]').textContent = value;
+      fragment.appendChild(item);
+    });
+    return fragment;
+  }
+
+  function renderFlow(section, flow) {
+    if (!flow || !Array.isArray(flow.steps) || flow.steps.length === 0) {
+      section.classList.add('hidden');
       return;
     }
 
-    const d = data[serviceKey] || data['pemeriksaan'] || data['sertifikasi'];
-    if (!d) return;
+    section.querySelector('[data-flow-intro]').textContent = flow.intro;
+    const stepList = section.querySelector('[data-flow-steps]');
+    const flowPanel = section.querySelector('[data-flow-panel]');
+    const flowHint = section.querySelector('[data-flow-hint] span');
+    const stepButtons = flow.steps.map((step, index) => {
+      const item = cloneTemplate('serviceFlowStepTemplate');
+      const button = item.querySelector('[data-flow-step]');
+      button.setAttribute('aria-pressed', 'false');
+      button.querySelector('[data-flow-number]').textContent = String(index + 1).padStart(2, '0');
+      button.querySelector('[data-flow-step-title]').textContent = step.title;
+      button.addEventListener('click', () => {
+        stepButtons.forEach((stepButton, stepIndex) => {
+          stepButton.setAttribute('aria-pressed', String(stepIndex === index));
+        });
+        flowPanel.classList.remove('hidden');
+        flowHint.textContent = 'Pilih nomor lain untuk membaca langkah berikutnya.';
+        section.querySelector('[data-flow-count]').textContent =
+          `Langkah ${index + 1} dari ${flow.steps.length}`;
+        section.querySelector('[data-flow-title]').textContent = step.title;
+        section.querySelector('[data-flow-description]').textContent = step.description;
+        const palette = flowIconPalettes[step.tone] || flowIconPalettes.amber;
+        const flowIconTile = section.querySelector('[data-flow-icon-tile]');
+        flowIconTile.style.backgroundImage = `linear-gradient(135deg, ${palette[0]}, ${palette[1]})`;
+        const flowIcon = section.querySelector('[data-flow-icon]');
+        flowIcon.className = `fa-solid ${step.icon || 'fa-circle-info'} relative z-10 text-3xl text-white drop-shadow-sm`;
+      });
+      return button;
+    });
 
-    const set = (id, val) => {
-      const el = document.getElementById(id);
-      if (el) el.textContent = val;
+    stepButtons.forEach(button => stepList.appendChild(button));
+  }
+
+  function initServiceDetail() {
+    const titleEl = document.getElementById('serviceTitle');
+    const dynamicContent = document.getElementById('serviceDynamicContent');
+    const legacyContent = document.getElementById('legacyLphProfile');
+    if (!titleEl || !dynamicContent || !legacyContent) return;
+
+    const serviceKey = new URLSearchParams(window.location.search).get('service');
+    if (!serviceKey || serviceKey === 'lph') return;
+
+    const service = (window.HSI_SERVICES_DATA || {})[serviceKey];
+    dynamicContent.classList.remove('hidden');
+    legacyContent.classList.add('hidden');
+
+    const setText = (id, value) => {
+      const element = document.getElementById(id);
+      if (element) element.textContent = value;
     };
 
-    set('serviceLabel', d.label);
-    set('breadcrumbCurrent', d.breadcrumb);
-    set('serviceTitle', d.title);
-
-    const descEl = document.getElementById('serviceDesc');
-    if (descEl && Array.isArray(d.desc)) {
-      descEl.innerHTML = d.desc.map(p => `<p>${p}</p>`).join('');
+    if (!service) {
+      setText('breadcrumbCurrent', 'Layanan tidak ditemukan');
+      setText('serviceLabel', 'Katalog layanan');
+      setText('serviceTitle', 'Layanan tidak ditemukan');
+      setText('serviceHeroDescription', 'Silakan kembali ke katalog untuk memilih layanan yang tersedia.');
+      dynamicContent.replaceChildren(cloneTemplate('serviceNotFoundTemplate'));
+      document.title = 'Layanan tidak ditemukan — Gesid Halal Center';
+      return;
     }
 
-    const featEl = document.getElementById('serviceFeatures');
-    if (featEl && Array.isArray(d.features)) {
-      featEl.innerHTML = d.features.map(f =>
-        `<li class="flex items-start gap-3">
-          <i class="fa-solid fa-check text-[#c89020] text-xs mt-1 flex-shrink-0"></i>
-          <span class="text-sm text-slate-700">${f}</span>
-        </li>`
-      ).join('');
+    setText('breadcrumbCurrent', service.breadcrumb);
+    setText('serviceTitle', service.title);
+    setText('serviceHeroDescription', service.shortDesc);
+
+    const label = document.getElementById('serviceLabel');
+    if (label) {
+      const indicator = label.querySelector('span');
+      if (indicator) indicator.className = 'h-2 w-2 rounded-full bg-[#c89020]';
+      label.replaceChildren(
+        ...(indicator ? [indicator] : []),
+        document.createTextNode(service.label)
+      );
     }
 
-    const targetEl = document.getElementById('serviceTarget');
-    if (targetEl && Array.isArray(d.target)) {
-      targetEl.innerHTML = d.target.map(t =>
-        `<li class="flex items-center gap-2">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#c89020] flex-shrink-0"></span>
-          <span>${t}</span>
-        </li>`
-      ).join('');
-    }
+    const detail = cloneTemplate('serviceDetailTemplate');
+    renderFlow(detail.querySelector('[data-service-flow]'), service.flow);
+    detail.querySelector('[data-service-icon]').classList.add('fa-solid', service.icon);
+    const description = detail.querySelector('[data-service-description]');
+    service.desc.forEach(paragraph => {
+      const element = document.createElement('p');
+      element.textContent = paragraph;
+      description.appendChild(element);
+    });
+    detail.querySelector('[data-service-features]').appendChild(
+      renderList('serviceFeatureTemplate', service.features)
+    );
+    detail.querySelector('[data-service-targets]').appendChild(
+      renderList('serviceTargetTemplate', service.target)
+    );
+    dynamicContent.replaceChildren(detail);
+
+    document.title = `${service.title} — Gesid Halal Center`;
+    const descriptionMeta = document.querySelector('meta[name="description"]');
+    if (descriptionMeta) descriptionMeta.content = service.shortDesc;
   }
 
   window.initServiceDetail = initServiceDetail;

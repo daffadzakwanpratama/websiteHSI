@@ -53,6 +53,35 @@ window.HSI_SERVICES_DATA = {
       'Pengawalan hasil pemeriksaan menuju Sidang Fatwa MUI',
       'Pemeriksaan berkala untuk perpanjangan sertifikat halal'
     ],
+    flow: {
+      intro: 'Pemeriksaan oleh LPH adalah bagian dari proses sertifikasi halal. Pilih langkah untuk melihat apa yang dilakukan.',
+      steps: [
+        {
+          title: 'Periksa dokumen dan bahan',
+          icon: 'fa-file-lines',
+          tone: 'blue',
+          description: 'Auditor meninjau kecukupan dokumen, daftar bahan, dan proses produk yang diajukan.'
+        },
+        {
+          title: 'Audit fasilitas produksi',
+          icon: 'fa-industry',
+          tone: 'indigo',
+          description: 'Auditor memeriksa fasilitas dan proses secara langsung, seperti area produksi, dapur, gudang, atau distribusi sesuai lingkup usaha.'
+        },
+        {
+          title: 'Uji laboratorium bila diperlukan',
+          icon: 'fa-flask',
+          tone: 'purple',
+          description: 'Bahan kritis dapat diuji di laboratorium terakreditasi apabila dipersyaratkan dalam pemeriksaan.'
+        },
+        {
+          title: 'Susun laporan hasil pemeriksaan',
+          icon: 'fa-file-circle-check',
+          tone: 'green',
+          description: 'Hasil pemeriksaan dirangkum dalam Laporan Hasil Pemeriksaan (LHP) untuk proses penetapan fatwa di Komisi Fatwa MUI.'
+        }
+      ]
+    },
     target: [
       'Industri Makanan & Minuman (kemasan, katering, restoran, bakery)',
       'Industri Farmasi, Obat Tradisional, & Suplemen Kesehatan',
@@ -82,6 +111,35 @@ window.HSI_SERVICES_DATA = {
       'Asistensi perbaikan temuan sebelum dan sesudah audit lapangan LPH',
       'Konsultasi intensif bersama tim teknis dan pendamping berpengalaman'
     ],
+    flow: {
+      intro: 'Pendamping membantu usaha menyiapkan pengajuan dan kesiapan audit. Pilih langkah untuk melihat fokus pendampingan.',
+      steps: [
+        {
+          title: 'Petakan kebutuhan usaha',
+          icon: 'fa-comments',
+          tone: 'teal',
+          description: 'Diskusikan kondisi usaha, jenis produk, dan kebutuhan pengajuan bersama tim pendamping.'
+        },
+        {
+          title: 'Siapkan bahan dan dokumen',
+          icon: 'fa-boxes-stacked',
+          tone: 'blue',
+          description: 'Kumpulkan data produk, bahan baku, bahan tambahan, dan bahan penolong untuk diperiksa kelengkapannya.'
+        },
+        {
+          title: 'Ajukan melalui SIHALAL',
+          icon: 'fa-cloud-arrow-up',
+          tone: 'purple',
+          description: 'Pendamping membantu proses registrasi akun dan pengajuan permohonan melalui aplikasi SIHALAL BPJPH.'
+        },
+        {
+          title: 'Cek kesiapan sebelum audit',
+          icon: 'fa-clipboard-check',
+          tone: 'amber',
+          description: 'Lakukan penilaian pra-audit untuk mengetahui hal yang perlu dilengkapi atau diperbaiki sebelum audit LPH.'
+        }
+      ]
+    },
     target: [
       'Pelaku Usaha Mikro, Kecil, dan Menengah (UMKM) yang baru mengajukan sertifikasi',
       'Perusahaan manufaktur yang ingin memastikan kelengkapan dokumen pra-audit',
@@ -110,6 +168,35 @@ window.HSI_SERVICES_DATA = {
       'Fasilitasi dan pembekalan pelaksanaan audit internal halal berkala',
       'Panduan penanganan dan tindak lanjut produk yang tidak memenuhi kriteria'
     ],
+    flow: {
+      intro: 'SJPH membantu usaha menjaga proses halal secara konsisten. Pilih langkah untuk melihat cara sistem ini disusun.',
+      steps: [
+        {
+          title: 'Kenali kondisi saat ini',
+          icon: 'fa-magnifying-glass',
+          tone: 'blue',
+          description: 'Tinjau sistem mutu dan operasional untuk mengetahui dokumen atau praktik yang perlu dibangun.'
+        },
+        {
+          title: 'Susun manual dan SOP',
+          icon: 'fa-file-pen',
+          tone: 'purple',
+          description: 'Siapkan manual SJPH dan prosedur penanganan bahan, proses produksi, serta penyimpanan sesuai kondisi usaha.'
+        },
+        {
+          title: 'Bentuk tim halal internal',
+          icon: 'fa-people-group',
+          tone: 'teal',
+          description: 'Tentukan tim yang bertanggung jawab dan pahami tugasnya dalam penerapan Sistem Jaminan Produk Halal.'
+        },
+        {
+          title: 'Jalankan evaluasi internal',
+          icon: 'fa-list-check',
+          tone: 'green',
+          description: 'Lakukan audit internal berkala dan tindak lanjuti produk atau proses yang belum memenuhi kriteria.'
+        }
+      ]
+    },
     target: [
       'Perusahaan yang belum memiliki sistem dokumentasi SJPH mandiri',
       'Tim operasional internal yang perlu membangun SOP dan manual halal',
@@ -138,6 +225,35 @@ window.HSI_SERVICES_DATA = {
       'Simulasi dan bimbingan teknis audit internal perusahaan',
       'Pendampingan dan konsultasi pasca pelatihan'
     ],
+    flow: {
+      intro: 'Pelatihan ditujukan untuk membekali personel yang menjalankan peran Penyelia Halal. Pilih langkah untuk melihat gambaran kegiatannya.',
+      steps: [
+        {
+          title: 'Tentukan peserta',
+          icon: 'fa-user-check',
+          tone: 'blue',
+          description: 'Pilih personel internal yang akan menjalankan tugas sebagai Penyelia Halal di perusahaan.'
+        },
+        {
+          title: 'Pelajari kompetensi penyelia',
+          icon: 'fa-book-open',
+          tone: 'purple',
+          description: 'Peserta mempelajari materi bimbingan teknis yang mengacu pada SKKNI Penyelia Halal.'
+        },
+        {
+          title: 'Bahas kasus dan titik kritis',
+          icon: 'fa-triangle-exclamation',
+          tone: 'amber',
+          description: 'Pelajari studi kasus industri dan cara mengenali titik kritis kehalalan dalam kegiatan usaha.'
+        },
+        {
+          title: 'Latih penerapan di perusahaan',
+          icon: 'fa-clipboard-check',
+          tone: 'teal',
+          description: 'Ikuti simulasi audit internal dan konsultasi lanjutan untuk membantu penerapan SJPH.'
+        }
+      ]
+    },
     target: [
       'Personil QA/QC, produksi, dan R&D yang ditunjuk sebagai Penyelia Halal',
       'Manajer operasional dan supervisor fasilitas produksi',
