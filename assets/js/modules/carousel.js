@@ -20,7 +20,27 @@
       const actualNextBtn = internalNext || nextBtn;
       const dotsContainer = carousel.querySelector('[data-carousel-dots]');
 
-      if (!track || slides.length === 0) return;
+      if (!track) return;
+
+      if (track.classList.contains('home-news-track')) {
+        const newsCards = track.querySelectorAll('.home-news-card');
+        if (newsCards.length === 0) return;
+
+        const group = document.createElement('div');
+        group.className = 'home-news-group';
+        newsCards.forEach((card) => group.appendChild(card));
+        track.appendChild(group);
+
+        const duplicateGroup = group.cloneNode(true);
+        duplicateGroup.setAttribute('aria-hidden', 'true');
+        duplicateGroup.setAttribute('inert', '');
+        track.appendChild(duplicateGroup);
+
+        track.classList.add('home-news-marquee');
+        return;
+      }
+
+      if (slides.length === 0) return;
 
       let currentIndex = 0;
       const totalSlides = slides.length;
