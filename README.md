@@ -97,6 +97,7 @@ Buka file `assets/css/custom.css`. Seluruh token warna dan font didefinisikan pa
   --font-sans:  'Plus Jakarta Sans', sans-serif;
 }
 ```
+Google Fonts dimuat langsung dari `<head>` setiap halaman dengan `preconnect` agar permintaan font dapat dimulai lebih awal; jangan mengembalikannya ke `@import` CSS karena itu menambah satu tahap permintaan jaringan.
 
 ---
 
