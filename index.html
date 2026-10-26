@@ -30,9 +30,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preload" as="image"
+    imagesrcset="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=640&amp;q=65 640w, https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=960&amp;q=65 960w, https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=1280&amp;q=65 1280w, https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=1600&amp;q=65 1600w"
+    imagesizes="100vw" fetchpriority="high">
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet">
+  </noscript>
   <link rel="stylesheet" href="assets/css/tailwind.css?v=3">
   <!-- Security Headers (meta fallback) -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -200,9 +208,11 @@
 
           <!-- Slide 1: Konsultasi & Tim Ahli -->
           <div class="hero-slide relative w-full h-full flex-shrink-0">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=75"
-              alt="Audit Fasilitas & Manufaktur Halal" class="w-full h-full object-cover" fetchpriority="high"
-              decoding="async">
+            <img
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=960&amp;q=65"
+              srcset="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=640&amp;q=65 640w, https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=960&amp;q=65 960w, https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=1280&amp;q=65 1280w, https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=1600&amp;q=65 1600w"
+              sizes="100vw" alt="Audit Fasilitas & Manufaktur Halal" class="w-full h-full object-cover"
+              fetchpriority="high" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/60 to-slate-950/75"></div>
           </div>
 
@@ -245,7 +255,7 @@
         class="relative z-20 max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 text-center pt-20 sm:pt-24 lg:pt-28 pb-8 flex-1 flex flex-col justify-center items-center">
 
         <!-- Main Headline (White Serif Headline) -->
-        <div data-animate="fade-down" class="mb-3 sm:mb-4">
+        <div class="mb-3 sm:mb-4">
           <h1
             class="text-white font-serif font-extrabold text-3xl sm:text-4xl lg:text-5xl xl:text-[56px] tracking-tight leading-[1.2] max-w-4xl mx-auto drop-shadow-md">
             Profesional, Trusted, and<br class="hidden sm:inline"> Integrated
@@ -253,14 +263,14 @@
         </div>
 
         <!-- Subtitle Description -->
-        <p data-animate="fade-up" data-delay="80"
+        <p
           class="text-white/90 text-xs sm:text-base lg:text-[17px] leading-relaxed max-w-3xl mx-auto mb-7 sm:mb-8 font-normal sm:font-medium text-shadow-hero">
           Lembaga Pemeriksa Halal (LPH) resmi terpercaya untuk pemeriksaan, audit mutu, dan kepatuhan regulasi
           sertifikasi halal BPJPH & MUI bagi seluruh pelaku usaha dan industri di Indonesia.
         </p>
 
         <!-- CTA Action Buttons -->
-        <div data-animate="fade-up" data-delay="120"
+        <div
           class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto">
           <a href="kontak.html"
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 text-[15px] font-bold rounded-xl text-slate-950 bg-[#e8a317] hover:bg-[#c89020] hover:text-white transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-0.5">
