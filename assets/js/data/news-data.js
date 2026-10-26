@@ -17,7 +17,7 @@ window.NEWS_DATA = [
       role: "Spesialis Regulasi & Kebijakan Halal",
       avatar: "assets/images/logo-emblem.webp"
     },
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=85",
+    image: "assets/images/photos/1450101499163-c8848c66ca85-1200.webp",
     caption: "Fasilitasi sertifikasi halal percepatan bagi pelaku usaha mikro dan kecil nasional.",
     summary: "Kemenag bersama BPJPH mempercepat program fasilitasi sertifikasi halal gratis bagi pelaku usaha mikro dan kecil di seluruh Indonesia menjelang batas wajib halal Oktober 2026.",
     content: `
@@ -74,7 +74,7 @@ window.NEWS_DATA = [
       role: "Analis Hubungan Internasional Halal",
       avatar: "assets/images/logo-emblem.webp"
     },
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=85",
+    image: "assets/images/photos/1521791136064-7986c2920216-1200.webp",
     caption: "Pertemuan bilateral harmonisasi standar halal ASEAN di Kuala Lumpur.",
     summary: "Forum bilateral halal ASEAN menghasilkan kesepakatan harmonisasi standar sertifikasi halal antara dua negara berpenduduk Muslim terbesar di kawasan.",
     content: `
@@ -170,7 +170,7 @@ window.NEWS_DATA = [
       role: "Auditor & Konsultan Hukum Halal",
       avatar: "assets/images/logo-emblem.webp"
     },
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85",
+    image: "assets/images/photos/1556742049-0cfed4f6a45d-1200.webp",
     caption: "Sosialisasi penegakan hukum dan sanksi administratif UU JPH.",
     summary: "Mulai 18 Oktober 2026, seluruh produk yang wajib bersertifikat halal namun belum memiliki sertifikat resmi akan dikenakan sanksi administratif bertahap.",
     content: `

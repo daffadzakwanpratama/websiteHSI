@@ -1535,223 +1535,34 @@ textarea:focus {
   line-height: 1.6;
 }
 
-/* ── 11. ALUR PROSES SERTIFIKASI & ASSET SHOWCASE ────────────────────────── */
-@keyframes alurFloat {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-@keyframes alurFloatSubtle {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(6px);
-  }
-}
-
-@keyframes alurChevronFlow {
-
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 0.85;
-  }
-
-  50% {
-    transform: translate3d(0, 4px, 0);
-    opacity: 1;
-  }
-}
-
-.alur-floating {
-  animation: alurFloat 5.5s ease-in-out infinite;
-  will-change: transform;
-}
-
-.alur-floating-subtle {
-  animation: alurFloatSubtle 6.5s ease-in-out infinite;
-  will-change: transform;
-}
-
-/* Timeline Track, Progress Line, Nodes & Chevrons */
-.alur-step-item {
-  position: relative;
-  padding-left: 3rem;
-}
-
+/* 11. ALUR PROSES SERTIFIKASI (statis, ringan) */
 .alur-step-node {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 9999px;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border-color: #c89020 !important;
+  box-shadow: 0 0 0 4px rgba(200, 144, 32, 0.14);
 }
 
-#alurTimelineTrack {
-  position: absolute;
-  width: 3px;
-  left: 1rem;
-  top: 16px;
-  bottom: 24px;
-  transform: translateX(-50%);
-  pointer-events: none;
-}
-
-#alurProgressLine {
-  position: absolute;
-  width: 3px;
-  left: 1rem;
-  top: 16px;
-  transform: translateX(-50%);
-  pointer-events: none;
-  margin-top: 0 !important;
-  will-change: height;
-  transition: none !important;
-}
-
-.alur-connector-arrow {
-  position: absolute;
-  left: 1rem;
-  bottom: -1.5rem;
-  transform: translateX(-50%);
-  z-index: 10;
-  pointer-events: none;
-}
-
-@media (min-width: 640px) {
-  .alur-step-item {
-    padding-left: 4rem;
-  }
-
-  .alur-step-node {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  #alurTimelineTrack {
-    left: 1.25rem;
-    top: 20px;
-    bottom: 32px;
-  }
-
-  #alurProgressLine {
-    left: 1.25rem;
-    top: 20px;
-  }
-
-  .alur-connector-arrow {
-    left: 1.25rem;
-    bottom: -1.75rem;
-  }
-}
-
-.alur-step-item.is-passed .alur-step-node {
-  border-color: #c89020;
-  background-color: #ffffff;
-  box-shadow: 0 0 0 4px rgba(200, 144, 32, 0.14), 0 2px 6px rgba(15, 23, 42, 0.08);
-}
-
-.alur-step-item.is-passed .alur-step-node .alur-step-num {
+.alur-step-node .alur-step-num {
   color: #c89020;
   font-weight: 800;
 }
 
-.alur-step-item.is-active .alur-step-node {
-  border-color: #c89020;
-  background-color: #fefce8;
-  color: #c89020;
-  box-shadow: 0 0 0 5px rgba(200, 144, 32, 0.22), 0 4px 12px rgba(200, 144, 32, 0.16);
-  transform: scale(1.08);
+.alur-step-item[data-step="5"] .alur-step-node {
+  background: linear-gradient(135deg, #f59e0b, #c89020);
 }
 
-.alur-step-item[data-step="5"].is-passed .alur-step-node,
-.alur-step-item[data-step="5"].is-active .alur-step-node {
-  background: linear-gradient(135deg, #f59e0b, #c89020) !important;
-  border-color: #b57f18 !important;
-  color: #ffffff !important;
-  box-shadow: 0 0 0 5px rgba(200, 144, 32, 0.25), 0 6px 16px rgba(200, 144, 32, 0.35) !important;
+.alur-step-item[data-step="5"] .alur-step-node .alur-step-num {
+  color: #ffffff;
 }
 
-.alur-step-item[data-step="5"].is-passed .alur-step-node .alur-step-num,
-.alur-step-item[data-step="5"].is-active .alur-step-node .alur-step-num {
-  color: #ffffff !important;
+#alurTimelineTrack {
+  top: 16px;
+  bottom: 24px;
+  background: linear-gradient(to bottom, #c89020, rgba(200, 144, 32, 0.25));
 }
 
-/* Downward Directional Flow Chevron Badges */
-.alur-arrow-badge {
-  will-change: transform;
-  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.alur-step-item.is-passed .alur-arrow-badge {
-  border-color: #c89020;
-  background-color: #fffdf5;
-  color: #c89020;
-  box-shadow: 0 2px 8px rgba(200, 144, 32, 0.2);
-}
-
-.alur-step-item.is-active .alur-arrow-badge {
-  border-color: #c89020;
-  background-color: #fefce8;
-  color: #b57f18;
-  box-shadow: 0 3px 10px rgba(200, 144, 32, 0.3);
-  animation: alurChevronFlow 2.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-}
-
-/* Content Cards & Active Elevation */
-.alur-step-card {
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.alur-step-item.is-active .alur-step-card {
-  border-color: rgba(200, 144, 32, 0.45);
-  box-shadow: 0 12px 28px -6px rgba(200, 144, 32, 0.1), 0 2px 8px -1px rgba(15, 23, 42, 0.05);
-}
-
-.alur-step-item:hover .alur-step-node {
-  border-color: #c89020;
-  background-color: #fef9e7;
-  color: #c89020;
-  transform: scale(1.08);
-}
-
-.alur-step-item:hover .alur-step-card {
-  border-color: rgba(200, 144, 32, 0.45);
-  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06);
-  transform: translateX(4px);
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  .alur-floating,
-  .alur-floating-subtle,
-  .alur-step-item.is-active .alur-arrow-badge {
-    animation: none !important;
-  }
-
-  .alur-step-item:hover .alur-step-card {
-    transform: none !important;
-  }
-
-  .alur-step-item:hover .alur-step-node {
-    transform: none !important;
+@media (min-width: 640px) {
+  #alurTimelineTrack {
+    top: 20px;
   }
 }
 
@@ -1831,4 +1642,4 @@ textarea:focus {
   .contact-form-col {
     order: 2 !important;
   }
-}
+}
