@@ -15,7 +15,7 @@ window.NEWS_DATA = [
     author: {
       name: "Tim Redaksi Gesid",
       role: "Spesialis Regulasi & Kebijakan Halal",
-      avatar: "assets/images/logo-emblem.png"
+      avatar: "assets/images/logo-emblem.webp"
     },
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=85",
     caption: "Fasilitasi sertifikasi halal percepatan bagi pelaku usaha mikro dan kecil nasional.",
@@ -72,7 +72,7 @@ window.NEWS_DATA = [
     author: {
       name: "Ahmad Fauzi, M.Si",
       role: "Analis Hubungan Internasional Halal",
-      avatar: "assets/images/logo-emblem.png"
+      avatar: "assets/images/logo-emblem.webp"
     },
     image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=85",
     caption: "Pertemuan bilateral harmonisasi standar halal ASEAN di Kuala Lumpur.",
@@ -115,9 +115,9 @@ window.NEWS_DATA = [
     author: {
       name: "Tim Pendamping Gesid Aceh",
       role: "Pendamping Proses Produk Halal (P3H)",
-      avatar: "assets/images/logo-emblem.png"
+      avatar: "assets/images/logo-emblem.webp"
     },
-    image: "assets/images/berita/penyerahan-sh-lhokseumawe.jpg",
+    image: "assets/images/berita/penyerahan-sh-lhokseumawe.webp",
     imageLayout: "portrait",
     caption: "Penyerahan Sertifikat Halal (SH) secara simbolis kepada UMKM AA Jatra dalam acara Baking Demo Roti GESID–APUI di Kota Lhokseumawe, Aceh.",
     summary: "LPH Gesid Halal Center bersama APUI Kota Lhokseumawe menyerahkan Sertifikat Halal resmi BPJPH secara simbolis kepada pelaku usaha UMKM AA Jatra dalam rangkaian agenda Baking Demo Roti.",
@@ -168,7 +168,7 @@ window.NEWS_DATA = [
     author: {
       name: "Tim Legal & Regulasi Gesid",
       role: "Auditor & Konsultan Hukum Halal",
-      avatar: "assets/images/logo-emblem.png"
+      avatar: "assets/images/logo-emblem.webp"
     },
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85",
     caption: "Sosialisasi penegakan hukum dan sanksi administratif UU JPH.",

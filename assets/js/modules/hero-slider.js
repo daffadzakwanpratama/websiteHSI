@@ -17,6 +17,22 @@
     let currentIndex = 0;
     const totalSlides = slides.length;
     let autoSlideTimer = null;
+    let nextImageTimer = null;
+
+    function loadSlideImage(index) {
+      const image = slides[index].querySelector('img[data-src]');
+      if (!image) return;
+
+      image.src = image.dataset.src;
+      image.removeAttribute('data-src');
+    }
+
+    function scheduleNextImage() {
+      clearTimeout(nextImageTimer);
+      nextImageTimer = setTimeout(() => {
+        loadSlideImage((currentIndex + 1) % totalSlides);
+      }, 3500);
+    }
 
     // Build Interactive Dots
     if (dotsContainer) {
@@ -51,8 +67,10 @@
       if (index < 0) index = totalSlides - 1;
       if (index >= totalSlides) index = 0;
       currentIndex = index;
+      loadSlideImage(currentIndex);
       track.style.transform = `translateX(-${currentIndex * 100}%)`;
       updateDots(currentIndex);
+      scheduleNextImage();
     }
 
     function nextSlide() {
@@ -83,10 +101,12 @@
     function startAutoSlide() {
       stopAutoSlide();
       autoSlideTimer = setInterval(nextSlide, 5000);
+      scheduleNextImage();
     }
 
     function stopAutoSlide() {
       if (autoSlideTimer) clearInterval(autoSlideTimer);
+      clearTimeout(nextImageTimer);
     }
 
     function restartAutoSlide() {

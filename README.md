@@ -39,11 +39,10 @@ websitecina/
     │   └── main.js               # [ENTRY POINT] Inisialisasi seluruh modul saat DOM ready
     │
     └── images/
-        ├── hero/                 # Gambar visual untuk Hero Banner
-        │   ├── hero-1.jpg
-        │   ├── hero-2.jpg
-        │   ├── hero-3.jpg
-        │   └── hero-4.jpg
+        ├── hero/                 # Gambar WebP untuk Hero Banner
+        │   ├── hero-1.webp
+        │   ├── hero-2.webp
+        │   └── hero-3.webp
         └── logo.svg              # Asset vektor logo resmi HSI
 ```
 
