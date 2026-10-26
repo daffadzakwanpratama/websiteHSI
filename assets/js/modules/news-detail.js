@@ -24,11 +24,20 @@
     const currentId = article.id;
     const currentIndex = newsList.findIndex(item => item.id === currentId);
 
-    // Update document title and meta description
+    // Update document title, meta description, and canonical/social URLs per article
     document.title = `${article.title} — Gesid Halal Center`;
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && article.summary) {
       metaDesc.setAttribute('content', article.summary);
+    }
+    const articleUrl = new URL(`detail-berita.html?id=${article.id}`, document.querySelector('link[rel="canonical"]')?.href || window.location.href).href;
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', articleUrl);
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', articleUrl);
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', article.title);
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', article.title);
+    if (article.summary) {
+      document.querySelector('meta[property="og:description"]')?.setAttribute('content', article.summary);
+      document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', article.summary);
     }
 
     // Helper to safely set text content

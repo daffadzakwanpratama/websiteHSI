@@ -127,6 +127,14 @@
     document.title = `${service.title} — Gesid Halal Center`;
     const descriptionMeta = document.querySelector('meta[name="description"]');
     if (descriptionMeta) descriptionMeta.content = service.shortDesc;
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      const serviceUrl = new URL(`detail-layanan.html?service=${encodeURIComponent(serviceKey)}`, canonical.href).href;
+      canonical.setAttribute('href', serviceUrl);
+      document.querySelector('meta[property="og:url"]')?.setAttribute('content', serviceUrl);
+    }
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', `${service.title} — Gesid Halal Center`);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', service.shortDesc);
   }
 
   window.initServiceDetail = initServiceDetail;
