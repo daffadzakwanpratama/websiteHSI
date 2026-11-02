@@ -8,12 +8,12 @@ Dibuat agar terstruktur, mudah dirawat oleh developer, dan mudah dipahami oleh s
 ## 📁 1. Struktur Direktori Proyek
 
 ```text
-websitecina/
+gesid-web/
 ├── index.html                    # Halaman Utama (Hero Slider, Highlights, Layanan, Alur, CTA)
 ├── tentang-kami.html             # Halaman Profil, Visi-Misi, Nilai Perusahaan & Legalitas
 ├── layanan.html                  # Halaman Katalog Layanan Lengkap
 ├── detail-layanan.html           # Halaman Detail Layanan (Dinamis via Query Param: ?service=...)
-├── kontak.html                   # Halaman Kontak, Peta Lokasi (Guangzhou), & Form Konsultasi
+├── kontak.html                   # Halaman Kontak, Peta Lokasi (Jakarta Barat), & Form Konsultasi
 ├── sitemap.xml                   # Sitemap SEO XML
 ├── robots.txt                    # Konfigurasi Crawling Mesin Pencari
 ├── PRD.md                        # Product Requirement Document Resmi

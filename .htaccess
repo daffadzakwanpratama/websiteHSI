@@ -3,16 +3,17 @@
 # Optimized for Hostinger Shared Hosting (Apache)
 # =============================================================================
 
-# ── 1. FORCE HTTPS (SSL) ──────────────────────────────────────────────────────
+# ── 1. CANONICAL DOMAIN & HTTPS ───────────────────────────────────────────────
 RewriteEngine On
+
+# Canonical domain used by the site's metadata and sitemap.
+RewriteCond %{HTTP_HOST} ^www\.lphgesid\.com$ [NC]
+RewriteRule ^ https://lphgesid.com%{REQUEST_URI} [R=301,L]
+
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# ── 2. FORCE WWW → NON-WWW (pilih salah satu sesuai domain utama) ─────────────
-# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-# RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
-
-# ── 3. HTTP SECURITY HEADERS ──────────────────────────────────────────────────
+# ── 2. HTTP SECURITY HEADERS ─────────────────────────────────────────────────
 <IfModule mod_headers.c>
 
   # Prevent Clickjacking — halaman tidak bisa di-embed di iframe pihak lain
@@ -43,13 +44,13 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 </IfModule>
 
-# ── 4. SEMBUNYIKAN INFO SERVER ────────────────────────────────────────────────
+# ── 3. SEMBUNYIKAN INFO SERVER ────────────────────────────────────────────────
 ServerSignature Off
 
 # Matikan directory listing — jangan tampilkan isi folder
 Options -Indexes
 
-# ── 5. BLOKIR AKSES KE FILE SENSITIF ─────────────────────────────────────────
+# ── 4. BLOKIR AKSES KE FILE SENSITIF ─────────────────────────────────────────
 <FilesMatch "(^\.htaccess|\.htpasswd|\.git|\.env|composer\.(json|lock)|package(-lock)?\.json|tailwind\.config\.js|README\.md|PRD\.md)$">
   Order Allow,Deny
   Deny from all
@@ -63,26 +64,26 @@ Options -Indexes
   RewriteRule ^\.gitignore - [F,L]
 </IfModule>
 
-# ── 6. BLOKIR AKSES KE FILE BACKUP / TEMP ────────────────────────────────────
+# ── 5. BLOKIR AKSES KE FILE BACKUP / TEMP ────────────────────────────────────
 <FilesMatch "\.(bak|old|orig|save|swp|tmp|log|sql|sh|py|rb|conf|ini|cfg)$">
   Order Allow,Deny
   Deny from all
 </FilesMatch>
 
-# ── 7. BLOKIR USER AGENT BERBAHAYA (Bad Bots & Scanners) ─────────────────────
+# ── 6. BLOKIR USER AGENT BERBAHAYA (Bad Bots & Scanners) ─────────────────────
 <IfModule mod_rewrite.c>
   RewriteCond %{HTTP_USER_AGENT} (sqlmap|nikto|nmap|masscan|nessus|burpsuite|acunetix|ZmEu|w3af|dirbuster|Havij|libwww-perl|python-requests/2\.2|python-urllib) [NC]
   RewriteRule .* - [F,L]
 </IfModule>
 
-# ── 8. ANTI-HOTLINKING GAMBAR ─────────────────────────────────────────────────
+# ── 7. ANTI-HOTLINKING GAMBAR ─────────────────────────────────────────────────
 <IfModule mod_rewrite.c>
   RewriteCond %{HTTP_REFERER} !^$
   RewriteCond %{HTTP_REFERER} !^https://(www\.)?gesidhalalcenter\.com [NC]
   RewriteRule \.(jpg|jpeg|png|gif|webp|svg|ico)$ - [F,NC]
 </IfModule>
 
-# ── 9. BROWSER CACHING (PERFORMANCE + SECURITY) ───────────────────────────────
+# ── 8. BROWSER CACHING (PERFORMANCE + SECURITY) ──────────────────────────────
 <IfModule mod_expires.c>
   ExpiresActive On
 
@@ -105,17 +106,17 @@ Options -Indexes
   ExpiresByType image/x-icon             "access plus 1 year"
 </IfModule>
 
-# ── 10. CUSTOM ERROR PAGES ───────────────────────────────────────────────────
-# ErrorDocument 403 /403.html
-# ErrorDocument 404 /404.html
+# ── 9. CUSTOM ERROR PAGES ────────────────────────────────────────────────────
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
 
-# ── 11. DISABLE HTTP METHODS BERBAHAYA ───────────────────────────────────────
+# ── 10. DISABLE HTTP METHODS BERBAHAYA ──────────────────────────────────────
 <LimitExcept GET POST HEAD>
   Order Allow,Deny
   Deny from all
 </LimitExcept>
 
-# ── 12. COMPRESS RESPONSE (GZIP) ─────────────────────────────────────────────
+# ── 11. COMPRESS RESPONSE (GZIP) ─────────────────────────────────────────────
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json text/plain image/svg+xml
 </IfModule>
