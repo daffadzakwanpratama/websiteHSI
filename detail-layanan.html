@@ -626,6 +626,10 @@
               </p>
 
               <form id="consultForm" class="space-y-3">
+                <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+                  <label for="websiteConsult">Jangan diisi</label>
+                  <input type="text" id="websiteConsult" name="website" data-honeypot tabindex="-1" autocomplete="off">
+                </div>
                 <!-- Row 1: Nama Usaha & Penanggung Jawab -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
@@ -688,7 +692,7 @@
                   class="btn-shimmer w-full py-3 text-[14.5px] font-bold rounded-xl text-white bg-[#c89020] hover:bg-[#b57f18] transition-all duration-300 shadow-md hover:scale-[1.01]">
                   Kirim Permintaan Konsultasi
                 </button>
-                <p class="text-[11px] text-center text-slate-400">Data Anda terenkripsi aman dan tidak disebarluaskan.
+                <p class="text-[11px] text-center text-slate-400">Pesan akan dikirim melalui WhatsApp kami.
                 </p>
               </form>
 
@@ -696,9 +700,14 @@
                 <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <i class="fa-solid fa-check text-[#c89020] text-xl"></i>
                 </div>
-                <h4 class="font-bold text-slate-900 mb-1">Permintaan Diterima!</h4>
-                <p class="text-sm text-slate-500">Tim LPH Gesid Halal Center akan menghubungi Anda dalam 1 hari kerja.
+                <h4 class="font-bold text-slate-900 mb-1">Lanjutkan di WhatsApp</h4>
+                <p class="text-sm text-slate-500">Pesan Anda sudah disiapkan. Tekan kirim di WhatsApp agar tim LPH
+                  Gesid Halal Center dapat menanggapi.
                 </p>
+                <a data-whatsapp-link href="https://wa.me/62895626779601" target="_blank" rel="noopener"
+                  class="mt-3 inline-flex items-center gap-2 px-4 py-2 text-sm font-bold rounded-xl text-white bg-[#c89020] hover:bg-[#b57f18] transition">
+                  Buka WhatsApp
+                </a>
               </div>
             </div>
 

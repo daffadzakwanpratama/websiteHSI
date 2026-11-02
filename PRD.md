@@ -20,7 +20,7 @@ Pada tahap awal, website difokuskan pada penyampaian informasi mengenai perusaha
 ## 2. Tujuan Website
 1. **Identitas Resmi:** Menjadi representasi digital resmi Gesid Halal Center.
 2. **Edukasi & Informasi:** Memberikan informasi profil perusahaan dan katalog layanan yang mudah dipahami calon klien/pelaku usaha.
-3. **Kanal Komunikasi:** Menyediakan akses kontak cepat (WhatsApp, Email, Telepon, Formulir Kontak/WeChat).
+3. **Kanal Komunikasi:** Menyediakan akses kontak cepat (WhatsApp, Email, Telepon, Formulir Kontak yang diteruskan ke WhatsApp).
 4. **Membangun Kredibilitas:** Menampilkan keunggulan, legalitas, dan profesionalisme perusahaan dalam industri sertifikasi & standardisasi halal.
 5. **Fondasi Digital & SEO:** Menyiapkan arsitektur informasi yang siap dikembangkan untuk kebutuhan SEO Google, Baidu SEO (pasar Tiongkok), dan sistem terintegrasi tahap lanjut.
 
@@ -54,10 +54,10 @@ Pada tahap awal, website difokuskan pada penyampaian informasi mengenai perusaha
 | **Beranda (Homepage)** | ✅ Rilis | Section Hero, Profil Singkat, Layanan, Keunggulan, CTA, Footer |
 | **Tentang Kami** | ✅ Rilis | Profil, Visi & Misi, Nilai Perusahaan, Legalitas |
 | **Layanan (Katalog & Detail)** | ✅ Rilis | List layanan, deskripsi, manfaat, proses, CTA |
-| **Kontak & Lokasi** | ✅ Rilis | Info kontak lengkap, formulir inquiry, Google Maps / WeChat ID |
+| **Kontak & Lokasi** | ✅ Rilis | Info kontak lengkap, formulir inquiry (diteruskan ke WhatsApp), Google Maps |
 | **Responsive Design** | ✅ Rilis | Optimal di Desktop, Tablet, dan Mobile Smartphone |
 | **Technical SEO & Baidu Readiness** | ✅ Rilis | Semantic HTML, Meta tags, OpenGraph, `robots.txt`, `sitemap.xml` |
-| **Multilingual Foundation** | ✅ Rilis | Struktur URL & layout siap untuk Bahasa Indonesia / Inggris / Mandarin |
+| *Multilingual (EN / 中文)* | ⏳ Tahap 2+ | Situs saat ini hanya Bahasa Indonesia (`lang="id"`); pemilih bahasa dan terjemahan belum dibuat |
 | *Sistem Pendaftaran Online* | ⏳ Tahap 2+ | Form multi-step upload dokumen & database |
 | *Cek & Verifikasi Sertifikat* | ⏳ Tahap 2+ | Database query publik nomor sertifikat |
 | *Portal Klien & Auth (Login)* | ⏳ Tahap 2+ | Dashboard status audit & tracking |
@@ -88,7 +88,7 @@ GESID HALAL CENTER (Website)
 └── 📞 Kontak (Contact Us)
     ├── Informasi Kontak & Alamat
     ├── Formulir Pesan / Inquiry
-    └── Akses Cepat (WhatsApp / WeChat)
+    └── Akses Cepat (WhatsApp)
 ```
 
 ---
@@ -96,7 +96,7 @@ GESID HALAL CENTER (Website)
 ## 7. Blueprint Struktur Halaman
 
 ### A. Beranda (Homepage)
-1. **Header / Navbar:** Logo Gesid, Menu Navigasi (Beranda, Tentang Kami, Layanan, Kontak), Pemilih Bahasa (ID / EN / 中文), Tombol CTA ("Hubungi Kami" / "Konsultasi").
+1. **Header / Navbar:** Logo Gesid, Menu Navigasi (Beranda, Tentang Kami, Layanan, Berita, Kontak), Tombol CTA (Kalkulator Tarif BPJPH).
 2. **Hero Section:** Headline kuat, sub-headline penjelas kredibilitas, visual relevan, tombol aksi primer & sekunder.
 3. **Sekilas Tentang Kami:** Cuplikan profil singkat dengan tautan ke halaman profil lengkap.
 4. **Katalog Layanan Utama:** Kartu ringkasan layanan unggulan dengan ikon/visual dan link detail.
@@ -125,8 +125,8 @@ GESID HALAL CENTER (Website)
 ### D. Halaman Kontak
 - Alamat Kantor Operasional & Peta Interaktif.
 - Email Resmi & Hotline Telepon.
-- Direct WhatsApp link & WeChat QR/ID (untuk klien Tiongkok/Asia).
-- Formulir Pesan/Inquiry dengan validasi dasar.
+- Direct WhatsApp link.
+- Formulir Pesan/Inquiry dengan validasi dasar; pesan diteruskan ke WhatsApp.
 - Jam Operasional Kantor.
 
 ---
@@ -141,20 +141,20 @@ GESID HALAL CENTER (Website)
 - Struktur heading teratur (`H1`, `H2`, `H3`).
 - Clean URL (misal: `/tentang-kami`, `/layanan/sertifikasi-halal`).
 - Tag Meta Title, Meta Description, Open Graph (OG tags), dan Schema.org JSON-LD (Organization & WebSite).
-- Penyiapan tag `lang="id"` (atau `zh-CN`/`en` pada versi bahasa terkait).
+- Penyiapan tag `lang="id"` (versi bahasa lain ditunda ke tahap berikutnya).
 - File `robots.txt` dan `sitemap.xml` otomatis terkonfigurasi.
 
 ### C. Security & Deployment
 - Wajib HTTPS / SSL aktif.
 - Security Headers dasar (Content-Security-Policy, X-Frame-Options, X-Content-Type-Options).
-- Anti-spam dasar pada formulir kontak (honeypot / Cloudflare Turnstile / reCAPTCHA).
+- Anti-spam dasar pada formulir (honeypot, batas waktu pengisian minimum, dan jeda antar pengiriman).
 
 ---
 
 ## 9. Data & Aset yang Diperlukan dari Klien
 1. **Brand Assets:** Logo resolusi tinggi (SVG/PNG transparan), brand guideline (kode warna, font resmi jika ada).
 2. **Konten Resmi:** Teks Profil, Visi, Misi, daftar resmi nama layanan beserta detail alurnya.
-3. **Kontak Resmi:** Alamat fisik, nomor telepon/WhatsApp, alamat email resmi domain, akun media sosial, akun WeChat (jika relevan).
+3. **Kontak Resmi:** Alamat fisik, nomor telepon/WhatsApp, alamat email resmi domain, akun media sosial.
 4. **Foto & Media:** Dokumentasi kantor, tim, aktivitas audit/pelatihan, atau aset foto berlisensi.
 
 ---
