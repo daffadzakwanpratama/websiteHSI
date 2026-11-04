@@ -21,6 +21,7 @@ website GESID/
 
 # Internal documents (tidak perlu publik)
 PRD.md
+Document/
 
 # Environment & secrets (jika ada di masa depan)
 .env

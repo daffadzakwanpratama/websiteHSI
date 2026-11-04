@@ -38,6 +38,9 @@
       '/': 'index.html',
       'index.html': 'index.html',
       'tentang-kami.html': 'tentang-kami.html',
+      'profil-visi-misi.html': 'tentang-kami.html',
+      'struktur-tim.html': 'tentang-kami.html',
+      'galeri.html': 'tentang-kami.html',
       'layanan.html': 'layanan.html',
       'detail-layanan.html': 'layanan.html', // Detail layanan maps to Layanan in main navbar
       'berita.html': 'berita.html',
@@ -59,15 +62,44 @@
       }
     });
 
+    // Desktop Dropdown Sub-items
+    document.querySelectorAll('.nav-dropdown-item').forEach(item => {
+      const href = item.getAttribute('href');
+      if (href === currentFile) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+
     // Mobile Nav Links
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
-      const href = link.getAttribute('href');
+      const href = link.getAttribute('href') || link.getAttribute('data-nav-target');
       if (href === activeTarget) {
         link.classList.add('active');
       } else {
         link.classList.remove('active');
       }
     });
+
+    // Mobile Dropdown Sub-items & Auto-expand when on About pages
+    let isAboutSubpage = false;
+    document.querySelectorAll('.mobile-subnav-link').forEach(item => {
+      const href = item.getAttribute('href');
+      if (href === currentFile) {
+        item.classList.add('active');
+        isAboutSubpage = true;
+      } else {
+        item.classList.remove('active');
+      }
+    });
+
+    if (isAboutSubpage || activeTarget === 'tentang-kami.html') {
+      const content = document.getElementById('mobileDropdownContent');
+      const chevron = document.getElementById('mobileDropdownChevron');
+      content?.classList.remove('hidden');
+      chevron?.classList.add('rotate-180');
+    }
   }
 
   function initMobileDropdown() {
@@ -86,6 +118,30 @@
         content.classList.add('hidden');
         chevron?.classList.remove('rotate-180');
       }
+    });
+  }
+
+  function initDesktopDropdown() {
+    document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+      let closeTimer = null;
+
+      function openMenu() {
+        if (closeTimer) {
+          clearTimeout(closeTimer);
+          closeTimer = null;
+        }
+        dropdown.classList.add('is-open');
+      }
+
+      function scheduleClose() {
+        if (closeTimer) clearTimeout(closeTimer);
+        closeTimer = setTimeout(() => {
+          dropdown.classList.remove('is-open');
+        }, 220);
+      }
+
+      dropdown.addEventListener('mouseenter', openMenu);
+      dropdown.addEventListener('mouseleave', scheduleClose);
     });
   }
 
@@ -108,6 +164,7 @@
   window.initNavigation = function () {
     initMobileMenu();
     initMobileDropdown();
+    initDesktopDropdown();
     initActiveNav();
     initHeaderScroll();
   };

@@ -41,7 +41,7 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="assets/css/site.min.css?v=1">
+  <link rel="stylesheet" href="assets/css/site.min.css?v=4">
   <link rel="preload" href="assets/webfonts/fa-solid-900.subset.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Schema.org Structured Data -->
@@ -101,8 +101,22 @@
         <nav class="hidden lg:flex items-center gap-5 sm:gap-6 absolute left-1/2 -translate-x-1/2">
           <a href="index.html"
             class="nav-link text-slate-700 hover:text-[#c89020] transition-colors duration-200">Beranda</a>
-          <a href="tentang-kami.html"
-            class="nav-link text-slate-700 hover:text-[#c89020] transition-colors duration-200">Tentang Kami</a>
+          <!-- Dropdown Tentang Kami -->
+          <div class="nav-dropdown">
+            <a href="tentang-kami.html"
+              class="nav-link inline-flex items-center text-slate-700 hover:text-[#c89020] transition-colors duration-200">
+              <span>Tentang Kami</span>
+              <i class="fa-solid fa-chevron-down nav-dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="nav-dropdown-panel">
+                <a href="tentang-kami.html" class="nav-dropdown-item">Tentang Kami</a>
+                <a href="profil-visi-misi.html" class="nav-dropdown-item">Visi &amp; Misi</a>
+                <a href="struktur-tim.html" class="nav-dropdown-item">Struktur Tim</a>
+                <a href="galeri.html" class="nav-dropdown-item">Galeri</a>
+              </div>
+            </div>
+          </div>
           <a href="layanan.html"
             class="nav-link text-slate-700 hover:text-[#c89020] transition-colors duration-200">Layanan</a>
           <a href="berita.html"
@@ -157,10 +171,21 @@
           <span class="flex items-center"><i class="fa-solid fa-house nav-icon"></i><span>Beranda</span></span>
           <span class="active-dot"></span>
         </a>
-        <a href="tentang-kami.html" class="mobile-nav-link">
-          <span class="flex items-center"><i class="fa-solid fa-building nav-icon"></i><span>Tentang Kami</span></span>
-          <span class="active-dot"></span>
-        </a>
+        <!-- Mobile Dropdown Tentang Kami -->
+        <div>
+          <button type="button" id="mobileDropdownBtn" data-nav-target="tentang-kami.html"
+            class="mobile-nav-link w-full text-left">
+            <span class="flex items-center"><i class="fa-solid fa-building nav-icon"></i><span>Tentang Kami</span></span>
+            <i id="mobileDropdownChevron"
+              class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
+          </button>
+          <div id="mobileDropdownContent" class="mobile-subnav-container hidden">
+            <a href="tentang-kami.html" class="mobile-subnav-link">Tentang Kami</a>
+            <a href="profil-visi-misi.html" class="mobile-subnav-link">Visi &amp; Misi</a>
+            <a href="struktur-tim.html" class="mobile-subnav-link">Struktur Tim</a>
+            <a href="galeri.html" class="mobile-subnav-link">Galeri</a>
+          </div>
+        </div>
         <a href="layanan.html" class="mobile-nav-link">
           <span class="flex items-center"><i class="fa-solid fa-layer-group nav-icon"></i><span>Layanan</span></span>
           <span class="active-dot"></span>
