@@ -149,8 +149,13 @@
     const header = document.querySelector('.site-header');
     if (!header) return;
 
+    const hasHeroImage = Boolean(document.getElementById('heroCarouselSection'));
+    if (hasHeroImage) {
+      header.classList.add('site-header--hero');
+    }
+
     function onScroll() {
-      if (window.scrollY > 12) {
+      if (window.scrollY > 24) {
         header.classList.add('is-scrolled');
       } else {
         header.classList.remove('is-scrolled');

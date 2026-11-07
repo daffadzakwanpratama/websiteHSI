@@ -1,68 +1,53 @@
 /**
  * Renders the selected service detail from the shared service catalog data.
+ * Visual, concise, and easy-to-scan layout.
  */
 
 (function () {
-  const flowIconPalettes = {
-    blue: ['#60A5FA', '#2563EB'],
-    indigo: ['#818CF8', '#4F46E5'],
-    purple: ['#C084FC', '#9333EA'],
-    teal: ['#2DD4BF', '#0F766E'],
-    green: ['#4ADE80', '#15803D'],
-    amber: ['#FBBF24', '#D97706']
-  };
-
   function cloneTemplate(id) {
     const template = document.getElementById(id);
-    return template.content.cloneNode(true);
+    return template ? template.content.cloneNode(true) : document.createDocumentFragment();
   }
 
   function renderList(templateId, values) {
     const fragment = document.createDocumentFragment();
+    if (!Array.isArray(values)) return fragment;
     values.forEach(value => {
       const item = cloneTemplate(templateId);
-      item.querySelector('[data-service-text]').textContent = value;
+      const textEl = item.querySelector('[data-service-text]');
+      if (textEl) textEl.textContent = value;
       fragment.appendChild(item);
     });
     return fragment;
   }
 
   function renderFlow(section, flow) {
+    if (!section) return;
     if (!flow || !Array.isArray(flow.steps) || flow.steps.length === 0) {
       section.classList.add('hidden');
       return;
     }
 
-    section.querySelector('[data-flow-intro]').textContent = flow.intro;
-    const stepList = section.querySelector('[data-flow-steps]');
-    const flowPanel = section.querySelector('[data-flow-panel]');
-    const flowHint = section.querySelector('[data-flow-hint] span');
-    const stepButtons = flow.steps.map((step, index) => {
-      const item = cloneTemplate('serviceFlowStepTemplate');
-      const button = item.querySelector('[data-flow-step]');
-      button.setAttribute('aria-pressed', 'false');
-      button.querySelector('[data-flow-number]').textContent = String(index + 1).padStart(2, '0');
-      button.querySelector('[data-flow-step-title]').textContent = step.title;
-      button.addEventListener('click', () => {
-        stepButtons.forEach((stepButton, stepIndex) => {
-          stepButton.setAttribute('aria-pressed', String(stepIndex === index));
-        });
-        flowPanel.classList.remove('hidden');
-        flowHint.textContent = 'Pilih nomor lain untuk membaca langkah berikutnya.';
-        section.querySelector('[data-flow-count]').textContent =
-          `Langkah ${index + 1} dari ${flow.steps.length}`;
-        section.querySelector('[data-flow-title]').textContent = step.title;
-        section.querySelector('[data-flow-description]').textContent = step.description;
-        const palette = flowIconPalettes[step.tone] || flowIconPalettes.amber;
-        const flowIconTile = section.querySelector('[data-flow-icon-tile]');
-        flowIconTile.style.backgroundImage = `linear-gradient(135deg, ${palette[0]}, ${palette[1]})`;
-        const flowIcon = section.querySelector('[data-flow-icon]');
-        flowIcon.className = `fa-solid ${step.icon || 'fa-circle-info'} relative z-10 text-3xl text-white drop-shadow-sm`;
-      });
-      return button;
-    });
+    const introEl = section.querySelector('[data-flow-intro]');
+    if (introEl) introEl.textContent = flow.intro || '';
 
-    stepButtons.forEach(button => stepList.appendChild(button));
+    const stepList = section.querySelector('[data-flow-steps]');
+    if (!stepList) return;
+
+    flow.steps.forEach((step, index) => {
+      const item = cloneTemplate('serviceFlowStepTemplate');
+      const numEl = item.querySelector('[data-flow-number]');
+      const iconEl = item.querySelector('[data-flow-icon]');
+      const titleEl = item.querySelector('[data-flow-step-title]');
+      const descEl = item.querySelector('[data-flow-step-desc]');
+
+      if (numEl) numEl.textContent = `Tahap ${index + 1}`;
+      if (iconEl) iconEl.className = `fa-solid ${step.icon || 'fa-check'} text-sm text-[#c89020]`;
+      if (titleEl) titleEl.textContent = step.title || '';
+      if (descEl) descEl.textContent = step.description || '';
+
+      stepList.appendChild(item);
+    });
   }
 
   function initServiceDetail() {
@@ -85,9 +70,9 @@
 
     if (!service) {
       setText('breadcrumbCurrent', 'Layanan tidak ditemukan');
-      setText('serviceLabel', 'Katalog layanan');
+      setText('serviceLabel', 'Katalog Layanan');
       setText('serviceTitle', 'Layanan tidak ditemukan');
-      setText('serviceHeroDescription', 'Silakan kembali ke katalog untuk memilih layanan yang tersedia.');
+      setText('serviceHeroDescription', 'Silakan kembali ke halaman Layanan untuk melihat daftar layanan resmi LPH GESID Halal Center.');
       dynamicContent.replaceChildren(cloneTemplate('serviceNotFoundTemplate'));
       document.title = 'Layanan tidak ditemukan — Gesid Halal Center';
       return;
@@ -99,29 +84,54 @@
 
     const label = document.getElementById('serviceLabel');
     if (label) {
-      const indicator = label.querySelector('span');
-      if (indicator) indicator.className = 'h-2 w-2 rounded-full bg-[#c89020]';
-      label.replaceChildren(
-        ...(indicator ? [indicator] : []),
-        document.createTextNode(service.label)
-      );
+      label.textContent = service.label;
     }
 
     const detail = cloneTemplate('serviceDetailTemplate');
-    renderFlow(detail.querySelector('[data-service-flow]'), service.flow);
-    detail.querySelector('[data-service-icon]').classList.add('fa-solid', service.icon);
+
+    // 1. Tentang Layanan
     const description = detail.querySelector('[data-service-description]');
-    service.desc.forEach(paragraph => {
-      const element = document.createElement('p');
-      element.textContent = paragraph;
-      description.appendChild(element);
-    });
-    detail.querySelector('[data-service-features]').appendChild(
-      renderList('serviceFeatureTemplate', service.features)
-    );
-    detail.querySelector('[data-service-targets]').appendChild(
-      renderList('serviceTargetTemplate', service.target)
-    );
+    if (description && Array.isArray(service.desc)) {
+      service.desc.forEach(paragraph => {
+        const element = document.createElement('p');
+        element.textContent = paragraph;
+        description.appendChild(element);
+      });
+    }
+
+    // 2. Apa yang Dilakukan GESID
+    const featuresEl = detail.querySelector('[data-service-features]');
+    if (featuresEl) {
+      featuresEl.appendChild(renderList('serviceFeatureTemplate', service.features));
+    }
+
+    // 3. Hasil yang Diperoleh Klien
+    const deliverablesSection = detail.querySelector('[data-service-deliverables-section]');
+    const deliverablesEl = detail.querySelector('[data-service-deliverables]');
+    if (deliverablesEl && Array.isArray(service.deliverables) && service.deliverables.length > 0) {
+      deliverablesEl.appendChild(renderList('serviceDeliverableTemplate', service.deliverables));
+    } else if (deliverablesSection) {
+      deliverablesSection.classList.add('hidden');
+    }
+
+    // 4. Tahapan Layanan (Visual 2x2 Grid)
+    renderFlow(detail.querySelector('[data-service-flow]'), service.flow);
+
+    // 5. Sesuai Untuk Siapa
+    const targetsEl = detail.querySelector('[data-service-targets]');
+    if (targetsEl) {
+      targetsEl.appendChild(renderList('serviceTargetTemplate', service.target));
+    }
+
+    // 6. Catatan Kewenangan & Ketidakberpihakan
+    const noteSection = detail.querySelector('[data-service-impartiality-section]');
+    const noteText = detail.querySelector('[data-service-impartiality]');
+    if (noteSection && noteText && service.impartialityNote) {
+      noteText.textContent = service.impartialityNote;
+    } else if (noteSection) {
+      noteSection.classList.add('hidden');
+    }
+
     dynamicContent.replaceChildren(detail);
 
     document.title = `${service.title} — Gesid Halal Center`;

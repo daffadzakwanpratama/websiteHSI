@@ -182,14 +182,83 @@ h4 {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
-  transition: all 0.25s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, -webkit-backdrop-filter 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .site-header.is-scrolled {
-  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.97);
+  background-color: rgba(255, 255, 255, 0.97);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   border-bottom-color: rgba(203, 213, 225, 0.85);
   box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06),
     0 1px 3px 0 rgba(15, 23, 42, 0.02);
+}
+
+/* Transparent Hero Navbar State (When over a full-bleed hero image and not scrolled) */
+.site-header.site-header--hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.site-header.site-header--hero:not(.is-scrolled) {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border: 0 !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.site-header.site-header--hero:not(.is-scrolled) img[src*="logo-emblem"] {
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+}
+
+.site-header.site-header--hero:not(.is-scrolled) a[aria-label="Gesid Halal Center"] > div > span {
+  color: #fbbf24 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+}
+
+.site-header.site-header--hero:not(.is-scrolled) a[aria-label="Gesid Halal Center"] > div > div > span:not(.flex-1) {
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+
+.site-header.site-header--hero:not(.is-scrolled) a[aria-label="Gesid Halal Center"] > div > div > span.flex-1 {
+  background-color: rgba(251, 191, 36, 0.85) !important;
+}
+
+.site-header.site-header--hero:not(.is-scrolled) .nav-link {
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.site-header.site-header--hero:not(.is-scrolled) .nav-link:hover,
+.site-header.site-header--hero:not(.is-scrolled) .nav-link.text-\[\#c89020\] {
+  color: #fbbf24 !important;
+}
+
+.site-header.site-header--hero:not(.is-scrolled) .nav-link::after {
+  background: #fbbf24;
+}
+
+.site-header.site-header--hero:not(.is-scrolled) .nav-dropdown:hover .nav-dropdown-chevron,
+.site-header.site-header--hero:not(.is-scrolled) .nav-dropdown:focus-within .nav-dropdown-chevron,
+.site-header.site-header--hero:not(.is-scrolled) .nav-dropdown.is-open .nav-dropdown-chevron {
+  color: #fbbf24 !important;
+}
+
+.site-header.site-header--hero:not(.is-scrolled) #mobileMenuBtn {
+  color: #ffffff !important;
+}
+
+.site-header.site-header--hero:not(.is-scrolled) #mobileMenuBtn:hover {
+  background-color: rgba(255, 255, 255, 0.14) !important;
 }
 
 /* Logo Emblem sizing guard (prevents oversized intrinsic image rendering) */
@@ -1546,11 +1615,11 @@ textarea:focus {
   font-weight: 800;
 }
 
-.alur-step-item[data-step="5"] .alur-step-node {
+.alur-step-item[data-step="10"] .alur-step-node {
   background: linear-gradient(135deg, #f59e0b, #c89020);
 }
 
-.alur-step-item[data-step="5"] .alur-step-node .alur-step-num {
+.alur-step-item[data-step="10"] .alur-step-node .alur-step-num {
   color: #ffffff;
 }
 

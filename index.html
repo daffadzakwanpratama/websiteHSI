@@ -45,7 +45,7 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="assets/css/site.min.css?v=4">
+  <link rel="stylesheet" href="assets/css/site.min.css?v=8">
   <link rel="preload" href="assets/webfonts/fa-solid-900.subset.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Schema.org Structured Data -->
@@ -60,7 +60,7 @@
     "description": "Pendampingan sertifikasi halal resmi BPJPH & MUI untuk pelaku usaha dan industri di Indonesia.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Ruko Seasons City Blok E No.1, RT.13/RW.1, Jemb. Besi, Kec. Tambora",
+      "streetAddress": "Ruko Seasons City Blok E No. 2, Jl. Latumeten No. 33, Jembatan Besi, Kec. Tambora",
       "addressLocality": "Jakarta Barat",
       "addressRegion": "DKI Jakarta",
       "postalCode": "11320",
@@ -80,7 +80,7 @@
 <body class="bg-white text-slate-800 antialiased flex flex-col min-h-screen">
 
   <!-- NAVBAR -->
-  <header class="site-header sticky top-0 z-50">
+  <header class="site-header site-header--hero fixed top-0 left-0 right-0 z-50">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-[72px]">
 
@@ -221,7 +221,7 @@
 
     <!-- HERO SECTION (CINEMATIC FULL-BLEED SLIDER WITH INTEGRATED STATS) -->
     <section
-      class="relative w-full min-h-[580px] sm:min-h-[660px] lg:min-h-[700px] bg-slate-950 flex flex-col justify-between overflow-hidden"
+      class="relative w-full min-h-[600px] sm:min-h-[680px] lg:min-h-[740px] bg-slate-950 flex flex-col justify-between overflow-hidden"
       id="heroCarouselSection">
 
       <!-- Full Bleed Background Image Slider Track -->
@@ -428,114 +428,722 @@
       </div>
     </section>
 
-    <!-- JENIS PRODUK WAJIB SERTIFIKASI HALAL -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-white border-b border-slate-100">
+    <!-- JENIS PRODUK & JASA WAJIB SERTIFIKASI HALAL (TERPISAH PRODUK & JASA) -->
+    <section class="py-14 sm:py-18 lg:py-22 bg-white border-b border-slate-100">
       <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div data-animate="fade-up"
-          class="text-center max-w-2xl mx-auto mb-8 sm:mb-10 flex flex-col items-center justify-center">
-          <div
-            class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200/80 text-amber-900 font-bold text-xs sm:text-sm tracking-wide shadow-xs mb-3">
-            <i class="fa-solid fa-scale-balanced text-[#c89020] mr-2"></i> Regulasi KMA 748 Tahun 2021
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight text-center">
-            Jenis Produk Wajib Sertifikasi Halal
+
+        <!-- Section Header -->
+        <div data-animate="fade-up" class="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-slate-900 tracking-tight">
+            Jenis Produk &amp; Jasa Wajib Sertifikasi Halal
           </h2>
-          <p class="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed text-center max-w-lg mx-auto">
-            Sesuai regulasi UU JPH, seluruh kategori produk berikut wajib bersertifikat halal resmi dari BPJPH & MUI.
+          <p class="text-slate-500 text-sm sm:text-base mt-2.5 leading-relaxed">
+             Terbagi menjadi kategori produk barang konsumsi dan kategori layanan jasa rantai pasok halal.
           </p>
         </div>
 
-        <div data-stagger="90" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-
-          <!-- 1. MAKANAN -->
-          <a href="#syarat-sertifikasi"
-            class="bg-slate-50/80 hover:bg-white border border-slate-200/80 hover:border-[#c89020]/50 rounded-2xl p-5 sm:p-6 flex flex-col items-center justify-between text-center hover-lift hover-glow-gold group transition-all duration-300">
-            <div class="flex flex-col items-center">
-              <div
-                class="w-14 h-14 rounded-2xl bg-amber-50 text-[#c89020] border border-amber-200/60 flex items-center justify-center mb-3.5 group-hover:bg-[#c89020] group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-xs">
-                <i class="fa-solid fa-bowl-rice text-2xl"></i>
+        <!-- ========================================== -->
+        <!-- KELOMPOK 1: KATEGORI PRODUK (8 JENIS)      -->
+        <!-- ========================================== -->
+        <div data-animate="fade-up" class="mb-14 sm:mb-16">
+          <div class="flex items-center justify-between gap-4 mb-6 sm:mb-8 pb-4 border-b border-slate-200">
+            <div class="flex items-center gap-3.5">
+              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-amber-50 border border-amber-200/80 flex items-center justify-center text-[#c89020] shrink-0 shadow-2xs">
+                <i class="fa-solid fa-box-open text-lg sm:text-xl"></i>
               </div>
-              <h3
-                class="text-base font-bold text-slate-900 group-hover:text-[#c89020] transition-colors text-center mb-1.5">
-                Makanan
-              </h3>
-              <p class="text-xs text-slate-500 leading-relaxed">
-                Olahan pangan kemasan, bumbu & rempah, katering, restoran, dan produk bakery.
-              </p>
-            </div>
-            <span
-              class="mt-4 text-[12px] font-bold text-[#c89020] inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              Lihat Syarat <i class="fa-solid fa-chevron-right text-[10px]"></i>
-            </span>
-          </a>
-
-          <!-- 2. MINUMAN -->
-          <a href="#syarat-sertifikasi"
-            class="bg-slate-50/80 hover:bg-white border border-slate-200/80 hover:border-[#c89020]/50 rounded-2xl p-5 sm:p-6 flex flex-col items-center justify-between text-center hover-lift hover-glow-gold group transition-all duration-300">
-            <div class="flex flex-col items-center">
-              <div
-                class="w-14 h-14 rounded-2xl bg-amber-50 text-[#c89020] border border-amber-200/60 flex items-center justify-center mb-3.5 group-hover:bg-[#c89020] group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-xs">
-                <i class="fa-solid fa-glass-water text-2xl"></i>
+              <div class="flex items-center gap-2.5">
+                <h3 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 tracking-tight font-serif">
+                  Kategori Produk
+                </h3>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-amber-100/80 text-[#946310] border border-amber-300/60">
+                  8 Kategori
+                </span>
               </div>
-              <h3
-                class="text-base font-bold text-slate-900 group-hover:text-[#c89020] transition-colors text-center mb-1.5">
-                Minuman
-              </h3>
-              <p class="text-xs text-slate-500 leading-relaxed">
-                Minuman serbuk & kemasan, jus konsentrat, sirup, teh, kopi, dan olahan susu.
-              </p>
             </div>
-            <span
-              class="mt-4 text-[12px] font-bold text-[#c89020] inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              Lihat Syarat <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            <span class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-slate-600 text-xs font-bold">
+              <i class="fa-solid fa-circle-check text-amber-500 text-xs"></i> Wajib Sertifikasi Halal
             </span>
-          </a>
+          </div>
 
-          <!-- 3. PRODUK KIMIA -->
-          <a href="#syarat-sertifikasi"
-            class="bg-slate-50/80 hover:bg-white border border-slate-200/80 hover:border-[#c89020]/50 rounded-2xl p-5 sm:p-6 flex flex-col items-center justify-between text-center hover-lift hover-glow-gold group transition-all duration-300">
-            <div class="flex flex-col items-center">
-              <div
-                class="w-14 h-14 rounded-2xl bg-amber-50 text-[#c89020] border border-amber-200/60 flex items-center justify-center mb-3.5 group-hover:bg-[#c89020] group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-xs">
-                <i class="fa-solid fa-flask text-2xl"></i>
-              </div>
-              <h3
-                class="text-base font-bold text-slate-900 group-hover:text-[#c89020] transition-colors text-center mb-1.5">
-                Produk Kimia & Gunaan
-              </h3>
-              <p class="text-xs text-slate-500 leading-relaxed">
-                Bahan kimia industri pangan, aditif, desinfektan, plastik kemasan, & pelumas mesin.
-              </p>
-            </div>
-            <span
-              class="mt-4 text-[12px] font-bold text-[#c89020] inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              Lihat Syarat <i class="fa-solid fa-chevron-right text-[10px]"></i>
-            </span>
-          </a>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5">
 
-          <!-- 4. KOSMETIK -->
-          <a href="#syarat-sertifikasi"
-            class="bg-slate-50/80 hover:bg-white border border-slate-200/80 hover:border-[#c89020]/50 rounded-2xl p-5 sm:p-6 flex flex-col items-center justify-between text-center hover-lift hover-glow-gold group transition-all duration-300">
-            <div class="flex flex-col items-center">
-              <div
-                class="w-14 h-14 rounded-2xl bg-amber-50 text-[#c89020] border border-amber-200/60 flex items-center justify-center mb-3.5 group-hover:bg-[#c89020] group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-xs">
-                <i class="fa-solid fa-spa text-2xl"></i>
+            <!-- 1. Makanan -->
+            <div class="group bg-white border border-slate-200/80 hover:border-orange-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#fff7ed] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26 24L74 16" stroke="#92400E" stroke-width="3.5" stroke-linecap="round"/>
+                  <path d="M26 30L76 24" stroke="#B45309" stroke-width="3.5" stroke-linecap="round"/>
+                  <path d="M24 50C24 38 36 32 48 32C60 32 72 38 72 50" fill="#FBBF24"/>
+                  <circle cx="38" cy="44" r="7" fill="#22C55E"/>
+                  <circle cx="44" cy="42" r="6" fill="#16A34A"/>
+                  <ellipse cx="56" cy="43" rx="9" ry="7" fill="#FFFFFF" stroke="#FDE68A" stroke-width="1.5"/>
+                  <circle cx="56" cy="43" r="4" fill="#F97316"/>
+                  <path d="M18 50H78C78 66 65 76 48 76C31 76 18 66 18 50Z" fill="#EF4444"/>
+                  <path d="M24 56H72" stroke="#FCA5A5" stroke-width="2.5" stroke-linecap="round"/>
+                  <rect x="36" y="74" width="24" height="5" rx="2.5" fill="#B91C1C"/>
+                </svg>
               </div>
-              <h3
-                class="text-base font-bold text-slate-900 group-hover:text-[#c89020] transition-colors text-center mb-1.5">
-                Kosmetik & Skincare
-              </h3>
-              <p class="text-xs text-slate-500 leading-relaxed">
-                Skincare, makeup, sabun, sampo, parfum, suplemen kesehatan & produk personal care.
-              </p>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Makanan</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Pangan &amp; Olahan</p>
+              </div>
             </div>
-            <span
-              class="mt-4 text-[12px] font-bold text-[#c89020] inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              Lihat Syarat <i class="fa-solid fa-chevron-right text-[10px]"></i>
+
+            <!-- 2. Minuman -->
+            <div class="group bg-white border border-slate-200/80 hover:border-sky-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#f0f9ff] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M52 14L46 32" stroke="#F43F5E" stroke-width="4" stroke-linecap="round"/>
+                  <circle cx="62" cy="34" r="10" fill="#FB923C" stroke="#FFF" stroke-width="2"/>
+                  <circle cx="62" cy="34" r="6" fill="#FDBA74"/>
+                  <path d="M28 38C28 28 36 22 46 22C56 22 64 28 64 38H28Z" fill="#E0F2FE" stroke="#38BDF8" stroke-width="2"/>
+                  <path d="M28 38H64L60 76C60 78.2 58.2 80 56 80H36C33.8 80 32 78.2 32 76L28 38Z" fill="#38BDF8"/>
+                  <path d="M30 48H62L59 74H33L30 48Z" fill="#0284C7"/>
+                  <rect x="36" y="53" width="8" height="8" rx="2" fill="#E0F2FE" opacity="0.9"/>
+                  <rect x="47" y="56" width="8" height="8" rx="2" fill="#BAE6FD" opacity="0.9"/>
+                  <rect x="25" y="36" width="42" height="4" rx="2" fill="#0369A1"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Minuman</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Kemasan &amp; Seduhan</p>
+              </div>
+            </div>
+
+            <!-- 3. Obat -->
+            <div class="group bg-white border border-slate-200/80 hover:border-teal-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#f0fdfa] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="26" y="20" width="24" height="8" rx="3" fill="#0F766E"/>
+                  <rect x="22" y="28" width="32" height="48" rx="6" fill="#14B8A6"/>
+                  <rect x="22" y="40" width="32" height="24" fill="#FFFFFF"/>
+                  <path d="M38 46V58M32 52H44" stroke="#EF4444" stroke-width="4" stroke-linecap="round"/>
+                  <g transform="rotate(-30 66 58)">
+                    <rect x="58" y="42" width="16" height="32" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+                    <path d="M58 50C58 45.5817 61.5817 42 66 42C70.4183 42 74 45.5817 74 50V58H58V50Z" fill="#EF4444"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Obat</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Farmasi &amp; Suplemen</p>
+              </div>
+            </div>
+
+            <!-- 4. Kosmetik -->
+            <div class="group bg-white border border-slate-200/80 hover:border-pink-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#fdf2f8] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="30" y="18" width="12" height="8" rx="4" fill="#F472B6"/>
+                  <rect x="28" y="26" width="16" height="6" rx="2" fill="#FBBF24"/>
+                  <rect x="22" y="32" width="28" height="44" rx="8" fill="#EC4899"/>
+                  <rect x="26" y="44" width="20" height="20" rx="4" fill="#FDF2F8"/>
+                  <path d="M62 36L70 30V48H62V36Z" fill="#F43F5E"/>
+                  <rect x="60" y="48" width="12" height="12" rx="1" fill="#FBBF24"/>
+                  <rect x="58" y="58" width="16" height="18" rx="3" fill="#831843"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Kosmetik</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Skincare &amp; Rias</p>
+              </div>
+            </div>
+
+            <!-- 5. Produk Kimiawi -->
+            <div class="group bg-white border border-slate-200/80 hover:border-violet-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#f5f3ff] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="48" cy="18" r="4" fill="#38BDF8"/>
+                  <circle cx="56" cy="24" r="3" fill="#F472B6"/>
+                  <path d="M38 28H58M42 28V42L24 70C21.5 74 24.4 78 29 78H67C71.6 78 74.5 74 72 70L54 42V28" stroke="#6D28D9" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="#EDE9FE"/>
+                  <path d="M31 58H65L71 69C72.5 72 70.5 75 67 75H29C25.5 75 23.5 72 25 69L31 58Z" fill="#8B5CF6"/>
+                  <circle cx="44" cy="66" r="3" fill="#DDD6FE"/>
+                  <circle cx="54" cy="69" r="2.5" fill="#DDD6FE"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Produk Kimiawi</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Aditif &amp; Bahan Kimia</p>
+              </div>
+            </div>
+
+            <!-- 6. Produk Biologi -->
+            <div class="group bg-white border border-slate-200/80 hover:border-emerald-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#ecfdf5] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="48" cy="50" r="28" fill="#A7F3D0" stroke="#059669" stroke-width="3"/>
+                  <circle cx="48" cy="50" r="21" fill="#D1FAE5"/>
+                  <path d="M48 34C60 34 62 48 48 62C34 48 36 34 48 34Z" fill="#10B981"/>
+                  <path d="M48 40V60" stroke="#ECFDF5" stroke-width="2.5" stroke-linecap="round"/>
+                  <circle cx="36" cy="44" r="3" fill="#059669"/>
+                  <circle cx="60" cy="54" r="3.5" fill="#047857"/>
+                  <circle cx="58" cy="39" r="2.5" fill="#34D399"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Produk Biologi</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Enzim &amp; Kultur</p>
+              </div>
+            </div>
+
+            <!-- 7. Produk Rekayasa Genetik -->
+            <div class="group bg-white border border-slate-200/80 hover:border-blue-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#eff6ff] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="34" y1="26" x2="62" y2="26" stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round"/>
+                  <line x1="38" y1="36" x2="58" y2="36" stroke="#EC4899" stroke-width="3.5" stroke-linecap="round"/>
+                  <line x1="38" y1="60" x2="58" y2="60" stroke="#10B981" stroke-width="3.5" stroke-linecap="round"/>
+                  <line x1="34" y1="70" x2="62" y2="70" stroke="#8B5CF6" stroke-width="3.5" stroke-linecap="round"/>
+                  <path d="M32 18C32 36 64 36 64 54C64 66 44 72 32 78" stroke="#2563EB" stroke-width="4.5" stroke-linecap="round"/>
+                  <path d="M64 18C64 36 32 36 32 54C32 66 52 72 64 78" stroke="#06B6D4" stroke-width="4.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Produk Rekayasa Genetik</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Bioteknologi &amp; GMO</p>
+              </div>
+            </div>
+
+            <!-- 8. Barang Gunaan -->
+            <div class="group bg-white border border-slate-200/80 hover:border-amber-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#fefce8] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M34 24L20 34L26 44L34 39V72H62V39L70 44L76 34L62 24H55C55 28 52 31 48 31C44 31 41 28 41 24H34Z" fill="#3B82F6" stroke="#1D4ED8" stroke-width="2" stroke-linejoin="round"/>
+                  <circle cx="64" cy="64" r="12" fill="#F59E0B" stroke="#FFFFFF" stroke-width="2.5"/>
+                  <path d="M60 64L63 67L69 61" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Barang Gunaan</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Sandang &amp; Peralatan</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- KELOMPOK 2: KATEGORI JASA (7 JENIS)        -->
+        <!-- ========================================== -->
+        <div data-animate="fade-up">
+          <div class="flex items-center justify-between gap-4 mb-6 sm:mb-8 pb-4 border-b border-slate-200">
+            <div class="flex items-center gap-3.5">
+              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-slate-100 border border-slate-200/90 flex items-center justify-center text-slate-700 shrink-0 shadow-2xs">
+                <i class="fa-solid fa-handshake-angle text-lg sm:text-xl text-[#0b2545]"></i>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <h3 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 tracking-tight font-serif">
+                  Kategori Jasa
+                </h3>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-200/80 text-slate-800 border border-slate-300">
+                  7 Kategori
+                </span>
+              </div>
+            </div>
+            <span class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-slate-600 text-xs font-bold">
+              <i class="fa-solid fa-circle-check text-[#0b2545] text-xs"></i> Rantai Pasok Halal
             </span>
-          </a>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5">
+
+            <!-- 1. Jasa Penyembelihan -->
+            <div class="group bg-white border border-slate-200/80 hover:border-orange-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#fffbeb] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="44" cy="48" r="24" fill="#FDE68A"/>
+                  <path d="M30 34C24 34 22 28 24 24C26 28 30 30 34 30H54C58 30 62 28 64 24C66 28 64 34 58 34" stroke="#92400E" stroke-width="3.5" stroke-linecap="round"/>
+                  <rect x="31" y="32" width="26" height="28" rx="10" fill="#B45309"/>
+                  <rect x="35" y="48" width="18" height="12" rx="6" fill="#FCD34D"/>
+                  <circle cx="38" cy="41" r="2" fill="#FFF"/>
+                  <circle cx="50" cy="41" r="2" fill="#FFF"/>
+                  <circle cx="65" cy="62" r="12" fill="#16A34A" stroke="#FFFFFF" stroke-width="2.5"/>
+                  <path d="M60 62L63.5 65.5L70 59" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Jasa Penyembelihan</h4>
+                <p class="text-xs text-slate-500 mt-0.5">RPH &amp; Unggas</p>
+              </div>
+            </div>
+
+            <!-- 2. Jasa Pengolahan -->
+            <div class="group bg-white border border-slate-200/80 hover:border-indigo-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#eef2ff] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="24" y="28" width="38" height="46" rx="6" fill="#6366F1"/>
+                  <rect x="20" y="24" width="46" height="7" rx="3.5" fill="#4338CA"/>
+                  <rect x="30" y="38" width="26" height="18" rx="3" fill="#E0E7FF"/>
+                  <circle cx="64" cy="60" r="14" fill="#F97316" stroke="#FFFFFF" stroke-width="2.5"/>
+                  <circle cx="64" cy="60" r="5" fill="#FFF"/>
+                  <path d="M64 49V52M64 68V71M53 60H56M72 60H75" stroke="#FFF" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Jasa Pengolahan</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Produksi &amp; Maklon</p>
+              </div>
+            </div>
+
+            <!-- 3. Jasa Penyimpanan -->
+            <div class="group bg-white border border-slate-200/80 hover:border-cyan-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#ecfeff] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 36L48 20L78 36V74H18V36Z" fill="#CFFAFE" stroke="#0891B2" stroke-width="3" stroke-linejoin="round"/>
+                  <rect x="28" y="54" width="16" height="16" rx="2" fill="#F59E0B"/>
+                  <rect x="48" y="54" width="16" height="16" rx="2" fill="#D97706"/>
+                  <rect x="38" y="38" width="16" height="14" rx="2" fill="#FBBF24"/>
+                  <circle cx="68" cy="32" r="10" fill="#0284C7"/>
+                  <path d="M68 26V38M62 32H74" stroke="#FFF" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Jasa Penyimpanan</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Gudang &amp; Cold Storage</p>
+              </div>
+            </div>
+
+            <!-- 4. Jasa Pengemasan -->
+            <div class="group bg-white border border-slate-200/80 hover:border-amber-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#fff7ed] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M48 20L76 34L48 48L20 34L48 20Z" fill="#FBBF24"/>
+                  <path d="M20 34L48 48V76L20 62V34Z" fill="#F59E0B"/>
+                  <path d="M76 34L48 48V76L76 62V34Z" fill="#D97706"/>
+                  <path d="M34 27L62 41V53L54 57V45L26 31L34 27Z" fill="#FEF3C7"/>
+                  <rect x="27" y="48" width="12" height="8" rx="1.5" transform="skewY(26)" fill="#FFFFFF"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Jasa Pengemasan</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Repacking &amp; Kemasan</p>
+              </div>
+            </div>
+
+            <!-- 5. Jasa Pendistribusian -->
+            <div class="group bg-white border border-slate-200/80 hover:border-emerald-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#ecfdf5] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="16" y="30" width="42" height="32" rx="4" fill="#10B981"/>
+                  <path d="M58 40H72L80 50V62H58V40Z" fill="#3B82F6"/>
+                  <path d="M62 44H70L75 50H62V44Z" fill="#E0F2FE"/>
+                  <path d="M31 46L35 50L44 41" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="32" cy="64" r="7" fill="#1E293B"/>
+                  <circle cx="32" cy="64" r="3" fill="#94A3B8"/>
+                  <circle cx="68" cy="64" r="7" fill="#1E293B"/>
+                  <circle cx="68" cy="64" r="3" fill="#94A3B8"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Jasa Pendistribusian</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Logistik &amp; Armada</p>
+              </div>
+            </div>
+
+            <!-- 6. Jasa Penjualan -->
+            <div class="group bg-white border border-slate-200/80 hover:border-rose-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#fff1f2] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="24" y="42" width="48" height="32" rx="3" fill="#FFFFFF" stroke="#E11D48" stroke-width="2.5"/>
+                  <rect x="32" y="50" width="16" height="14" rx="2" fill="#BAE6FD"/>
+                  <rect x="54" y="50" width="10" height="24" rx="1" fill="#F43F5E"/>
+                  <path d="M20 42L26 26H70L76 42H20Z" fill="#F43F5E"/>
+                  <path d="M32 26H42L40 42H30L32 26Z" fill="#FFFFFF"/>
+                  <path d="M54 26H64L66 42H56L54 26Z" fill="#FFFFFF"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Jasa Penjualan</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Ritel &amp; Swalayan</p>
+              </div>
+            </div>
+
+            <!-- 7. Jasa Penyajian -->
+            <div class="group bg-white border border-slate-200/80 hover:border-amber-300 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 hover:shadow-md flex flex-col">
+              <div class="w-full h-28 sm:h-32 rounded-xl bg-[#fefce8] flex items-center justify-center overflow-hidden mb-3">
+                <svg class="w-20 h-20 sm:w-22 sm:h-22 group-hover:scale-105 transition-transform duration-300" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="48" cy="28" r="5" fill="#D97706"/>
+                  <path d="M22 60C22 43 33.5 32 48 32C62.5 32 74 43 74 60H22Z" fill="#FBBF24" stroke="#B45309" stroke-width="2.5"/>
+                  <path d="M32 52C34 44 40 39 48 39" stroke="#FEF08A" stroke-width="3" stroke-linecap="round"/>
+                  <rect x="16" y="60" width="64" height="6" rx="3" fill="#475569"/>
+                  <path d="M24 66H72L66 72H30L24 66Z" fill="#334155"/>
+                </svg>
+              </div>
+              <div class="text-center px-1 pb-0.5">
+                <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug">Jasa Penyajian</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Restoran &amp; Katering</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 1. GAMBARAN UMUM: ALUR PROSES SERTIFIKASI HALAL REGULER (5 TAHAP UTAMA) -->
+    <section id="alur-sertifikasi"
+      class="py-16 sm:py-20 lg:py-24 bg-white border-t border-slate-200 relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
+
+        <!-- Section Header -->
+        <div data-animate="fade-up" class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-slate-900 tracking-tight leading-tight">
+            Alur Proses Sertifikasi Halal Reguler
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+            <strong>Gambaran umum 5 tahapan utama</strong> sertifikasi halal resmi yang melibatkan Pelaku Usaha, BPJPH, LPH Gesid Halal Center, dan Komisi Fatwa MUI.
+          </p>
+        </div>
+
+        <!-- DIAGRAM ALUR 5 TAHAP (UKURAN KARTU KONSISTEN & PANAH SVG TEGAS) -->
+        <div data-animate="fade-up" class="relative pt-4">
+
+          <!-- BARIS 1: TAHAP 1 -> 2 -> 3 -->
+          <div class="flex flex-col lg:flex-row items-stretch justify-between gap-2 lg:gap-0">
+
+            <!-- TAHAP 1: PERSIAPAN -->
+            <div class="w-full lg:w-[calc((100%-6rem)/3)] min-h-[176px] relative bg-[#eef5fb] border border-[#d5e4f2] rounded-2xl p-5 flex items-center gap-4 shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="absolute -top-4 -left-2.5 w-10 h-10 rounded-full bg-[#0b2545] text-white font-extrabold text-base flex items-center justify-center shadow-md ring-4 ring-white">
+                1
+              </div>
+              <div class="w-24 h-24 sm:w-[96px] sm:h-[96px] flex-shrink-0 flex items-center justify-center">
+                <img src="assets/images/alur/konsultan-pendamping-halal.webp" alt="Persiapan Sertifikasi Halal"
+                  class="w-full h-full object-contain mix-blend-multiply" loading="lazy">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="inline-block px-3 py-1 rounded-lg bg-[#d7e8f7] text-[#0b2545] font-extrabold text-[11.5px] sm:text-xs uppercase tracking-wide mb-2 leading-tight">
+                  PERSIAPAN
+                </span>
+                <p class="text-xs sm:text-[13px] text-[#1e3a5f] leading-relaxed font-medium">
+                  Pelaku Usaha menyiapkan dokumen dan persyaratan sertifikasi halal, menunjuk Penyelia &amp; melakukan Pelatihan
+                </p>
+              </div>
+            </div>
+
+            <!-- PANAH 1 -> 2 -->
+            <div class="w-full lg:w-12 py-2 lg:py-0 flex items-center justify-center flex-shrink-0 text-[#0b2545]">
+              <!-- Panah Kanan (Desktop) -->
+              <svg class="hidden lg:block w-8 h-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 16H26" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M19 9L27 16L19 23" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <!-- Panah Bawah (Mobile) -->
+              <svg class="block lg:hidden w-7 h-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16 4V26" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M9 19L16 27L23 19" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- TAHAP 2: PENDAFTARAN -->
+            <div class="w-full lg:w-[calc((100%-6rem)/3)] min-h-[176px] relative bg-[#eef5fb] border border-[#d5e4f2] rounded-2xl p-5 flex items-center gap-4 shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="absolute -top-4 -left-2.5 w-10 h-10 rounded-full bg-[#0b2545] text-white font-extrabold text-base flex items-center justify-center shadow-md ring-4 ring-white">
+                2
+              </div>
+              <div class="w-24 h-24 sm:w-[96px] sm:h-[96px] flex-shrink-0 flex items-center justify-center">
+                <div class="w-20 h-24 sm:w-[84px] sm:h-[92px] bg-white rounded-2xl p-2 shadow-2xs border border-slate-200/60 flex items-center justify-center overflow-hidden">
+                  <img src="assets/images/alur/logo-sihalal.webp" alt="Logo SiHalal"
+                    class="w-full h-full object-contain" loading="lazy">
+                </div>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="inline-block px-3 py-1 rounded-lg bg-[#d7e8f7] text-[#0b2545] font-extrabold text-[11.5px] sm:text-xs uppercase tracking-wide mb-2 leading-tight">
+                  PENDAFTARAN
+                </span>
+                <p class="text-xs sm:text-[13px] text-[#1e3a5f] leading-relaxed font-medium">
+                  Pelaku Usaha melakukan pendaftaran melalui aplikasi SIHALAL (<a href="https://ptsp.halal.go.id/" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#c89020] font-semibold">https://ptsp.halal.go.id/</a>), melakukan pembayaran, kemudian BPJPH menerbitkan STTD
+                </p>
+              </div>
+            </div>
+
+            <!-- PANAH 2 -> 3 -->
+            <div class="w-full lg:w-12 py-2 lg:py-0 flex items-center justify-center flex-shrink-0 text-[#0b2545]">
+              <!-- Panah Kanan (Desktop) -->
+              <svg class="hidden lg:block w-8 h-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 16H26" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M19 9L27 16L19 23" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <!-- Panah Bawah (Mobile) -->
+              <svg class="block lg:hidden w-7 h-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16 4V26" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M9 19L16 27L23 19" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- TAHAP 3: PEMERIKSA KEHALALAN PRODUK -->
+            <div class="w-full lg:w-[calc((100%-6rem)/3)] min-h-[176px] relative bg-[#eef5fb] border border-[#d5e4f2] rounded-2xl p-5 flex items-center gap-4 shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="absolute -top-4 -left-2.5 w-10 h-10 rounded-full bg-[#0b2545] text-white font-extrabold text-base flex items-center justify-center shadow-md ring-4 ring-white">
+                3
+              </div>
+              <div class="w-24 h-24 sm:w-[96px] sm:h-[96px] flex-shrink-0 flex items-center justify-center">
+                <div class="w-20 h-20 sm:w-[84px] sm:h-[84px] rounded-full overflow-hidden shadow-xs flex items-center justify-center bg-black">
+                  <img src="assets/images/alur/logo-lph.jpg" alt="Logo LPH"
+                    class="w-full h-full object-cover scale-[1.02]" loading="lazy">
+                </div>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="inline-block px-3 py-1 rounded-lg bg-[#d7e8f7] text-[#0b2545] font-extrabold text-[11px] sm:text-[11.5px] uppercase tracking-wide mb-2 leading-tight">
+                  PEMERIKSA KEHALALAN PRODUK
+                </span>
+                <p class="text-xs sm:text-[13px] text-[#1e3a5f] leading-relaxed font-medium">
+                  LPH melakukan pemeriksaan (audit) kehalalan produk dan mengunggah Laporan Pemeriksaan di SIHALAL.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- JALUR PUTUS-PUTUS PENGHUBUNG TAHAP 3 KE TAHAP 4 (DESKTOP) -->
+          <div class="hidden lg:block relative h-16 w-full pointer-events-none">
+            <svg class="w-full h-full" viewBox="0 0 1000 64" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Garis putus-putus dari bawah Tahap 3 menuju atas Tahap 4 -->
+              <path d="M 880 4 L 880 28 Q 880 36 870 36 L 680 36 Q 670 36 670 44 L 670 54" stroke="#0b2545" stroke-width="3" stroke-dasharray="8 6" stroke-linecap="round" fill="none" />
+              <!-- Mata panah turun di ujung Tahap 4 -->
+              <path d="M 662 46 L 670 58 L 678 46" stroke="#0b2545" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+          </div>
+
+          <!-- Panah Bawah 3 -> 4 (Mobile) -->
+          <div class="flex lg:hidden py-2 items-center justify-center text-[#0b2545]">
+            <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16 4V26" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M9 19L16 27L23 19" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- BARIS 2: TAHAP 5 (KIRI DI DESKTOP) <- TAHAP 4 (KANAN DI DESKTOP) -->
+          <div class="flex flex-col lg:flex-row items-stretch justify-center gap-2 lg:gap-0">
+
+            <!-- TAHAP 5: PENERBIT SERTIFIKAT HALAL (Urutan ke-3 di Mobile, Kiri di Desktop) -->
+            <div class="order-3 lg:order-1 w-full lg:w-[calc((100%-6rem)/3)] min-h-[176px] relative bg-[#eef5fb] border border-[#d5e4f2] rounded-2xl p-5 flex items-center gap-4 shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="absolute -top-4 -left-2.5 w-10 h-10 rounded-full bg-[#0b2545] text-white font-extrabold text-base flex items-center justify-center shadow-md ring-4 ring-white">
+                5
+              </div>
+              <div class="w-24 h-24 sm:w-[96px] sm:h-[96px] flex-shrink-0 flex items-center justify-center">
+                <img src="assets/images/alur/sertifikat-halal-resmi.webp" alt="Sertifikat Halal Republik Indonesia"
+                  class="w-full h-full object-contain mix-blend-multiply" loading="lazy">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="inline-block px-3 py-1 rounded-lg bg-[#d7e8f7] text-[#0b2545] font-extrabold text-[11px] sm:text-xs uppercase tracking-wide mb-2 leading-tight">
+                  PENERBIT SERTIFIKAT HALAL
+                </span>
+                <p class="text-xs sm:text-[13px] text-[#1e3a5f] leading-relaxed font-medium">
+                  BPJPH Menerbitkan sertifikat Halal berdasarkan hasil sidang Fatwa
+                </p>
+              </div>
+            </div>
+
+            <!-- PANAH 4 -> 5 (Panah ke Kiri di Desktop, Panah ke Bawah di Mobile) -->
+            <div class="order-2 w-full lg:w-12 py-2 lg:py-0 flex items-center justify-center flex-shrink-0 text-[#0b2545]">
+              <!-- Panah Kiri (Desktop: dari Tahap 4 di kanan menuju Tahap 5 di kiri) -->
+              <svg class="hidden lg:block w-8 h-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M28 16H6" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M13 9L5 16L13 23" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <!-- Panah Bawah (Mobile: dari Tahap 4 turun ke Tahap 5) -->
+              <svg class="block lg:hidden w-7 h-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16 4V26" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M9 19L16 27L23 19" stroke="#0b2545" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- TAHAP 4: SIDANG FATWA (Urutan ke-1 di Mobile, Kanan di Desktop) -->
+            <div class="order-1 lg:order-3 w-full lg:w-[calc((100%-6rem)/3)] min-h-[176px] relative bg-[#eef5fb] border border-[#d5e4f2] rounded-2xl p-5 flex items-center gap-4 shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="absolute -top-4 -left-2.5 w-10 h-10 rounded-full bg-[#0b2545] text-white font-extrabold text-base flex items-center justify-center shadow-md ring-4 ring-white">
+                4
+              </div>
+              <div class="w-24 h-24 sm:w-[96px] sm:h-[96px] flex-shrink-0 flex items-center justify-center">
+                <div class="w-20 h-20 sm:w-[84px] sm:h-[84px] rounded-full overflow-hidden shadow-xs bg-white flex items-center justify-center">
+                  <img src="assets/images/alur/logo-mui.webp" alt="Logo Majelis Ulama Indonesia (MUI)"
+                    class="w-full h-full object-cover scale-[1.06]" loading="lazy">
+                </div>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="inline-block px-3 py-1 rounded-lg bg-[#d7e8f7] text-[#0b2545] font-extrabold text-[11.5px] sm:text-xs uppercase tracking-wide mb-2 leading-tight">
+                  SIDANG FATWA
+                </span>
+                <p class="text-xs sm:text-[13px] text-[#1e3a5f] leading-relaxed font-medium">
+                  Komisi Fatwa MUI menetapkan Kehalalan produk melalui sidang fatwa.
+                </p>
+              </div>
+            </div>
+
+          </div>
 
         </div>
+
+      </div>
+    </section>
+
+    <!-- 2. SYARAT DOKUMEN (8) & PROSES PENDAFTARAN DI SIHALAL (10) - VERSI SEDERHANA -->
+    <section id="syarat-sertifikasi" class="py-14 sm:py-18 lg:py-20 bg-slate-50/60 border-y border-slate-200/80">
+      <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div data-animate="fade-up" class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+          <h2 class="text-2xl sm:text-3xl lg:text-[34px] font-bold text-slate-900 tracking-tight leading-snug font-serif">
+            Syarat &amp; Langkah Pendaftaran
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
+            Siapkan 8 dokumen persyaratan di bawah ini, lalu ajukan pendaftaran melalui portal resmi BPJPH (<a href="https://ptsp.halal.go.id" target="_blank" rel="noopener noreferrer" class="font-semibold text-[#946310] hover:underline">SIHALAL</a>) dengan memilih <strong>LPH GESID Halal Center</strong>. Jika dokumen Anda belum lengkap atau butuh panduan, <a href="https://wa.me/62895626779601?text=Halo%20Gesid%20Halal%20Center,%20saya%20ingin%20konsultasi%20syarat%20sertifikasi%20halal" target="_blank" rel="noopener" class="font-semibold text-[#946310] hover:underline">hubungi tim kami untuk konsultasi gratis</a>.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+
+          <!-- Syarat Dokumen -->
+          <div data-animate="fade-up" class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7">
+            <div class="flex items-baseline justify-between gap-3 pb-3 mb-1 border-b-2 border-[#c89020]/70">
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 font-serif">Syarat Dokumen</h3>
+              <span class="text-xs font-semibold text-slate-500">8 dokumen</span>
+            </div>
+            <ul>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <i class="fa-solid fa-circle-check text-[#c89020] mt-0.5"></i>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">NIB</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Nomor Induk Berusaha (OSS)</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <i class="fa-solid fa-circle-check text-[#c89020] mt-0.5"></i>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Data Pelaku Usaha</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Identitas &amp; informasi usaha</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <i class="fa-solid fa-circle-check text-[#c89020] mt-0.5"></i>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Data Produk</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Nama, jenis &amp; menu produk</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <i class="fa-solid fa-circle-check text-[#c89020] mt-0.5"></i>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Daftar Bahan</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Bahan baku, tambahan &amp; penolong</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <i class="fa-solid fa-circle-check text-[#c89020] mt-0.5"></i>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Foto Produk &amp; Kemasan</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Tampak jelas beserta label</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <i class="fa-solid fa-circle-check text-[#c89020] mt-0.5"></i>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Proses Produksi</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Penerimaan hingga distribusi</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <i class="fa-solid fa-circle-check text-[#c89020] mt-0.5"></i>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Dokumen SJPH</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Manual Sistem Jaminan Produk Halal</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <i class="fa-solid fa-circle-check text-[#c89020] mt-0.5"></i>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Penyelia Halal</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">SK penetapan &amp; bukti kompetensi</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Langkah Pendaftaran -->
+          <div data-animate="fade-up" data-delay="100" class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7">
+            <div class="flex items-baseline justify-between gap-3 pb-3 mb-1 border-b-2 border-[#c89020]/70">
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 font-serif">Langkah Pendaftaran</h3>
+              <span class="text-xs font-semibold text-slate-500">10 langkah</span>
+            </div>
+            <ol>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <span class="w-6 h-6 rounded-full bg-amber-50 border border-amber-200 text-[#946310] text-[11px] font-bold flex items-center justify-center shrink-0">1</span>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Siapkan Akun</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Email aktif &amp; NIB berbasis risiko</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <span class="w-6 h-6 rounded-full bg-amber-50 border border-amber-200 text-[#946310] text-[11px] font-bold flex items-center justify-center shrink-0">2</span>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Ajukan Permohonan</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Isi data &amp; unggah dokumen di SIHALAL</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <span class="w-6 h-6 rounded-full bg-amber-50 border border-amber-200 text-[#946310] text-[11px] font-bold flex items-center justify-center shrink-0">3</span>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Verifikasi BPJPH</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Pengecekan kelengkapan dokumen</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <span class="w-6 h-6 rounded-full bg-amber-50 border border-amber-200 text-[#946310] text-[11px] font-bold flex items-center justify-center shrink-0">4</span>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Penetapan Biaya</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Biaya pemeriksaan ditetapkan LPH</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <span class="w-6 h-6 rounded-full bg-amber-50 border border-amber-200 text-[#946310] text-[11px] font-bold flex items-center justify-center shrink-0">5</span>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Pembayaran</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Melalui virtual account</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <span class="w-6 h-6 rounded-full bg-amber-50 border border-amber-200 text-[#946310] text-[11px] font-bold flex items-center justify-center shrink-0">6</span>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Terbit STTD</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Surat Tanda Terima Dokumen</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <span class="w-6 h-6 rounded-full bg-amber-50 border border-amber-200 text-[#946310] text-[11px] font-bold flex items-center justify-center shrink-0">7</span>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Pemeriksaan LPH</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Audit oleh LPH Gesid Halal Center</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <span class="w-6 h-6 rounded-full bg-amber-50 border border-amber-200 text-[#946310] text-[11px] font-bold flex items-center justify-center shrink-0">8</span>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Sidang Fatwa</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Penetapan kehalalan oleh MUI</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <span class="w-6 h-6 rounded-full bg-amber-50 border border-amber-200 text-[#946310] text-[11px] font-bold flex items-center justify-center shrink-0">9</span>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Terbit Sertifikat</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Diterbitkan oleh BPJPH</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 py-3 border-b border-slate-100 last:border-b-0">
+                <span class="w-6 h-6 rounded-full bg-amber-50 border border-amber-200 text-[#946310] text-[11px] font-bold flex items-center justify-center shrink-0">10</span>
+                <div>
+                  <p class="text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug">Unduh Sertifikat</p>
+                  <p class="text-xs sm:text-[13px] text-slate-500 mt-0.5">Saat status "Terbit SH" di SIHALAL</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+
+        <p data-animate="fade-up" class="text-center text-sm text-slate-600 mt-8">
+          Butuh bantuan menyiapkan dokumen?
+          <a href="https://wa.me/62895626779601?text=Halo%20Gesid%20Halal%20Center,%20saya%20ingin%20konsultasi%20syarat%20sertifikasi%20halal"
+            target="_blank" rel="noopener" class="font-semibold text-[#946310] hover:underline">Konsultasi gratis &rarr;</a>
+        </p>
+
       </div>
     </section>
 
@@ -751,288 +1359,6 @@
       </div>
     </section>
 
-    <!-- ALUR PROSES SERTIFIKASI HALAL REGULER -->
-    <section id="alur-sertifikasi"
-      class="py-20 sm:py-24 lg:py-28 bg-white border-y border-slate-100 relative overflow-hidden">
-      <!-- Ambient Background Glow -->
-      <div class="absolute top-0 right-1/4 w-96 h-96 bg-amber-100/20 rounded-full blur-3xl pointer-events-none -z-0">
-      </div>
-
-      <div class="max-w-5xl xl:max-w-5xl mx-auto px-6 sm:px-10 lg:px-10 relative z-10">
-
-        <!-- Section Header -->
-        <div data-animate="fade-up" class="max-w-2xl mb-12 sm:mb-14">
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/60 mb-3">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#c89020]"></span>
-            <p class="text-xs font-semibold text-[#c89020] uppercase tracking-[0.18em]">
-              Alur Sertifikasi
-            </p>
-          </div>
-          <h2 class="text-3xl sm:text-4xl lg:text-[40px] font-serif text-slate-900 tracking-tight leading-[1.2]">
-            Alur Proses Sertifikasi Halal Reguler
-          </h2>
-          <p class="mt-4 text-base sm:text-[17px] text-slate-600 leading-relaxed max-w-xl font-normal">
-            Transparansi lima tahapan resmi dari persiapan dokumen, audit LPH, sidang fatwa MUI, hingga penerbitan
-            sertifikat halal oleh BPJPH Kemenag RI.
-          </p>
-        </div>
-
-        <!-- 2-Column Responsive Layout: Alur Proses (Utama) & Visual Showcase (Pendukung) -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 xl:gap-12 items-start">
-
-          <!-- Kolom Kiri: Alur 5 Tahapan Sertifikasi (Fokus Utama) -->
-          <div class="lg:col-span-7 xl:col-span-7">
-            <div id="alurTimelineContainer" class="relative">
-
-              <!-- Continuous Background Spine Track -->
-              <div id="alurTimelineTrack"
-                class="absolute left-4 sm:left-5 w-[3px] bg-slate-200/90 rounded-full -translate-x-1/2 pointer-events-none">
-              </div>
-
-              <!-- Steps List -->
-              <div class="space-y-10 sm:space-y-12">
-
-                <!-- Step 01: Persiapan & Penyusunan Dokumen SJPH -->
-                <div class="alur-step-item relative pl-12 sm:pl-16 group" data-step="1">
-                  <!-- Step Node -->
-                  <div
-                    class="alur-step-node absolute left-0 top-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center shadow-xs">
-                    <span class="font-serif text-xs sm:text-sm font-bold text-slate-600 alur-step-num">01</span>
-                  </div>
-                  <!-- Content Card -->
-                  <div
-                    class="alur-step-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-[#c89020]/50 shadow-xs">
-                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
-                      <span
-                        class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-amber-50 text-[#946310] text-xs font-bold uppercase tracking-wider border border-amber-200/60">
-                        <i class="fa-solid fa-user-check text-[10px] text-[#c89020]"></i> Pelaku Usaha (PU)
-                      </span>
-                      <span class="text-[11px] font-semibold text-slate-500">Tahap 01 dari 05</span>
-                    </div>
-                    <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                      Persiapan & Penyusunan Dokumen SJPH
-                    </h3>
-                    <p class="text-xs sm:text-[14px] text-slate-700 leading-relaxed font-normal">
-                      PU menyiapkan dokumen persyaratan legalitas, data bahan baku & produk, menyusun manual Sistem
-                      Jaminan
-                      Produk Halal (SJPH), menunjuk Penyelia Halal internal berstandar SKKNI, serta mengikuti bimbingan
-                      teknis.
-                    </p>
-                    <div class="mt-4 pt-3.5 border-t border-slate-100 flex items-center gap-2 text-xs">
-                      <i class="fa-solid fa-circle-check text-emerald-600 text-xs flex-shrink-0"></i>
-                      <span class="font-bold text-slate-800">Output:</span>
-                      <span class="text-slate-600 font-medium">Dokumen SJPH & Tim Halal Internal Siap</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Step 02: Pendaftaran Daring & Verifikasi STTD -->
-                <div class="alur-step-item relative pl-12 sm:pl-16 group" data-step="2">
-                  <!-- Step Node -->
-                  <div
-                    class="alur-step-node absolute left-0 top-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center shadow-xs">
-                    <span class="font-serif text-xs sm:text-sm font-bold text-slate-600 alur-step-num">02</span>
-                  </div>
-                  <!-- Content Card -->
-                  <div
-                    class="alur-step-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-[#c89020]/50 shadow-xs">
-                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
-                      <span
-                        class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-purple-50 text-purple-800 text-xs font-bold uppercase tracking-wider border border-purple-200/60">
-                        <i class="fa-solid fa-cloud-arrow-up text-[10px] text-purple-600"></i> SiHalal & BPJPH
-                      </span>
-                      <span class="text-[11px] font-semibold text-slate-500">Tahap 02 dari 05</span>
-                    </div>
-                    <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                      Pendaftaran Daring & Verifikasi STTD
-                    </h3>
-                    <p class="text-xs sm:text-[14px] text-slate-700 leading-relaxed font-normal">
-                      PU mengajukan permohonan sertifikasi secara daring melalui aplikasi <span
-                        class="font-semibold text-slate-900">SIHALAL</span> (<a href="https://ptsp.halal.go.id"
-                        target="_blank" rel="noopener noreferrer"
-                        class="text-slate-900 underline underline-offset-2 hover:text-[#c89020] font-semibold transition-colors">ptsp.halal.go.id</a>).
-                      BPJPH memverifikasi kelengkapan dokumen, menerbitkan tagihan kode bayar, dan mengeluarkan STTD.
-                    </p>
-                    <div class="mt-4 pt-3.5 border-t border-slate-100 flex items-center gap-2 text-xs">
-                      <i class="fa-solid fa-circle-check text-emerald-600 text-xs flex-shrink-0"></i>
-                      <span class="font-bold text-slate-800">Output:</span>
-                      <span class="text-slate-600 font-medium">Surat Tanda Terima Dokumen (STTD) Terbit</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Step 03: Pemeriksaan & Audit Produk oleh LPH -->
-                <div class="alur-step-item relative pl-12 sm:pl-16 group" data-step="3">
-                  <!-- Step Node -->
-                  <div
-                    class="alur-step-node absolute left-0 top-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center shadow-xs">
-                    <span class="font-serif text-xs sm:text-sm font-bold text-slate-600 alur-step-num">03</span>
-                  </div>
-                  <!-- Content Card -->
-                  <div
-                    class="alur-step-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-[#c89020]/50 shadow-xs">
-                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
-                      <span
-                        class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-indigo-50 text-indigo-800 text-xs font-bold uppercase tracking-wider border border-indigo-200/60">
-                        <i class="fa-solid fa-clipboard-check text-[10px] text-indigo-600"></i> Lembaga Pemeriksa Halal
-                        (LPH)
-                      </span>
-                      <span class="text-[11px] font-semibold text-slate-500">Tahap 03 dari 05</span>
-                    </div>
-                    <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                      Pemeriksaan & Audit Produk oleh LPH
-                    </h3>
-                    <p class="text-xs sm:text-[14px] text-slate-700 leading-relaxed font-normal">
-                      Auditor Halal dari Lembaga Pemeriksa Halal pilihan PU melakukan pemeriksaan kecukupan dokumen,
-                      audit
-                      lapangan ke fasilitas produksi, uji laboratorium (bila diperlukan), serta mengunggah Laporan Hasil
-                      Pemeriksaan (LHP) di SIHALAL.
-                    </p>
-                    <div class="mt-4 pt-3.5 border-t border-slate-100 flex items-center gap-2 text-xs">
-                      <i class="fa-solid fa-circle-check text-emerald-600 text-xs flex-shrink-0"></i>
-                      <span class="font-bold text-slate-800">Output:</span>
-                      <span class="text-slate-600 font-medium">Laporan Hasil Pemeriksaan (LHP) Diunggah</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Step 04: Sidang Fatwa & Ketetapan Halal MUI -->
-                <div class="alur-step-item relative pl-12 sm:pl-16 group" data-step="4">
-                  <!-- Step Node -->
-                  <div
-                    class="alur-step-node absolute left-0 top-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center shadow-xs">
-                    <span class="font-serif text-xs sm:text-sm font-bold text-slate-600 alur-step-num">04</span>
-                  </div>
-                  <!-- Content Card -->
-                  <div
-                    class="alur-step-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-[#c89020]/50 shadow-xs">
-                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
-                      <span
-                        class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-emerald-50 text-emerald-900 text-xs font-bold uppercase tracking-wider border border-emerald-200/60">
-                        <i class="fa-solid fa-scale-balanced text-[10px] text-emerald-600"></i> Komisi Fatwa MUI
-                      </span>
-                      <span class="text-[11px] font-semibold text-slate-500">Tahap 04 dari 05</span>
-                    </div>
-                    <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                      Sidang Fatwa & Ketetapan Halal
-                    </h3>
-                    <p class="text-xs sm:text-[14px] text-slate-700 leading-relaxed font-normal">
-                      Komisi Fatwa Majelis Ulama Indonesia menggelar Sidang Fatwa Halal untuk mengkaji dan memutuskan
-                      kehalalan produk berdasarkan data audit LPH, kemudian menerbitkan surat Ketetapan Halal resmi.
-                    </p>
-                    <div class="mt-4 pt-3.5 border-t border-slate-100 flex items-center gap-2 text-xs">
-                      <i class="fa-solid fa-circle-check text-emerald-600 text-xs flex-shrink-0"></i>
-                      <span class="font-bold text-slate-800">Output:</span>
-                      <span class="text-slate-600 font-medium">Ketetapan Halal MUI Resmi Diterbitkan</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Step 05: Penerbitan Sertifikat Halal Resmi -->
-                <div class="alur-step-item relative pl-12 sm:pl-16 group" data-step="5">
-                  <!-- Step Node (Accent Gold) -->
-                  <div
-                    class="alur-step-node absolute left-0 top-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center shadow-xs">
-                    <span class="font-serif text-xs sm:text-sm font-bold text-slate-600 alur-step-num">05</span>
-                  </div>
-                  <!-- Content Card -->
-                  <div
-                    class="alur-step-card p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-amber-50/50 via-white to-white border-2 border-[#c89020]/50 shadow-xs">
-                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
-                      <span
-                        class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-amber-100/80 text-[#754d10] text-xs font-bold uppercase tracking-wider border border-amber-300/50">
-                        <i class="fa-solid fa-certificate text-[10px] text-[#c89020]"></i> BPJPH Kemenag RI
-                      </span>
-                      <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block animate-pulse"></span> Tahap
-                        Akhir
-                      </span>
-                    </div>
-                    <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                      Penerbitan Sertifikat Halal Resmi
-                    </h3>
-                    <p class="text-xs sm:text-[14px] text-slate-700 leading-relaxed font-normal">
-                      BPJPH menerbitkan Sertifikat Halal resmi ber-QR Code digital berdasarkan hasil sidang fatwa.
-                      Sertifikat siap diunduh secara online dan dicantumkan pada kemasan produk maupun media pemasaran
-                      bisnis.
-                    </p>
-                    <div class="mt-4 pt-3.5 border-t border-amber-200/60 flex items-center gap-2 text-xs">
-                      <i class="fa-solid fa-circle-check text-emerald-600 text-xs flex-shrink-0"></i>
-                      <span class="font-bold text-slate-900">Output:</span>
-                      <span class="text-amber-900 font-semibold">Sertifikat Halal Ber-QR Code Resmi Terbit</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- End of Steps List -->
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Kolom Kanan: Sisi Visual Pendukung (Integrated Showcase) -->
-          <div data-animate="fade-left" class="lg:col-span-5 xl:col-span-5 lg:sticky lg:top-28">
-            <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
-              <div>
-                <p class="text-xs font-semibold uppercase tracking-[0.14em] text-[#946310]">
-                  Pendampingan sertifikasi halal
-                </p>
-                <h3 class="mt-2 text-2xl font-semibold tracking-tight text-slate-900">
-                  Proses lebih jelas, dari awal sampai terbit.
-                </h3>
-                <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                  Kami membantu menyiapkan dokumen dan memahami setiap tahap sertifikasi halal.
-                </p>
-              </div>
-
-              <div class="my-5 flex justify-center rounded-2xl bg-slate-50 px-4 py-3">
-                <img src="assets/images/alur/konsultan-pendamping-halal.webp" alt="Konsultan mendampingi proses sertifikasi halal"
-                  class="h-44 w-full object-contain sm:h-48" loading="lazy">
-              </div>
-
-              <div class="border-t border-slate-100 pt-4">
-                <h4 class="text-sm font-semibold text-slate-900">Siapa melakukan apa?</h4>
-                <ul class="mt-3 divide-y divide-slate-100">
-                  <li class="flex items-center gap-3 py-3 first:pt-0 last:pb-0">
-                    <img src="assets/images/alur/logo-sihalal.webp" alt=""
-                      class="h-9 w-9 flex-shrink-0 object-contain" loading="lazy">
-                    <p class="text-sm leading-snug text-slate-600">
-                      <span class="font-semibold text-slate-900">BPJPH</span>
-                      <span class="block text-xs">Mengelola pendaftaran dan menerbitkan sertifikat.</span>
-                    </p>
-                  </li>
-                  <li class="flex items-center gap-3 py-3">
-                    <img src="assets/images/alur/logo-lph.webp" alt=""
-                      class="h-9 w-9 flex-shrink-0 object-contain" loading="lazy">
-                    <p class="text-sm leading-snug text-slate-600">
-                      <span class="font-semibold text-slate-900">LPH</span>
-                      <span class="block text-xs">Memeriksa dan mengaudit produk.</span>
-                    </p>
-                  </li>
-                  <li class="flex items-center gap-3 py-3 first:pt-0 last:pb-0">
-                    <img src="assets/images/alur/logo-mui.webp" alt=""
-                      class="h-9 w-9 flex-shrink-0 object-contain" loading="lazy">
-                    <p class="text-sm leading-snug text-slate-600">
-                      <span class="font-semibold text-slate-900">MUI</span>
-                      <span class="block text-xs">Menetapkan fatwa halal.</span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-
-              <a href="kontak.html"
-                class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#c89020] px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#b57f18]">
-                Konsultasi berkas
-                <i class="fa-solid fa-arrow-right text-xs"></i>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
     <!-- CTA -->
     <section
       class="py-14 sm:py-16 lg:py-20 bg-gradient-to-br from-amber-50/70 via-white to-amber-50/40 border-y border-amber-200/50 text-slate-900 relative overflow-hidden">
@@ -1123,6 +1449,8 @@
                 class="text-slate-600 hover:text-[#c89020] transition-colors duration-200">Tentang Kami</a></li>
             <li><a href="layanan.html"
                 class="text-slate-600 hover:text-[#c89020] transition-colors duration-200">Katalog Layanan</a></li>
+            <li><a href="berita.html"
+                class="text-slate-600 hover:text-[#c89020] transition-colors duration-200">Berita</a></li>
             <li><a href="kontak.html"
                 class="text-slate-600 hover:text-[#c89020] transition-colors duration-200">Kontak</a></li>
             <li><a href="https://bpjph.halal.go.id/kalkulator-biaya-sh" target="_blank" rel="noopener"
@@ -1138,7 +1466,7 @@
           <ul class="space-y-2.5 text-sm text-slate-600">
             <li class="flex items-start gap-2.5">
               <i class="fa-solid fa-location-dot text-[#c89020] mt-0.5 text-xs flex-shrink-0"></i>
-              <span>Ruko Seasons City Blok E No.1, RT.13/RW.1, Jemb. Besi, Kec. Tambora, Kota Jakarta Barat, DKI Jakarta
+              <span>Ruko Seasons City Blok E No. 2, Jl. Latumeten No. 33, Jembatan Besi, Kec. Tambora, Kota Jakarta Barat, DKI Jakarta
                 11320</span>
             </li>
             <li class="flex items-center gap-2.5">
