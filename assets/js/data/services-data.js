@@ -1,7 +1,6 @@
 /**
  * Gesid Halal Center - Service Catalog Data
- * Ringkas, visual, dan akurat sesuai Pedoman Mutu & SOP LPH GESID Halal Center (116 hlm)
- * serta Dokumen Profil Resmi LPH GESID Halal Center (8 hlm).
+ * Bahasa natural, ringkas, dan mudah dipahami oleh pelaku usaha.
  */
 
 window.HSI_SERVICES_DATA = {
@@ -13,27 +12,27 @@ window.HSI_SERVICES_DATA = {
     accentColor: 'forest',
     breadcrumb: 'Profil LPH Gesid Halal Center',
     title: 'Profil LPH GESID Halal Center',
-    shortDesc: 'Lembaga Pemeriksa Halal (LPH) di bawah naungan Yayasan GESID Indonesia Emas untuk pemeriksaan dan pengujian kehalalan produk sesuai SNI ISO/IEC 17065:2012.',
+    shortDesc: 'Lembaga Pemeriksa Halal (LPH) resmi yang melayani pemeriksaan dan pengujian kehalalan produk untuk pelaku usaha di seluruh Indonesia.',
     desc: [
-      'LPH GESID Halal Center (Akte Yayasan Nomor AHU-0015928.AH.01.04.Tahun 2026 & SK LPH Nomor 03/GIE/IX/2026) melaksanakan pemeriksaan dan/atau pengujian kehalalan produk sebagai dasar penetapan fatwa halal oleh MUI dan penerbitan Sertifikat Halal oleh BPJPH.'
+      'LPH GESID Halal Center bernaung di bawah Yayasan GESID Indonesia Emas. Kami bertugas memeriksa dan menguji kehalalan produk usaha Anda sebagai syarat penetapan fatwa halal oleh MUI dan penerbitan Sertifikat Halal oleh BPJPH.'
     ],
     features: [
-      'Audit kecukupan dokumen (Tahap 1) & pemeriksaan lapangan (Tahap 2)',
-      'Pengujian laboratorium mitra terakreditasi SNI ISO/IEC 17025',
-      'Cakupan 15 kategori produk & jasa sesuai KMA No. 748 Tahun 2021',
-      'Jaringan nasional 85 Anggota P3H di 15 Provinsi'
+      'Pemeriksaan kelengkapan dokumen & peninjauan langsung ke lokasi produksi',
+      'Pengujian sampel bahan di laboratorium terakreditasi (jika diperlukan)',
+      'Melayani 15 kategori produk barang dan jasa',
+      'Didukung jaringan 85 pendamping halal (P3H) di 15 provinsi'
     ],
     deliverables: [
-      'Berita Acara Pemeriksaan Lapangan resmi',
-      'Hasil uji laboratorium terakreditasi SNI ISO/IEC 17025 (bila diperlukan)',
-      'Laporan Hasil Pemeriksaan (LHP) untuk Sidang Fatwa MUI & SIHALAL'
+      'Berita Acara Pemeriksaan lokasi produksi',
+      'Hasil uji laboratorium resmi (jika produk memerlukan uji lab)',
+      'Laporan Hasil Pemeriksaan untuk proses Sidang Fatwa MUI'
     ],
     target: [
-      'UMKM hingga perusahaan industri yang mengajukan Sertifikat Halal Reguler',
-      'Pelaku usaha Makanan, Minuman, Obat, Kosmetik, Kimiawi, Biologi, & Barang Gunaan',
-      'Penyedia jasa Penyembelihan (RPH/RPU), Logistik, Pengolahan, & Penyajian'
+      'UMKM hingga perusahaan besar yang mengajukan Sertifikat Halal Reguler',
+      'Usaha Makanan, Minuman, Obat, Kosmetik, Bahan Kimia, & Barang Gunaan',
+      'Usaha Jasa Penyembelihan (RPH/RPU), Pengolahan, Gudang, Logistik, & Katering'
     ],
-    impartialityNote: 'Prinsip Ketidakberpihakan (SNI ISO/IEC 17065:2012 — Pedoman Mutu Hal. 112): Pemeriksaan halal dilaksanakan secara objektif dan independen, tidak dicampuradukkan dengan jasa konsultasi yang menimbulkan konflik kepentingan.'
+    impartialityNote: 'Komitmen Layanan: Seluruh pemeriksaan dilakukan secara jujur, objektif, dan transparan sesuai ketentuan resmi BPJPH dan MUI.'
   },
 
   pemeriksaan: {
@@ -43,109 +42,109 @@ window.HSI_SERVICES_DATA = {
     icon: 'fa-clipboard-check',
     accentColor: 'forest',
     breadcrumb: 'Pemeriksaan Kehalalan Produk & Jasa',
-    title: 'Pemeriksaan Kehalalan Produk & Jasa (Audit LPH)',
-    shortDesc: 'Audit kecukupan dokumen (Tahap 1) dan pemeriksaan lokasi produksi (Tahap 2) oleh Auditor Halal LPH GESID sebagai dasar penetapan fatwa halal MUI.',
+    title: 'Pemeriksaan Kehalalan Produk & Jasa',
+    shortDesc: 'Pemeriksaan dokumen dan peninjauan lokasi produksi oleh Auditor Halal LPH GESID untuk pengajuan Sertifikat Halal resmi.',
     desc: [
-      'Mandat utama LPH GESID Halal Center (Pedoman Mutu Hal. 12 & 41–78) bagi pelaku usaha yang telah menyiapkan berkas persyaratan dan mendaftar melalui portal resmi SIHALAL (ptsp.halal.go.id).'
+      'Layanan utama bagi pelaku usaha yang mengajukan Sertifikat Halal jalur Reguler melalui aplikasi SIHALAL (ptsp.halal.go.id). Tim auditor kami akan memeriksa kesesuaian bahan baku dan proses produksi usaha Anda secara menyeluruh.'
     ],
     features: [
-      'Verifikasi kecukupan dokumen permohonan di SIHALAL (Audit Tahap 1)',
-      'Perhitungan biaya transparan sesuai tarif resmi BPJPH (mandays × unit cost)',
-      'Pemeriksaan lokasi produksi, bahan baku, fasilitas, & SJPH (Audit Tahap 2)',
-      'Telaah teknis & SDM Syariah serta pengiriman Laporan Audit ke Komisi Fatwa MUI'
+      'Pengecekan kelengkapan dokumen persyaratan di aplikasi SIHALAL',
+      'Rincian biaya resmi dan transparan sesuai ketentuan BPJPH',
+      'Kunjungan pemeriksaan langsung ke tempat produksi dan gudang bahan',
+      'Penyusunan laporan hasil pemeriksaan untuk diajukan ke Sidang Fatwa MUI'
     ],
     deliverables: [
-      'Hasil verifikasi kecukupan dokumen & rincian biaya resmi di SIHALAL',
-      'Berita Acara Pemeriksaan Lapangan oleh Auditor Halal teregistrasi',
-      'Laporan Hasil Pemeriksaan (LHP) resmi untuk Sidang Fatwa MUI'
+      'Konfirmasi kelengkapan dokumen & rincian biaya resmi di SIHALAL',
+      'Berita Acara Pemeriksaan lokasi oleh Auditor Halal resmi',
+      'Laporan Hasil Pemeriksaan untuk penetapan fatwa halal MUI'
     ],
     flow: {
-      intro: 'Estimasi keseluruhan alur proses berdasarkan Bagan Alir SOP (Pedoman Mutu Hal. 78) adalah 35 hari kerja:',
+      intro: 'Proses pemeriksaan berlangsung rata-rata 3–5 minggu melalui 4 tahapan berikut:',
       steps: [
         {
-          title: 'Audit Tahap 1 (Dokumen)',
+          title: 'Cek Dokumen',
           icon: 'fa-file-circle-check',
-          description: 'LPH memeriksa kelengkapan berkas (NIB, Manual SJPH, Penyelia Halal, matriks bahan, & alur proses) di SIHALAL.'
+          description: 'Tim kami memeriksa kelengkapan dokumen usaha, daftar bahan, dan alur produksi yang Anda unggah di SIHALAL.'
         },
         {
-          title: 'Biaya & Penugasan Auditor',
+          title: 'Penjadwalan Auditor',
           icon: 'fa-user-tie',
-          description: 'Penetapan biaya sesuai regulasi BPJPH dan penunjukan Auditor Halal sesuai bidang produk.'
+          description: 'Penetapan biaya resmi BPJPH dan penugasan Auditor Halal yang sesuai dengan jenis produk Anda.'
         },
         {
-          title: 'Audit Tahap 2 (Lapangan)',
+          title: 'Pemeriksaan Lokasi',
           icon: 'fa-industry',
-          description: 'Pemeriksaan langsung fasilitas produksi di lokasi usaha serta pengambilan sampel uji lab bila diperlukan.'
+          description: 'Auditor mengunjungi tempat produksi untuk mencocokkan bahan baku, proses pembuatan, dan kebersihan fasilitas.'
         },
         {
-          title: 'Laporan ke Fatwa MUI & BPJPH',
+          title: 'Sidang Fatwa & Sertifikat',
           icon: 'fa-award',
-          description: 'LPH menyerahkan Laporan Hasil Pemeriksaan ke Komisi Fatwa MUI untuk penetapan halal dan penerbitan SH oleh BPJPH.'
+          description: 'Laporan pemeriksaan diserahkan ke MUI untuk penetapan halal, lalu BPJPH menerbitkan Sertifikat Halal Anda.'
         }
       ]
     },
     target: [
       'Usaha Makanan, Minuman, Restoran, Katering, & Dapur Pusat',
-      'Industri Obat, Kosmetik, Produk Kimiawi, Biologi, & Barang Gunaan',
-      'Jasa Penyembelihan (RPH/RPU), Logistik, Penyimpanan, & Pengemasan'
+      'Industri Obat, Kosmetik, Bahan Kimia, Produk Biologi, & Barang Gunaan',
+      'Jasa Penyembelihan (RPH/RPU), Gudang, Logistik, & Pengemasan'
     ],
-    impartialityNote: 'Batas Kewenangan: LPH GESID berwenang memeriksa dan menyusun Laporan Hasil Pemeriksaan. Ketetapan Halal diputuskan oleh Komisi Fatwa MUI, sedangkan Sertifikat Halal diterbitkan oleh BPJPH.'
+    impartialityNote: 'Informasi Penting: LPH GESID bertugas melakukan pemeriksaan produk. Penetapan status halal dilakukan oleh MUI, dan Sertifikat Halal diterbitkan oleh BPJPH.'
   },
 
   pengujian: {
     id: 'pengujian',
     number: '02',
-    label: 'Layanan Utama LPH · Lab ISO 17025',
+    label: 'Layanan Utama LPH · Uji Laboratorium',
     icon: 'fa-flask-vial',
     accentColor: 'forest',
-    breadcrumb: 'Pengujian Laboratorium Bahan Kritis',
-    title: 'Pengujian Laboratorium Bahan & Produk Kritis',
-    shortDesc: 'Pengujian ilmiah terhadap sampel produk dan bahan titik kritis melalui laboratorium mitra terakreditasi SNI ISO/IEC 17025.',
+    breadcrumb: 'Pengujian Laboratorium',
+    title: 'Pengujian Laboratorium Bahan & Produk',
+    shortDesc: 'Pengujian sampel bahan atau produk di laboratorium terakreditasi untuk memastikan bebas dari kandungan non-halal.',
     desc: [
-      'Sesuai Pedoman Mutu LPH GESID (Hal. 50, 53, 106, & 109), pengujian laboratorium dilakukan apabila dalam pemeriksaan ditemukan bahan atau produk dengan titik kritis kehalalan tinggi yang membutuhkan pembuktian ilmiah.'
+      'Pengujian laboratorium dilakukan apabila produk menggunakan bahan yang masih perlu dipastikan kehalalannya secara ilmiah—seperti olahan daging, gelatin, atau bahan campuran tertentu.'
     ],
     features: [
-      'Pengambilan sampel produk/bahan kritis oleh Auditor Halal saat audit lapangan',
-      'Uji autentikasi Real-Time PCR / deteksi DNA porcine (babi) pada turunan hewani',
-      'Uji kandungan logam dan parameter keamanan/kehalalan sesuai skema produk',
-      'Analisis pada laboratorium mitra yang terakreditasi SNI ISO/IEC 17025'
+      'Pengambilan sampel secara higienis oleh Auditor Halal saat kunjungan lokasi',
+      'Uji deteksi kandungan babi (DNA porcine) pada olahan daging dan turunan hewani',
+      'Uji kemurnian dan keamanan bahan sesuai standar pemeriksaan halal',
+      'Pengujian dikerjakan di laboratorium mitra yang telah terakreditasi resmi'
     ],
     deliverables: [
-      'Berita acara pengambilan sampel pemeriksaan resmi',
-      'Sertifikat / Laporan Hasil Uji (LHU) laboratorium terakreditasi SNI ISO/IEC 17025',
-      'Bukti ilmiah pendukung di dalam Laporan Hasil Pemeriksaan LPH'
+      'Berita acara resmi pengambilan sampel produk',
+      'Sertifikat / Laporan Hasil Uji (LHU) dari laboratorium terakreditasi',
+      'Lampiran bukti hasil uji untuk memperlancar Sidang Fatwa MUI'
     ],
     flow: {
-      intro: 'Pengujian dilakukan secara terintegrasi di dalam tahapan pemeriksaan LPH:',
+      intro: 'Tahapan pengujian sampel dilakukan bersamaan dengan proses pemeriksaan:',
       steps: [
         {
-          title: 'Identifikasi Titik Kritis',
+          title: 'Pengecekan Bahan',
           icon: 'fa-magnifying-glass',
-          description: 'Auditor mengidentifikasi bahan/produk yang wajib diuji lab berdasarkan skema pemeriksaan.'
+          description: 'Auditor menentukan apakah ada bahan atau produk yang memerlukan uji laboratorium.'
         },
         {
           title: 'Pengambilan Sampel',
           icon: 'fa-vial',
-          description: 'Pengambilan dan penyegelan sampel di lokasi usaha sesuai prosedur baku bebas kontaminasi.'
+          description: 'Sampel diambil dan disegel langsung di lokasi usaha agar tetap steril dan terjaga.'
         },
         {
-          title: 'Analisis Lab ISO 17025',
+          title: 'Proses Uji Lab',
           icon: 'fa-microscope',
-          description: 'Pengujian PCR/DNA porcine atau kandungan logam di laboratorium mitra terakreditasi.'
+          description: 'Sampel diuji di laboratorium terakreditasi menggunakan peralatan analisis modern.'
         },
         {
-          title: 'Lampiran Laporan Audit',
+          title: 'Hasil Uji Resmi',
           icon: 'fa-file-shield',
-          description: 'Hasil uji dilampirkan ke dalam Laporan Hasil Pemeriksaan LPH untuk Sidang Fatwa MUI.'
+          description: 'Hasil laboratorium dilampirkan ke dalam laporan pemeriksaan untuk Sidang Fatwa MUI.'
         }
       ]
     },
     target: [
-      'Produk olahan daging, sosis, bakso, & unit Rumah Potong Hewan (RPH/RPU)',
-      'Produk dengan bahan turunan hewani kritis (gelatin, kolagen, enzim, lemak)',
-      'Produk kosmetik, obat-obatan, kimiawi, & barang gunaan'
+      'Produk olahan daging, sosis, bakso, & Rumah Potong Hewan/Unggas (RPH/RPU)',
+      'Produk yang memakai bahan turunan hewani (gelatin, kolagen, enzim, lemak)',
+      'Produk kosmetik, obat-obatan, suplemen, & bahan kimia tertentu'
     ],
-    impartialityNote: 'Transparansi Biaya (Pedoman Mutu Hal. 107 & 109): Biaya uji laboratorium hanya dikenakan apabila produk memang memerlukan pengujian laboratorium berdasarkan skema pemeriksaan.'
+    impartialityNote: 'Biaya Transparan: Biaya uji laboratorium hanya dikenakan jika produk Anda memang memerlukan pengujian lab.'
   },
 
   pendampingan: {
@@ -154,110 +153,110 @@ window.HSI_SERVICES_DATA = {
     label: 'Jaringan 85 P3H · 15 Provinsi',
     icon: 'fa-handshake-angle',
     accentColor: 'forest',
-    breadcrumb: 'Pendampingan Proses Produk Halal',
-    title: 'Pendampingan Proses Produk Halal (P3H) & Informasi Pengajuan',
-    shortDesc: 'Panduan pemenuhan 8 berkas persyaratan awal, penjelasan alur portal SIHALAL, dan dukungan jaringan 85 Anggota P3H di 15 Provinsi.',
+    breadcrumb: 'Pendampingan Pendaftaran Halal (P3H)',
+    title: 'Pendampingan Pendaftaran Halal (P3H)',
+    shortDesc: 'Bantuan persiapan 8 dokumen persyaratan awal dan panduan langkah demi langkah mendaftar di aplikasi SIHALAL.',
     desc: [
-      'Berdasarkan Dokumen Profil Resmi (Hal. 2) dan Pedoman Mutu (Hal. 105 & 108), GESID didukung jaringan 85 Anggota P3H di 15 Provinsi untuk membantu pelaku usaha memahami persyaratan berkas dan alur pendaftaran SIHALAL.'
+      'Bagi pelaku usaha yang baru pertama kali mengurus sertifikasi halal, jaringan 85 Pendamping Proses Produk Halal (P3H) kami di 15 provinsi siap memandu Anda menyiapkan berkas dan mendaftar di sistem SIHALAL dengan mudah.'
     ],
     features: [
-      'Penjelasan daftar 8 dokumen syarat sertifikasi halal yang disiapkan pemohon',
-      'Panduan pembuatan akun dan unggah berkas di portal SIHALAL (ptsp.halal.go.id)',
-      'Dukungan jaringan 85 Anggota P3H GESID di 15 Provinsi untuk pelaku usaha daerah',
-      'Informasi pemilihan skema pengajuan sesuai kategori produk dan skala usaha'
+      'Panduan menyiapkan 8 dokumen syarat sertifikasi halal dari awal',
+      'Bantuan cara membuat akun dan mengunggah berkas di SIHALAL (ptsp.halal.go.id)',
+      'Didukung 85 pendamping P3H di 15 provinsi untuk membantu pelaku usaha daerah',
+      'Konsultasi pemilihan jalur pendaftaran yang tepat sesuai jenis usaha Anda'
     ],
     deliverables: [
-      'Checklist kesiapan 8 dokumen persyaratan sertifikasi halal',
-      'Panduan langkah pendaftaran akun dan pemilihan LPH di SIHALAL',
-      'Pendampingan proses produk halal oleh anggota P3H terdaftar'
+      'Daftar periksa (checklist) kelengkapan 8 dokumen syarat halal',
+      'Panduan praktis pendaftaran akun dan pemilihan LPH di SIHALAL',
+      'Pendampingan langsung oleh petugas P3H resmi hingga berkas siap diajukan'
     ],
     flow: {
-      intro: 'Langkah mudah bagi pelaku usaha yang baru memulai pengurusan sertifikasi halal:',
+      intro: '4 langkah mudah bagi usaha yang baru memulai pengurusan sertifikasi halal:',
       steps: [
         {
-          title: 'Cek Kategori Usaha',
+          title: 'Konsultasi Usaha',
           icon: 'fa-store',
-          description: 'Sampaikan jenis produk dan skala usaha Anda untuk mengetahui skema persyaratan yang tepat.'
+          description: 'Ceritakan jenis produk dan skala usaha Anda untuk mengetahui syarat yang dibutuhkan.'
         },
         {
-          title: 'Siapkan 8 Berkas',
+          title: 'Siapkan 8 Dokumen',
           icon: 'fa-folder-open',
-          description: 'Pelaku usaha menyiapkan NIB, Penyelia Halal, Manual SJPH, daftar bahan, & alur proses.'
+          description: 'Tim pendamping membantu Anda mengecek kelengkapan NIB, daftar bahan, alur produksi, dan dokumen SJPH.'
         },
         {
-          title: 'Panduan Akun SIHALAL',
+          title: 'Daftar di SIHALAL',
           icon: 'fa-laptop',
-          description: 'Asistensi tata cara registrasi di ptsp.halal.go.id atau pendampingan P3H daerah.'
+          description: 'Panduan membuat akun dan mengunggah berkas permohonan di portal ptsp.halal.go.id.'
         },
         {
-          title: 'Lanjut ke Audit LPH',
+          title: 'Proses Pemeriksaan',
           icon: 'fa-arrow-right-to-bracket',
-          description: 'Setelah berkas diverifikasi BPJPH, permohonan diproses secara independen oleh Auditor LPH.'
+          description: 'Setelah berkas masuk di SIHALAL, tim Auditor LPH akan melanjutkan proses pemeriksaan resmi.'
         }
       ]
     },
     target: [
       'UMKM yang baru pertama kali mengurus sertifikasi halal',
-      'Pelaku usaha yang ingin memastikan kelengkapan 8 dokumen syarat sebelum mendaftar',
-      'Pelaku usaha di daerah yang membutuhkan panduan aplikasi SIHALAL'
+      'Pelaku usaha yang masih bingung menyiapkan 8 dokumen persyaratan',
+      'Pelaku usaha di berbagai daerah yang butuh panduan aplikasi SIHALAL'
     ],
-    impartialityNote: 'Prinsip Ketidakberpihakan (Pedoman Mutu Hal. 112): Pemeriksaan/audit oleh Auditor Halal LPH bersifat independen dan terpisah dari kegiatan pendampingan awal. [Perlu Konfirmasi Pihak GESID terkait batas cakupan pendampingan P3H untuk UMK vs jalur Reguler].'
+    impartialityNote: 'Komitmen Layanan: Pendampingan awal bertujuan memudahkan persiapan berkas Anda, sedangkan pemeriksaan resmi tetap dilakukan secara objektif oleh tim Auditor Halal.'
   },
 
   bimtek: {
     id: 'bimtek',
     number: '04',
-    label: 'Layanan Kegiatan & Edukasi',
+    label: 'Layanan Edukasi & Pelatihan',
     icon: 'fa-chalkboard-user',
     accentColor: 'forest',
-    breadcrumb: 'Sosialisasi & Bimbingan Teknis SJPH',
-    title: 'Sosialisasi & Bimbingan Teknis (Bimtek) Persyaratan SJPH',
-    shortDesc: 'Edukasi regulasi Jaminan Produk Halal, bimbingan teknis pemahaman 5 kriteria Manual SJPH, dan pembekalan peran Penyelia Halal.',
+    breadcrumb: 'Sosialisasi & Pelatihan Halal (SJPH)',
+    title: 'Sosialisasi & Pelatihan Sistem Jaminan Produk Halal (SJPH)',
+    shortDesc: 'Pelatihan praktis bagi tim perusahaan dan UMKM untuk memahami aturan halal, menyusun dokumen SJPH, serta menjalankan tugas Penyelia Halal.',
     desc: [
-      'Sesuai Pedoman Mutu (Hal. 38, 105, & 108), GESID menyelenggarakan kegiatan sosialisasi dan bimbingan teknis agar tim internal perusahaan mampu menyusun dokumen Manual SJPH secara mandiri tanpa melanggar ketidakberpihakan audit LPH (Hal. 112).'
+      'Kami menyelenggarakan kegiatan sosialisasi dan pelatihan praktis agar tim usaha Anda memahami cara menjaga kehalalan produk sehari-hari serta mampu menyusun dokumen Sistem Jaminan Produk Halal (SJPH) dengan benar.'
     ],
     features: [
-      'Sosialisasi regulasi halal (UU 33/2014, PP 39/2021, & KMA 748/2021)',
-      'Bimbingan teknis 5 kriteria Sistem Jaminan Produk Halal (SJPH)',
-      'Edukasi tugas Penyelia Halal dan cara mengidentifikasi titik kritis bahan',
-      'Kerja sama literasi & seminar halal bersama asosiasi industri, UMKM, dan kampus'
+      'Penjelasan aturan sertifikasi halal terbaru dengan bahasa yang mudah dipahami',
+      'Panduan praktis menyusun dokumen Manual SJPH untuk usaha Anda',
+      'Pembekalan tugas Penyelia Halal dan cara mengecek kehalalan bahan baku',
+      'Program seminar & pelatihan bersama komunitas UMKM, perusahaan, dan kampus'
     ],
     deliverables: [
-      'Materi pedoman pemahaman kriteria Sistem Jaminan Produk Halal (SJPH)',
-      'Kesiapan tim internal perusahaan dalam menyusun dokumen syarat secara mandiri',
-      'Dokumentasi pelaksanaan kegiatan sosialisasi / bimbingan teknis'
+      'Materi panduan praktis penyusunan dokumen SJPH',
+      'Kesiapan tim internal usaha dalam menerapkan standar halal sehari-hari',
+      'Dokumentasi kegiatan sosialisasi dan pelatihan'
     ],
     flow: {
-      intro: 'Kegiatan edukasi diselenggarakan oleh Divisi Pelatihan dan Pengembangan secara terpisah dari proses audit:',
+      intro: 'Pelaksanaan kegiatan pelatihan dan sosialisasi dibagi menjadi 4 tahap:',
       steps: [
         {
-          title: 'Pilih Topik Edukasi',
+          title: 'Pilih Topik',
           icon: 'fa-comments',
-          description: 'Tentukan kebutuhan sosialisasi regulasi halal atau bimbingan teknis kriteria SJPH.'
+          description: 'Tentukan materi pelatihan sesuai kebutuhan tim atau jenis usaha Anda.'
         },
         {
-          title: 'Penjadwalan Bimtek',
+          title: 'Atur Jadwal',
           icon: 'fa-calendar-check',
-          description: 'Penyesuaian jadwal dan materi sesuai sektor produk atau jasa peserta.'
+          description: 'Sesuaikan waktu pelaksanaan, baik secara tatap muka maupun online.'
         },
         {
-          title: 'Pelaksanaan Materi',
+          title: 'Sesi Pelatihan',
           icon: 'fa-chalkboard-user',
-          description: 'Pembahasan 5 kriteria SJPH, titik kritis bahan, dan peran Penyelia Halal.'
+          description: 'Pembahasan praktis dokumen SJPH, cara cek bahan, dan tugas Penyelia Halal.'
         },
         {
-          title: 'Penerapan Mandiri',
+          title: 'Siap Diterapkan',
           icon: 'fa-file-signature',
-          description: 'Tim internal perusahaan menyusun dan menerapkan dokumen SJPH untuk diajukan di SIHALAL.'
+          description: 'Tim Anda siap menyusun dokumen syarat dan menjaga standar halal di tempat produksi.'
         }
       ]
     },
     target: [
-      'Tim internal perusahaan yang akan menyusun dokumen Manual SJPH',
-      'Calon Penyelia Halal dan staf QA/QC/Produksi',
-      'Asosiasi industri, komunitas UMKM, instansi, dan lembaga pendidikan'
+      'Pemilik usaha dan tim internal yang ingin menyusun dokumen SJPH',
+      'Calon Penyelia Halal serta staf produksi atau gudang',
+      'Komunitas UMKM, asosiasi pengusaha, instansi, dan perguruan tinggi'
     ],
-    impartialityNote: 'Kepatuhan Ketidakberpihakan (Pedoman Mutu Hal. 112): LPH GESID tidak mencampuradukkan pemeriksaan halal dengan jasa konsultasi pembuatan dokumen. [Perlu Konfirmasi Pihak GESID terkait status program pelatihan Penyelia Halal apakah bersifat Bimtek edukasi atau bekerja sama dengan LPK resmi].'
+    impartialityNote: 'Catatan Layanan: Kegiatan pelatihan ini berfokus pada edukasi agar tim usaha Anda mandiri dan siap sebelum mengikuti proses pemeriksaan resmi.'
   }
 };
 
