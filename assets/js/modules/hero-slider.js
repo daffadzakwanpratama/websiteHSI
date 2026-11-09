@@ -40,8 +40,8 @@
       slides.forEach((_, idx) => {
         const dot = document.createElement('button');
         dot.type = 'button';
-        dot.className = `transition-all duration-300 rounded-full ${idx === 0 ? 'w-8 h-2 bg-[#c89020] shadow-sm' : 'w-2.5 h-2.5 bg-white/60 hover:bg-white'}`;
-        dot.setAttribute('aria-label', `Slide ${idx + 1}`);
+        dot.className = `hero-dot ${idx === 0 ? 'is-active' : ''}`;
+        dot.setAttribute('aria-label', `Slide ${idx + 1} dari ${totalSlides}`);
         dot.addEventListener('click', (e) => {
           e.stopPropagation();
           goToSlide(idx);
@@ -53,12 +53,12 @@
 
     function updateDots(index) {
       if (!dotsContainer) return;
-      const dots = dotsContainer.querySelectorAll('button');
+      const dots = dotsContainer.querySelectorAll('.hero-dot');
       dots.forEach((dot, idx) => {
         if (idx === index) {
-          dot.className = 'transition-all duration-300 rounded-full w-8 h-2 bg-[#c89020] shadow-sm';
+          dot.classList.add('is-active');
         } else {
-          dot.className = 'transition-all duration-300 rounded-full w-2.5 h-2.5 bg-white/60 hover:bg-white';
+          dot.classList.remove('is-active');
         }
       });
     }

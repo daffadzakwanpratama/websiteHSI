@@ -149,13 +149,18 @@
     const header = document.querySelector('.site-header');
     if (!header) return;
 
-    const hasHeroImage = Boolean(document.getElementById('heroCarouselSection'));
+    const heroSection = document.getElementById('heroCarouselSection');
+    const hasHeroImage = Boolean(heroSection);
     if (hasHeroImage) {
       header.classList.add('site-header--hero');
     }
 
     function onScroll() {
-      if (window.scrollY > 24) {
+      const threshold = heroSection
+        ? Math.max(heroSection.offsetHeight - header.offsetHeight, 80)
+        : 24;
+
+      if (window.scrollY >= threshold) {
         header.classList.add('is-scrolled');
       } else {
         header.classList.remove('is-scrolled');
@@ -163,6 +168,7 @@
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
     onScroll();
   }
 

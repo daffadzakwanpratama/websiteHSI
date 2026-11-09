@@ -41,7 +41,7 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="assets/css/site.min.css?v=4">
+  <link rel="stylesheet" href="assets/css/site.min.css?v=17">
   <link rel="preload" href="assets/webfonts/fa-solid-900.subset.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Schema.org Structured Data -->
@@ -235,437 +235,386 @@
     </section>
 
     <!-- 1. STRUKTUR KEPENGURUSAN GESID HALAL CENTER (BAGAN HIRARKI RESMI) -->
+    <!--
+      Catatan foto: setiap kartu memiliki area foto seragam (.org-photo, 56x56, bulat).
+      Untuk memasang foto asli, ganti isi <div class="org-photo"> dengan:
+      <img src="assets/images/tim/nama-file.webp" alt="Nama Anggota" loading="lazy">
+    -->
     <section class="py-14 sm:py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- BAGAN HIRARKI ORGANISASI (MODEL POHON HIRARKI) -->
-        <div data-animate="fade-up" class="bg-slate-50/80 rounded-3xl border border-slate-200/90 p-5 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden">
+        <p class="lg:hidden text-center text-xs text-slate-500 mb-3">
+          <i class="fa-solid fa-arrows-left-right text-[#c89020] mr-1" aria-hidden="true"></i>
+          Geser ke samping untuk melihat seluruh diagram struktur organisasi
+        </p>
 
-          <div class="flex flex-col items-center w-full">
+        <!-- Wrapper: horizontal scroll di layar kecil, struktur tetap utuh -->
+        <div class="org-scroll rounded-3xl border border-slate-200 bg-slate-50/70" id="orgChartScroll">
+          <div class="org-canvas" role="img" aria-label="Bagan struktur organisasi LPH GESID Halal Center">
 
-            <!-- ================= LEVEL 1: PEMBINA (TOP EXECUTIVE ILLUSTRATION) ================= -->
-            <div class="relative z-10 w-full max-w-xs">
-              <div class="bg-white rounded-2xl border-2 border-[#c89020] p-4 sm:p-5 shadow-md text-center flex flex-col items-center hover:shadow-lg transition-all">
-                <!-- Executive Desk Illustration SVG (Matching Reference Top Node) -->
-                <div class="w-24 h-20 mb-2 flex items-center justify-center">
-                  <svg viewBox="0 0 120 96" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- High-back Executive Chair -->
-                    <rect x="34" y="10" width="52" height="52" rx="10" fill="#FEF3C7" stroke="#946310" stroke-width="2.5"/>
-                    <!-- Shoulders / Suit -->
-                    <path d="M32 66C32 53.8497 41.8497 44 54 44H66C78.1503 44 88 53.8497 88 66V68H32V66Z" fill="#1E293B" stroke="#0F172A" stroke-width="2.5"/>
-                    <!-- Shirt & Tie -->
-                    <path d="M53 44L60 58L67 44H53Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
-                    <path d="M58.5 48H61.5L62.5 64L60 67L57.5 64L58.5 48Z" fill="#C89020"/>
-                    <!-- Neck -->
-                    <rect x="55" y="37" width="10" height="9" rx="3" fill="#F3C6A5" stroke="#0F172A" stroke-width="2"/>
-                    <!-- Ears -->
-                    <circle cx="45" cy="26" r="3.5" fill="#F3C6A5" stroke="#0F172A" stroke-width="2"/>
-                    <circle cx="75" cy="26" r="3.5" fill="#F3C6A5" stroke="#0F172A" stroke-width="2"/>
-                    <!-- Head -->
-                    <path d="M46 23C46 15.268 52.268 9 60 9C67.732 9 74 15.268 74 23V27C74 34.732 67.732 41 60 41C52.268 41 46 34.732 46 27V23Z" fill="#F5CBA7" stroke="#0F172A" stroke-width="2.5"/>
-                    <!-- Peci / Executive Hair -->
-                    <path d="M45 20C45 12.5 51.5 8 60 8C68.5 8 75 12.5 75 20C71 17.5 65.5 16.5 60 16.5C54.5 16.5 49 17.5 45 20Z" fill="#0F172A"/>
-                    <!-- Executive Desk Front -->
-                    <rect x="18" y="66" width="84" height="8" rx="2" fill="#FFFBEB" stroke="#946310" stroke-width="2.5"/>
-                    <rect x="24" y="74" width="72" height="16" rx="2" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5"/>
-                    <line x1="36" y1="82" x2="84" y2="82" stroke="#C89020" stroke-width="2.5" stroke-linecap="round"/>
-                  </svg>
+            <!-- LEVEL 1: PEMBINA -->
+            <div class="org-card org-card--lead org-row-reveal">
+              <div class="org-photo" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg>
+              </div>
+              <p class="org-role">Pembina</p>
+              <p class="org-name">Dr. Ir. H. Sodik Mudjahid, M.Sc.</p>
+              <p class="org-note">Dewan Pembina Yayasan</p>
+            </div>
+
+            <div class="org-line-v h-7 org-line-reveal"></div>
+
+            <!-- LEVEL 2: PENGAWAS I & PENGAWAS II -->
+            <div class="org-pair org-row-reveal">
+              <div class="org-line-h top-0"></div>
+              <div class="org-pair-col">
+                <div class="org-line-v h-6"></div>
+                <div class="org-card">
+                  <div class="org-photo" aria-hidden="true">
+                    <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg>
+                  </div>
+                  <p class="org-role">Pengawas I</p>
+                  <p class="org-name">Rio Santoso</p>
+                  <p class="org-note">Dewan Pengawas LPH</p>
                 </div>
-                <span class="inline-block text-[10px] font-extrabold uppercase tracking-widest text-white bg-[#c89020] px-3 py-0.5 rounded-full mb-1.5">
-                  Pembina
-                </span>
-                <h4 class="text-sm sm:text-[15px] font-extrabold text-slate-900 leading-snug">
-                  Dr. Ir. H. Sodik Mudjahid, M.Sc.
-                </h4>
-                <p class="text-[11px] text-slate-500 mt-0.5">Dewan Pembina Yayasan</p>
+                <div class="org-line-v h-6"></div>
+              </div>
+              <div class="org-pair-col">
+                <div class="org-line-v h-6"></div>
+                <div class="org-card">
+                  <div class="org-photo" aria-hidden="true">
+                    <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg>
+                  </div>
+                  <p class="org-role">Pengawas II</p>
+                  <p class="org-name">Viviana Hanifa, S.P., M.Si.</p>
+                  <p class="org-note">Dewan Pengawas LPH</p>
+                </div>
+                <div class="org-line-v h-6"></div>
+              </div>
+              <div class="org-line-h bottom-0"></div>
+            </div>
+
+            <div class="org-line-v h-7 org-line-reveal"></div>
+
+            <!-- LEVEL 3: DIREKTUR EKSEKUTIF + KOMITE KETIDAKBERPIHAKAN (cabang samping sejajar) -->
+            <div class="org-director-row org-row-reveal">
+              <div class="org-card org-card--lead">
+                <div class="org-photo" aria-hidden="true">
+                  <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg>
+                </div>
+                <p class="org-role">Direktur Eksekutif</p>
+                <p class="org-name">Murni Mupardila, S.Pd., M.A.</p>
+                <p class="org-note">Pimpinan Eksekutif LPH</p>
+              </div>
+
+              <!-- Garis cabang ke Komite -->
+              <div class="org-side-line" aria-hidden="true"></div>
+
+              <!-- Komite Ketidakberpihakan (Tinggi seragam dengan kartu Direktur) -->
+              <div class="org-card org-card--committee">
+                <p class="org-role">Komite Ketidakberpihakan</p>
+                <p class="org-note mb-2">Komite Independen LPH</p>
+                <div class="org-committee-list">
+                  <div class="org-committee-item">
+                    <div class="org-photo-sm" aria-hidden="true">
+                      <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg>
+                    </div>
+                    <span>Raja Kitter Wut, S.H., M.H.</span>
+                  </div>
+                  <div class="org-committee-item">
+                    <div class="org-photo-sm" aria-hidden="true">
+                      <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg>
+                    </div>
+                    <span>Rio Santoso</span>
+                  </div>
+                  <div class="org-committee-item">
+                    <div class="org-photo-sm" aria-hidden="true">
+                      <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg>
+                    </div>
+                    <span>Yetra Wati, S.IP.</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Connector Down to Pengawas -->
-            <div class="w-[3px] h-7 sm:h-9 bg-[#c89020]"></div>
+            <div class="org-line-v h-7 org-line-reveal"></div>
 
-            <!-- ================= LEVEL 2: PENGAWAS I & PENGAWAS II ================= -->
-            <div class="w-full max-w-2xl relative">
-              <!-- Desktop Horizontal Branch Top -->
-              <div class="hidden sm:block absolute top-0 left-1/4 right-1/4 h-[3px] bg-[#c89020]"></div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-10 relative">
-                <!-- Pengawas I -->
-                <div class="flex flex-col items-center">
-                  <div class="hidden sm:block w-[3px] h-6 bg-[#c89020]"></div>
-                  <div class="w-full bg-white rounded-2xl border-2 border-slate-300 hover:border-[#c89020] p-4 shadow-xs text-center flex flex-col items-center transition-all">
-                    <!-- Male Bust Avatar SVG -->
-                    <div class="w-16 h-16 mb-2">
-                      <svg viewBox="0 0 80 80" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="40" cy="40" r="36" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
-                        <path d="M18 68C18 56.9543 26.9543 48 38 48H42C53.0457 48 62 56.9543 62 68V70H18V68Z" fill="#334155" stroke="#0F172A" stroke-width="2.2"/>
-                        <path d="M34 48L40 57L46 48H34Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.8"/>
-                        <rect x="36" y="41" width="8" height="9" fill="#E5B895" stroke="#0F172A" stroke-width="2"/>
-                        <path d="M28 27C28 20.3726 33.3726 15 40 15C46.6274 15 52 20.3726 52 27V31C52 37.6274 46.6274 43 40 43C33.3726 43 28 37.6274 28 31V27Z" fill="#E5B895" stroke="#0F172A" stroke-width="2.2"/>
-                        <path d="M27 26C27 18 32.5 13 40 13C47.5 13 53 18 53 26C49.5 22.5 45 21 40 21C35 21 30.5 22.5 27 26Z" fill="#1E293B"/>
-                      </svg>
-                    </div>
-                    <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-[#946310] bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full mb-1">
-                      Pengawas I
-                    </span>
-                    <h4 class="text-sm sm:text-[15px] font-extrabold text-slate-900">Rio Santoso</h4>
+            <!-- LEVEL 4: MANAJER MUTU & SDM | MANAJER KEUANGAN & ADMINISTRASI -->
+            <div class="org-pair org-row-reveal">
+              <div class="org-line-h top-0"></div>
+              <div class="org-pair-col">
+                <div class="org-line-v h-6"></div>
+                <div class="org-card">
+                  <div class="org-photo" aria-hidden="true">
+                    <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg>
                   </div>
-                  <div class="hidden sm:block w-[3px] h-6 bg-[#c89020]"></div>
+                  <p class="org-role">Manajer Mutu dan SDM</p>
+                  <p class="org-name">Ida Rifda</p>
+                  <p class="org-note">Kendali Mutu ISO 17065 &amp; SDM</p>
                 </div>
-
-                <!-- Pengawas II -->
-                <div class="flex flex-col items-center">
-                  <div class="hidden sm:block w-[3px] h-6 bg-[#c89020]"></div>
-                  <div class="w-full bg-white rounded-2xl border-2 border-slate-300 hover:border-[#c89020] p-4 shadow-xs text-center flex flex-col items-center transition-all">
-                    <!-- Female Hijab Bust Avatar SVG -->
-                    <div class="w-16 h-16 mb-2">
-                      <svg viewBox="0 0 80 80" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="40" cy="40" r="36" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2"/>
-                        <path d="M18 68C18 56.9543 26.9543 48 38 48H42C53.0457 48 62 56.9543 62 68V70H18V68Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.2"/>
-                        <!-- Hijab Outer -->
-                        <path d="M24 29C24 19.6112 31.1634 13 40 13C48.8366 13 56 19.6112 56 29V47C56 51 50 56 40 56C30 56 24 51 24 47V29Z" fill="#C89020" stroke="#0F172A" stroke-width="2.2"/>
-                        <!-- Face -->
-                        <path d="M30 28C30 22.4772 34.4772 18 40 18C45.5228 18 50 22.4772 50 28V32C50 37.5228 45.5228 42 40 42C34.4772 42 30 37.5228 30 32V28Z" fill="#F5CBA7" stroke="#0F172A" stroke-width="2"/>
-                      </svg>
-                    </div>
-                    <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-[#946310] bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full mb-1">
-                      Pengawas II
-                    </span>
-                    <h4 class="text-sm sm:text-[15px] font-extrabold text-slate-900">Viviana Hanifa, S.P., M.Si.</h4>
-                  </div>
-                  <div class="hidden sm:block w-[3px] h-6 bg-[#c89020]"></div>
-                </div>
+                <div class="org-line-v h-6"></div>
               </div>
-
-              <!-- Desktop Horizontal Branch Bottom (Merging back to center spine) -->
-              <div class="hidden sm:block absolute bottom-0 left-1/4 right-1/4 h-[3px] bg-[#c89020]"></div>
+              <div class="org-pair-col">
+                <div class="org-line-v h-6"></div>
+                <div class="org-card">
+                  <div class="org-photo" aria-hidden="true">
+                    <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg>
+                  </div>
+                  <p class="org-role">Manajer Keuangan &amp; Admin</p>
+                  <p class="org-name">Sindia Dwike Pratika</p>
+                  <p class="org-note">Keuangan &amp; Layanan Administrasi</p>
+                </div>
+                <div class="org-line-v h-6"></div>
+              </div>
+              <div class="org-line-h bottom-0"></div>
             </div>
 
-            <!-- Connector Down to Direktur Eksekutif -->
-            <div class="w-[3px] h-7 sm:h-9 bg-[#c89020]"></div>
+            <div class="org-line-v h-7 org-line-reveal"></div>
 
-            <!-- ================= LEVEL 3: DIREKTUR EKSEKUTIF + KOMITE KETIDAKBERPIHAKAN ================= -->
-            <div class="w-full max-w-4xl relative flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-0">
+            <!-- LEVEL 5: 4 DIVISI OPERASIONAL & TEKNIS -->
+            <div class="org-divisions org-row-reveal">
+              <div class="org-line-h top-0"></div>
 
-              <!-- Left Spacer on Desktop to Keep Direktur Eksekutif Centered -->
-              <div class="hidden lg:block lg:w-1/3"></div>
-
-              <!-- Center: Direktur Eksekutif -->
-              <div class="w-full max-w-xs lg:w-1/3 flex flex-col items-center relative z-10">
-                <div class="w-full bg-slate-900 text-white rounded-2xl border-2 border-[#c89020] p-5 shadow-lg text-center flex flex-col items-center relative">
-                  <div class="w-18 h-18 mb-2.5">
-                    <svg viewBox="0 0 80 80" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="40" cy="40" r="36" fill="#1E293B" stroke="#C89020" stroke-width="2.5"/>
-                      <path d="M18 68C18 56.9543 26.9543 48 38 48H42C53.0457 48 62 56.9543 62 68V70H18V68Z" fill="#FFFBEB" stroke="#0F172A" stroke-width="2.2"/>
-                      <path d="M24 29C24 19.6112 31.1634 13 40 13C48.8366 13 56 19.6112 56 29V47C56 51 50 56 40 56C30 56 24 51 24 47V29Z" fill="#C89020" stroke="#0F172A" stroke-width="2.2"/>
-                      <path d="M30 28C30 22.4772 34.4772 18 40 18C45.5228 18 50 22.4772 50 28V32C50 37.5228 45.5228 42 40 42C34.4772 42 30 37.5228 30 32V28Z" fill="#F5CBA7" stroke="#0F172A" stroke-width="2"/>
-                    </svg>
+              <!-- 1. Auditor Halal (Ringkasan Divisi + Tombol Modal) -->
+              <div class="org-division-col">
+                <div class="org-line-v h-6"></div>
+                <div class="org-stack org-stack--linked">
+                  <div class="org-card">
+                    <div class="org-photo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg></div>
+                    <p class="org-role">Auditor Halal</p>
+                    <p class="org-name">Tim Auditor Halal</p>
+                    <p class="org-note">Bersertifikat — <span id="auditorCardCount">5</span> Personel</p>
+                    <button type="button" class="org-btn-modal" id="openAuditorModalBtn" aria-haspopup="dialog" aria-controls="auditorModal">
+                      Lihat Daftar Auditor (<span id="auditorBtnCount">5</span>)
+                    </button>
                   </div>
-                  <span class="inline-block text-[10px] font-extrabold uppercase tracking-widest text-slate-950 bg-[#c89020] px-3 py-0.5 rounded-full mb-1.5">
-                    Direktur Eksekutif
-                  </span>
-                  <h4 class="text-base font-extrabold text-white leading-snug">
-                    Murni Mupardila, S.Pd., M.A.
-                  </h4>
-                  <p class="text-[11px] text-amber-200/90 mt-0.5">Pimpinan Eksekutif LPH</p>
                 </div>
               </div>
 
-              <!-- Right Side-Branch: Komite Ketidakberpihakan (Dashed Line per Pedoman Mutu) -->
-              <div class="w-full max-w-xs lg:w-1/3 flex flex-col lg:flex-row items-center">
-                <!-- Dashed connector line -->
-                <div class="lg:hidden w-[3px] h-5 border-l-2 border-dashed border-[#c89020]"></div>
-                <div class="hidden lg:block w-8 xl:w-12 border-t-2 border-dashed border-[#c89020]"></div>
-
-                <div class="w-full bg-amber-50/90 rounded-2xl border-2 border-dashed border-[#c89020] p-4 shadow-xs text-left">
-                  <div class="flex items-center gap-2.5 mb-2.5 pb-2 border-b border-amber-200/80">
-                    <!-- Group Icon SVG -->
-                    <div class="w-9 h-9 rounded-xl bg-[#c89020] text-white flex items-center justify-center flex-shrink-0">
-                      <i class="fa-solid fa-scale-balanced text-sm"></i>
-                    </div>
-                    <div>
-                      <span class="block text-[10px] font-extrabold uppercase tracking-wider text-[#946310]">Komite Independen</span>
-                      <h4 class="text-xs sm:text-[13px] font-extrabold text-slate-900 leading-tight">Komite Ketidakberpihakan</h4>
-                    </div>
+              <!-- 2. Laboratorium (1 orang) -->
+              <div class="org-division-col">
+                <div class="org-line-v h-6"></div>
+                <div class="org-stack org-stack--linked">
+                  <div class="org-card">
+                    <div class="org-photo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg></div>
+                    <p class="org-role">Laboratorium</p>
+                    <p class="org-name">Mirawati</p>
+                    <p class="org-note">Personel Laboran &amp; Uji Sampel</p>
                   </div>
-                  <ol class="space-y-1.5 text-xs text-slate-700 font-semibold">
-                    <li class="flex items-center gap-2 bg-white/90 px-2.5 py-1.5 rounded-lg border border-amber-200/60">
-                      <span class="w-4 h-4 rounded-full bg-amber-100 text-[#946310] text-[10px] font-extrabold flex items-center justify-center flex-shrink-0">1</span>
-                      <span>Raja Kitter Wut, S.H., M.H.</span>
-                    </li>
-                    <li class="flex items-center gap-2 bg-white/90 px-2.5 py-1.5 rounded-lg border border-amber-200/60">
-                      <span class="w-4 h-4 rounded-full bg-amber-100 text-[#946310] text-[10px] font-extrabold flex items-center justify-center flex-shrink-0">2</span>
-                      <span>Rio Santoso</span>
-                    </li>
-                    <li class="flex items-center gap-2 bg-white/90 px-2.5 py-1.5 rounded-lg border border-amber-200/60">
-                      <span class="w-4 h-4 rounded-full bg-amber-100 text-[#946310] text-[10px] font-extrabold flex items-center justify-center flex-shrink-0">3</span>
-                      <span>Yetra Wati, S.IP.</span>
-                    </li>
-                  </ol>
                 </div>
               </div>
 
-            </div>
-
-            <!-- Connector Down to Manajer Level -->
-            <div class="w-[3px] h-8 sm:h-10 bg-[#c89020]"></div>
-
-            <!-- ================= LEVEL 4: MANAJER MUTU & SDM | MANAJER KEUANGAN & ADMINISTRASI ================= -->
-            <div class="w-full max-w-3xl relative">
-              <!-- Desktop Horizontal Branch Top -->
-              <div class="hidden sm:block absolute top-0 left-1/4 right-1/4 h-[3px] bg-[#c89020]"></div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-12 relative">
-                <!-- Manajer Mutu dan SDM -->
-                <div class="flex flex-col items-center">
-                  <div class="hidden sm:block w-[3px] h-6 bg-[#c89020]"></div>
-                  <div class="w-full bg-white rounded-2xl border-2 border-slate-300 hover:border-[#c89020] p-4 sm:p-5 shadow-xs text-center flex flex-col items-center transition-all">
-                    <div class="w-16 h-16 mb-2">
-                      <svg viewBox="0 0 80 80" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="40" cy="40" r="36" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
-                        <path d="M18 68C18 56.9543 26.9543 48 38 48H42C53.0457 48 62 56.9543 62 68V70H18V68Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.2"/>
-                        <path d="M24 29C24 19.6112 31.1634 13 40 13C48.8366 13 56 19.6112 56 29V47C56 51 50 56 40 56C30 56 24 51 24 47V29Z" fill="#334155" stroke="#0F172A" stroke-width="2.2"/>
-                        <path d="M30 28C30 22.4772 34.4772 18 40 18C45.5228 18 50 22.4772 50 28V32C50 37.5228 45.5228 42 40 42C34.4772 42 30 37.5228 30 32V28Z" fill="#F5CBA7" stroke="#0F172A" stroke-width="2"/>
-                      </svg>
-                    </div>
-                    <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider text-slate-700 bg-slate-100 border border-slate-200 px-3 py-0.5 rounded-full mb-1">
-                      Manajer Mutu dan SDM
-                    </span>
-                    <h4 class="text-sm sm:text-base font-extrabold text-slate-900">Ida Rifda</h4>
-                    <p class="text-[11px] text-slate-500 mt-0.5">Kendali Mutu ISO 17065 &amp; Kompetensi SDM</p>
+              <!-- 3. SDM Syariah (Ringkasan Divisi + Tombol Modal) -->
+              <div class="org-division-col">
+                <div class="org-line-v h-6"></div>
+                <div class="org-stack org-stack--linked">
+                  <div class="org-card">
+                    <div class="org-photo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg></div>
+                    <p class="org-role">SDM Syariah</p>
+                    <p class="org-name">Tim SDM Syariah</p>
+                    <p class="org-note">Kepatuhan — <span id="syariahCardCount">3</span> Personel</p>
+                    <button type="button" class="org-btn-modal" id="openSyariahModalBtn" aria-haspopup="dialog" aria-controls="syariahModal">
+                      Lihat SDM Syariah (<span id="syariahBtnCount">3</span>)
+                    </button>
                   </div>
-                  <div class="hidden sm:block w-[3px] h-6 bg-[#c89020]"></div>
-                </div>
-
-                <!-- Manajer Keuangan & Administrasi -->
-                <div class="flex flex-col items-center">
-                  <div class="hidden sm:block w-[3px] h-6 bg-[#c89020]"></div>
-                  <div class="w-full bg-white rounded-2xl border-2 border-slate-300 hover:border-[#c89020] p-4 sm:p-5 shadow-xs text-center flex flex-col items-center transition-all">
-                    <div class="w-16 h-16 mb-2">
-                      <svg viewBox="0 0 80 80" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="40" cy="40" r="36" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
-                        <path d="M18 68C18 56.9543 26.9543 48 38 48H42C53.0457 48 62 56.9543 62 68V70H18V68Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.2"/>
-                        <path d="M24 29C24 19.6112 31.1634 13 40 13C48.8366 13 56 19.6112 56 29V47C56 51 50 56 40 56C30 56 24 51 24 47V29Z" fill="#946310" stroke="#0F172A" stroke-width="2.2"/>
-                        <path d="M30 28C30 22.4772 34.4772 18 40 18C45.5228 18 50 22.4772 50 28V32C50 37.5228 45.5228 42 40 42C34.4772 42 30 37.5228 30 32V28Z" fill="#F5CBA7" stroke="#0F172A" stroke-width="2"/>
-                      </svg>
-                    </div>
-                    <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider text-slate-700 bg-slate-100 border border-slate-200 px-3 py-0.5 rounded-full mb-1">
-                      Manajer Keuangan &amp; Administrasi
-                    </span>
-                    <h4 class="text-sm sm:text-base font-extrabold text-slate-900">Sindia Dwike Pratika</h4>
-                    <p class="text-[11px] text-slate-500 mt-0.5">Tata Kelola Keuangan &amp; Layanan Administrasi</p>
-                  </div>
-                  <div class="hidden sm:block w-[3px] h-6 bg-[#c89020]"></div>
                 </div>
               </div>
 
-              <!-- Desktop Horizontal Branch Bottom -->
-              <div class="hidden sm:block absolute bottom-0 left-1/4 right-1/4 h-[3px] bg-[#c89020]"></div>
-            </div>
-
-            <!-- Connector Down to 4 Operational Divisions -->
-            <div class="w-[3px] h-8 sm:h-10 bg-[#c89020]"></div>
-
-            <!-- ================= LEVEL 5: 4 DIVISI OPERASIONAL & TEKNIS (BOTTOM TIER WITH GROUP AVATARS) ================= -->
-            <div class="w-full relative">
-              <!-- Desktop Horizontal Branch Across 4 Columns -->
-              <div class="hidden lg:block absolute top-0 left-[12.5%] right-[12.5%] h-[3px] bg-[#c89020]"></div>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 relative">
-
-                <!-- 1. AUDITOR (5 Orang) -->
-                <div class="flex flex-col items-center">
-                  <div class="hidden lg:block w-[3px] h-6 bg-[#c89020]"></div>
-                  <div class="w-full h-full bg-white rounded-2xl border-2 border-[#c89020]/80 p-4 sm:p-5 shadow-sm flex flex-col items-center text-center">
-                    <!-- 3-Person Team Illustration SVG (Matching Reference Bottom Nodes) -->
-                    <div class="w-28 h-16 mb-2.5 flex items-center justify-center">
-                      <svg viewBox="0 0 130 76" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Left Person -->
-                        <path d="M8 72C8 63 15 56 24 56H28C37 56 44 63 44 72V74H8V72Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
-                        <circle cx="26" cy="39" r="11" fill="#E5B895" stroke="#0F172A" stroke-width="2"/>
-                        <path d="M15 37C15 30 20 26 26 26C32 26 37 30 37 37" fill="#334155"/>
-                        <!-- Right Person -->
-                        <path d="M86 72C86 63 93 56 102 56H106C115 56 122 63 122 72V74H86V72Z" fill="#475569" stroke="#0F172A" stroke-width="2"/>
-                        <circle cx="104" cy="39" r="11" fill="#D4A373" stroke="#0F172A" stroke-width="2"/>
-                        <path d="M93 37C93 30 98 26 104 26C110 26 115 30 115 37" fill="#1E293B"/>
-                        <!-- Center Leader Person (Foreground) -->
-                        <path d="M36 72C36 59 46 50 59 50H71C84 50 94 59 94 72V74H36V72Z" fill="#C89020" stroke="#0F172A" stroke-width="2.2"/>
-                        <circle cx="65" cy="31" r="14" fill="#F5CBA7" stroke="#0F172A" stroke-width="2.2"/>
-                        <path d="M51 29C51 20 57 15 65 15C73 15 79 20 79 29C75 25 70 24 65 24C60 24 55 25 51 29Z" fill="#0F172A"/>
-                      </svg>
-                    </div>
-                    <span class="inline-block text-[10px] font-extrabold uppercase tracking-widest text-white bg-[#c89020] px-3 py-1 rounded-full mb-3 w-full">
-                      Auditor Halal
-                    </span>
-                    <ol class="w-full space-y-1.5 text-left text-xs text-slate-700 font-semibold">
-                      <li class="flex items-start gap-2 bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-200/80">
-                        <span class="text-[#c89020] font-extrabold">1.</span>
-                        <span>Prof. Diana Laila Ramatillah, M.Farm., Ph.D.</span>
-                      </li>
-                      <li class="flex items-start gap-2 bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-200/80">
-                        <span class="text-[#c89020] font-extrabold">2.</span>
-                        <span>Ely May Sarroh Saragih, S.P., M.Si.</span>
-                      </li>
-                      <li class="flex items-start gap-2 bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-200/80">
-                        <span class="text-[#c89020] font-extrabold">3.</span>
-                        <span>Adiana S, S.Pi., M.Si.</span>
-                      </li>
-                      <li class="flex items-start gap-2 bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-200/80">
-                        <span class="text-[#c89020] font-extrabold">4.</span>
-                        <span>Dr. Nina Jusnita, S.Tp., M.Si.</span>
-                      </li>
-                      <li class="flex items-start gap-2 bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-200/80">
-                        <span class="text-[#c89020] font-extrabold">5.</span>
-                        <span>Dr. Zuraida Sagala, S.Si., M.Si.</span>
-                      </li>
-                    </ol>
+              <!-- 4. Media / Marketing & Kelembagaan (1 orang) -->
+              <div class="org-division-col">
+                <div class="org-line-v h-6"></div>
+                <div class="org-stack org-stack--linked">
+                  <div class="org-card">
+                    <div class="org-photo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg></div>
+                    <p class="org-role">Media &amp; Kelembagaan</p>
+                    <p class="org-name">Fauzi</p>
+                    <p class="org-note">Publikasi &amp; Sosialisasi Halal</p>
                   </div>
                 </div>
-
-                <!-- 2. LABORATORIUM (1 Orang) -->
-                <div class="flex flex-col items-center">
-                  <div class="hidden lg:block w-[3px] h-6 bg-[#c89020]"></div>
-                  <div class="w-full h-full bg-white rounded-2xl border-2 border-slate-300 hover:border-[#c89020] p-4 sm:p-5 shadow-sm flex flex-col items-center text-center transition-all">
-                    <div class="w-28 h-16 mb-2.5 flex items-center justify-center">
-                      <svg viewBox="0 0 130 76" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M36 72C36 59 46 50 59 50H71C84 50 94 59 94 72V74H36V72Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.2"/>
-                        <path d="M49 31C49 21 56 14 65 14C74 14 81 21 81 31V48C81 52 75 56 65 56C55 56 49 52 49 48V31Z" fill="#C89020" stroke="#0F172A" stroke-width="2.2"/>
-                        <circle cx="65" cy="32" r="11" fill="#F5CBA7" stroke="#0F172A" stroke-width="2"/>
-                      </svg>
-                    </div>
-                    <span class="inline-block text-[10px] font-extrabold uppercase tracking-widest text-slate-800 bg-amber-100 border border-amber-300 px-3 py-1 rounded-full mb-3 w-full">
-                      Laboratorium
-                    </span>
-                    <div class="w-full flex-1 flex flex-col justify-center bg-slate-50 p-4 rounded-xl border border-slate-200/80">
-                      <h4 class="text-sm sm:text-base font-extrabold text-slate-900">Mirawati</h4>
-                      <p class="text-[11px] text-slate-500 mt-1">Personel Laboran &amp; Pengujian Sampel Halal</p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 3. SDM SYARIAH (3 Orang) -->
-                <div class="flex flex-col items-center">
-                  <div class="hidden lg:block w-[3px] h-6 bg-[#c89020]"></div>
-                  <div class="w-full h-full bg-white rounded-2xl border-2 border-[#c89020]/80 p-4 sm:p-5 shadow-sm flex flex-col items-center text-center">
-                    <div class="w-28 h-16 mb-2.5 flex items-center justify-center">
-                      <svg viewBox="0 0 130 76" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Left Person -->
-                        <path d="M8 72C8 63 15 56 24 56H28C37 56 44 63 44 72V74H8V72Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
-                        <circle cx="26" cy="39" r="11" fill="#F5CBA7" stroke="#0F172A" stroke-width="2"/>
-                        <path d="M15 37C15 30 20 26 26 26C32 26 37 30 37 37" fill="#946310"/>
-                        <!-- Right Person -->
-                        <path d="M86 72C86 63 93 56 102 56H106C115 56 122 63 122 72V74H86V72Z" fill="#334155" stroke="#0F172A" stroke-width="2"/>
-                        <circle cx="104" cy="39" r="11" fill="#E5B895" stroke="#0F172A" stroke-width="2"/>
-                        <path d="M93 37C93 30 98 26 104 26C110 26 115 30 115 37" fill="#0F172A"/>
-                        <!-- Center Person -->
-                        <path d="M36 72C36 59 46 50 59 50H71C84 50 94 59 94 72V74H36V72Z" fill="#1E293B" stroke="#0F172A" stroke-width="2.2"/>
-                        <circle cx="65" cy="31" r="14" fill="#F5CBA7" stroke="#0F172A" stroke-width="2.2"/>
-                        <path d="M51 27C51 19 57 14 65 14C73 14 79 19 79 27C75 24 70 23 65 23C60 23 55 24 51 27Z" fill="#C89020"/>
-                      </svg>
-                    </div>
-                    <span class="inline-block text-[10px] font-extrabold uppercase tracking-widest text-white bg-[#c89020] px-3 py-1 rounded-full mb-3 w-full">
-                      SDM Syariah
-                    </span>
-                    <ol class="w-full space-y-1.5 text-left text-xs text-slate-700 font-semibold">
-                      <li class="flex items-start gap-2 bg-slate-50 px-2.5 py-2 rounded-lg border border-slate-200/80">
-                        <span class="text-[#c89020] font-extrabold">1.</span>
-                        <span>Yohan Fitriadi, S.H.I., M.M.</span>
-                      </li>
-                      <li class="flex items-start gap-2 bg-slate-50 px-2.5 py-2 rounded-lg border border-slate-200/80">
-                        <span class="text-[#c89020] font-extrabold">2.</span>
-                        <span>Afdhalia Mahatta, S.H., M.H.</span>
-                      </li>
-                      <li class="flex items-start gap-2 bg-slate-50 px-2.5 py-2 rounded-lg border border-slate-200/80">
-                        <span class="text-[#c89020] font-extrabold">3.</span>
-                        <span>Alail Atariq, S.H.</span>
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-
-                <!-- 4. MEDIA / MARKETING & KELEMBAGAAN (1 Orang) -->
-                <div class="flex flex-col items-center">
-                  <div class="hidden lg:block w-[3px] h-6 bg-[#c89020]"></div>
-                  <div class="w-full h-full bg-white rounded-2xl border-2 border-slate-300 hover:border-[#c89020] p-4 sm:p-5 shadow-sm flex flex-col items-center text-center transition-all">
-                    <div class="w-28 h-16 mb-2.5 flex items-center justify-center">
-                      <svg viewBox="0 0 130 76" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M36 72C36 59 46 50 59 50H71C84 50 94 59 94 72V74H36V72Z" fill="#334155" stroke="#0F172A" stroke-width="2.2"/>
-                        <circle cx="65" cy="31" r="14" fill="#E5B895" stroke="#0F172A" stroke-width="2.2"/>
-                        <path d="M51 29C51 20 57 15 65 15C73 15 79 20 79 29C75 25 70 24 65 24C60 24 55 25 51 29Z" fill="#1E293B"/>
-                      </svg>
-                    </div>
-                    <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider text-slate-800 bg-amber-100 border border-amber-300 px-2.5 py-1 rounded-full mb-3 w-full">
-                      Media / Marketing &amp; Kelembagaan
-                    </span>
-                    <div class="w-full flex-1 flex flex-col justify-center bg-slate-50 p-4 rounded-xl border border-slate-200/80">
-                      <h4 class="text-sm sm:text-base font-extrabold text-slate-900">Fauzi</h4>
-                      <p class="text-[11px] text-slate-500 mt-1">Publikasi, Komunikasi Kelembagaan &amp; Sosialisasi Halal</p>
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </div>
 
           </div>
-
         </div>
 
       </div>
     </section>
 
-    <!-- 2. PILAR TENAGA AHLI & AUDITOR HALAL -->
-    <section class="py-14 sm:py-20 bg-slate-50 border-t border-slate-200">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
-
-        <div data-animate="fade-up" class="max-w-2xl mb-10 sm:mb-12">
-          <span class="text-xs font-bold tracking-widest text-[#c89020] uppercase">Standar Kompetensi Pedoman Mutu</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-serif mt-1">
-            Kualifikasi Sumber Daya Manusia LPH
-          </h2>
-          <p class="text-slate-600 text-sm mt-2">
-            Sesuai Bab IV Pedoman Mutu LPH GESID Halal Center, seluruh personel pemeriksaan dan manajemen memenuhi standar kualifikasi ketat berdasarkan regulasi Jaminan Produk Halal.
-          </p>
+    <!-- MODAL POPUP: DAFTAR SELURUH AUDITOR HALAL -->
+    <div class="org-modal-backdrop" id="auditorModal" role="dialog" aria-modal="true" aria-labelledby="auditorModalTitle" aria-hidden="true">
+      <div class="org-modal-dialog">
+        <div class="org-modal-header">
+          <div>
+            <p class="org-role">Divisi Operasional &amp; Teknis</p>
+            <h3 id="auditorModalTitle" class="org-modal-title">Daftar Auditor Halal Bersertifikat</h3>
+            <p class="org-note"><span id="auditorModalCount">5</span> Personel Auditor Halal Resmi LPH GESID Halal Center</p>
+          </div>
+          <button type="button" class="org-modal-close" id="closeAuditorModalBtn" aria-label="Tutup daftar auditor">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
         </div>
-
-        <div data-stagger="100" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-2xs">
-            <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200/80 text-[#c89020] flex items-center justify-center mb-4">
-              <i class="fa-solid fa-clipboard-check text-xl"></i>
+        <div class="org-modal-body">
+          <div class="org-modal-grid" id="auditorModalGrid">
+            <div class="org-card">
+              <div class="org-photo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg></div>
+              <p class="org-role">Auditor Halal</p>
+              <p class="org-name">Prof. Diana Laila Ramatillah, M.Farm., Ph.D.</p>
+              <p class="org-note">Auditor Halal Bersertifikat</p>
             </div>
-            <h3 class="text-lg font-bold text-slate-900 mb-2">Auditor Halal Bersertifikat</h3>
-            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-              WNI beragama Islam, berpendidikan minimal S1 di bidang Pangan, Kimia, Biokimia, Teknik Industri, Biologi, Farmasi, Kedokteran, Tata Boga, atau Pertanian, serta memegang sertifikat pelatihan &amp; kompetensi Auditor Halal dari BPJPH/MUI.
-            </p>
-          </div>
-
-          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-2xs">
-            <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200/80 text-[#c89020] flex items-center justify-center mb-4">
-              <i class="fa-solid fa-scale-balanced text-xl"></i>
+            <div class="org-card">
+              <div class="org-photo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg></div>
+              <p class="org-role">Auditor Halal</p>
+              <p class="org-name">Ely May Sarroh Saragih, S.P., M.Si.</p>
+              <p class="org-note">Auditor Halal Bersertifikat</p>
             </div>
-            <h3 class="text-lg font-bold text-slate-900 mb-2">Sumber Daya Syariah</h3>
-            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-              Berpendidikan minimal S1 bidang Syariah/Hukum Islam, memahami fiqih makanan/minuman dan barang gunaan serta peraturan perundang-undangan JPH untuk memberikan telaah syariah kepada Auditor Halal dan Komisi Fatwa.
-            </p>
-          </div>
-
-          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-2xs">
-            <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200/80 text-[#c89020] flex items-center justify-center mb-4">
-              <i class="fa-solid fa-flask-vial text-xl"></i>
+            <div class="org-card">
+              <div class="org-photo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg></div>
+              <p class="org-role">Auditor Halal</p>
+              <p class="org-name">Adiana S, S.Pi., M.Si.</p>
+              <p class="org-note">Auditor Halal Bersertifikat</p>
             </div>
-            <h3 class="text-lg font-bold text-slate-900 mb-2">Personel Laboran &amp; Uji Lab</h3>
-            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-              Memahami standar laboratorium penguji ISO/IEC 17025, mahir dalam teknik pengambilan sampel (sampling), serta menguasai prosedur analisis laboratorium untuk mengidentifikasi titik kritis kehalalan bahan dan produk.
-            </p>
+            <div class="org-card">
+              <div class="org-photo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg></div>
+              <p class="org-role">Auditor Halal</p>
+              <p class="org-name">Dr. Nina Jusnita, S.Tp., M.Si.</p>
+              <p class="org-note">Auditor Halal Bersertifikat</p>
+            </div>
+            <div class="org-card">
+              <div class="org-photo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg></div>
+              <p class="org-role">Auditor Halal</p>
+              <p class="org-name">Dr. Zuraida Sagala, S.Si., M.Si.</p>
+              <p class="org-note">Auditor Halal Bersertifikat</p>
+            </div>
           </div>
-
         </div>
-
       </div>
-    </section>
+    </div>
 
-    <!-- 3. CTA -->
+    <!-- MODAL POPUP: DAFTAR TENAGA AHLI SDM SYARIAH -->
+    <div class="org-modal-backdrop" id="syariahModal" role="dialog" aria-modal="true" aria-labelledby="syariahModalTitle" aria-hidden="true">
+      <div class="org-modal-dialog">
+        <div class="org-modal-header">
+          <div>
+            <p class="org-role">Divisi Operasional &amp; Teknis</p>
+            <h3 id="syariahModalTitle" class="org-modal-title">Daftar Tenaga Ahli SDM Syariah</h3>
+            <p class="org-note"><span id="syariahModalCount">3</span> Personel Telaah &amp; Kepatuhan Syariah Resmi LPH GESID Halal Center</p>
+          </div>
+          <button type="button" class="org-modal-close" id="closeSyariahModalBtn" aria-label="Tutup daftar SDM Syariah">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="org-modal-body">
+          <div class="org-modal-grid" id="syariahModalGrid">
+            <div class="org-card">
+              <div class="org-photo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg></div>
+              <p class="org-role">SDM Syariah</p>
+              <p class="org-name">Yohan Fitriadi, S.H.I., M.M.</p>
+              <p class="org-note">Telaah &amp; Kepatuhan Syariah</p>
+            </div>
+            <div class="org-card">
+              <div class="org-photo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg></div>
+              <p class="org-role">SDM Syariah</p>
+              <p class="org-name">Afdhalia Mahatta, S.H., M.H.</p>
+              <p class="org-note">Telaah &amp; Kepatuhan Syariah</p>
+            </div>
+            <div class="org-card">
+              <div class="org-photo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg></div>
+              <p class="org-role">SDM Syariah</p>
+              <p class="org-name">Alail Atariq, S.H.</p>
+              <p class="org-note">Telaah &amp; Kepatuhan Syariah</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Pada layar kecil, posisikan bagan di tengah (Pembina/Direktur) saat pertama dibuka
+      (function () {
+        var el = document.getElementById('orgChartScroll');
+        if (el && el.scrollWidth > el.clientWidth) {
+          el.scrollLeft = (el.scrollWidth - el.clientWidth) / 2;
+        }
+
+        // Reveal per baris bertahap saat baris tersebut discroll masuk ke layar
+        var revealElements = document.querySelectorAll('.org-row-reveal, .org-line-reveal');
+        if (revealElements.length > 0) {
+          if ('IntersectionObserver' in window) {
+            var rowObserver = new IntersectionObserver(function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('is-in-view');
+                  rowObserver.unobserve(entry.target);
+                }
+              });
+            }, {
+              root: null,
+              rootMargin: '0px 0px -8% 0px',
+              threshold: 0.15
+            });
+
+            revealElements.forEach(function (el) {
+              rowObserver.observe(el);
+            });
+          } else {
+            revealElements.forEach(function (el) {
+              el.classList.add('is-in-view');
+            });
+          }
+        }
+
+        // Helper setup modal popup anggota divisi
+        function setupModal(modalId, openBtnId, closeBtnId, gridId, cardCountId, btnCountId, modalCountId) {
+          var modal = document.getElementById(modalId);
+          var openBtn = document.getElementById(openBtnId);
+          var closeBtn = document.getElementById(closeBtnId);
+          var grid = document.getElementById(gridId);
+
+          if (grid) {
+            var total = grid.querySelectorAll('.org-card').length;
+            var cardCount = document.getElementById(cardCountId);
+            var btnCount = document.getElementById(btnCountId);
+            var modalCount = document.getElementById(modalCountId);
+            if (cardCount) cardCount.textContent = total;
+            if (btnCount) btnCount.textContent = total;
+            if (modalCount) modalCount.textContent = total;
+          }
+
+          function openModal() {
+            if (!modal) return;
+            modal.classList.add('is-open');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+          }
+
+          function closeModal() {
+            if (!modal) return;
+            modal.classList.remove('is-open');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            if (openBtn) openBtn.focus();
+          }
+
+          if (openBtn) openBtn.addEventListener('click', openModal);
+          if (closeBtn) closeBtn.addEventListener('click', closeModal);
+          if (modal) {
+            modal.addEventListener('click', function (e) {
+              if (e.target === modal) closeModal();
+            });
+          }
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+              closeModal();
+            }
+          });
+        }
+
+        setupModal('auditorModal', 'openAuditorModalBtn', 'closeAuditorModalBtn', 'auditorModalGrid', 'auditorCardCount', 'auditorBtnCount', 'auditorModalCount');
+        setupModal('syariahModal', 'openSyariahModalBtn', 'closeSyariahModalBtn', 'syariahModalGrid', 'syariahCardCount', 'syariahBtnCount', 'syariahModalCount');
+      })();
+    </script>
+
+    <!-- 2. CTA -->
     <section class="py-14 sm:py-18 bg-slate-900 text-white relative overflow-hidden">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8" data-animate="fade-up">
