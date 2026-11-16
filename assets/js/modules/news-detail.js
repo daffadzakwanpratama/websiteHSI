@@ -89,22 +89,49 @@
       }
     }
 
-    // 4. Featured Image & Caption
-    if (article.image) {
-      setAttr('articleImage', 'src', article.image);
-      setAttr('articleImage', 'alt', article.title);
-    }
+    // 4. Featured Image & Caption (Auto-fit portrait & landscape without cropping)
     const articleImage = document.getElementById('articleImage');
-    if (articleImage && article.imageLayout === 'portrait') {
-      const imageFrame = document.getElementById('articleImageFrame');
-      if (imageFrame) {
-        imageFrame.style.aspectRatio = 'auto';
-        imageFrame.style.height = 'min(65vh, 560px)';
-        imageFrame.style.maxHeight = 'none';
-        imageFrame.style.backgroundColor = '#f1f5f9';
-      }
+    const imageFrame = document.getElementById('articleImageFrame');
+
+    function applyAdaptiveImageLayout() {
+      if (!articleImage || !imageFrame) return;
+      const w = articleImage.naturalWidth || 0;
+      const h = articleImage.naturalHeight || 0;
+      const isPortrait = h > w || article.imageLayout === 'portrait';
+
+      imageFrame.style.aspectRatio = 'auto';
+      imageFrame.style.height = 'auto';
+      imageFrame.style.maxHeight = 'none';
+      imageFrame.style.display = 'flex';
+      imageFrame.style.alignItems = 'center';
+      imageFrame.style.justifyContent = 'center';
+
+      articleImage.style.width = 'auto';
+      articleImage.style.height = 'auto';
+      articleImage.style.maxWidth = '100%';
       articleImage.style.objectFit = 'contain';
       articleImage.style.objectPosition = 'center';
+      // Portrait dijaga agar tidak terlalu tinggi; landscape tetap proporsional & tidak terpotong
+      articleImage.style.maxHeight = isPortrait ? '420px' : '460px';
+    }
+
+    if (articleImage && article.image) {
+      articleImage.removeAttribute('srcset');
+      articleImage.removeAttribute('sizes');
+      articleImage.onload = applyAdaptiveImageLayout;
+      articleImage.src = article.image;
+      articleImage.alt = article.title;
+      if (articleImage.complete && articleImage.naturalWidth > 0) {
+        applyAdaptiveImageLayout();
+      }
+      if (article.imageFallback) {
+        articleImage.onerror = function () {
+          if (!this.dataset.fb1) {
+            this.dataset.fb1 = '1';
+            this.src = article.imageFallback;
+          }
+        };
+      }
     }
     setText('articleCaption', article.caption || article.title);
 
@@ -131,6 +158,14 @@
       if (nextTitle) nextTitle.textContent = nextArticle.title;
     }
 
+    const esc = str =>
+      String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+
     // 7. Sidebar Related Articles
     const sidebarRelated = document.getElementById('sidebarRelatedContainer');
     if (sidebarRelated) {
@@ -144,17 +179,17 @@
         : newsList.filter(n => n.id !== article.id).slice(0, 3);
 
       sidebarRelated.innerHTML = displayArticles.map(rel => `
-        <a href="detail-berita.html?id=${rel.id}" class="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200/80">
+        <a href="detail-berita.html?id=${encodeURIComponent(rel.id)}" class="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200/80">
           <div class="w-16 h-16 rounded-lg overflow-hidden bg-slate-100 flex-shrink-0 relative aspect-square">
-            <img src="${rel.image}" alt="${rel.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            <img src="${esc(rel.image)}" alt="${esc(rel.title)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
           </div>
           <div class="flex-1 min-w-0">
-            <span class="${rel.categoryBadgeClass} text-[9px] font-bold px-1.5 py-0.5 rounded text-white uppercase">${rel.categoryLabel}</span>
+            <span class="${esc(rel.categoryBadgeClass)} text-[9px] font-bold px-1.5 py-0.5 rounded text-white uppercase">${esc(rel.categoryLabel)}</span>
             <h4 class="text-xs font-bold text-slate-900 group-hover:text-[#c89020] transition-colors line-clamp-2 mt-1 leading-snug">
-              ${rel.title}
+              ${esc(rel.title)}
             </h4>
             <p class="text-[10px] text-slate-400 mt-1 flex items-center gap-1">
-              <i class="fa-regular fa-clock text-[9px]"></i> ${rel.readTime}
+              <i class="fa-regular fa-clock text-[9px]"></i> ${esc(rel.readTime)}
             </p>
           </div>
         </a>
@@ -167,27 +202,27 @@
       const candidates = newsList.filter(n => n.id !== article.id).slice(0, 4);
       bottomRelated.innerHTML = candidates.map(item => `
         <article class="bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
-          <a href="detail-berita.html?id=${item.id}" class="group flex flex-col h-full">
+          <a href="detail-berita.html?id=${encodeURIComponent(item.id)}" class="group flex flex-col h-full">
             <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
-              <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
-              <span class="${item.categoryBadgeClass} absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide">
-                ${item.categoryLabel}
+              <img src="${esc(item.image)}" alt="${esc(item.title)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
+              <span class="${esc(item.categoryBadgeClass)} absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide">
+                ${esc(item.categoryLabel)}
               </span>
             </div>
             <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
               <div>
                 <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5">
-                  <i class="fa-regular fa-calendar text-[10px]"></i> ${item.date}
+                  <i class="fa-regular fa-calendar text-[10px]"></i> ${esc(item.date)}
                 </p>
                 <h3 class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-2">
-                  ${item.title}
+                  ${esc(item.title)}
                 </h3>
                 <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">
-                  ${item.summary}
+                  ${esc(item.summary)}
                 </p>
               </div>
               <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                <span class="text-[11px] text-slate-400 font-medium">${item.readTime}</span>
+                <span class="text-[11px] text-slate-400 font-medium">${esc(item.readTime)}</span>
                 <span class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">
                   Baca <i class="fa-solid fa-arrow-right text-[9px]"></i>
                 </span>

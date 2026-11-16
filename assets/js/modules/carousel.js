@@ -24,7 +24,7 @@
 
       if (track.classList.contains('home-news-track')) {
         const newsCards = track.querySelectorAll('.home-news-card');
-        if (newsCards.length === 0) return;
+        if (newsCards.length < 3) return;
 
         const group = document.createElement('div');
         group.className = 'home-news-group';

@@ -1,108 +1,9 @@
 /**
- * Comprehensive database for 4 curated news articles.
+ * Fallback news database containing the verified LPH Gesid Halal Center article.
+ * Primary news articles are loaded dynamically from Google Sheets via news-sheet-loader.js.
  */
 
 window.NEWS_DATA = [
-  {
-    id: 1,
-    title: "Pemerintah Targetkan 1 Juta UMKM Bersertifikat Halal Sebelum Oktober 2026",
-    slug: "pemerintah-targetkan-1-juta-umkm-bersertifikat-halal-2026",
-    category: "nasional",
-    categoryLabel: "Nasional",
-    categoryBadgeClass: "badge-nasional",
-    date: "18 Sep 2026",
-    readTime: "5 menit baca",
-    author: {
-      name: "Tim Redaksi Gesid",
-      role: "Spesialis Regulasi & Kebijakan Halal",
-      avatar: "assets/images/logo-emblem.webp"
-    },
-    image: "assets/images/photos/1450101499163-c8848c66ca85-1200.webp",
-    caption: "Fasilitasi sertifikasi halal percepatan bagi pelaku usaha mikro dan kecil nasional.",
-    summary: "Kemenag bersama BPJPH mempercepat program fasilitasi sertifikasi halal gratis bagi pelaku usaha mikro dan kecil di seluruh Indonesia menjelang batas wajib halal Oktober 2026.",
-    content: `
-      <p class="lead-text">
-        <strong>Jakarta —</strong> Kementerian Agama Republik Indonesia (Kemenag) melalui Badan Penyelenggara Jaminan Produk Halal (BPJPH) secara resmi mengumumkan percepatan target fasilitasi sertifikasi halal dengan sasaran mencapai 1 juta Usaha Mikro, Kecil, dan Menengah (UMKM) sebelum batas wajib halal per 17 Oktober 2026.
-      </p>
-
-      <h3>Akselerasi Program Sertifikasi Halal Gratis (SEHATI)</h3>
-      <p>
-        Kepala BPJPH menegaskan bahwa program Sehati (Sertifikasi Halal Gratis) akan terus digencarkan bekerja sama dengan Lembaga Pendamping Proses Produk Halal (LP3H), Lembaga Pemeriksa Halal (LPH), perbankan syariah, dan pemerintah daerah di seluruh provinsi.
-      </p>
-
-      <blockquote class="article-quote">
-        <p>"Kewajiban sertifikasi halal bukan dimaksudkan untuk membebani pelaku usaha, melainkan untuk meningkatkan nilai tambah, daya saing pasar, dan kepastian hukum bagi konsumen domestik maupun global."</p>
-        <cite>— Perwakilan BPJPH Kementerian Agama RI</cite>
-      </blockquote>
-
-      <h3>Tiga Sektor Prioritas Sertifikasi</h3>
-      <p>
-        Dalam akselerasi ini, pemerintah memprioritaskan tiga klaster produk strategis:
-      </p>
-      <ul>
-        <li><strong>Produk Pangan & Minuman Olahan:</strong> Makanan kemasan kering, roti, bumbu rempah, minuman herbal, dan katering.</li>
-        <li><strong>Jasa Penyembelihan & Daging:</strong> Rumah Potong Hewan (RPH) dan Rumah Potong Unggas (RPU) di daerah.</li>
-        <li><strong>Bahan Baku & Bahan Tambahan:</strong> Industri penyuplai bahan pangan skala menengah dan UMKM binaan daerah.</li>
-      </ul>
-
-      <div class="callout-box">
-        <div class="callout-icon"><i class="fa-solid fa-lightbulb"></i></div>
-        <div>
-          <h4>Penting untuk Pelaku Usaha</h4>
-          <p>Pelaku UMKM yang ingin mendaftar dapat memanfaatkan pendampingan gratis dari konsultan terakreditasi agar proses kurasi bahan baku dan pengisian manual SJPH dapat selesai tanpa kendala.</p>
-        </div>
-      </div>
-
-      <h3>Dukungan Gesid Halal Center</h3>
-      <p>
-        Sebagai konsultan pendampingan profesional, Gesid Halal Center siap membantu pelaku usaha dari berbagai skala — baik melalui jalur *self-declare* bagi usaha mikro maupun jalur reguler dengan audit LPH independen bagi industri menengah dan besar.
-      </p>
-    `,
-    relatedIds: [2, 3, 4]
-  },
-  {
-    id: 2,
-    title: "Indonesia & Malaysia Perkuat Kerja Sama Pengakuan Sertifikasi Halal ASEAN",
-    slug: "indonesia-malaysia-perkuat-kerja-sama-halal-asean",
-    category: "internasional",
-    categoryLabel: "Internasional",
-    categoryBadgeClass: "badge-internasional",
-    date: "15 Sep 2026",
-    readTime: "7 menit baca",
-    author: {
-      name: "Ahmad Fauzi, M.Si",
-      role: "Analis Hubungan Internasional Halal",
-      avatar: "assets/images/logo-emblem.webp"
-    },
-    image: "assets/images/photos/1521791136064-7986c2920216-1200.webp",
-    caption: "Pertemuan bilateral harmonisasi standar halal ASEAN di Kuala Lumpur.",
-    summary: "Forum bilateral halal ASEAN menghasilkan kesepakatan harmonisasi standar sertifikasi halal antara dua negara berpenduduk Muslim terbesar di kawasan.",
-    content: `
-      <p class="lead-text">
-        <strong>Kuala Lumpur —</strong> Pemerintah Indonesia dan Malaysia melalui otoritas jaminan produk halal masing-masing, BPJPH dan JAKIM, resmi menandatangani pembaruan nota kesepahaman (MoU) pengakuan timbal balik (*Mutual Recognition Agreement*) sertifikat halal lintas negara.
-      </p>
-
-      <h3>Mendorong Integrasi Ekosistem Halal Kawasan</h3>
-      <p>
-        Kesepakatan ini membuka jalan bagi percepatan arus barang halal antara kedua negara tanpa memerlukan proses audit ulang yang memakan waktu lama, asalkan produk telah memiliki sertifikat halal resmi dari otoritas yang diakui.
-      </p>
-
-      <blockquote class="article-quote">
-        <p>"Harmonisasi ini adalah tonggak penting menuju terbentuknya Single Halal Market di kawasan ASEAN yang beranggotakan lebih dari 300 juta konsumen muslim."</p>
-      </blockquote>
-
-      <h3>Keuntungan bagi Eksportir Indonesia</h3>
-      <p>
-        Bagi pelaku industri makanan, farmasi, dan kosmetik Indonesia yang telah mengantongi Sertifikat Halal BPJPH, kesepakatan ini memberikan beberapa keuntungan konkret:
-      </p>
-      <ul>
-        <li><strong>Reduksi Biaya Logistik & Pengujian:</strong> Tidak diperlukan uji laboratorium ganda di pelabuhan masuk Malaysia.</li>
-        <li><strong>Proses Custom Clearance Lebih Cepat:</strong> Verifikasi QR code sertifikat halal secara digital antar-sistem.</li>
-        <li><strong>Kemudahan Ekspansi ke Pasar Timur Tengah:</strong> Menguatkan reputasi produk di rantai pasok global.</li>
-      </ul>
-    `,
-    relatedIds: [1, 3, 4]
-  },
   {
     id: 3,
     title: "Penyerahan Sertifikat Halal Simbolis UMKM AA Jatra pada Baking Demo Roti GESID-APUI Lhokseumawe",
@@ -154,48 +55,6 @@ window.NEWS_DATA = [
         Kegiatan di Lhokseumawe ini sekaligus menegaskan kehadiran operasional aktif LPH Gesid Halal Center di berbagai provinsi di Indonesia, membuktikan bahwa layanan konsultasi, audit, dan pendampingan halal Gesid hadir langsung mendampingi para pelaku usaha di akar rumput.
       </p>
     `,
-    relatedIds: [1, 4, 2]
-  },
-  {
-    id: 4,
-    title: "Wajib Halal Oktober 2026: Ini Sanksi bagi Produk yang Belum Bersertifikat",
-    slug: "wajib-halal-oktober-2026-sanksi-produk-tanpa-sertifikat",
-    category: "nasional",
-    categoryLabel: "Trending",
-    categoryBadgeClass: "badge-trending",
-    date: "10 Sep 2026",
-    readTime: "6 menit baca",
-    author: {
-      name: "Tim Legal & Regulasi Gesid",
-      role: "Auditor & Konsultan Hukum Halal",
-      avatar: "assets/images/logo-emblem.webp"
-    },
-    image: "assets/images/photos/1556742049-0cfed4f6a45d-1200.webp",
-    caption: "Sosialisasi penegakan hukum dan sanksi administratif UU JPH.",
-    summary: "Mulai 18 Oktober 2026, seluruh produk yang wajib bersertifikat halal namun belum memiliki sertifikat resmi akan dikenakan sanksi administratif bertahap.",
-    content: `
-      <p class="lead-text">
-        <strong>Jakarta —</strong> Pemberlakuan penahapan pertama kewajiban sertifikasi halal sesuai amanat Undang-Undang Nomor 33 Tahun 2014 tentang Jaminan Produk Halal (UU JPH) akan mencapai batas akhir penyesuaian pada Oktober 2026.
-      </p>
-
-      <h3>Tahapan Sanksi Administratif</h3>
-      <p>
-        Berdasarkan Peraturan Pemerintah terkait JPH, pelaku usaha yang produknya termasuk dalam kategori wajib halal namun belum mengantongi sertifikat resmi dapat dikenakan sanksi administratif berupa:
-      </p>
-      <ul>
-        <li><strong>Peringatan Tertulis:</strong> Surat teguran resmi dari otoritas pengawas jaminan produk halal.</li>
-        <li><strong>Denda Administratif:</strong> Pengenaan denda sesuai ketentuan klasifikasi skala usaha.</li>
-        <li><strong>Penarikan Barang dari Peredaran:</strong> Pembatasan distribusi dan larangan penjualan di pasar modern maupun ritel tradisional.</li>
-      </ul>
-
-      <div class="callout-box">
-        <div class="callout-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
-        <div>
-          <h4>Jangan Menunggu Hingga Menit Terakhir</h4>
-          <p>Proses audit dan penetapan fatwa memerlukan waktu rata-rata 15 hingga 30 hari kerja. Daftarkan produk Anda sekarang agar operasional bisnis tetap aman tanpa hambatan perizinan.</p>
-        </div>
-      </div>
-    `,
-    relatedIds: [1, 3, 2]
+    relatedIds: []
   }
 ];

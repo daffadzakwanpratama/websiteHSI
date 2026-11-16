@@ -166,7 +166,13 @@ window.HSI_SERVICES_DATA = {
       'Konsultasi pemilihan jalur pendaftaran yang tepat sesuai jenis usaha Anda'
     ],
     deliverables: [
-      'Daftar periksa (checklist) kelengkapan 8 dokumen syarat halal',
+      {
+        text: 'Daftar periksa (checklist) kelengkapan 8 dokumen syarat halal',
+        link: {
+          label: 'Lihat 8 dokumen →',
+          href: 'index.html#syarat-sertifikasi'
+        }
+      },
       'Panduan praktis pendaftaran akun dan pemilihan LPH di SIHALAL',
       'Pendampingan langsung oleh petugas P3H resmi hingga berkas siap diajukan'
     ],

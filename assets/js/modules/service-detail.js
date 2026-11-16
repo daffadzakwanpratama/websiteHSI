@@ -15,7 +15,21 @@
     values.forEach(value => {
       const item = cloneTemplate(templateId);
       const textEl = item.querySelector('[data-service-text]');
-      if (textEl) textEl.textContent = value;
+      if (textEl) {
+        if (value && typeof value === 'object') {
+          textEl.textContent = value.text || '';
+          if (value.link && value.link.href && value.link.label) {
+            textEl.appendChild(document.createTextNode(' '));
+            const anchor = document.createElement('a');
+            anchor.href = value.link.href;
+            anchor.textContent = value.link.label;
+            anchor.className = 'inline-flex items-center gap-1 font-semibold text-[#946310] hover:text-[#c89020] underline underline-offset-2 transition-colors';
+            textEl.appendChild(anchor);
+          }
+        } else {
+          textEl.textContent = value;
+        }
+      }
       fragment.appendChild(item);
     });
     return fragment;
