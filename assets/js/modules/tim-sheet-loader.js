@@ -6,10 +6,10 @@
 (function () {
   const TIM_CSV_URL =
     'https://docs.google.com/spreadsheets/d/e/2PACX-1vT2JzUgzPHeADkiRBmnSjsVcUlueYyEssZ82CZ_Nk-SJQ15Z_TGslqGSFzUnZ8TN_uZ4umJXq2yJylB/pub?gid=603509023&single=true&output=csv';
-  const CACHE_KEY = 'gesid_tim_sheet_v1';
+  const CACHE_KEY = 'gesid_tim_sheet_v2';
 
   const DEFAULT_AVATAR_SVG =
-    '<svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12"/><path d="M12 58c0-11 9-19 20-19s20 8 20 19"/></svg>';
+    "<svg viewBox='0 0 64 64'><circle cx='32' cy='24' r='12'/><path d='M12 58c0-11 9-19 20-19s20 8 20 19'/></svg>";
 
   function buildPhotoMarkup(item, isSmall) {
     const core = window.GesidSheetCore;
@@ -17,11 +17,12 @@
     const photoClass = isSmall ? 'org-photo-sm' : 'org-photo';
 
     if (item.image) {
+      const fb = esc(item.imageFallback || '');
       return `
         <div class="${photoClass}">
           <img src="${esc(item.image)}" alt="${esc(item.nama)}" loading="lazy"
-            style="width:100%;height:100%;object-fit:cover;border-radius:9999px;"
-            onerror="this.parentElement.innerHTML='${DEFAULT_AVATAR_SVG.replace(/'/g, "\\'")}'">
+            style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:9999px;display:block;"
+            onerror="if(!this.dataset.fb1 && '${fb}'){this.dataset.fb1='1';this.src='${fb}';}else{this.style.display='none';}">
         </div>
       `;
     }
@@ -63,6 +64,7 @@
         nama,
         keterangan: r.keterangan || '',
         image: img.isEmpty ? '' : img.primary,
+        imageFallback: img.isEmpty ? '' : img.fallback,
         urutan: parseInt(r.urutan, 10) || idx + 1
       });
     });

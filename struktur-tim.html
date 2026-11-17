@@ -41,6 +41,64 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="stylesheet" href="assets/css/site.min.css?v=17">
+  <style>
+    .org-card {
+      min-height: 216px !important;
+      height: auto !important;
+      padding: 18px 14px !important;
+    }
+    .org-card--committee {
+      min-height: 216px !important;
+      height: auto !important;
+    }
+    .org-role,
+    .org-name,
+    .org-note {
+      flex-shrink: 0 !important;
+      overflow: visible !important;
+      display: block !important;
+    }
+    .org-photo {
+      width: 80px !important;
+      height: 80px !important;
+      margin-bottom: 12px !important;
+      border-width: 2px !important;
+      display: block !important;
+      position: relative !important;
+    }
+    .org-photo svg {
+      width: 56px !important;
+      height: 56px !important;
+      margin: 18px auto 0 !important;
+      display: block !important;
+    }
+    .org-modal-grid .org-photo {
+      width: 76px !important;
+      height: 76px !important;
+    }
+    .org-photo-sm {
+      width: 30px !important;
+      height: 30px !important;
+      display: block !important;
+      position: relative !important;
+    }
+    .org-photo-sm svg {
+      width: 22px !important;
+      height: 22px !important;
+      margin: 6px auto 0 !important;
+      display: block !important;
+    }
+    .org-photo img,
+    .org-photo-sm img {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      object-fit: cover !important;
+      object-position: center top !important;
+      border-radius: 9999px !important;
+      display: block !important;
+    }
+  </style>
   <link rel="preload" href="assets/webfonts/fa-solid-900.subset.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Schema.org Structured Data -->
