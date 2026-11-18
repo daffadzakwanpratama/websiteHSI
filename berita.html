@@ -303,18 +303,6 @@
           <p data-animate="fade-up" data-delay="160" class="text-white/70 text-sm sm:text-lg leading-relaxed max-w-xl">
             Regulasi, kebijakan BPJPH, dan perkembangan industri halal Indonesia terbaru untuk Anda.
           </p>
-          <div data-animate="fade-up" data-delay="220"
-            class="flex flex-wrap items-center gap-x-5 gap-y-2 mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-white/15">
-            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors"><i
-                class="fa-solid fa-file-lines text-[#e8a317] text-sm"></i><span
-                class="text-xs sm:text-sm font-semibold">4 Artikel Tersedia</span></div>
-            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors"><i
-                class="fa-solid fa-tags text-[#e8a317] text-sm"></i><span class="text-xs sm:text-sm font-semibold">3
-                Kategori</span></div>
-            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors"><i
-                class="fa-regular fa-clock text-[#e8a317] text-sm"></i><span
-                class="text-xs sm:text-sm font-semibold">Diperbarui 18 Sep 2026</span></div>
-          </div>
         </div>
       </div>
     </section>
@@ -330,22 +318,17 @@
               class="search-input w-full pl-9 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-slate-50 text-slate-800 placeholder-slate-400 transition-all duration-200 font-sans"
               oninput="searchBerita(this.value)">
           </div>
-          <div class="flex items-center gap-2 flex-wrap">
+          <div class="inline-flex items-center gap-1.5 flex-wrap bg-slate-100 p-1.5 rounded-full">
             <button onclick="filterPage('semua')" data-tab="semua"
-              class="page-tab berita-tab active-tab px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 flex items-center gap-1.5"><i
-                class="fa-solid fa-border-all text-[11px]"></i> Semua</button>
+              class="page-tab berita-tab active-tab px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-colors">Semua</button>
             <button onclick="filterPage('nasional')" data-tab="nasional"
-              class="page-tab berita-tab px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 flex items-center gap-1.5"><i
-                class="fa-solid fa-flag text-[11px]"></i> Nasional</button>
+              class="page-tab berita-tab px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-colors">Nasional</button>
             <button onclick="filterPage('internasional')" data-tab="internasional"
-              class="page-tab berita-tab px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 flex items-center gap-1.5"><i
-                class="fa-solid fa-globe text-[11px]"></i> Internasional</button>
+              class="page-tab berita-tab px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-colors">Internasional</button>
             <button onclick="filterPage('daerah')" data-tab="daerah"
-              class="page-tab berita-tab px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 flex items-center gap-1.5"><i
-                class="fa-solid fa-location-dot text-[11px]"></i> Daerah</button>
+              class="page-tab berita-tab px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-colors">Daerah</button>
             <button onclick="filterPage('trending')" data-tab="trending"
-              class="page-tab berita-tab px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 flex items-center gap-1.5"><i
-                class="fa-solid fa-fire text-[11px]"></i> Trending</button>
+              class="page-tab berita-tab px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-colors">Trending</button>
           </div>
         </div>
       </div>
@@ -358,40 +341,19 @@
             class="font-bold text-slate-800">1</span> dari <span id="totalNum"
             class="font-bold text-slate-800">1</span> artikel</p>
 
-        <div id="articlesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-
-          <!-- Article 3 — Daerah -->
+        <div id="articlesGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <article class="article-card" data-kategori="daerah"
             data-title="penyerahan sertifikat halal simbolis umkm aa jatra baking demo roti gesid apui lhokseumawe">
-            <a href="detail-berita.html?id=3"
-              class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
-              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
+            <a href="detail-berita.html?id=3" class="group block">
+              <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 mb-3.5">
                 <img src="assets/images/berita/penyerahan-sh-lhokseumawe.webp"
                   alt="Penyerahan Sertifikat Halal UMKM AA Jatra GESID APUI Lhokseumawe"
-                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                  style="object-position: center 56%"
-                  loading="lazy">
-                <span
-                  class="badge-daerah absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide">Daerah</span>
+                  class="w-full h-full object-cover" loading="lazy">
               </div>
-              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5"><i
-                      class="fa-regular fa-calendar text-[10px]"></i> 14 Mei 2026</p>
-                  <h3
-                    class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
-                    Penyerahan Sertifikat Halal Simbolis UMKM AA Jatra pada Baking Demo GESID-APUI Lhokseumawe</h3>
-                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">LPH Gesid bersama APUI menyerahkan
-                    Sertifikat Halal resmi BPJPH kepada UMKM AA Jatra dalam agenda Baking Demo Roti di Kota Lhokseumawe,
-                    Aceh.</p>
-                </div>
-                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span class="text-[11px] text-slate-400 font-medium">4 menit baca</span>
-                  <span
-                    class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
-                </div>
-              </div>
+              <p class="text-xs font-semibold text-[#c89020] mb-1.5">Daerah</p>
+              <h3 class="text-[15px] sm:text-base font-bold text-slate-900 group-hover:text-[#c89020] transition-colors leading-snug line-clamp-2">
+                Penyerahan Sertifikat Halal Simbolis UMKM AA Jatra pada Baking Demo Roti GESID-APUI Lhokseumawe
+              </h3>
             </a>
           </article>
         </div>

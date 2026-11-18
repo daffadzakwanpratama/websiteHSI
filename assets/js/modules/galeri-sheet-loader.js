@@ -92,33 +92,12 @@
     }
   }
 
-  function renderHomeInspectionCarousel(items) {
-    const berandaItems = items.filter(i => i.bagian === 'beranda');
-    if (berandaItems.length === 0) return;
-
-    const carousels = document.querySelectorAll('[data-carousel]');
-    carousels.forEach(carousel => {
-      if (carousel.classList.contains('home-news-carousel')) return;
-      const track = carousel.querySelector('.carousel-track');
-      if (!track) return;
-
-      track.innerHTML = berandaItems
-        .map(item => buildPortfolioCard(item, 'carousel-slide w-[85%] sm:w-[55%] lg:w-[32%] flex-shrink-0', false))
-        .join('');
-    });
-  }
-
   function applyGaleriData(items) {
     if (!Array.isArray(items) || items.length === 0) return;
-    const runRender = () => {
-      renderGaleriPage(items);
-      renderHomeInspectionCarousel(items);
-    };
-
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', runRender);
+      document.addEventListener('DOMContentLoaded', () => renderGaleriPage(items));
     } else {
-      runRender();
+      renderGaleriPage(items);
     }
   }
 

@@ -215,17 +215,17 @@
       <div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl pointer-events-none"></div>
       <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
         <p data-animate="fade-down"
-          class="text-[#c89020] text-xs sm:text-[13px] font-bold tracking-widest uppercase mb-2.5 inline-flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-[#c89020] animate-pulse-glow"></span>
+          class="text-[#c89020] text-xs font-bold tracking-widest uppercase mb-2 inline-flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#c89020]"></span>
           Tentang Kami
         </p>
-        <h1 data-animate="fade-up"
+        <h1 data-animate="fade-up" data-delay="60"
           class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight leading-tight max-w-2xl font-serif text-slate-900">
-          Lembaga Pemeriksa Halal Resmi &amp; Mitra Usaha Anda
+          Tentang Gesid Halal Center
         </h1>
         <p data-animate="fade-up" data-delay="100"
           class="text-slate-600 mt-3 text-base sm:text-lg max-w-2xl leading-relaxed">
-          Mengenal lebih dekat peran, tim, dan layanan Gesid Halal Center dalam membantu pelaku usaha meraih sertifikat halal resmi.
+          Lembaga Pemeriksa Halal (LPH) di bawah naungan Yayasan GESID Indonesia Emas yang berkomitmen menjaga mutu, objektivitas, dan kepatuhan regulasi halal.
         </p>
       </div>
     </section>
@@ -233,49 +233,46 @@
     <!-- 1. IKHTISAR PERUSAHAAN (EDITORIAL TWO-COLUMN SPLIT) -->
     <section class="py-12 sm:py-16 lg:py-20 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
-          <!-- Kolom Kiri: Narasi Profil & Metrik -->
-          <div data-animate="fade-right" class="lg:col-span-7 space-y-6">
-            <div>
-              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight font-serif">
-                Membantu Usaha Anda Meraih Sertifikasi Halal Resmi dengan Mudah &amp; Terarah
-              </h2>
-            </div>
+          <!-- Kolom Kiri: Narasi Profil Singkat -->
+          <div data-animate="fade-right" class="space-y-4">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight font-serif leading-tight">
+              Profil Lembaga
+            </h2>
 
-            <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
-              <p>
-                <strong>Gesid Halal Center</strong> adalah <strong>Lembaga Pemeriksa Halal (LPH)</strong> resmi di bawah naungan <strong>Yayasan GESID Indonesia Emas</strong>. Kami hadir untuk membantu pelaku usaha—mulai dari UMKM hingga perusahaan besar—dalam proses pemeriksaan dan pengujian kehalalan produk sesuai ketentuan pemerintah.
-              </p>
-              <p>
-                Seluruh proses kerja kami mengikuti standar resmi <strong>BPJPH</strong> dan fatwa <strong>Majelis Ulama Indonesia (MUI)</strong>. Kami berkomitmen menjaga kejujuran, objektivitas, dan kerahasiaan data usaha Anda di setiap tahap pemeriksaan.
-              </p>
-              <p>
-                Didukung oleh tim Auditor Halal bersertifikat, Tenaga Ahli Syariah, serta kerja sama dengan laboratorium terakreditasi, kami memastikan proses pemeriksaan halal berjalan jelas, tepat waktu, dan mudah dipahami.
-              </p>
-            </div>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              <strong>Gesid Halal Center</strong> adalah <strong>Lembaga Pemeriksa Halal (LPH)</strong> di bawah naungan <strong>Yayasan GESID Indonesia Emas</strong> yang melayani pemeriksaan kehalalan produk bagi UMKM hingga industri besar sesuai standar <strong>BPJPH</strong> dan <strong>MUI</strong>.
+            </p>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Didukung oleh Auditor Halal bersertifikat, Tenaga Ahli Syariah, dan laboratorium terakreditasi, kami memastikan seluruh proses berjalan profesional, objektif, dan tepat waktu.
+            </p>
           </div>
 
-          <!-- Kolom Kanan: Foto Dokumentasi Nyata & Box Filosofi -->
-          <div data-animate="fade-left" data-delay="150" class="lg:col-span-5 space-y-4">
-            <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative group bg-slate-100">
-              <img src="assets/images/lph/lph-dpd-ri.webp"
-                alt="Dokumentasi Kegiatan di Gedung DPD RI"
-                class="w-full aspect-[16/10] sm:aspect-[4/3] object-cover group-hover:scale-103 transition-transform duration-700 ease-out"
-                loading="lazy">
-              <div
-                class="p-3 bg-white border-t border-slate-100 text-[11px] sm:text-xs text-slate-500 font-medium flex items-center justify-between">
-                <span><i class="fa-solid fa-landmark text-[#c89020] mr-1.5"></i> Gedung DPD RI</span>
-                <span class="text-slate-400">Kegiatan Nasional</span>
+          <!-- Kolom Kanan: 2 Bingkai Sertifikat Akreditasi (Coming Soon) -->
+          <div data-animate="fade-left" data-delay="150">
+            <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;">
+              <div data-cert-box="1"
+                style="aspect-ratio:1/1.414;background:linear-gradient(180deg,#fffdf7 0%,#fef9ec 100%);border:2px solid #c89020;border-radius:10px;padding:10px;box-shadow:0 8px 24px -8px rgba(148,99,16,0.16);display:flex;flex-direction:column;text-align:center;overflow:hidden;">
+                <div style="border:1px dashed rgba(200,144,32,0.55);border-radius:6px;padding:10px 6px;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;">
+                  <img src="assets/images/logo-emblem.webp" alt="Emblem LPH Gesid" style="height:28px;width:auto;object-fit:contain;" loading="lazy">
+                  <p style="font-size:10px;font-weight:800;color:#0f172a;margin:0;line-height:1.3;text-transform:uppercase;">Sertifikat Akreditasi</p>
+                  <span style="display:inline-block;padding:3px 10px;border-radius:9999px;background:#fef3c7;border:1px solid #f59e0b;font-size:9px;font-weight:700;color:#92400e;letter-spacing:0.04em;text-transform:uppercase;">
+                    Coming Soon
+                  </span>
+                </div>
               </div>
-            </div>
 
-            <!-- Filosofi Box (Minimal & Authoritative) -->
-            <div class="bg-amber-50/70 border-l-4 border-l-[#c89020] border border-amber-200/80 rounded-xl p-5">
-              <p class="text-[11px] font-bold tracking-widest text-[#946310] uppercase mb-1">Komitmen Kami</p>
-              <blockquote class="text-sm sm:text-[15px] font-bold text-slate-900 leading-snug font-serif">
-                "Halal bukan sekadar selembar sertifikat, melainkan wujud kepedulian dan jaminan kualitas terbaik bagi konsumen Anda."
-              </blockquote>
+              <div data-cert-box="2"
+                style="aspect-ratio:1/1.414;background:linear-gradient(180deg,#fffdf7 0%,#fef9ec 100%);border:2px solid #c89020;border-radius:10px;padding:10px;box-shadow:0 8px 24px -8px rgba(148,99,16,0.16);display:flex;flex-direction:column;text-align:center;overflow:hidden;">
+                <div style="border:1px dashed rgba(200,144,32,0.55);border-radius:6px;padding:10px 6px;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;">
+                  <img src="assets/images/logo-emblem.webp" alt="Emblem LPH Gesid" style="height:28px;width:auto;object-fit:contain;" loading="lazy">
+                  <p style="font-size:10px;font-weight:800;color:#0f172a;margin:0;line-height:1.3;text-transform:uppercase;">Lampiran Akreditasi</p>
+                  <span style="display:inline-block;padding:3px 10px;border-radius:9999px;background:#fef3c7;border:1px solid #f59e0b;font-size:9px;font-weight:700;color:#92400e;letter-spacing:0.04em;text-transform:uppercase;">
+                    Coming Soon
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 

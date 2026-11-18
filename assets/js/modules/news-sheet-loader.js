@@ -122,69 +122,28 @@
 
   function renderHomeNews(newsList) {
     const core = window.GesidSheetCore;
-    const section = document.getElementById('berita');
-    if (!core || !section || !newsList.length) return;
+    const grid = document.getElementById('homeNewsSimpleGrid');
+    if (!core || !grid || !newsList.length) return;
 
     const esc = core.escapeHTML;
-    const lead = newsList[0];
-    const leadEl = section.querySelector('.home-news-lead');
-    if (leadEl && lead) {
-      leadEl.href = `detail-berita.html?id=${lead.id}`;
-      leadEl.innerHTML = `
-        <img src="${esc(lead.image)}" alt="${esc(lead.title)}" loading="lazy" onerror="${core.buildImageOnError(lead.imageFallback)}">
-        <span class="home-news-lead-shade"></span>
-        <span class="home-news-lead-content">
-          <span class="home-news-label">Sorotan Berita</span>
-          <span class="home-news-lead-title">${esc(lead.title)}</span>
-          <span class="home-news-meta">${esc(lead.categoryLabel)} <span aria-hidden="true">·</span> ${esc(lead.date)}</span>
-        </span>
-      `;
-    }
-
-    const listContainer = section.querySelector('.home-news-list');
-    if (listContainer) {
-      const listItems = newsList.length > 1 ? newsList.slice(1, 4) : [lead];
-      const listMarkup = listItems
-        .map(item => `
-          <a href="detail-berita.html?id=${item.id}" class="home-news-list-item group">
-            <img src="${esc(item.image)}" alt="" loading="lazy" onerror="${core.buildImageOnError(item.imageFallback)}">
-            <span class="min-w-0">
-              <span class="home-news-list-title">${esc(item.title)}</span>
-              <span class="home-news-meta"><span>${esc(item.categoryLabel)}</span> · ${esc(item.date)}</span>
-            </span>
-          </a>
-        `)
-        .join('');
-
-      listContainer.innerHTML = `<h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mb-4">Berita Terbaru</h2>${listMarkup}`;
-    }
-
-    const track = section.querySelector('.home-news-track');
-    if (track) {
-      const cardsMarkup = newsList
-        .map(item => `
-          <a href="detail-berita.html?id=${item.id}" class="home-news-card group">
-            <img src="${esc(item.image)}" alt="${esc(item.title)}" loading="lazy" onerror="${core.buildImageOnError(item.imageFallback)}">
-            <span class="home-news-card-shade"></span>
-            <span class="home-news-card-content">
-              <span class="home-news-meta">${esc(item.categoryLabel)} <span aria-hidden="true">·</span> ${esc(item.date)}</span>
-              <span class="home-news-card-title">${esc(item.title)}</span>
-            </span>
-          </a>
-        `)
-        .join('');
-
-      if (newsList.length >= 3) {
-        track.classList.add('home-news-marquee');
-        track.innerHTML = `
-          <div class="home-news-group">${cardsMarkup}</div>
-          <div class="home-news-group" aria-hidden="true" inert>${cardsMarkup}</div>
-        `;
-      } else {
-        track.classList.remove('home-news-marquee');
-        track.innerHTML = cardsMarkup;
-      }
-    }
+    grid.innerHTML = newsList
+      .slice(0, 3)
+      .map(item => `
+        <a href="detail-berita.html?id=${item.id}" class="group block">
+          <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 mb-3.5">
+            <img src="${esc(item.image)}"
+              alt="${esc(item.title)}"
+              class="w-full h-full object-cover"
+              loading="lazy"
+              onerror="${core.buildImageOnError(item.imageFallback)}">
+          </div>
+          <p class="text-xs font-semibold text-[#c89020] mb-1.5">${esc(item.categoryLabel)}</p>
+          <h3 class="text-[15px] sm:text-base font-bold text-slate-900 group-hover:text-[#c89020] transition-colors leading-snug line-clamp-2">
+            ${esc(item.title)}
+          </h3>
+        </a>
+      `)
+      .join('');
   }
 
   function renderBeritaGrid(newsList) {
@@ -194,42 +153,23 @@
 
     const esc = core.escapeHTML;
     grid.innerHTML = newsList
-      .map(item => {
-        const badgeIcon =
-          item.category === 'trending' ? '<i class="fa-solid fa-fire text-[9px]"></i> ' : '';
-        const badgeExtraClass = item.category === 'trending' ? ' flex items-center gap-1' : '';
-        return `
-          <article class="article-card" data-kategori="${esc(item.category)}" data-title="${esc(item.title.toLowerCase())}">
-            <a href="detail-berita.html?id=${item.id}"
-              class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover-lift flex flex-col h-full">
-              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 flex-shrink-0">
-                <img src="${esc(item.image)}"
-                  alt="${esc(item.title)}"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy"
-                  onerror="${core.buildImageOnError(item.imageFallback)}">
-                <span class="${esc(item.categoryBadgeClass)} absolute top-3 left-3 px-2.5 py-0.5 text-white text-[10px] font-bold rounded-md uppercase tracking-wide${badgeExtraClass}">${badgeIcon}${esc(item.categoryLabel)}</span>
-              </div>
-              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <p class="text-[11px] text-slate-400 font-medium mb-2 flex items-center gap-1.5"><i
-                      class="fa-regular fa-calendar text-[10px]"></i> ${esc(item.date)}</p>
-                  <h3
-                    class="text-[14px] sm:text-[15px] font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#c89020] transition-colors line-clamp-3">
-                    ${esc(item.title)}</h3>
-                  <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">${esc(item.summary)}</p>
-                </div>
-                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span class="text-[11px] text-slate-400 font-medium">${esc(item.readTime)}</span>
-                  <span
-                    class="text-[11px] font-bold text-[#c89020] flex items-center gap-1 group-hover:gap-2 transition-all">Baca
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i></span>
-                </div>
-              </div>
-            </a>
-          </article>
-        `;
-      })
+      .map(item => `
+        <article class="article-card" data-kategori="${esc(item.category)}" data-title="${esc(item.title.toLowerCase())}">
+          <a href="detail-berita.html?id=${item.id}" class="group block">
+            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 mb-3.5">
+              <img src="${esc(item.image)}"
+                alt="${esc(item.title)}"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="${core.buildImageOnError(item.imageFallback)}">
+            </div>
+            <p class="text-xs font-semibold text-[#c89020] mb-1.5">${esc(item.categoryLabel)}</p>
+            <h3 class="text-[15px] sm:text-base font-bold text-slate-900 group-hover:text-[#c89020] transition-colors leading-snug line-clamp-2">
+              ${esc(item.title)}
+            </h3>
+          </a>
+        </article>
+      `)
       .join('');
 
     if (typeof window.refreshBeritaGrid === 'function') {
