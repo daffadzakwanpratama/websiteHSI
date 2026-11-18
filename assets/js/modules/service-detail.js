@@ -73,7 +73,7 @@
     const serviceKey = new URLSearchParams(window.location.search).get('service');
     if (!serviceKey || serviceKey === 'lph') return;
 
-    const service = (window.HSI_SERVICES_DATA || {})[serviceKey];
+    const service = (window.GESID_SERVICES_DATA || {})[serviceKey];
     dynamicContent.classList.remove('hidden');
     legacyContent.classList.add('hidden');
 

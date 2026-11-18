@@ -3,38 +3,7 @@
  * Bahasa natural, ringkas, dan mudah dipahami oleh pelaku usaha.
  */
 
-window.HSI_SERVICES_DATA = {
-  lph: {
-    id: 'lph',
-    number: '01',
-    label: 'Profil Lembaga Pemeriksa Halal',
-    icon: 'fa-building-shield',
-    accentColor: 'forest',
-    breadcrumb: 'Profil LPH Gesid Halal Center',
-    title: 'Profil LPH GESID Halal Center',
-    shortDesc: 'Lembaga Pemeriksa Halal (LPH) resmi yang melayani pemeriksaan dan pengujian kehalalan produk untuk pelaku usaha di seluruh Indonesia.',
-    desc: [
-      'LPH GESID Halal Center bernaung di bawah Yayasan GESID Indonesia Emas. Kami bertugas memeriksa dan menguji kehalalan produk usaha Anda sebagai syarat penetapan fatwa halal oleh MUI dan penerbitan Sertifikat Halal oleh BPJPH.'
-    ],
-    features: [
-      'Pemeriksaan kelengkapan dokumen & peninjauan langsung ke lokasi produksi',
-      'Pengujian sampel bahan di laboratorium terakreditasi (jika diperlukan)',
-      'Melayani 15 kategori produk barang dan jasa',
-      'Didukung jaringan 85 pendamping halal (P3H) di 15 provinsi'
-    ],
-    deliverables: [
-      'Berita Acara Pemeriksaan lokasi produksi',
-      'Hasil uji laboratorium resmi (jika produk memerlukan uji lab)',
-      'Laporan Hasil Pemeriksaan untuk proses Sidang Fatwa MUI'
-    ],
-    target: [
-      'UMKM hingga perusahaan besar yang mengajukan Sertifikat Halal Reguler',
-      'Usaha Makanan, Minuman, Obat, Kosmetik, Bahan Kimia, & Barang Gunaan',
-      'Usaha Jasa Penyembelihan (RPH/RPU), Pengolahan, Gudang, Logistik, & Katering'
-    ],
-    impartialityNote: 'Komitmen Layanan: Seluruh pemeriksaan dilakukan secara jujur, objektif, dan transparan sesuai ketentuan resmi BPJPH dan MUI.'
-  },
-
+window.GESID_SERVICES_DATA = {
   pemeriksaan: {
     id: 'pemeriksaan',
     number: '01',
@@ -265,9 +234,3 @@ window.HSI_SERVICES_DATA = {
     impartialityNote: 'Catatan Layanan: Kegiatan pelatihan ini berfokus pada edukasi agar tim usaha Anda mandiri dan siap sebelum mengikuti proses pemeriksaan resmi.'
   }
 };
-
-// Aliases for backwards compatibility:
-window.HSI_SERVICES_DATA.sjph = window.HSI_SERVICES_DATA.bimtek;
-window.HSI_SERVICES_DATA.pelatihan = window.HSI_SERVICES_DATA.bimtek;
-window.HSI_SERVICES_DATA.sertifikasi = window.HSI_SERVICES_DATA.pemeriksaan;
-window.HSI_SERVICES_DATA.standarisasi = window.HSI_SERVICES_DATA.pendampingan;

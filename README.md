@@ -68,8 +68,8 @@ Kode JavaScript dipisahkan menjadi 3 layer yang terisolasi:
 
 | Layer | Lokasi | Fungsi |
 |---|---|---|
-| **Data Layer** | `assets/js/data/services-data.js` & `assets/js/data/news-data.js` | Berisi data murni (`window.HSI_SERVICES_DATA` & data berita). Jika ingin mengubah teks, fitur, layanan, atau menambah berita, **hanya edit file ini** tanpa menyentuh file logika. |
-| **Logic Layer (Modules)** | `assets/js/modules/*.js` | Setiap fitur UI (Nav, Slider, Counter, Form, Detail Renderer, dll) memiliki file terpisah yang independen dan modular. |
+| **Data Layer** | `assets/js/data/services-data.js` & `assets/js/data/news-data.js` | Berisi data murni (`window.GESID_SERVICES_DATA` & data berita cadangan). Jika ingin mengubah teks, fitur, atau layanan, **hanya edit file ini** tanpa menyentuh file logika. |
+| **Logic Layer (Modules)** | `assets/js/modules/*.js` | Setiap fitur UI (Nav, Slider, Form, Detail Renderer, Sheet Loader, dll) memiliki file terpisah yang independen dan modular. |
 | **Entry Point** | `assets/js/main.js` | Memanggil fungsi inisialisasi (`initNavigation()`, `initHeroSlider()`, dll) secara aman ketika DOM sudah siap. |
 
 ---
@@ -77,9 +77,9 @@ Kode JavaScript dipisahkan menjadi 3 layer yang terisolasi:
 ## 🛠️ 3. Panduan Maintenance / Cara Menambah & Mengubah Konten
 
 ### A. Mengubah / Menambah Data Layanan
-Buka file `assets/js/data/services-data.js`. Tambahkan objek baru atau modifikasi yang sudah ada (`lph`, `pemeriksaan`, `pendampingan`, `sjph`, `pelatihan`):
+Buka file `assets/js/data/services-data.js`. Tambahkan objek baru atau modifikasi yang sudah ada (`pemeriksaan`, `pengujian`, `pendampingan`, `bimtek`):
 ```javascript
-window.HSI_SERVICES_DATA = {
+window.GESID_SERVICES_DATA = {
   pemeriksaan: {
     id: 'pemeriksaan',
     number: '01',
